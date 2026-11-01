@@ -20,7 +20,7 @@ function run(script,allowed=[0]){
 mkdirSync(resolve(target,'reports/verification'),{recursive:true});
 run('scripts/generate-fixtures.mjs');
 run('scripts/evaluate.mjs');
-run('agent/run-model.mjs',[1]);
+run('agent/run-model.mjs',[2]);
 run('scripts/check.mjs');
 run('scripts/fault-matrix.mjs');
 run('scripts/render-reports.mjs');
