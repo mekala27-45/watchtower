@@ -8,14 +8,15 @@ export function canonical(v) {
   return JSON.stringify(v);
 }
 export const digest=v=>createHash('sha256').update(canonical(v)).digest('hex');
-export function metric({id,value=null,state='available',unit,method,dataset,window,plan_digest,code_revision,evidence,numerator=null,denominator=null}) {
-  const m={id,value,state,unit,method,dataset,window,plan_digest,code_revision,evidence,numerator,denominator};
+export function metric({id,value=null,state='available',category='quality',unit,method,dataset,window,plan_digest,code_revision,evidence,numerator=null,denominator=null}) {
+  const m={id,value,state,category,unit,method,dataset,window,plan_digest,code_revision,evidence,numerator,denominator};
   validateMetric(m); return m;
 }
 export function validateMetric(m) {
   if(!m || !/^[a-z][a-z0-9_.]*$/.test(m.id||'') || !METHODS.includes(m.method)) throw Error('invalid_metric');
   for(const k of ['unit','dataset','window','plan_digest','code_revision','evidence']) if(typeof m[k]!=='string'||!m[k]) throw Error('missing_'+k);
   if(!['available','unavailable','not_applicable'].includes(m.state)) throw Error('invalid_state');
+  if(!['execution','quality'].includes(m.category)) throw Error('invalid_category');
   if(m.state!=='available') {if(m.value!==null) throw Error('unavailable_is_not_zero'); return;}
   if(typeof m.value!=='number'||!Number.isFinite(m.value)||m.value<0) throw Error('invalid_value');
   if(m.unit==='ratio') {
@@ -27,7 +28,7 @@ export function sealManifest(data) {
   data.metrics.forEach(validateMetric);
   if(new Set(data.metrics.map(m=>m.id)).size!==data.metrics.length) throw Error('duplicate_metric');
   const payload={...data,disclaimer:DISCLAIMER,disclaimer_digest:digest(DISCLAIMER)};
-  return {...payload,digest:digest(payload)};
+  return validateManifest({...payload,digest:digest(payload)});
 }
 export function validateManifest(m,revision) {
   if(!m||!m.digest) throw Error('missing_manifest');
@@ -35,6 +36,14 @@ export function validateManifest(m,revision) {
   if(expected!==digest(payload)) throw Error('manifest_digest_mismatch');
   if(!m.metrics?.length) throw Error('empty_manifest');
   m.metrics.forEach(validateMetric);
+  if(!m.code_revision||!m.plan_digest) throw Error('manifest_provenance_required');
+  for(const metric of m.metrics) {
+    if(metric.code_revision!==m.code_revision||metric.plan_digest!==m.plan_digest) throw Error('metric_provenance_mismatch');
+    if(metric.method!=='deterministic_baseline'&&metric.category==='quality'&&metric.state==='available') {
+      const run=m.runs?.[metric.method];
+      if(!run?.attempted||!run.execution_receipt) throw Error('unexecuted_model_quality');
+    }
+  }
   if(revision && m.code_revision!==revision) throw Error('stale_report_revision');
   if(m.disclaimer!==DISCLAIMER||m.disclaimer_digest!==digest(DISCLAIMER)) throw Error('disclaimer_mismatch');
   for(const run of Object.values(m.runs||{})) if(run.status==='passed' && (!run.rows||!run.execution_receipt)) throw Error('zero_rows_or_missing_execution');
