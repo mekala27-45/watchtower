@@ -1,0 +1,13 @@
+ARG NODE_IMAGE
+FROM $NODE_IMAGE
+WORKDIR /app
+COPY package.json ./
+COPY apps ./apps
+COPY packages ./packages
+COPY reports ./reports
+ENV PORT=80
+ENV HOST=0.0.0.0
+ENV WATCHTOWER_DEPLOYMENT=production
+EXPOSE 80
+USER node
+CMD ["node", "apps/api/server.mjs"]

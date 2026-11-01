@@ -92,6 +92,6 @@ export function createApp({dbPath=resolve(ROOT,'state/local.sqlite'),revision=pr
 }
 if(process.argv[1]&&pathToFileURL(resolve(process.argv[1])).href===import.meta.url){
  const app=createApp({dbPath:process.env.WATCHTOWER_DB||resolve(ROOT,'state/local.sqlite'),origins:(process.env.WATCHTOWER_ORIGINS||'').split(',').filter(Boolean)});
- app.server.listen(Number(process.env.PORT||4318),'127.0.0.1',()=>console.log('Watchtower local candidate at http://127.0.0.1:'+app.server.address().port));
+ app.server.listen(Number(process.env.PORT||4318),process.env.HOST||'127.0.0.1',()=>console.log('Watchtower local candidate at http://127.0.0.1:'+app.server.address().port));
  process.on('SIGTERM',()=>app.close().then(()=>process.exit(0)));
 }
