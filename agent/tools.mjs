@@ -1,4 +1,4 @@
-import { createHash, randomBytes } from 'node:crypto';
+import { createHash, createHmac, randomBytes } from 'node:crypto';
 
 export const TOOL_NAMES = Object.freeze(['list_changes', 'inspect_snapshot', 'propose_finding']);
 export const FINDING_FIELDS = Object.freeze({
@@ -65,6 +65,10 @@ export function createToolSession(inputBundle, options = {}) {
     }
   }
   const cursors = new Map();
+  // Trusted runtime may persist this per-session seed to restore cursor bindings.
+  // It is never accepted in model tool arguments; ordinary contract sessions use a fresh seed.
+  const cursorSeed = options.cursorSeed ?? randomBytes(32).toString('hex');
+  if (!/^[a-f0-9]{64}$/.test(cursorSeed)) fail('invalid_cursor_seed');
   const events = [];
   const proposals = [];
   let calls = 0;
@@ -90,7 +94,7 @@ export function createToolSession(inputBundle, options = {}) {
       }));
       let next = null;
       if (offset + limits.pageSize < bundle.candidates.length) {
-        next = randomBytes(24).toString('base64url');
+        next = createHmac('sha256', cursorSeed).update(bundle.id + ':' + (offset + limits.pageSize)).digest('base64url');
         cursors.set(next, offset + limits.pageSize);
       }
       return { namespace: bundle.namespace, bundle_id: bundle.id, candidates: page, next_cursor: next, coverage: clone(bundle.after?.state ?? 'unknown') };

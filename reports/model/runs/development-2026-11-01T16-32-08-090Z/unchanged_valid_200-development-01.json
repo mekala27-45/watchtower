@@ -1,0 +1,1693 @@
+{
+  "fixture_id": "unchanged_valid_200-development-01",
+  "family": "unchanged_valid_200",
+  "method": "local_agent",
+  "status": "completed",
+  "inference_attempted": true,
+  "reason": null,
+  "model_request_count": 1,
+  "model_requested_tool_calls": 0,
+  "handler_executions": 0,
+  "proposed_findings": [],
+  "elapsed_ms": 4167,
+  "generated_tokens": 79,
+  "supported_proposals": 0,
+  "correct_noop_or_uncertainty": false,
+  "quality_available": true,
+  "transitions": [
+    {
+      "transition": 1,
+      "method": "local_agent",
+      "inference_attempted": true,
+      "bundle": {
+        "namespace": "synthetic:evaluation",
+        "source_id": 1001,
+        "before": {
+          "namespace": "synthetic:evaluation",
+          "source_id": 1001,
+          "items": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "tag_name": "v1.0.0",
+              "draft": false,
+              "prerelease": false,
+              "published_at": "2026-10-01T12:00:00.000Z",
+              "created_at": "2026-09-30T12:00:00.000Z",
+              "assets": [
+                {
+                  "id": 1010,
+                  "name": "fixture.tar.gz",
+                  "size": 1024,
+                  "content_type": "application/gzip"
+                }
+              ],
+              "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+              "notes_bytes": 31,
+              "normalizer_version": "normalizer-v1",
+              "digest": "c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119"
+            },
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 102,
+              "tag_name": "v1.0.0",
+              "draft": false,
+              "prerelease": false,
+              "published_at": "2026-10-01T12:00:00.000Z",
+              "created_at": "2026-09-30T12:00:00.000Z",
+              "assets": [
+                {
+                  "id": 1020,
+                  "name": "fixture.tar.gz",
+                  "size": 1024,
+                  "content_type": "application/gzip"
+                }
+              ],
+              "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+              "notes_bytes": 31,
+              "normalizer_version": "normalizer-v1",
+              "digest": "1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36",
+              "id": "ev_1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36"
+            }
+          ],
+          "state": "captured",
+          "scope": "bounded-v1",
+          "coverage": {
+            "procedure_complete": true,
+            "uncovered_scope": []
+          },
+          "id": "obs_0ea31938b1c0e6effec4439e46c4f721e124fe31efb8ad5ea3521fe9586c4c66",
+          "digest": "0ea31938b1c0e6effec4439e46c4f721e124fe31efb8ad5ea3521fe9586c4c66",
+          "captured_at": null,
+          "checked_at": null
+        },
+        "after": {
+          "namespace": "synthetic:evaluation",
+          "source_id": 1001,
+          "items": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "tag_name": "v1.0.0",
+              "draft": false,
+              "prerelease": false,
+              "published_at": "2026-10-01T12:00:00.000Z",
+              "created_at": "2026-09-30T12:00:00.000Z",
+              "assets": [
+                {
+                  "id": 1010,
+                  "name": "fixture.tar.gz",
+                  "size": 1024,
+                  "content_type": "application/gzip"
+                }
+              ],
+              "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+              "notes_bytes": 31,
+              "normalizer_version": "normalizer-v1",
+              "digest": "c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119"
+            },
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 102,
+              "tag_name": "v1.0.0",
+              "draft": false,
+              "prerelease": false,
+              "published_at": "2026-10-01T12:00:00.000Z",
+              "created_at": "2026-09-30T12:00:00.000Z",
+              "assets": [
+                {
+                  "id": 1020,
+                  "name": "fixture.tar.gz",
+                  "size": 1024,
+                  "content_type": "application/gzip"
+                }
+              ],
+              "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+              "notes_bytes": 31,
+              "normalizer_version": "normalizer-v1",
+              "digest": "1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36",
+              "id": "ev_1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36"
+            }
+          ],
+          "state": "captured",
+          "scope": "bounded-v1",
+          "coverage": {
+            "procedure_complete": true,
+            "uncovered_scope": []
+          },
+          "id": "obs_0ea31938b1c0e6effec4439e46c4f721e124fe31efb8ad5ea3521fe9586c4c66",
+          "digest": "0ea31938b1c0e6effec4439e46c4f721e124fe31efb8ad5ea3521fe9586c4c66",
+          "captured_at": null,
+          "checked_at": null
+        },
+        "candidates": [],
+        "evidence": {
+          "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119": {
+            "namespace": "synthetic:evaluation",
+            "source_id": 1001,
+            "release_id": 101,
+            "tag_name": "v1.0.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-10-01T12:00:00.000Z",
+            "created_at": "2026-09-30T12:00:00.000Z",
+            "assets": [
+              {
+                "id": 1010,
+                "name": "fixture.tar.gz",
+                "size": 1024,
+                "content_type": "application/gzip"
+              }
+            ],
+            "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+            "notes_bytes": 31,
+            "normalizer_version": "normalizer-v1",
+            "digest": "c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+            "id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119"
+          },
+          "ev_1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36": {
+            "namespace": "synthetic:evaluation",
+            "source_id": 1001,
+            "release_id": 102,
+            "tag_name": "v1.0.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-10-01T12:00:00.000Z",
+            "created_at": "2026-09-30T12:00:00.000Z",
+            "assets": [
+              {
+                "id": 1020,
+                "name": "fixture.tar.gz",
+                "size": 1024,
+                "content_type": "application/gzip"
+              }
+            ],
+            "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+            "notes_bytes": 31,
+            "normalizer_version": "normalizer-v1",
+            "digest": "1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36",
+            "id": "ev_1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36"
+          }
+        },
+        "watchlist_version": "watchlist-v1",
+        "outcome": "unchanged_in_observed_scope",
+        "normalizer_version": "normalizer-v1",
+        "verifier_version": "verifier-v1",
+        "id": "bundle_1f6725f77260928f0d6788f90e1fc0f69ff043dccb730d59f36480f1757b28e1",
+        "digest": "1f6725f77260928f0d6788f90e1fc0f69ff043dccb730d59f36480f1757b28e1"
+      },
+      "bundle_digest": "1f6725f77260928f0d6788f90e1fc0f69ff043dccb730d59f36480f1757b28e1",
+      "expected_outcome": "unchanged_in_observed_scope",
+      "outcome": null,
+      "expected_facts": [],
+      "emitted_facts": [],
+      "grade": {
+        "expected": 0,
+        "emitted": 0,
+        "matched": 0,
+        "missed": 0,
+        "duplicates": 0,
+        "unsupported": 0,
+        "precision": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "unit": "ratio",
+          "state": "not_applicable"
+        },
+        "recall": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "unit": "ratio",
+          "state": "not_applicable"
+        },
+        "pass": true
+      },
+      "verification": [],
+      "review_previews": [],
+      "unsupported_publications": 0,
+      "correct_noop_or_uncertainty": false,
+      "supported_proposals": 0,
+      "status": "completed",
+      "error": null,
+      "reply": "{\"name\": \"list_changes\", \"arguments\": {\"bundle_id\": \"bundle_1f6725f77260928f0d6788f90e1fc0f69ff043dccb730d59f36480f1757b28e1\"}}",
+      "reply_error": "invalid_outcome",
+      "runtime": {
+        "requests": [
+          {
+            "request_id": "request-1",
+            "started_at": "2026-11-01T16:32:14.561Z",
+            "tool_inventory": [
+              "inspect_snapshot",
+              "list_changes",
+              "propose_finding"
+            ],
+            "tool_inventory_digest": "82cef7002a3519faab702677894297d7cb8c1d15c0d7a656f65aa0b45147f98b",
+            "prompt_digest": "c9b58c4d28a0e541d678b5f37b94f15ea3ae21154771fe5aff567a484955289d",
+            "output_token_cap": 256,
+            "temperature": 0,
+            "status": "completed",
+            "provider_dispatched": true,
+            "finish_reason": {
+              "unified": "stop",
+              "raw": "stop"
+            },
+            "generated_tokens": 79,
+            "input_tokens": 891
+          }
+        ],
+        "provider_calls": [],
+        "executions": [],
+        "proposals": [],
+        "errors": []
+      },
+      "session_id": "wrun_01M6BZ8MRWHTREKJN5CYH73B9F",
+      "normalization_error": null,
+      "events": [
+        {
+          "data": {
+            "runtime": {
+              "agentId": "watchtower",
+              "agentName": "watchtower",
+              "eveVersion": "1.0.0-rc.1"
+            }
+          },
+          "type": "session.started",
+          "meta": {
+            "at": "2026-11-01T16:32:14.546Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 0
+            }
+          }
+        },
+        {
+          "data": {
+            "deliveryId": "392471b9-1d15-4070-9741-38932025ba40",
+            "principal": {
+              "id": "local-dev",
+              "type": "local-dev"
+            },
+            "source": {
+              "channel": "channel:eve"
+            }
+          },
+          "type": "delivery.admitted",
+          "meta": {
+            "at": "2026-11-01T16:32:14.546Z",
+            "endOfLine": true,
+            "position": {
+              "index": 1,
+              "line": 0
+            }
+          }
+        },
+        {
+          "data": {
+            "cause": {
+              "deliveryId": "392471b9-1d15-4070-9741-38932025ba40"
+            },
+            "follows": null,
+            "trace": {
+              "decision": {
+                "action": "record",
+                "recordInputs": true,
+                "recordOutputs": true
+              },
+              "spanId": "e8aa60835d26f06a",
+              "traceFlags": 1,
+              "traceId": "71bea782919e185f3fa0aeb8f4ac04cb"
+            },
+            "turnId": "turn_0"
+          },
+          "type": "turn.started",
+          "scope": {
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:32:14.549Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 1
+            }
+          }
+        },
+        {
+          "data": {
+            "deliveryId": "392471b9-1d15-4070-9741-38932025ba40",
+            "parts": [
+              {
+                "kind": "text",
+                "text": "Inspect this immutable observation bundle. {\"bundle_id\":\"bundle_1f6725f77260928f0d6788f90e1fc0f69ff043dccb730d59f36480f1757b28e1\",\"namespace\":\"synthetic:evaluation\",\"source_id\":1001,\"before_state\":\"captured\",\"after_state\":\"captured\",\"before_scope\":\"bounded-v1\",\"after_scope\":\"bounded-v1\",\"uncovered_scope\":[],\"normalization_error\":null}"
+              }
+            ],
+            "turnId": "turn_0"
+          },
+          "type": "delivery.consumed",
+          "scope": {
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:32:14.549Z",
+            "endOfLine": true,
+            "position": {
+              "index": 1,
+              "line": 1
+            }
+          }
+        },
+        {
+          "data": {
+            "owner": {
+              "turnId": "turn_0"
+            },
+            "runId": "run_0"
+          },
+          "type": "model.requested",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:32:14.552Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 2
+            }
+          }
+        },
+        {
+          "data": {
+            "attempt": 0,
+            "modelId": "watchtower_ollama/qwen3:0.6b",
+            "runId": "run_0"
+          },
+          "type": "model.started",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 3
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "{\"",
+            "kind": "text",
+            "partId": "run_0.0"
+          },
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 4
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "name",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 5
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "\":",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 6
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": " \"",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 7
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "list",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 8
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "_changes",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 9
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "\",",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 10
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": " \"",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 11
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "arguments",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 12
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "\":",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 13
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": " {\"",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 14
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "bundle",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 15
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "_id",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 16
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "\":",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 17
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": " \"",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 18
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "bundle",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 19
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "_",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 20
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "1",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 21
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "f",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 22
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "6",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 23
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "7",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 24
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "2",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 25
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "5",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 26
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "f",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 27
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "7",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 28
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "7",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 29
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "2",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 30
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "6",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 31
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "0",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 32
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "9",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 33
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "2",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 34
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "8",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 35
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "f",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 36
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "0",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 37
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "d",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 38
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "6",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 39
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "7",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 40
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "8",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 41
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "8",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 42
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "f",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 43
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "9",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 44
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "0",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 45
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "e",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 46
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "1",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 47
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "fc",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 48
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "0",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 49
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "f",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 50
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "6",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 51
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "9",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 52
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "ff",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 53
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "0",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 54
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "4",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 55
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "3",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 56
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "d",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 57
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "ccb",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 58
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "7",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 59
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "3",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 60
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "0",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 61
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "d",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 62
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "5",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 63
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "9",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 64
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "f",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 65
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "3",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 66
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "6",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 67
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "4",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 68
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "8",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 69
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "0",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 70
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "f",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 71
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "1",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 72
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "7",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 73
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "5",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 74
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "7",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 75
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "b",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 76
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "2",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 77
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "8",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 78
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "e",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 79
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "1",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 80
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "\"}}",
+            "partId": "run_0.0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:32:14.554Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 81
+            }
+          }
+        },
+        {
+          "data": {
+            "kind": "text",
+            "partId": "run_0.0",
+            "phase": "reply",
+            "runId": "run_0",
+            "value": "{\"name\": \"list_changes\", \"arguments\": {\"bundle_id\": \"bundle_1f6725f77260928f0d6788f90e1fc0f69ff043dccb730d59f36480f1757b28e1\"}}"
+          },
+          "type": "content.completed",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:32:16.222Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 82
+            }
+          }
+        },
+        {
+          "data": {
+            "finishReason": "stop",
+            "outcome": "completed",
+            "runId": "run_0"
+          },
+          "type": "model.settled",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:32:16.223Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 83
+            }
+          }
+        },
+        {
+          "data": {
+            "kind": "model",
+            "owner": {
+              "runId": "run_0"
+            },
+            "usage": {
+              "cacheReadTokens": 765,
+              "cacheWriteTokens": 0,
+              "inputTokens": 891,
+              "outputTokens": 79
+            }
+          },
+          "type": "usage.recorded",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:32:16.223Z",
+            "endOfLine": true,
+            "position": {
+              "index": 1,
+              "line": 83
+            }
+          }
+        },
+        {
+          "data": {
+            "outcome": "completed",
+            "reply": [
+              "run_0.0"
+            ],
+            "turnId": "turn_0"
+          },
+          "type": "turn.settled",
+          "scope": {
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:32:16.239Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 84
+            }
+          }
+        },
+        {
+          "data": {
+            "deliveryId": "392471b9-1d15-4070-9741-38932025ba40",
+            "outcome": "handled",
+            "turnId": "turn_0"
+          },
+          "type": "delivery.settled",
+          "meta": {
+            "at": "2026-11-01T16:32:16.239Z",
+            "endOfLine": true,
+            "position": {
+              "index": 1,
+              "line": 84
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

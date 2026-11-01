@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-11-01T16:39:22.833Z",
+  "neon": {
+    "project_id": "sparkling-mode-99569565",
+    "branch_id": "br-gentle-feather-b5gitp6s",
+    "org_id": "org-red-hill-57715386",
+    "plan": "free",
+    "postgres_version": 18,
+    "endpoint": "direct",
+    "tls": {
+      "rejectUnauthorized": true,
+      "channel_binding": true
+    },
+    "migrations": [
+      "001_watchtower.sql",
+      "002_runtime_adapter.sql"
+    ],
+    "actual_ready": true
+  },
+  "vercel": {
+    "project_id": "prj_lYRZi3drj3O1KVLqx98pdpBEPAZL",
+    "team_id": "team_NNcxgB3J9dHQnUJYJJYvRMda",
+    "plan": "hobby",
+    "framework": "container",
+    "production_deployment": null,
+    "database_secret": "approval_blocked"
+  },
+  "github": {
+    "repository": null,
+    "pages": null,
+    "dispatch": null,
+    "reason": "No repository create connector; native Chrome windows minimized and unavailable to browser controls."
+  }
+}

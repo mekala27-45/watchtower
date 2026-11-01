@@ -98,7 +98,11 @@ function nextPage(headers, source, currentPage) {
     const target = part.match(/<([^>]+)>/)?.[1];
     if (!target) fail('INVALID_LINK_HEADER');
     let url; try { url = new URL(target); } catch { fail('INVALID_LINK_HEADER'); }
-    if (url.origin !== 'https://api.github.com' || url.pathname !== `/repos/${source.label}/releases` || url.username || url.password || url.hash || url.searchParams.size !== 2 || url.searchParams.get('per_page') !== '20' || Number(url.searchParams.get('page')) !== currentPage + 1) fail('UNTRUSTED_NEXT_PAGE');
+    // GitHub emits its numeric repository route in Link headers. Treat it only
+    // as a next-page indication for this already pinned identity; requests are
+    // still constructed from the fixed canonical label by the frozen plan.
+    const sameRepository=url.pathname===`/repos/${source.label}/releases`||url.pathname===`/repositories/${source.sourceId}/releases`;
+    if (url.origin !== 'https://api.github.com' || !sameRepository || url.username || url.password || url.hash || url.searchParams.size !== 2 || url.searchParams.get('per_page') !== '20' || url.searchParams.get('page') !== String(currentPage + 1)) fail('UNTRUSTED_NEXT_PAGE');
     return true;
   }
   return false;

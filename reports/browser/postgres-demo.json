@@ -1,0 +1,37 @@
+{
+  "schema": "watchtower-screenshot-sequence-v1",
+  "artifact": "postgres-demo.gif",
+  "kind": "presentation_sequence_from_actual_browser_screenshots",
+  "not_elapsed_time_video": true,
+  "backend": "postgres",
+  "source_revision": "3de3342a04ba4527984890df743a4c208ba1d01f",
+  "browser_report": "reports/browser/postgres.json",
+  "capture_started_at": "2026-11-01T16:40:40.134Z",
+  "capture_finished_at": "2026-11-01T16:41:00.863Z",
+  "processing": "Repeated masthead/footer cropped; frames padded and resized uniformly; no generated interface content.",
+  "duration_ms": [
+    2600,
+    1800,
+    2400,
+    3000
+  ],
+  "sources": [
+    {
+      "file": "postgres-briefing-review.png",
+      "sha256": "0ab9e84319bc6e34c6babd762dca6c5eeffc00ffd9a8fd2ea5030a2baf4e3dfa"
+    },
+    {
+      "file": "postgres-briefing-approved.png",
+      "sha256": "d60223061a4374d87bb2f79e28139fdc04c9f54eae361b589a8b33ba341776b7"
+    },
+    {
+      "file": "postgres-briefing-published.png",
+      "sha256": "55d2a2695b3684ae186adfb4d19c7e05bf0a84feb7b0a6c0f70e03d5ff4f13ad"
+    },
+    {
+      "file": "postgres-briefing-recovered.png",
+      "sha256": "ed67376e2b9c2b321b911dfb2a097a4ea7d4f577ce4a2fb541607aa890458ec0"
+    }
+  ],
+  "sha256": "ae42d9f0608f6e2bdbe1ee6eceb48d6c2e593c5ff2643bf31e3f78386c2d8c44"
+}

@@ -1,0 +1,13 @@
+# Browser verification
+
+The proof sheet keeps the live source desk, synthetic review desk, actual agent trace and independent evaluation tables separate. A table is used for the small model subset so every case and denominator stays available. Both themes use the exact supplied palette. Bundled Bodoni Moda, Noto Sans and Fira Mono assets carry the original SIL Open Font License text in apps/site/fonts; provenance.json records every redistributed file digest.
+
+Run `npm run build:site`, then `npm run test:browser`. The browser suite launches a fresh headless browser profile against the compiled Vite artifact and real HTTP routes. Its default database is disposable in-memory SQLite, labeled as such. Set `WATCHTOWER_BROWSER_POSTGRES=1` and load the approved local DATABASE_URL to exercise the same suite against the Postgres adapter. Set `WATCHTOWER_BROWSER_LABEL=postgres` to preserve that evidence separately.
+
+The suite tests prepare, explicit digest approval, publication, identical retry, and an independent HTTP read that finds one receipt. It also checks loaded font faces, keyboard focus, live labels, reduced motion, actual rendered text contrast in both themes, narrow stacking, unknown sources, loading, partial coverage, failed reads and expired sessions. Loading, partial and network-failure cases deliberately control browser responses and are labeled accordingly. Stale review changes the real source head after approval, verifies HTTP rejection and checks that no receipt was written. Only the session created by the expiration test is expired.
+
+For the public site, set `WATCHTOWER_BROWSER_URL` to the actual Pages URL and `WATCHTOWER_BROWSER_LABEL=public`. The build must already contain its approved public API origin. The public run exercises the real browser-to-API workflow and a separate client; local-only fault manipulations are omitted. A local browser result does not establish public Pages or hosted API success.
+
+The report names its tested source revision, backend, browser version and timestamps. Reports generated while implementation changes are uncommitted are development evidence; release verification must rerun on the frozen candidate revision. Screenshots retain the UI state actually observed, including unavailable model results when inference has not run.
+
+`scripts/make-demo-gif.py LABEL` assembles the review, approval, publication and recovery screenshots from a passed browser run. Its companion JSON records input hashes and display durations. It is a presentation sequence of actual screenshots, not a continuous recording or a latency measurement. No interface text or result is invented by the assembly script.

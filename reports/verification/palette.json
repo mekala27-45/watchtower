@@ -1,0 +1,23 @@
+{
+  "failures": 0,
+  "modes": {
+    "light": {
+      "failures": 0,
+      "worstAdjacentCvd": 13.7,
+      "worstAdjacentNormal": 13.8,
+      "worstSlotContrast": 3.49,
+      "worstCardContrast": 3.79,
+      "firstThreeAllPairsCvd": 18.9,
+      "failingChecks": []
+    },
+    "dark": {
+      "failures": 0,
+      "worstAdjacentCvd": 12.2,
+      "worstAdjacentNormal": 14.0,
+      "worstSlotContrast": 4.1,
+      "worstCardContrast": 3.24,
+      "firstThreeAllPairsCvd": 13.7,
+      "failingChecks": []
+    }
+  }
+}

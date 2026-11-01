@@ -131,6 +131,20 @@ test('bounded pagination reports uncovered pages and refuses forged next links',
   const forged = await collect(queue(json([release()], { link: '<https://evil.test/x>; rel="next"' })));
   assert.equal(forged.state, 'unavailable'); assert.equal(forged.errors[0].code, 'UNTRUSTED_NEXT_PAGE');
 });
+test('numeric GitHub pagination alias is pinned to the verified repository and never used as an outbound URL',async()=>{
+  const next=`<https://api.github.com/repositories/${source.sourceId}/releases?per_page=20&page=2>; rel="next", <https://api.github.com/repositories/${source.sourceId}/releases?per_page=20&page=15>; rel="last"`;
+  const q=queue(json([release()],{link:next}),json([release(2)]));
+  const result=await collect(q);assert.equal(result.state,'captured');assert.equal(result.attempts.length,2);
+  assert.equal(q.calls[1].url,`https://api.github.com/repos/${source.label}/releases?per_page=20&page=2`);
+  const truncated=await collect(queue(json([release()],{link:next}),json([release(2)],{link:`<https://api.github.com/repositories/${source.sourceId}/releases?per_page=20&page=3>; rel="next"`})));
+  assert.equal(truncated.state,'partial');assert.equal(truncated.coverage.truncated,true);assert.equal(truncated.attempts.length,2);
+  for(const url of [
+    `https://api.github.com/repositories/${source.sourceId+1}/releases?per_page=20&page=2`,
+    `https://api.github.com/repositories/${source.sourceId}/releases?per_page=20&page=02`,
+    `https://api.github.com/repositories/${source.sourceId}/releases?per_page=20&page=2&extra=1`,
+    `https://api.github.com/repositories/${source.sourceId}/releases?per_page=20&page=2#forged`,
+  ]){const rejected=await collect(queue(json([release()],{link:`<${url}>; rel="next"`})));assert.equal(rejected.state,'unavailable');assert.equal(rejected.errors[0].code,'UNTRUSTED_NEXT_PAGE');assert.equal(rejected.attempts.length,1);}
+});
 test('same duplicate identity is deduplicated and conflicting pages are unstable', async () => {
   const stable = await collect(queue(json([release()], { link: page2 }), json([release()])));
   assert.equal(stable.state, 'captured'); assert.equal(stable.items.length, 1);

@@ -1,19 +1,89 @@
 {
-  "checked_at":"2026-11-01",
-  "runtime":{"node":"24.19.0","sqlite":"3.53.3"},
-  "installed_third_party_dependencies":[],
-  "required_candidates":[
-    {"package":"eve","candidate":"1.0.0-rc.1","status":"unverified"},
-    {"package":"ai","candidate":"7.0.159","status":"unverified"},
-    {"package":"@ai-sdk/openai-compatible","candidate":"3.0.82","status":"unverified"},
-    {"package":"pg","candidate":"8.23.1","status":"unverified"},
-    {"package":"zod","candidate":"4.6.7","status":"unverified"},
-    {"package":"typescript","candidate":"7.0.2","status":"unverified"},
-    {"package":"vite","candidate":"8.3.5","status":"unverified"},
-    {"package":"@playwright/test","candidate":"1.64.1","status":"unverified"}
+  "checked_at": "2026-11-01T16:47:04.524Z",
+  "runtime": {
+    "node": "24.19.0"
+  },
+  "packages": [
+    {
+      "package": "@ai-sdk/openai-compatible",
+      "declared": "3.0.82",
+      "installed": "3.0.82",
+      "integrity": "sha512-wey0CbujWRkZbbrJjw/GJHyjXpt0v44PQKaTGTVGmigqnM057G7GQHDyZQQj9O0lICY5qJxzpn4wCSftT8BSQg==",
+      "license": "Apache-2.0"
+    },
+    {
+      "package": "@fontsource/bodoni-moda",
+      "declared": "5.3.0",
+      "installed": "5.3.0",
+      "integrity": "sha512-Wt2XBCHivYxkTP3ydq/Ax+7VshwsOh/6ayA5om2t+yClCkGwLPj2Mi6OnyMANjyLcqDUWs4rlOHnc8SBLf6/pA==",
+      "license": "OFL-1.1"
+    },
+    {
+      "package": "@fontsource/fira-mono",
+      "declared": "5.3.0",
+      "installed": "5.3.0",
+      "integrity": "sha512-FZzRwKhpoXQU1uhEGKUg5AHUUdfiaTXxGCdBBeGHUmcZaqEDEmndSVvpXHkSViH25f/UiWfhcWTib+6A8o4qeQ==",
+      "license": "OFL-1.1"
+    },
+    {
+      "package": "@fontsource/noto-sans",
+      "declared": "5.3.0",
+      "installed": "5.3.0",
+      "integrity": "sha512-fBCog2PY7DiVVTEEqtI/Qdinx/knobHYfoGpjFXdfBX5RoJaBp1Prw2G75p0OIsdlMZg3cLo0c+YbIUYOxnQJw==",
+      "license": "OFL-1.1"
+    },
+    {
+      "package": "@playwright/test",
+      "declared": "1.64.1",
+      "installed": "1.64.1",
+      "integrity": "sha512-IaYGml/nSOiZWROfPtuIL7neuu9qDOZ3TNvNljUIrhDMxiGTgPjzj/g9p9RxpS2tSepPDRY+UwAaEeiKtUvIAg==",
+      "license": "Apache-2.0"
+    },
+    {
+      "package": "ai",
+      "declared": "7.0.159",
+      "installed": "7.0.159",
+      "integrity": "sha512-4e/BwDoKJlMNYZaqERcTbGte+4TwroN9qKnCprog/XVfD9InzVPlhCviDhN452JIRrRsYg9BT0WsQ2C3Ds2mVQ==",
+      "license": "Apache-2.0"
+    },
+    {
+      "package": "eve",
+      "declared": "1.0.0-rc.1",
+      "installed": "1.0.0-rc.1",
+      "integrity": "sha512-yg1zd3Wwi0OY+ue6NP8IV3gPa+Kth9jIB6Af0/sqVElySXWKxL9j0lNkTAddTI38SbyEu0Z11YCZhIlaOQTZLQ==",
+      "license": "Apache-2.0"
+    },
+    {
+      "package": "pg",
+      "declared": "8.23.1",
+      "installed": "8.23.1",
+      "integrity": "sha512-aL96AHANtWjPLDOLqnhx+ngp9+UK7ETEU8VJrDCGvsSSi/mGLcWYsS6Herg7lmaBJe4uwrfqsa7gTEFaSizDoQ==",
+      "license": "MIT"
+    },
+    {
+      "package": "typescript",
+      "declared": "7.0.2",
+      "installed": "7.0.2",
+      "integrity": "sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==",
+      "license": "Apache-2.0"
+    },
+    {
+      "package": "vite",
+      "declared": "8.3.5",
+      "installed": "8.3.5",
+      "integrity": "sha512-z1YpjieJ9g0ebTmQpLBv/oq9E3F9EIlOe+7LahW8SrE3LTiG3udBRUXQOlYXP9b+IC2q2phHeVxj9xGlw34OEQ==",
+      "license": "MIT"
+    },
+    {
+      "package": "zod",
+      "declared": "4.6.7",
+      "installed": "4.6.7",
+      "integrity": "sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==",
+      "license": "MIT"
+    }
   ],
-  "registry_probe":"DNS failure; no integrity or compatibility claim",
-  "container_digest":null,
-  "fonts":{"Bodoni Moda":"not installed","Noto Sans":"not installed","Fira Mono":"not installed"},
-  "source":"day-23-watchtower-prompt.md inherited candidates, not installed versions"
+  "registry_evidence": "reports/probes/dependencies.json",
+  "container_evidence": "reports/probes/container-image.json",
+  "font_evidence": "apps/site/fonts/provenance.json",
+  "initial_failed_probe": "docs/sources/dependency-lock-initial.json"
 }

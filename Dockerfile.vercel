@@ -1,10 +1,13 @@
-ARG NODE_IMAGE
-FROM $NODE_IMAGE
+FROM node:24.19.0-bookworm-slim@sha256:a9f5f7c91a432850b2a8a7797adf5eadb6c733ceed61167806cee7ea7fbc29df
 WORKDIR /app
-COPY package.json ./
+COPY package.json package-lock.json ./
+RUN npm ci --omit=dev --ignore-scripts --no-audit --no-fund && npm cache clean --force
 COPY apps ./apps
 COPY packages ./packages
 COPY reports ./reports
+COPY config ./config
+COPY db ./db
+RUN mkdir -p /app/state && chown node:node /app/state
 ENV PORT=80
 ENV HOST=0.0.0.0
 ENV WATCHTOWER_DEPLOYMENT=production

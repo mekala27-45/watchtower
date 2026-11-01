@@ -1,0 +1,37 @@
+{
+  "schema": "watchtower-screenshot-sequence-v1",
+  "artifact": "local-demo.gif",
+  "kind": "presentation_sequence_from_actual_browser_screenshots",
+  "not_elapsed_time_video": true,
+  "backend": "sqlite_local_candidate",
+  "source_revision": "3de3342a04ba4527984890df743a4c208ba1d01f",
+  "browser_report": "reports/browser/local.json",
+  "capture_started_at": "2026-11-01T16:33:22.701Z",
+  "capture_finished_at": "2026-11-01T16:33:25.045Z",
+  "processing": "Repeated masthead/footer cropped; frames padded and resized uniformly; no generated interface content.",
+  "duration_ms": [
+    2600,
+    1800,
+    2400,
+    3000
+  ],
+  "sources": [
+    {
+      "file": "local-briefing-review.png",
+      "sha256": "ab178268054c95772640ea9491f01fdc6e68ea12bc8752590a063468c0896017"
+    },
+    {
+      "file": "local-briefing-approved.png",
+      "sha256": "e6edc14379f26a5933e8bf3c9c9fec7af4d3f5cede3451120b068af0357f170f"
+    },
+    {
+      "file": "local-briefing-published.png",
+      "sha256": "c0013b35202e569ed41b4322a55943d2c195a63938201d7b4ffc37aa6d27589f"
+    },
+    {
+      "file": "local-briefing-recovered.png",
+      "sha256": "c28932ff868e61e3534d6cca0debfe19c5c70a5f993e3469b80491af7c26d7e6"
+    }
+  ],
+  "sha256": "3476c0457e79e5ad8a9374197c877ff2d2c67d669ddc4cdaec6ad3968b12a4a9"
+}

@@ -21,11 +21,18 @@ function temporary(t) {
   return {open(){const s=new Store(path);opened.push(s);return s;},path};
 }
 
-test('preflight records unresolved fixed identities and refuses malformed or empty scope',()=>{
+test('preflight separates verified source identity from backend readiness and refuses malformed scope',()=>{
   const config=JSON.parse(readFileSync(new URL('../config/watchlist.json',import.meta.url),'utf8'));
   const report=collectionPreflight(config);
   assert.equal(report.sources.length,4);assert.equal(report.ready_for_live_collection,false);
-  assert.deepEqual(report.blockers,['repository_numeric_identities_unresolved','rest_api_version_unverified','direct_postgres_adapter_unavailable']);
+  const expected=[];
+  if(config.sources.some(source=>source.identity_verified!==true||!Number.isSafeInteger(source.source_id)||source.source_id<1||typeof source.identity_evidence!=='string'||source.identity_evidence.length===0))expected.push('repository_numeric_identities_unresolved');
+  if(config.api_version!=='2026-03-10'||config.api_version_verified!==true)expected.push('rest_api_version_unverified');
+  assert.deepEqual(report.blockers,[...expected,'direct_postgres_adapter_unavailable']);
+  const postgres=collectionPreflight(config,{backend:'postgres_verified'});
+  assert.deepEqual(postgres.blockers,expected);assert.equal(postgres.ready_for_live_collection,expected.length===0);
+  const unresolved={...config,api_version_verified:false,sources:config.sources.map(source=>({...source,source_id:null,identity_verified:false,identity_evidence:null}))};
+  assert.deepEqual(collectionPreflight(unresolved).blockers,['repository_numeric_identities_unresolved','rest_api_version_unverified','direct_postgres_adapter_unavailable']);
   assert.equal(report.requests_attempted,0);assert.equal(report.workflow_dispatch_succeeded,false);
   assert.throws(()=>collectionPreflight({...config,sources:[{label:'attacker/repo'}]}),/invalid_fixed_watchlist/);
   assert.throws(()=>collectionPreflight({}),/invalid_fixed_watchlist/);

@@ -3,35 +3,35 @@
   "procedure_version": "bounded-github-v1",
   "source_policy_version": "source-policy-v1",
   "api_version": "2026-03-10",
-  "api_version_verified": false,
+  "api_version_verified": true,
   "namespace": "live",
   "sources": [
     {
       "label": "vercel/eve",
-      "source_id": null,
-      "identity_verified": false,
-      "identity_evidence": null,
+      "source_id": 1271113810,
+      "identity_verified": true,
+      "identity_evidence": "reports/probes/github-identities.json",
       "watched_ids": []
     },
     {
       "label": "ollama/ollama",
-      "source_id": null,
-      "identity_verified": false,
-      "identity_evidence": null,
+      "source_id": 658928958,
+      "identity_verified": true,
+      "identity_evidence": "reports/probes/github-identities.json",
       "watched_ids": []
     },
     {
       "label": "microsoft/playwright",
-      "source_id": null,
-      "identity_verified": false,
-      "identity_evidence": null,
+      "source_id": 221981891,
+      "identity_verified": true,
+      "identity_evidence": "reports/probes/github-identities.json",
       "watched_ids": []
     },
     {
       "label": "vitejs/vite",
-      "source_id": null,
-      "identity_verified": false,
-      "identity_evidence": null,
+      "source_id": 257485422,
+      "identity_verified": true,
+      "identity_evidence": "reports/probes/github-identities.json",
       "watched_ids": []
     }
   ],
@@ -43,7 +43,5 @@
     "source_deadline_ms": 45000,
     "lease_ms": 120000
   },
-  "state": "unresolved",
-  "reason": "Numeric repository identities and API version require an actual runner probe. Do not invent identity values."
+  "state": "verified"
 }
-

@@ -12,12 +12,17 @@ for(const file of tracked.filter(f=>f.endsWith('.mjs'))){
  const r=spawnSync(process.execPath,['--check',file],{encoding:'utf8'});if(r.status!==0)syntax.push({file,error:'syntax_error'});
 }
 const prose=[];
-for(const file of tracked.filter(f=>f.endsWith('.md'))){
- const text=readFileSync(file,'utf8').replace(/\x60{3}[\s\S]*?\x60{3}/g,'').replace(/\x60[^\x60]*\x60/g,'');
+const proseRules=JSON.parse(readFileSync('config/prose-rules.json','utf8'));
+const escapeRegex=value=>value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+const vocabulary=new RegExp('\\b(?:'+proseRules.phrases.map(p=>p.endsWith('e')?escapeRegex(p.slice(0,-1))+'(?:e|es|ed|ing)':escapeRegex(p)+'(?:s|ed|ing)?').join('|')+')\\b','i');
+for(const file of tracked.filter(f=>f.endsWith('.md')&&!['agent/instructions.md','docs/sources/model-instructions-initial.md'].includes(f))){
+ const text=readFileSync(file,'utf8').replace(/\x60{3}[\s\S]*?\x60{3}/g,'').replace(/\x60[^\x60]*\x60/g,'').replace(/^[ \t]*[|: -]{3,}[ \t]*$/gm,'');
  if(/[^\x09\x0a\x0d\x20-\x7e]/.test(text))prose.push({file,reason:'non_ascii_prose'});
  if(/["']/.test(text))prose.push({file,reason:'quoted_prose'});
+ if(/--/.test(text))prose.push({file,reason:'double_hyphen_in_prose'});
+ if(vocabulary.test(text))prose.push({file,reason:'series_vocabulary'});
 }
-const record={code_revision:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),generated_at:new Date().toISOString(),tests:{total:count('tests'),passed:count('pass'),failed:count('fail'),skipped:count('skipped'),exit_code:result.status,evidence:'reports/verification/tests.tap'},syntax:{status:syntax.length?'failed':'passed',failures:syntax},scan,prose:{status:prose.length?'failed':'passed',failures:prose,vocabulary_source:'Inherited Day 7 banned vocabulary unavailable; this gate covers ASCII and quote rules only.'},required_remote_checks:'not_executed',actual_model_gate:'not_executed'};
+const record={code_revision:execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),generated_at:new Date().toISOString(),tests:{total:count('tests'),passed:count('pass'),failed:count('fail'),skipped:count('skipped'),exit_code:result.status,evidence:'reports/verification/tests.tap'},syntax:{status:syntax.length?'failed':'passed',failures:syntax},scan,prose:{status:prose.length?'failed':'passed',failures:prose,vocabulary_source:proseRules.source,vocabulary_source_sha256:proseRules.source_sha256,excluded_runtime_prompt_evidence:['agent/instructions.md','docs/sources/model-instructions-initial.md']},required_remote_checks:'reports/verification/delivery.json',actual_model_gate:'scripts/verify-report-evidence.mjs validates actual archives separately'};
 record.local_checks_passed=result.status===0&&!syntax.length&&scan.status==='passed'&&!prose.length;
 writeFileSync('reports/verification/checks.json',JSON.stringify(record,null,2)+'\n');
 console.log(JSON.stringify(record,null,2));if(!record.local_checks_passed)process.exitCode=1;

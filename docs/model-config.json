@@ -1,0 +1,16 @@
+{
+  "model": "qwen3:0.6b",
+  "artifact_digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+  "runtime": "ollama",
+  "runtime_version": "0.40.13",
+  "quantization": "Q4_K_M",
+  "placement": "CPU",
+  "context": 8192,
+  "max_turns": 3,
+  "max_tool_calls": 4,
+  "sequence_deadline_ms": 60000,
+  "temperature": 0,
+  "seed": 23,
+  "status": "frozen",
+  "adapter": "eve-native-ollama-v1"
+}

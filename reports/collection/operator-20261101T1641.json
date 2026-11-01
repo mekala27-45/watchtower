@@ -1,0 +1,134 @@
+{
+  "namespace": "live",
+  "mode": "live_source",
+  "backend": "postgres",
+  "job_id": "operator-20261101T1641",
+  "plan_digest": "b141b609f5feacb41b27abc96ffdade28368a9ab3c89490b912573ffbb327c19",
+  "state": "incomplete",
+  "attempt_budget": 24,
+  "attempted": 4,
+  "budget_remaining": 20,
+  "live_collection_executed": true,
+  "workflow_dispatch_succeeded": false,
+  "outcomes": [
+    {
+      "source_id": 1271113810,
+      "run_id": "collect-d2e8d7d26020be01cd4ea21e531bb0d1338554435d14824dd50c4a94224032ea",
+      "state": "unavailable",
+      "attempted": 1,
+      "comparison_head": null,
+      "next_eligible_at": null,
+      "persistence": "committed_with_fence",
+      "mode": "live_source",
+      "backend": "postgres"
+    },
+    {
+      "source_id": 658928958,
+      "run_id": "collect-8f231e41d8ed704ef3032a9b353daed6f18712ac252f4b812e6b3edcdfcde272",
+      "state": "unavailable",
+      "attempted": 1,
+      "comparison_head": null,
+      "next_eligible_at": null,
+      "persistence": "committed_with_fence",
+      "mode": "live_source",
+      "backend": "postgres"
+    },
+    {
+      "source_id": 221981891,
+      "run_id": "collect-cd4b4319962591f24301d375021a4512c05b4996335b97045429d3637462653c",
+      "state": "unavailable",
+      "attempted": 1,
+      "comparison_head": null,
+      "next_eligible_at": null,
+      "persistence": "committed_with_fence",
+      "mode": "live_source",
+      "backend": "postgres"
+    },
+    {
+      "source_id": 257485422,
+      "run_id": "collect-1cee2ca72ea082ef8c17961561407a586b5c0fa275775baa0d56e92f2ceaf901",
+      "state": "unavailable",
+      "attempted": 1,
+      "comparison_head": null,
+      "next_eligible_at": null,
+      "persistence": "committed_with_fence",
+      "mode": "live_source",
+      "backend": "postgres"
+    }
+  ],
+  "retention": {
+    "namespace": "live",
+    "settings": {
+      "keepRecentJobs": 100,
+      "keepRecentRunsPerSource": 100,
+      "keepLatestRevisions": 2,
+      "maxRows": 10000,
+      "maxBytes": 16777216,
+      "unfinishedGraceMs": 300000
+    },
+    "delete_runs": [],
+    "delete_jobs": [],
+    "delete_cache": [],
+    "deleted": {
+      "jobs": 0,
+      "runs": 0,
+      "attempts": 0,
+      "cache": 0
+    },
+    "retained": {
+      "jobs": 1,
+      "runs": 4,
+      "attempts": 4,
+      "cache": 0,
+      "rows": 9,
+      "bytes": 13674
+    },
+    "pinned_runs": [
+      {
+        "id": "collect-1cee2ca72ea082ef8c17961561407a586b5c0fa275775baa0d56e92f2ceaf901",
+        "reasons": [
+          "latest_attempt",
+          "recent_source_attempt",
+          "retained_job"
+        ]
+      },
+      {
+        "id": "collect-8f231e41d8ed704ef3032a9b353daed6f18712ac252f4b812e6b3edcdfcde272",
+        "reasons": [
+          "latest_attempt",
+          "recent_source_attempt",
+          "retained_job"
+        ]
+      },
+      {
+        "id": "collect-cd4b4319962591f24301d375021a4512c05b4996335b97045429d3637462653c",
+        "reasons": [
+          "latest_attempt",
+          "recent_source_attempt",
+          "retained_job"
+        ]
+      },
+      {
+        "id": "collect-d2e8d7d26020be01cd4ea21e531bb0d1338554435d14824dd50c4a94224032ea",
+        "reasons": [
+          "latest_attempt",
+          "recent_source_attempt",
+          "retained_job"
+        ]
+      }
+    ],
+    "pinned_jobs": [
+      {
+        "id": "operator-20261101T1641",
+        "reasons": [
+          "pinned_run",
+          "recent_job"
+        ]
+      }
+    ],
+    "evidence_deleted": false,
+    "observations_deleted": false,
+    "receipts_deleted": false,
+    "backend": "postgres"
+  }
+}

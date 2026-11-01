@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {methodLabel,printable,timestamp,coverageLabel,metricValue,safeSourceUrl,normalizeSources,partitionResults,evidenceFields,modelCaseId,reportMetrics} from '../apps/site/view-model.mjs';
 import {Store} from '../packages/workflow/store.mjs';
+import {publicRuntimeConfig} from '../apps/site/runtime-config.mjs';
 
 test('unavailable evidence never renders as zero or a successful negative',()=>{
  assert.equal(printable(undefined),'Unavailable');assert.equal(printable(null),'Unavailable');
@@ -44,7 +45,8 @@ test('UI shell exposes readable states and keyboard affordances without success 
  for(const id of ['view-sources','view-briefings','view-trace','view-evidence','approve','publish','recover','briefing-digest','receipt','theme-toggle'])assert.ok(html.includes('id="'+id+'"'),id);
  assert.match(html,/href="#main"/);assert.match(html,/aria-live="polite"/);assert.match(html,/scope="col"/);
  assert.match(css,/:focus-visible/);assert.match(css,/prefers-reduced-motion:reduce/);assert.match(css,/@media\(max-width:600px\)/);
- assert.match(html,/font files have not been installed or license-verified/);
+ assert.match(html,/fonts are bundled with their SIL Open Font License files/);
+ assert.match(css,/@font-face/);
  assert.match(html,/Public deployment: not verified/);
 });
 test('exact palette retains the requested magnitude ramps and text contrast',()=>{
@@ -80,15 +82,25 @@ test('source view consumes the real store shape and preserves failed attempt ver
  } finally {store.close();}
 });
 
-test('actual generated model rows retain every fixture identity and unavailable quality',()=>{
+test('actual generated model rows retain every fixture identity and reported quality state',()=>{
  const model=JSON.parse(readFileSync(new URL('../reports/model/current.json',import.meta.url),'utf8'));
  assert.deepEqual(model.rows.map(modelCaseId),model.subset_ids);
  assert.ok(model.rows.every(row=>modelCaseId(row)!=='Unspecified'));
  const metrics=reportMetrics(model);
  assert.equal(metrics.find(m=>m.id==='attempted').value,model.attempted);
  assert.equal(metrics.find(m=>m.id==='unexecuted').value,model.unexecuted);
- assert.equal(metricValue(metrics.find(m=>m.id==='model_metrics.precision')),'Unavailable');
- assert.equal(metricValue(metrics.find(m=>m.id==='model_metrics.supported_proposals')),'Unavailable');
+ for(const key of ['precision','supported_proposals']){
+  const metric=metrics.find(m=>m.id==='model_metrics.'+key);
+  assert.equal(metricValue(metric),metricValue(model.model_metrics[key]));
+  if(!model.attempted)assert.equal(metricValue(metric),'Unavailable');
+ }
+});
+
+test('public API configuration is an origin without credentials or arbitrary path',()=>{
+ assert.equal(publicRuntimeConfig('').apiOrigin,'');
+ assert.equal(publicRuntimeConfig('https://api.example.test').apiOrigin,'https://api.example.test');
+ assert.equal(publicRuntimeConfig('http://127.0.0.1:4318',{allowLocal:true}).apiOrigin,'http://127.0.0.1:4318');
+ for(const value of ['http://api.example.test','https://user:secret@api.example.test','https://api.example.test/path','https://api.example.test?token=x','javascript:alert(1)'])assert.throws(()=>publicRuntimeConfig(value));
 });
 
 test('actual baseline summary is rendered with its denominators and independent verifier counts',()=>{

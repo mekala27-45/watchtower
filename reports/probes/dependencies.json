@@ -1,0 +1,107 @@
+{
+  "checked_at": "2026-11-01T16:24:05.594Z",
+  "metadata": [
+    {
+      "name": "eve",
+      "version": "1.0.0-rc.1",
+      "engines": {
+        "node": ">=24"
+      },
+      "integrity": "sha512-yg1zd3Wwi0OY+ue6NP8IV3gPa+Kth9jIB6Af0/sqVElySXWKxL9j0lNkTAddTI38SbyEu0Z11YCZhIlaOQTZLQ==",
+      "tarball": "https://registry.npmjs.org/eve/-/eve-1.0.0-rc.1.tgz",
+      "status": 200
+    },
+    {
+      "name": "ai",
+      "version": "7.0.159",
+      "engines": {
+        "node": ">=22"
+      },
+      "integrity": "sha512-4e/BwDoKJlMNYZaqERcTbGte+4TwroN9qKnCprog/XVfD9InzVPlhCviDhN452JIRrRsYg9BT0WsQ2C3Ds2mVQ==",
+      "tarball": "https://registry.npmjs.org/ai/-/ai-7.0.159.tgz",
+      "status": 200
+    },
+    {
+      "name": "@ai-sdk/openai-compatible",
+      "version": "3.0.82",
+      "engines": {
+        "node": ">=22"
+      },
+      "integrity": "sha512-wey0CbujWRkZbbrJjw/GJHyjXpt0v44PQKaTGTVGmigqnM057G7GQHDyZQQj9O0lICY5qJxzpn4wCSftT8BSQg==",
+      "tarball": "https://registry.npmjs.org/@ai-sdk/openai-compatible/-/openai-compatible-3.0.82.tgz",
+      "status": 200
+    },
+    {
+      "name": "pg",
+      "version": "8.23.1",
+      "engines": {
+        "node": ">= 16.0.0"
+      },
+      "integrity": "sha512-aL96AHANtWjPLDOLqnhx+ngp9+UK7ETEU8VJrDCGvsSSi/mGLcWYsS6Herg7lmaBJe4uwrfqsa7gTEFaSizDoQ==",
+      "tarball": "https://registry.npmjs.org/pg/-/pg-8.23.1.tgz",
+      "status": 200
+    },
+    {
+      "name": "zod",
+      "version": "4.6.7",
+      "engines": null,
+      "integrity": "sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==",
+      "tarball": "https://registry.npmjs.org/zod/-/zod-4.6.7.tgz",
+      "status": 200
+    },
+    {
+      "name": "vite",
+      "version": "8.3.5",
+      "engines": {
+        "node": "^20.19.0 || >=22.12.0"
+      },
+      "integrity": "sha512-z1YpjieJ9g0ebTmQpLBv/oq9E3F9EIlOe+7LahW8SrE3LTiG3udBRUXQOlYXP9b+IC2q2phHeVxj9xGlw34OEQ==",
+      "tarball": "https://registry.npmjs.org/vite/-/vite-8.3.5.tgz",
+      "status": 200
+    },
+    {
+      "name": "typescript",
+      "version": "7.0.2",
+      "engines": {
+        "node": ">=16.20.0"
+      },
+      "integrity": "sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==",
+      "tarball": "https://registry.npmjs.org/typescript/-/typescript-7.0.2.tgz",
+      "status": 200
+    },
+    {
+      "name": "@playwright/test",
+      "version": "1.64.1",
+      "engines": {
+        "node": ">=20"
+      },
+      "integrity": "sha512-IaYGml/nSOiZWROfPtuIL7neuu9qDOZ3TNvNljUIrhDMxiGTgPjzj/g9p9RxpS2tSepPDRY+UwAaEeiKtUvIAg==",
+      "tarball": "https://registry.npmjs.org/@playwright/test/-/test-1.64.1.tgz",
+      "status": 200
+    },
+    {
+      "name": "@fontsource/bodoni-moda",
+      "version": "5.3.0",
+      "engines": null,
+      "integrity": "sha512-Wt2XBCHivYxkTP3ydq/Ax+7VshwsOh/6ayA5om2t+yClCkGwLPj2Mi6OnyMANjyLcqDUWs4rlOHnc8SBLf6/pA==",
+      "tarball": "https://registry.npmjs.org/@fontsource/bodoni-moda/-/bodoni-moda-5.3.0.tgz",
+      "status": 200
+    },
+    {
+      "name": "@fontsource/noto-sans",
+      "version": "5.3.0",
+      "engines": null,
+      "integrity": "sha512-fBCog2PY7DiVVTEEqtI/Qdinx/knobHYfoGpjFXdfBX5RoJaBp1Prw2G75p0OIsdlMZg3cLo0c+YbIUYOxnQJw==",
+      "tarball": "https://registry.npmjs.org/@fontsource/noto-sans/-/noto-sans-5.3.0.tgz",
+      "status": 200
+    },
+    {
+      "name": "@fontsource/fira-mono",
+      "version": "5.3.0",
+      "engines": null,
+      "integrity": "sha512-FZzRwKhpoXQU1uhEGKUg5AHUUdfiaTXxGCdBBeGHUmcZaqEDEmndSVvpXHkSViH25f/UiWfhcWTib+6A8o4qeQ==",
+      "tarball": "https://registry.npmjs.org/@fontsource/fira-mono/-/fira-mono-5.3.0.tgz",
+      "status": 200
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import {digest,canonical} from './index.mjs';
 import {summarizeRows} from '../domain/grader.mjs';
-export function validateReportInputs({baseline,subset,model,plan,modelArchive},revision) {
+import {validateActualModel} from './model-input.mjs';
+export function validateReportInputs({baseline,subset,model,plan,modelArchive,fixtures},revision) {
  if(!baseline||!subset||!model||!plan||!modelArchive)throw Error('missing_report_inputs');
  const {plan_digest,...planBody}=plan;
  if(digest(planBody)!==plan_digest)throw Error('invalid_plan_digest');
@@ -20,7 +21,12 @@ export function validateReportInputs({baseline,subset,model,plan,modelArchive},r
  if(canonical(ids(subset.rows))!==canonical(expected)||canonical(ids(model.rows||[]))!==canonical(expected))throw Error('input_subset_mismatch');
  if(model.plan_digest!==plan_digest||model.fixture_digest!==plan.dataset_digest||model.source_revision!==revision)throw Error('model_provenance_mismatch');
  if(canonical(modelArchive.ledger)!==canonical(model)||modelArchive.provenance?.source_revision!==revision)throw Error('model_archive_mismatch');
+ if(model.execution_mode==='actual_local_inference'){
+  const actual=validateActualModel({model,plan,modelArchive,fixtures});
+  return {baseline_status:'passed',baseline_execution:baseline.execution,model_status:actual.status,model_execution:actual.execution_receipt,model_summary:actual.summary,model_coverage:actual.coverage,model_metrics:actual.metrics};
+ }
+ if(model.execution_mode!=='actual_inference_unavailable')throw Error('unrecognized_model_execution_mode');
  if(model.attempted!==0||model.completed!==0||model.unexecuted!==24||model.planned!==24||model.quality_available!==false)throw Error('actual_model_input_not_supported');
  if(model.rows.some(r=>r.method!=='local_agent'||r.status!=='unexecuted'||r.inference_attempted||r.handler_executions!==0||r.precision!==null||r.recall!==null||r.supported_proposals!==null))throw Error('invalid_unexecuted_model_row');
- return {baseline_status:'passed',baseline_execution:baseline.execution,model_status:'not_executed'};
+ return {baseline_status:'passed',baseline_execution:baseline.execution,model_status:'not_executed',model_execution:null,model_summary:null,model_coverage:null,model_metrics:model.model_metrics};
 }

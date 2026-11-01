@@ -15,8 +15,25 @@
     "start": "node apps/api/server.mjs",
     "reports": "node scripts/render-reports.mjs",
     "check": "node scripts/check.mjs",
-    "eval:model": "node agent/run-model.mjs"
+    "eval:model": "node agent/eve-evaluator.mjs",
+    "build:site": "node scripts/build-site.mjs",
+    "typecheck": "node node_modules/typescript/bin/tsc",
+    "test:browser": "node tests/browser-flow.mjs",
+    "agent:start": "eve dev --no-ui --no-default-extensions --host 127.0.0.1 --port 2001"
   },
   "license": "MIT",
-  "author": "Ajay Mekala <mekalaajayk@gmail.com>"
+  "author": "Ajay Mekala <mekalaajayk@gmail.com>",
+  "dependencies": {
+    "@ai-sdk/openai-compatible": "3.0.82",
+    "@fontsource/bodoni-moda": "5.3.0",
+    "@fontsource/fira-mono": "5.3.0",
+    "@fontsource/noto-sans": "5.3.0",
+    "@playwright/test": "1.64.1",
+    "ai": "7.0.159",
+    "eve": "1.0.0-rc.1",
+    "pg": "8.23.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.5",
+    "zod": "4.6.7"
+  }
 }

@@ -1,0 +1,28 @@
+{
+  "schema": "watchtower-model-provenance-v1",
+  "method": "local_agent",
+  "execution_mode": "actual_local_inference",
+  "actual_inference": true,
+  "model": "qwen3:0.6b",
+  "artifact_digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+  "cpu_placement": {
+    "size_vram": 0,
+    "size": 1532367993,
+    "context_length": 8192
+  },
+  "source_revision": "3de3342a04ba4527984890df743a4c208ba1d01f",
+  "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+  "generation": {
+    "model_turns": 3,
+    "tool_calls": 4,
+    "output_tokens": 256,
+    "seconds_per_sequence": 60
+  },
+  "subset_ids": [
+    "mutable_tag-development-02",
+    "unchanged_valid_200-development-01"
+  ],
+  "subset_digest": "d532269e33caa05a212f5f621120d30fcb529a50fb1c4842ff677724e79ca984",
+  "runtime_inventory_verified": true,
+  "run_id": "development-2026-11-01T16-36-25-470Z"
+}

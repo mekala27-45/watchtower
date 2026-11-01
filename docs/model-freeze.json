@@ -1,0 +1,38 @@
+{
+  "schema": "watchtower-model-freeze-v1",
+  "frozen_at": "2026-11-01T16:44:54.515Z",
+  "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+  "subset_digest": "48daa917fb30109651289b21090e10b4ef77a519fe01a47bfa7eb6c3ed34383c",
+  "model_config_digest": "d1bd93ff92d93f3925827a016abe5865ad1d3600c93db20e0c5445300e7af78a",
+  "source_files": {
+    "agent/agent.ts": "6b82b24f65d6094bc00337a3f284a9ef2781b127fb87bb9555cbf84ce9d4819d",
+    "agent/instructions.md": "964f859553af24a63fce5f24478808e86cb7ff50425a6a1875ae4fd98455bab6",
+    "agent/tools.mjs": "b1bd21dbf501c171a36ab2fb8bc59bca7d6501528e25bdfd6673e8f60efe4b55",
+    "agent/runtime-boundary.mjs": "1b20d06a922ab2895d0a5b40218835fa096d5d1b77aee0b5a26fd91b1cad05f1",
+    "agent/runtime-bridge.mjs": "50f852b33765a7b581a4d5e2c9c4f38f1d76e87f3d1e5dd92e626ace6e648e34",
+    "agent/ollama-native.mjs": "439cef31645f22f9cbd924ddeb8fa30b0fbf734dc5a86370d8330da816a01c10",
+    "agent/actual-ledger.mjs": "d05c1f59e3c31d01d286312beb0eb1cc80913200e6443ffdb8720e62a50584d1",
+    "agent/eve-evaluator.mjs": "8a9a12cc77d20c978d9421ddb6cf0a8003b178df584691bc15ec44052ada9b6a",
+    "agent/tools/list_changes.ts": "30fecc63c34d4f6969d6471151594e30454f6be2f1789951b200187bb0cc9eb5",
+    "agent/tools/inspect_snapshot.ts": "83ad1c49c76198d6f4fb43a6ce20dd79eed4210622873dc9e41124bc19310dca",
+    "agent/tools/propose_finding.ts": "27c5a8705ad0537f85f3df371ec397de79cd7988191e41f6679f3717f6b951ca",
+    "packages/domain/index.mjs": "79647d2b50dfeefb07db79fc04c8b50d43326f20347c36622eb9ee297be3ad52",
+    "packages/domain/grader.mjs": "ef7b1c5af4d4beb78c91b7056637afd9e0272e9f18c68b30ca2a18635dbf617d",
+    "docs/evaluation-plan.json": "2ac30e960db3c20053d1a0ab9d01e85886402397326dcb7de389a2fee459b38e",
+    "docs/model-config.json": "0ef2d4742fc1f8b8e598e44bae9a2aa07cd379c541d79ecbddffd067704367f1"
+  },
+  "dependency_versions": {
+    "eve": "1.0.0-rc.1",
+    "ai": "7.0.159",
+    "@ai-sdk/provider": "4.0.35"
+  },
+  "development_run": "development-2026-11-01T16-38-27-371Z",
+  "development_result": {
+    "attempted": 3,
+    "handler_executions": 2,
+    "supported_proposals": 0,
+    "correct_noop_or_uncertainty": 1
+  },
+  "limitation": "Development demonstrates a real handler result and a correct no-op. No supported factual proposal was produced; this weakness is preserved without tuning on heldout data.",
+  "invariant": "No model, adapter, prompt, schema, generation budget or subset changes after this snapshot. Commit these files before the heldout command."
+}

@@ -1,4 +1,6 @@
 node_modules/
+.eve/
+dist/
 .env
 .env.*
 !.env.example

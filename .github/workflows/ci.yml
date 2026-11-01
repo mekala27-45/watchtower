@@ -1,17 +1,40 @@
-name: Local candidate verification
-on: [push, pull_request, workflow_dispatch]
+name: Verify source and archived evidence
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           fetch-depth: 0
           persist-credentials: false
-      - name: Verify runner supports required Node built-ins
-        run: node -e "if(Number(process.versions.node.split('.')[0])<24)process.exit(1)"
-      - run: node scripts/check.mjs
-      - name: Actual inference remains a separate required gate
-        run: node agent/run-model.mjs
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24.19.0'
+          cache: npm
+      - name: Install the locked dependency graph
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Validate source, tests, prose and repository scan
+        run: node scripts/check.mjs
+      - name: Check browser boundary types
+        run: npm exec --offline -- tsc --noEmit
+      - name: Verify archived actual inference without running inference
+        run: node scripts/verify-report-evidence.mjs --archived
+      - name: Build the static application
+        run: node scripts/build-site.mjs
+        env:
+          BUILD_REVISION: ${{ github.sha }}
+      - name: Preserve this job verification output
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: verification-${{ github.run_id }}-${{ github.run_attempt }}
+          path: reports/verification/
+          retention-days: 14
+          if-no-files-found: warn

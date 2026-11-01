@@ -1,57 +1,34 @@
 {
-  "observed_at": "2026-11-01",
-  "execution_host": "Windows local managed workspace",
-  "node": {
-    "status": "passed",
-    "version": "24.19.0"
-  },
-  "local_sqlite": {
-    "status": "passed",
-    "version": "3.53.3",
-    "scope": "local candidate only"
-  },
-  "npm_registry": {
-    "status": "blocked",
-    "evidence": "Invoke-WebRequest registry.npmjs.org/eve/latest returned No such host is known"
-  },
-  "github_cli": {
-    "status": "blocked",
-    "evidence": "gh auth status returned no authenticated hosts"
-  },
-  "required_npm_cache": {
-    "status": "unavailable",
-    "evidence": "npm cache ls eve ai pg zod typescript vite @playwright/test @ai-sdk/openai-compatible returned no entries"
-  },
+  "checked_at": "2026-11-01T16:39:22.833Z",
   "neon": {
-    "account_listing": "passed",
-    "direct_tls": "not_executed",
-    "free_eligibility": "unverified",
-    "watchtower_database_created": false
+    "project_id": "sparkling-mode-99569565",
+    "branch_id": "br-gentle-feather-b5gitp6s",
+    "org_id": "org-red-hill-57715386",
+    "plan": "free",
+    "postgres_version": 18,
+    "endpoint": "direct",
+    "tls": {
+      "rejectUnauthorized": true,
+      "channel_binding": true
+    },
+    "migrations": [
+      "001_watchtower.sql",
+      "002_runtime_adapter.sql"
+    ],
+    "actual_ready": true
   },
   "vercel": {
-    "account_listing": "passed",
-    "team": "team_NNcxgB3J9dHQnUJYJJYvRMda",
-    "hobby_eligibility": "unverified",
-    "container_probe": "not_executed"
+    "project_id": "prj_lYRZi3drj3O1KVLqx98pdpBEPAZL",
+    "team_id": "team_NNcxgB3J9dHQnUJYJJYvRMda",
+    "plan": "hobby",
+    "framework": "container",
+    "production_deployment": null,
+    "database_secret": "approval_blocked"
   },
-  "pages": {
-    "deployment": "not_executed",
-    "public_url": null
-  },
-  "dispatch": {
-    "status": "not_executed",
-    "run_url": null
-  },
-  "schedule": {
-    "configured": true,
-    "observed_scheduled_success": false,
-    "enabled": false
-  },
-  "remote_mutations": [],
-  "loopback_client": {
-    "error": "EACCES",
-    "status": "blocked",
-    "listener_bind": "available",
-    "browser_inventory": "empty"
+  "github": {
+    "repository": null,
+    "pages": null,
+    "dispatch": null,
+    "reason": "No repository create connector; native Chrome windows minimized and unavailable to browser controls."
   }
 }

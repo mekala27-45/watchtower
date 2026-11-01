@@ -43,7 +43,13 @@
     "good": "#22663B",
     "warning": "#855600",
     "serious": "#A34418",
-    "critical": "#9B2142"
+    "critical": "#9B2142",
+    "status": {
+      "good": "#22663B",
+      "warning": "#855600",
+      "serious": "#A34418",
+      "critical": "#9B2142"
+    }
   },
   "dark": {
     "surface": "#213329",
@@ -89,6 +95,12 @@
     "good": "#94DBA6",
     "warning": "#EFCE78",
     "serious": "#FFB18D",
-    "critical": "#FFACC2"
+    "critical": "#FFACC2",
+    "status": {
+      "good": "#94DBA6",
+      "warning": "#EFCE78",
+      "serious": "#FFB18D",
+      "critical": "#FFACC2"
+    }
   }
 }

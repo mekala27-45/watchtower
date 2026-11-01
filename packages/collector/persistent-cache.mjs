@@ -1,4 +1,5 @@
 import { validateEvidence, digest } from '../domain/index.mjs';
+export { pruneCollectorHistory, planCollectorPrune, snapshotCollectorHistory, COLLECTOR_RETENTION_DEFAULTS } from './retention.mjs';
 
 const validNamespace = value => typeof value === 'string' && /^(live|synthetic|test:[A-Za-z0-9_-]+)$/.test(value);
 const validKey = value => typeof value === 'string' && /^[a-f0-9]{64}$/.test(value);
@@ -33,7 +34,7 @@ export function installCollectorTables(store) {
   `);
 }
 
-function validateEntry(entry, key, namespace, sourceId) {
+export function validateEntry(entry, key, namespace, sourceId) {
   const evidenceKeys = new Set(['id','digest','namespace','source_id','release_id','tag_name','draft','prerelease','published_at','created_at','assets','notes_digest','notes_bytes','normalizer_version']);
   if (!entry || entry.key !== key || entry.validation_state !== 'valid' ||
       entry.source_policy_version !== 'source-policy-v1' ||

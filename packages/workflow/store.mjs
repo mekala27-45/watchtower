@@ -208,6 +208,13 @@ export class Store {
   headVersions(ns) {
     return this.db.prepare('SELECT source_id,comparison_head,version FROM heads WHERE namespace=? ORDER BY source_id').all(namespace(ns));
   }
+  assertCurrentHeads(ns,previous) {
+    const current=this.headVersions(ns);
+    if(canonical(previous)===canonical(current))return;
+    const changed=current.filter(row=>!previous.some(old=>canonical(old)===canonical(row))).map(row=>row.source_id);
+    const changedSources=this.listSources(ns).filter(source=>changed.includes(source.sourceId)).map(source=>source.label);
+    throw Object.assign(new Error('review_required'),{code:'review_required',status:409,changedSources});
+  }
   getRun(ns,id) { const row = this.db.prepare('SELECT * FROM observations WHERE namespace=? AND id=?').get(namespace(ns),required(id,'run')); return row ? {...json(row),capturedAt:row.captured_at,digest:row.digest,mode:ns==='live'?'live_source':'synthetic',backend:BACKEND} : null; }
   getEvidence(ns,id) { const row=this.db.prepare('SELECT * FROM evidence WHERE namespace=? AND id=?').get(namespace(ns),required(id,'evidence')); return row ? {namespace:ns,id,digest:row.digest,capturedAt:row.captured_at,data:json(row),backend:BACKEND}:null; }
   prepareBriefing({ namespace:ns, findings, evidenceIds, coverage, method, bundle, beforeRunId, afterRunId, sourceHeads = this.headVersions(ns), watchlistVersion='watchlist-v1', normalizerVersion='normalizer-v1', verifierVersion='verifier-v1', retention='pinned' }) {
@@ -271,7 +278,7 @@ export class Store {
       const briefing=this.getBriefing(ns,briefingDigest);
       if(!briefing)fail('not_found',404);
       if(briefing.watchlistVersion!=='watchlist-v1'||briefing.normalizerVersion!==NORMALIZER_VERSION||briefing.verifierVersion!==VERIFIER_VERSION)fail('review_required_versions',409);
-      if(canonical(briefing.sourceHeads)!==canonical(this.headVersions(ns)))fail('review_required',409);
+      this.assertCurrentHeads(ns,briefing.sourceHeads);
       const id=randomUUID(),now=this.now();
       this.db.prepare('INSERT INTO approvals VALUES(?,?,?,?,?,?,?)').run(ns,id,briefingDigest,reviewer,scope,now,now+ttlMs);
       this.event(ns,'briefing_approved',briefingDigest,{approvalId:id,reviewer});
@@ -287,7 +294,7 @@ export class Store {
       if(!briefing)fail('not_found',404);
       if(payloadDigest!==briefingDigest)fail('payload_mismatch',409);
       if(briefing.watchlistVersion!=='watchlist-v1'||briefing.normalizerVersion!==NORMALIZER_VERSION||briefing.verifierVersion!==VERIFIER_VERSION)fail('review_required_versions',409);
-      if(canonical(briefing.sourceHeads)!==canonical(this.headVersions(ns)))fail('review_required',409);
+      this.assertCurrentHeads(ns,briefing.sourceHeads);
       const approval=approvalId ? this.db.prepare('SELECT * FROM approvals WHERE namespace=? AND id=? AND briefing_digest=?').get(ns,approvalId,briefingDigest) : this.db.prepare('SELECT * FROM approvals WHERE namespace=? AND briefing_digest=? ORDER BY approved_at DESC LIMIT 1').get(ns,briefingDigest);
       if(!approval||approval.scope!==ns)fail('approval_required',409);
       if(approval.expires_at<=this.now())fail('approval_expired',409);

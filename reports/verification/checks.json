@@ -1,11 +1,11 @@
 {
-  "code_revision": "1ba8a7e4e661b995e9d462fac3eaf0ca14178dbb",
-  "generated_at": "2026-11-01T16:02:00.251Z",
+  "code_revision": "9b78bb87d0349e4816a5c5a34458fb5085b674c8",
+  "generated_at": "2026-11-01T16:48:17.757Z",
   "tests": {
-    "total": 109,
-    "passed": 108,
+    "total": 156,
+    "passed": 156,
     "failed": 0,
-    "skipped": 1,
+    "skipped": 0,
     "exit_code": 0,
     "evidence": "reports/verification/tests.tap"
   },
@@ -15,17 +15,51 @@
   },
   "scan": {
     "status": "passed",
-    "files": 243,
-    "commits": 41,
+    "files": 373,
+    "commits": 45,
     "failures": [],
     "scope": "pattern-based secret and release-body scan; not a complete security audit"
   },
   "prose": {
-    "status": "passed",
-    "failures": [],
-    "vocabulary_source": "Inherited Day 7 banned vocabulary unavailable; this gate covers ASCII and quote rules only."
+    "status": "failed",
+    "failures": [
+      {
+        "file": ".agents/skills/evidence-verifier/SKILL.md",
+        "reason": "double_hyphen_in_prose"
+      },
+      {
+        "file": ".agents/skills/source-collector/SKILL.md",
+        "reason": "double_hyphen_in_prose"
+      },
+      {
+        "file": ".agents/skills/workflow-recovery/SKILL.md",
+        "reason": "double_hyphen_in_prose"
+      },
+      {
+        "file": "RESULTS.md",
+        "reason": "double_hyphen_in_prose"
+      },
+      {
+        "file": "THIRD_PARTY_NOTICES.md",
+        "reason": "double_hyphen_in_prose"
+      },
+      {
+        "file": "agent/README.md",
+        "reason": "quoted_prose"
+      },
+      {
+        "file": "packages/workflow/README.md",
+        "reason": "double_hyphen_in_prose"
+      }
+    ],
+    "vocabulary_source": "supplied prompt_checker.py",
+    "vocabulary_source_sha256": "de18417c7d2c39548b76ab0b3eb3d1e367e4b000af0aaf4dfd82713c89a61fb1",
+    "excluded_runtime_prompt_evidence": [
+      "agent/instructions.md",
+      "docs/sources/model-instructions-initial.md"
+    ]
   },
-  "required_remote_checks": "not_executed",
-  "actual_model_gate": "not_executed",
-  "local_checks_passed": true
+  "required_remote_checks": "reports/verification/delivery.json",
+  "actual_model_gate": "scripts/verify-report-evidence.mjs validates actual archives separately",
+  "local_checks_passed": false
 }

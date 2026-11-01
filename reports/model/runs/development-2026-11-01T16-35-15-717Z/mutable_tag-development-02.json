@@ -1,0 +1,514 @@
+{
+  "fixture_id": "mutable_tag-development-02",
+  "family": "mutable_tag",
+  "method": "local_agent",
+  "status": "completed",
+  "inference_attempted": true,
+  "reason": null,
+  "model_request_count": 1,
+  "model_requested_tool_calls": 0,
+  "handler_executions": 0,
+  "proposed_findings": [],
+  "elapsed_ms": 1943,
+  "generated_tokens": 72,
+  "supported_proposals": 0,
+  "correct_noop_or_uncertainty": false,
+  "quality_available": true,
+  "transitions": [
+    {
+      "transition": 1,
+      "method": "local_agent",
+      "inference_attempted": true,
+      "bundle": {
+        "namespace": "synthetic:evaluation",
+        "source_id": 1001,
+        "before": {
+          "namespace": "synthetic:evaluation",
+          "source_id": 1001,
+          "items": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "tag_name": "v1.0.0",
+              "draft": false,
+              "prerelease": false,
+              "published_at": "2026-10-01T12:00:00.000Z",
+              "created_at": "2026-09-30T12:00:00.000Z",
+              "assets": [
+                {
+                  "id": 1010,
+                  "name": "fixture.tar.gz",
+                  "size": 1024,
+                  "content_type": "application/gzip"
+                }
+              ],
+              "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+              "notes_bytes": 31,
+              "normalizer_version": "normalizer-v1",
+              "digest": "c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119"
+            }
+          ],
+          "state": "captured",
+          "scope": "bounded-v1",
+          "coverage": {
+            "procedure_complete": true,
+            "uncovered_scope": []
+          },
+          "id": "obs_fd44f2e1c29126e8253548aa36234e1091f5d755ed8abd6af1d36e9d6cba617c",
+          "digest": "fd44f2e1c29126e8253548aa36234e1091f5d755ed8abd6af1d36e9d6cba617c",
+          "captured_at": null,
+          "checked_at": null
+        },
+        "after": {
+          "namespace": "synthetic:evaluation",
+          "source_id": 1001,
+          "items": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "tag_name": "v0.1.0",
+              "draft": false,
+              "prerelease": false,
+              "published_at": "2026-10-01T12:00:00.000Z",
+              "created_at": "2026-09-30T12:00:00.000Z",
+              "assets": [
+                {
+                  "id": 1010,
+                  "name": "fixture.tar.gz",
+                  "size": 1024,
+                  "content_type": "application/gzip"
+                }
+              ],
+              "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+              "notes_bytes": 31,
+              "normalizer_version": "normalizer-v1",
+              "digest": "bca6dafd368907da6f4502c98dd2d96247a45ec4c7f7c7b375fcd25d07a56c07",
+              "id": "ev_bca6dafd368907da6f4502c98dd2d96247a45ec4c7f7c7b375fcd25d07a56c07"
+            }
+          ],
+          "state": "captured",
+          "scope": "bounded-v1",
+          "coverage": {
+            "procedure_complete": true,
+            "uncovered_scope": []
+          },
+          "id": "obs_1c2ebce6db50045dba4e808f15987321a1398e1fd9ace9132c85a4693a3fd688",
+          "digest": "1c2ebce6db50045dba4e808f15987321a1398e1fd9ace9132c85a4693a3fd688",
+          "captured_at": null,
+          "checked_at": null
+        },
+        "candidates": [
+          {
+            "id": "candidate_83c013d1572be79d08f1eefbd4979196e6df281a0a279a91c700ed1ba230fb45",
+            "namespace": "synthetic:evaluation",
+            "source_id": 1001,
+            "release_id": 101,
+            "kind": "tag_changed",
+            "field": "tag_name",
+            "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+            "after_evidence_id": "ev_bca6dafd368907da6f4502c98dd2d96247a45ec4c7f7c7b375fcd25d07a56c07",
+            "watchlist_version": "watchlist-v1"
+          }
+        ],
+        "evidence": {
+          "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119": {
+            "namespace": "synthetic:evaluation",
+            "source_id": 1001,
+            "release_id": 101,
+            "tag_name": "v1.0.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-10-01T12:00:00.000Z",
+            "created_at": "2026-09-30T12:00:00.000Z",
+            "assets": [
+              {
+                "id": 1010,
+                "name": "fixture.tar.gz",
+                "size": 1024,
+                "content_type": "application/gzip"
+              }
+            ],
+            "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+            "notes_bytes": 31,
+            "normalizer_version": "normalizer-v1",
+            "digest": "c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+            "id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119"
+          },
+          "ev_bca6dafd368907da6f4502c98dd2d96247a45ec4c7f7c7b375fcd25d07a56c07": {
+            "namespace": "synthetic:evaluation",
+            "source_id": 1001,
+            "release_id": 101,
+            "tag_name": "v0.1.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-10-01T12:00:00.000Z",
+            "created_at": "2026-09-30T12:00:00.000Z",
+            "assets": [
+              {
+                "id": 1010,
+                "name": "fixture.tar.gz",
+                "size": 1024,
+                "content_type": "application/gzip"
+              }
+            ],
+            "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+            "notes_bytes": 31,
+            "normalizer_version": "normalizer-v1",
+            "digest": "bca6dafd368907da6f4502c98dd2d96247a45ec4c7f7c7b375fcd25d07a56c07",
+            "id": "ev_bca6dafd368907da6f4502c98dd2d96247a45ec4c7f7c7b375fcd25d07a56c07"
+          }
+        },
+        "watchlist_version": "watchlist-v1",
+        "outcome": "changed",
+        "normalizer_version": "normalizer-v1",
+        "verifier_version": "verifier-v1",
+        "id": "bundle_510beb099bad6cd0736d05c45b8b0fedfecb8f46d2f56af925415383b2cf5a78",
+        "digest": "510beb099bad6cd0736d05c45b8b0fedfecb8f46d2f56af925415383b2cf5a78"
+      },
+      "bundle_digest": "510beb099bad6cd0736d05c45b8b0fedfecb8f46d2f56af925415383b2cf5a78",
+      "expected_outcome": "changed",
+      "outcome": null,
+      "expected_facts": [
+        {
+          "namespace": "synthetic:evaluation",
+          "source_id": 1001,
+          "release_id": 101,
+          "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+          "after_evidence_id": "ev_bca6dafd368907da6f4502c98dd2d96247a45ec4c7f7c7b375fcd25d07a56c07",
+          "kind": "tag_changed",
+          "field": "tag_name"
+        }
+      ],
+      "emitted_facts": [],
+      "grade": {
+        "expected": 1,
+        "emitted": 0,
+        "matched": 0,
+        "missed": 1,
+        "duplicates": 0,
+        "unsupported": 0,
+        "precision": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "unit": "ratio",
+          "state": "not_applicable"
+        },
+        "recall": {
+          "value": 0,
+          "numerator": 0,
+          "denominator": 1,
+          "unit": "ratio",
+          "state": "available"
+        },
+        "pass": false
+      },
+      "verification": [],
+      "review_previews": [],
+      "unsupported_publications": 0,
+      "correct_noop_or_uncertainty": false,
+      "supported_proposals": 0,
+      "status": "completed",
+      "error": null,
+      "reply": "{\"name\": \"list_changes\", \"arguments\": {\"bundle_id\": \"bundle_510beb099bad6cd0736d05c45b8b0fedfecb8f46d2f56af925415383b2cf5a78\"}}",
+      "reply_error": "invalid_outcome",
+      "runtime": {
+        "requests": [
+          {
+            "request_id": "request-1",
+            "started_at": "2026-11-01T16:35:16.250Z",
+            "tool_inventory": [
+              "inspect_snapshot",
+              "list_changes",
+              "propose_finding"
+            ],
+            "tool_inventory_digest": "82cef7002a3519faab702677894297d7cb8c1d15c0d7a656f65aa0b45147f98b",
+            "prompt_digest": "38f23f8839c3232566b40abcf49e3de3480e6ca7725ff44a8aaa79efa6ab0548",
+            "output_token_cap": 256,
+            "temperature": 0,
+            "status": "completed",
+            "provider_dispatched": true,
+            "finish_reason": {
+              "unified": "stop",
+              "raw": "stop"
+            },
+            "generated_tokens": 72,
+            "input_tokens": 884
+          }
+        ],
+        "provider_calls": [],
+        "executions": [],
+        "proposals": [],
+        "errors": []
+      },
+      "session_id": "wrun_01M6BZE65AX2RJHH16AFGV1378",
+      "normalization_error": null,
+      "events": [
+        {
+          "data": {
+            "runtime": {
+              "agentId": "watchtower",
+              "agentName": "watchtower",
+              "eveVersion": "1.0.0-rc.1"
+            }
+          },
+          "type": "session.started",
+          "meta": {
+            "at": "2026-11-01T16:35:16.226Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 0
+            }
+          }
+        },
+        {
+          "data": {
+            "deliveryId": "8d7144ca-3392-46d2-8d34-b67885d79431",
+            "principal": {
+              "id": "local-dev",
+              "type": "local-dev"
+            },
+            "source": {
+              "channel": "channel:eve"
+            }
+          },
+          "type": "delivery.admitted",
+          "meta": {
+            "at": "2026-11-01T16:35:16.226Z",
+            "endOfLine": true,
+            "position": {
+              "index": 1,
+              "line": 0
+            }
+          }
+        },
+        {
+          "data": {
+            "cause": {
+              "deliveryId": "8d7144ca-3392-46d2-8d34-b67885d79431"
+            },
+            "follows": null,
+            "trace": {
+              "decision": {
+                "action": "record",
+                "recordInputs": true,
+                "recordOutputs": true
+              },
+              "spanId": "f5de168bcd75dcfe",
+              "traceFlags": 1,
+              "traceId": "8816144f00ffe1fea0895697f9e6a50f"
+            },
+            "turnId": "turn_0"
+          },
+          "type": "turn.started",
+          "scope": {
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:35:16.234Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 1
+            }
+          }
+        },
+        {
+          "data": {
+            "deliveryId": "8d7144ca-3392-46d2-8d34-b67885d79431",
+            "parts": [
+              {
+                "kind": "text",
+                "text": "Inspect this immutable observation bundle. {\"bundle_id\":\"bundle_510beb099bad6cd0736d05c45b8b0fedfecb8f46d2f56af925415383b2cf5a78\",\"namespace\":\"synthetic:evaluation\",\"source_id\":1001,\"before_state\":\"captured\",\"after_state\":\"captured\",\"before_scope\":\"bounded-v1\",\"after_scope\":\"bounded-v1\",\"uncovered_scope\":[],\"normalization_error\":null}"
+              }
+            ],
+            "turnId": "turn_0"
+          },
+          "type": "delivery.consumed",
+          "scope": {
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:35:16.234Z",
+            "endOfLine": true,
+            "position": {
+              "index": 1,
+              "line": 1
+            }
+          }
+        },
+        {
+          "data": {
+            "owner": {
+              "turnId": "turn_0"
+            },
+            "runId": "run_0"
+          },
+          "type": "model.requested",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:35:16.238Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 2
+            }
+          }
+        },
+        {
+          "data": {
+            "attempt": 0,
+            "modelId": "watchtower_ollama/qwen3:0.6b",
+            "runId": "run_0"
+          },
+          "type": "model.started",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:35:16.240Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 3
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "{\"name\": \"list_changes\", \"arguments\": {\"bundle_id\": \"bundle_510beb099bad6cd0736d05c45b8b0fedfecb8f46d2f56af925415383b2cf5a78\"}}",
+            "kind": "text",
+            "partId": "run_0.0"
+          },
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:35:16.240Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 4
+            }
+          }
+        },
+        {
+          "data": {
+            "kind": "text",
+            "partId": "run_0.0",
+            "phase": "reply",
+            "runId": "run_0",
+            "value": "{\"name\": \"list_changes\", \"arguments\": {\"bundle_id\": \"bundle_510beb099bad6cd0736d05c45b8b0fedfecb8f46d2f56af925415383b2cf5a78\"}}"
+          },
+          "type": "content.completed",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:35:17.478Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 5
+            }
+          }
+        },
+        {
+          "data": {
+            "finishReason": "stop",
+            "outcome": "completed",
+            "runId": "run_0"
+          },
+          "type": "model.settled",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:35:17.479Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 6
+            }
+          }
+        },
+        {
+          "data": {
+            "kind": "model",
+            "owner": {
+              "runId": "run_0"
+            },
+            "usage": {
+              "cacheReadTokens": 0,
+              "cacheWriteTokens": 0,
+              "inputTokens": 884,
+              "outputTokens": 72
+            }
+          },
+          "type": "usage.recorded",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:35:17.479Z",
+            "endOfLine": true,
+            "position": {
+              "index": 1,
+              "line": 6
+            }
+          }
+        },
+        {
+          "data": {
+            "outcome": "completed",
+            "reply": [
+              "run_0.0"
+            ],
+            "turnId": "turn_0"
+          },
+          "type": "turn.settled",
+          "scope": {
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:35:17.489Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 7
+            }
+          }
+        },
+        {
+          "data": {
+            "deliveryId": "8d7144ca-3392-46d2-8d34-b67885d79431",
+            "outcome": "handled",
+            "turnId": "turn_0"
+          },
+          "type": "delivery.settled",
+          "meta": {
+            "at": "2026-11-01T16:35:17.489Z",
+            "endOfLine": true,
+            "position": {
+              "index": 1,
+              "line": 7
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

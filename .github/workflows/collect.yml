@@ -1,4 +1,4 @@
-name: Bounded source collection candidate
+name: Bounded Postgres source collection
 on:
   workflow_dispatch:
   schedule:
@@ -6,16 +6,49 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: watchtower-watchlist
+  group: watchtower-live-watchlist
   cancel-in-progress: false
 jobs:
   collect:
-    if: vars.WATCHTOWER_COLLECTION_ENABLED == 'true'
+    # Manual dispatch establishes evidence before the recurring job is enabled.
+    if: github.event_name == 'workflow_dispatch' || vars.WATCHTOWER_COLLECTION_ENABLED == 'true'
     runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      COLLECTION_RUN_KEY: gha-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           persist-credentials: false
-      - name: Require verified target adapter
-        run: node -e "import('node:fs').then(fs=>{if(!fs.existsSync('packages/workflow/postgres.mjs'))throw Error('Postgres adapter incomplete')})"
-      - run: node scripts/collect.mjs --check
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24.19.0'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Collect the fixed watchlist into direct Postgres
+        id: collect
+        run: node scripts/collect-postgres.mjs --run-key "$COLLECTION_RUN_KEY"
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+      - name: Record runner provenance separately from collection coverage
+        if: always()
+        env:
+          COLLECTION_STEP_OUTCOME: ${{ steps.collect.outcome }}
+        run: |
+          node --input-type=module <<'NODE'
+          import {mkdir,writeFile} from 'node:fs/promises';
+          const e=process.env;
+          const provenance={schema:'watchtower-actions-provenance-v1',namespace:'live',mode:'provider_job_record',provider:'github_actions',run_key:e.COLLECTION_RUN_KEY,run_id:e.GITHUB_RUN_ID,run_attempt:e.GITHUB_RUN_ATTEMPT,event_name:e.GITHUB_EVENT_NAME,source_revision:e.GITHUB_SHA,run_url:e.GITHUB_SERVER_URL+'/'+e.GITHUB_REPOSITORY+'/actions/runs/'+e.GITHUB_RUN_ID,collection_step_outcome:e.COLLECTION_STEP_OUTCOME,workflow_success_verified:false,scheduled_success_verified:false,note:'Confirm the completed provider run and persisted collection rows independently. This file does not prove final workflow success.',recorded_at:new Date().toISOString()};
+          await mkdir('reports/collection',{recursive:true});
+          await writeFile('reports/collection/provider-'+e.COLLECTION_RUN_KEY+'.json',JSON.stringify(provenance,null,2)+'\n');
+          NODE
+      - name: Preserve bounded collection and provider evidence
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: collection-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            reports/collection/gha-${{ github.run_id }}-${{ github.run_attempt }}.json
+            reports/collection/provider-gha-${{ github.run_id }}-${{ github.run_attempt }}.json
+          retention-days: 14
+          if-no-files-found: error

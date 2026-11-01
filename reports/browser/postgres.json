@@ -1,0 +1,182 @@
+{
+  "schema": "watchtower-browser-verification-v1",
+  "label": "postgres",
+  "started_at": "2026-11-01T16:40:40.134Z",
+  "source_revision": "3de3342a04ba4527984890df743a4c208ba1d01f",
+  "backend": "postgres",
+  "tests": [
+    {
+      "name": "compiled site loads local fonts and four labeled views",
+      "status": "passed",
+      "detail": {
+        "fontFaces": [
+          {
+            "family": "Bodoni Moda",
+            "status": "loaded"
+          },
+          {
+            "family": "Noto Sans",
+            "status": "loaded"
+          },
+          {
+            "family": "Noto Sans",
+            "status": "loaded"
+          },
+          {
+            "family": "Noto Sans",
+            "status": "loaded"
+          },
+          {
+            "family": "Fira Mono",
+            "status": "loaded"
+          }
+        ]
+      }
+    },
+    {
+      "name": "keyboard skip link and section focus are visible",
+      "status": "passed"
+    },
+    {
+      "name": "real HTTP prepare approve publish and identical receipt recovery",
+      "status": "passed",
+      "detail": {
+        "receipt_id": "b6e7030a-a349-4227-aa8e-79def949c499",
+        "published_at": 1793551246363,
+        "briefing_digest": "f120a7aa001e40dc51fcb8fb9dd8167c9c5702fc8799f546e7ce9f54f30b5028",
+        "namespace": "demo:b06fa55e-b2a3-4aac-ae27-4af0b355cb13"
+      }
+    },
+    {
+      "name": "separate HTTP client sees exactly one committed receipt",
+      "status": "passed",
+      "detail": {
+        "receipt_count": 1,
+        "receipt_id": "b6e7030a-a349-4227-aa8e-79def949c499"
+      }
+    },
+    {
+      "name": "light theme real rendered text contrast and four views",
+      "status": "passed",
+      "detail": [
+        {
+          "view": "sources",
+          "checked": 61,
+          "worst": 5.798269134032843
+        },
+        {
+          "view": "briefings",
+          "checked": 66,
+          "worst": 6.073828333888035
+        },
+        {
+          "view": "trace",
+          "checked": 112,
+          "worst": 5.798269134032843
+        },
+        {
+          "view": "evidence",
+          "checked": 87,
+          "worst": 6.073828333888035
+        }
+      ]
+    },
+    {
+      "name": "dark theme real rendered text contrast and four views",
+      "status": "passed",
+      "detail": [
+        {
+          "view": "sources",
+          "checked": 61,
+          "worst": 8.769416394215044
+        },
+        {
+          "view": "briefings",
+          "checked": 66,
+          "worst": 6.937896300492237
+        },
+        {
+          "view": "trace",
+          "checked": 112,
+          "worst": 8.769416394215044
+        },
+        {
+          "view": "evidence",
+          "checked": 87,
+          "worst": 8.910879174833159
+        }
+      ]
+    },
+    {
+      "name": "narrow mobile layout keeps controls and aligned evidence readable",
+      "status": "passed"
+    },
+    {
+      "name": "reduced motion and screen reader labels",
+      "status": "passed"
+    },
+    {
+      "name": "unknown and empty source states keep successful negative claims absent",
+      "status": "passed"
+    },
+    {
+      "name": "loading and partial source response remain labeled",
+      "status": "passed",
+      "detail": {
+        "kind": "controlled_browser_response",
+        "scope": "UI loading and partial-state boundary"
+      }
+    },
+    {
+      "name": "failed API refresh offers retry and timestamps retained data",
+      "status": "passed",
+      "detail": {
+        "kind": "controlled_network_failure"
+      }
+    },
+    {
+      "name": "stale approval names source and blocks publish until a fresh review",
+      "status": "passed",
+      "detail": {
+        "kind": "actual_backend_head_change",
+        "backend": "postgres",
+        "namespace": "demo:8937f045-61e0-4030-9312-b128d990273d",
+        "publication_status": 409,
+        "receipt_count": 0
+      }
+    },
+    {
+      "name": "real expired session is rejected and UI asks for a fresh session",
+      "status": "passed"
+    },
+    {
+      "name": "no uncaught browser errors",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    "postgres-briefing-review.png",
+    "postgres-briefing-approved.png",
+    "postgres-briefing-published.png",
+    "postgres-briefing-recovered.png",
+    "postgres-light-sources.png",
+    "postgres-light-briefings.png",
+    "postgres-light-trace.png",
+    "postgres-light-evidence.png",
+    "postgres-dark-sources.png",
+    "postgres-dark-briefings.png",
+    "postgres-dark-trace.png",
+    "postgres-dark-evidence.png",
+    "postgres-mobile-briefing.png",
+    "postgres-mobile-sources.png"
+  ],
+  "errors": [],
+  "site_url": "http://127.0.0.1:65304",
+  "browser_version": "156.0.8078.74",
+  "api_revision": "3de3342a04ba4527984890df743a4c208ba1d01f",
+  "api_url": "http://127.0.0.1:65304",
+  "status": "passed",
+  "finished_at": "2026-11-01T16:41:00.863Z",
+  "passed": 14,
+  "failed": 0
+}

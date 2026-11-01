@@ -1,10 +1,11 @@
 import {METHOD_LABELS, printable, timestamp, shortId, coverageLabel, metricValue, safeSourceUrl, normalizeSources, findingText, evidenceFields, modelCaseId, reportMetrics} from './view-model.mjs';
+import {publicRuntimeConfig} from './runtime-config.mjs';
 const $ = id => document.getElementById(id);
 const state = {session:null,briefing:null,receipt:null,report:null,operationKey:null,lastRead:null,busy:false};
-const apiBase = document.documentElement.dataset.apiBase ?? '';
+const apiBase = publicRuntimeConfig(document.documentElement.dataset.apiBase ?? '',{allowLocal:['localhost','127.0.0.1'].includes(location.hostname)}).apiOrigin;
 function el(tag,text,className) { const node=document.createElement(tag); if(text!==undefined)node.textContent=text; if(className)node.className=className; return node; }
 function status(id,message,type='') { const node=$(id); node.textContent=message; node.className='status-line '+type; }
-function toggleBusy(busy) {state.busy=busy; for(const id of ['start-demo','new-demo','approve','publish','recover']) $(id).disabled=busy || (id==='publish' && !state.briefing?.approved) || (id==='approve' && (!state.briefing || state.briefing.approved || state.receipt));}
+function toggleBusy(busy) {state.busy=busy; for(const id of ['start-demo','new-demo','approve','publish','recover']) $(id).disabled=busy || (id==='publish' && (!state.briefing?.approved || state.receipt)) || (id==='approve' && (!state.briefing || state.briefing.approved || state.briefing.reviewRequired || state.receipt));}
 async function api(path,body) {
   const controller=new AbortController(); const timeout=setTimeout(()=>controller.abort(),12000);
   try {
@@ -13,7 +14,7 @@ async function api(path,body) {
     if(path.startsWith('/api/demo/sessions/') && state.session)headers.Authorization='Bearer '+state.session.capability;
     const response=await fetch(apiBase+path,{method:body===undefined?'GET':'POST',headers,body:body===undefined?undefined:JSON.stringify(body),signal:controller.signal,cache:'no-store'});
     let data;try{data=await response.json()}catch{throw new Error('The API returned an unreadable response.');}
-    if(!response.ok) {const err=new Error(data.error?.message ?? data.message ?? data.error?.code ?? 'Request failed');err.code=data.error?.code ?? data.error;throw err;}
+    if(!response.ok) {const err=new Error(data.error?.message ?? data.message ?? data.error?.code ?? 'Request failed');err.code=data.error?.code ?? data.error;err.changedSources=data.error?.changedSources ?? data.error?.details?.changedSources;throw err;}
     return data;
   } finally {clearTimeout(timeout);}
 }
@@ -46,7 +47,13 @@ function renderSources(data) {
 async function refresh() {
   $('refresh').disabled=true;status('global-status','Reading source status...');
   const responses=await Promise.allSettled([api('/health'),api('/api/sources'),api('/api/reports/current')]);
-  if(responses[0].status==='fulfilled'){const health=responses[0].value;$('readiness').textContent=(health.ready ?? health.readiness ?? health.status==='ok')?'API connected / local candidate':'API responding / persistence not ready';}
+  if(responses[0].status==='fulfilled'){
+    const health=responses[0].value,ready=health.ready ?? health.readiness ?? health.status==='ok';
+    $('readiness').textContent=ready?'API connected / '+(health.database?.backend ?? 'backend unreported'):'API responding / persistence not ready';
+    $('edition-state').textContent=health.productionReady?'Connected evidence desk':'Local candidate';
+    $('deployment-state').textContent='API revision: '+shortId(health.revision);
+    $('deployment-state').title=health.revision ?? 'Revision unreported';
+  }
   else $('readiness').textContent='API unavailable';
   if(responses[1].status==='fulfilled'){renderSources(responses[1].value);state.lastRead=new Date().toISOString();$('source-read-time').textContent='Last successful status read: '+state.lastRead;}
   if(responses[2].status==='fulfilled')renderReport(responses[2].value);
@@ -80,6 +87,11 @@ function renderReport(report) {
   $('report-summary').replaceChildren();
   if(report.planDigest ?? report.plan_digest){const line=el('p','Evaluation plan: ','micro');line.append(el('code',report.planDigest ?? report.plan_digest));$('report-summary').append(line);}
   if(report.generatedAt ?? report.generated_at)$('report-summary').append(el('p','Report generated: '+timestamp(report.generatedAt ?? report.generated_at),'micro'));
+  const completion=report.completion ?? report.checklist;
+  if(Array.isArray(completion)){
+    const incomplete=completion.filter(row=>row.status!=='done');
+    $('evidence-pushback').textContent=incomplete.length?'Planned checks still incomplete: '+incomplete.map(row=>row.item).join('; ')+'. Consult each checklist evidence record for its limit.':'The planned checklist has recorded completion evidence. These bounded synthetic and operational checks do not establish general production performance.';
+  }
   const modelAttempted=model?.attempted ?? model?.actualAttempts ?? model?.attemptedCount ?? model?.summary?.attempted ?? 0;
   const message=el('div');message.append(el('strong',modelAttempted>0?'Actual model outcomes are recorded separately.':'Actual model execution is unavailable.'),el('p',modelAttempted>0?'Inspect attempted, failed and supported outcomes in the model report.':'Baseline outputs are excluded from this method. Unexecuted cases remain visible.'));
   $('model-state').replaceChildren(el('span',modelAttempted>0?'!':'?','state-icon'),message);
@@ -88,12 +100,32 @@ function renderReport(report) {
   if(Array.isArray(rows) && rows.length) {
     const table=el('table',undefined,'metrics');table.append(el('caption','Every declared model case, including unexecuted rows.'));const head=el('thead');const hr=el('tr');for(const t of ['Sequence','Outcome','Method']){const th=el('th',t);th.scope='col';hr.append(th);}head.append(hr);table.append(head);const body=el('tbody');
     for(const row of rows){const tr=el('tr');const th=el('th',modelCaseId(row));th.scope='row';tr.append(th,el('td',row.outcome ?? row.status ?? 'Unavailable'),el('td',row.method ?? 'local_agent'));body.append(tr);}table.append(body);$('model-results').append(table);
+    for(const row of rows.filter(row=>row.inference_attempted || row.transitions?.some(t=>t.inference_attempted))){
+      const details=el('details',undefined,'method-note');details.append(el('summary',modelCaseId(row)+' / '+(row.status ?? 'Recorded attempt')));
+      details.append(el('p','Model requests: '+printable(row.model_request_count)+'. Model-requested tool calls: '+printable(row.model_requested_tool_calls)+'. Executed handlers: '+printable(row.handler_executions)+'. Supported proposals: '+printable(row.supported_proposals)+'.'));
+      for(const transition of row.transitions ?? []){
+        const section=el('section',undefined,'trace-transition');section.append(el('h3','Transition '+transition.transition),el('p','Outcome: '+printable(transition.outcome)+'. Execution: '+printable(transition.status)+'. Reply format: '+printable(transition.reply_error ?? 'No recorded format error')+'.'));
+        const requests=transition.runtime?.provider_calls ?? [],executions=transition.runtime?.executions ?? [];
+        const calls=el('table',undefined,'metrics');calls.append(el('caption','Observed tool requests and handler execution; request alone does not prove execution.'));
+        const head=el('thead'),hr=el('tr');for(const name of ['Tool','Provider call','Handler execution']){const th=el('th',name);th.scope='col';hr.append(th);}head.append(hr);calls.append(head);const body=el('tbody');
+        for(const call of requests){const execution=executions.find(x=>x.provider_call_id===call.provider_call_id);const tr=el('tr');const th=el('th',call.tool);th.scope='row';tr.append(th,el('td',shortId(call.provider_call_id)),el('td',execution?.handler_executed?printable(execution.status):'Not executed'));body.append(tr);}
+        if(!requests.length){const tr=el('tr');const td=el('td','No model-directed tool request was recorded.');td.colSpan=3;tr.append(td);body.append(tr);}calls.append(body);section.append(calls);
+        for(const preview of transition.review_previews ?? [])section.append(el('p',printable(preview.text?.text ?? preview.text)+' [Unapproved review preview; not published]','finding'));
+        if(transition.error)section.append(el('p','Recorded error: '+printable(transition.error),'status-line error'));
+        const raw=el('details');raw.append(el('summary','Show transition evidence and independent grade'),el('pre',JSON.stringify(transition,null,2)));section.append(raw);details.append(section);
+      }
+      $('model-results').append(details);
+    }
   }
 }
 $('download-report').addEventListener('click',()=>{if(!state.report)return;const blob=new Blob([JSON.stringify(state.report,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=el('a');a.href=url;a.download='watchtower-current-report.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
 function renderFields(id,fields,other) {
   const container=$(id);container.replaceChildren();
   for(const [label,value] of fields){container.append(el('dt',label));const dd=el('dd',value);if(other && other.find(([key])=>key===label)?.[1]!==value)dd.className='changed';container.append(dd);}
+}
+function identity(id,value){
+  const node=$(id);node.replaceChildren(el('span',shortId(value)));
+  if(value){const details=el('details',undefined,'identity');details.append(el('summary','Full identity'),el('code',String(value)));node.append(details);}
 }
 function renderBriefing(briefing) {
   state.briefing={...briefing,approved:briefing.approved ?? briefing.state==='approved'};
@@ -106,7 +138,7 @@ function renderBriefing(briefing) {
   const first=briefing.findings?.[0];
   const before=briefing.before ?? (first ? {evidenceId:first.beforeEvidenceId,tag:first.before} : null);
   const after=briefing.after ?? (first ? {evidenceId:first.afterEvidenceId,tag:first.after} : null);
-  $('before-id').textContent=shortId(before?.id ?? before?.evidenceId);$('after-id').textContent=shortId(after?.id ?? after?.evidenceId);
+  identity('before-id',before?.id ?? before?.evidenceId);identity('after-id',after?.id ?? after?.evidenceId);
   const bf=evidenceFields(before),af=evidenceFields(after);renderFields('before-fields',bf,af);renderFields('after-fields',af,bf);
   $('receipt').hidden=!state.receipt;toggleBusy(false);
 }
@@ -125,9 +157,11 @@ $('start-demo').addEventListener('click',startDemo);
 $('new-demo').addEventListener('click',()=>{state.session=null;state.briefing=null;state.receipt=null;$('briefing').hidden=true;startDemo();});
 function handleDemoError(error) {
   const code=String(error.code ?? '');
-  if(/review_required|stale/i.test(code)){if(state.briefing)state.briefing.approved=false;$('briefing-state').textContent='Review required';}
-  if(/expired|capability|session/i.test(code)) {if(state.briefing)state.briefing.approved=false;$('session-state').textContent='Session unavailable or expired. Start a new session.';}
-  status('demo-status',error.name==='AbortError'?'The request timed out. Publication may have committed; use receipt recovery after reconnecting.':error.message,'error');
+  if(/review_required|stale/i.test(code)){if(state.briefing){state.briefing.approved=false;state.briefing.reviewRequired=true;}$('briefing-state').textContent='Review required';$('recover').hidden=true;}
+  if(/expired|capability|session/i.test(code)) {if(state.briefing){state.briefing.approved=false;state.briefing.reviewRequired=true;}$('session-state').textContent='Session unavailable or expired. Start a new session.';$('recover').hidden=true;}
+  const changed=Array.isArray(error.changedSources)?error.changedSources.map(x=>typeof x==='string'?x:x.label ?? x.sourceId).filter(Boolean).join(', '):'';
+  const message=/review_required|stale/i.test(code)?'Review required: '+(changed?'source dependencies changed for '+changed:'source dependencies changed')+'. Start a new session and review its revision before publication.':error.message;
+  status('demo-status',error.name==='AbortError'?'The request timed out. Publication may have committed; use receipt recovery after reconnecting.':message,'error');
 }
 $('approve').addEventListener('click',async()=>{toggleBusy(true);try{await api('/api/demo/sessions/'+encodeURIComponent(state.session.id)+'/approve',{digest:state.briefing.digest});state.briefing.approved=true;$('briefing-state').textContent='Approved';status('demo-status','This exact synthetic revision is approved. Publication remains a separate action.');}catch(error){handleDemoError(error)}finally{toggleBusy(false)}});
 async function publish() {

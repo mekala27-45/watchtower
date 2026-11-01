@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { Store } from '../packages/workflow/store.mjs';
 import { digest } from '../packages/domain/index.mjs';
 import { SOURCE_LABELS, API_VERSION, createSource, planSource, collectSource } from '../packages/collector/index.mjs';
-import { PersistentCache, installCollectorTables, persistCollectorArtifacts } from '../packages/collector/persistent-cache.mjs';
+import { PersistentCache, installCollectorTables, persistCollectorArtifacts, pruneCollectorHistory } from '../packages/collector/persistent-cache.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 function fail(code) { throw Object.assign(new Error(code), { code }); }
@@ -50,6 +50,7 @@ export async function runCollection({
   for (const source of sources) createSource(source.label, source.sourceId);
   if (!safeRunKey(runKey) || typeof transport !== 'function') fail('invalid_collection_command');
   installCollectorTables(store);
+  pruneCollectorHistory(store,namespace);
   const prepared = sources.map(source => {
     const existing = store.db.prepare('SELECT label FROM sources WHERE namespace=? AND source_id=?').get(namespace,source.sourceId);
     if (existing && existing.label !== source.label) fail('source_identity_conflict');
@@ -62,7 +63,10 @@ export async function runCollection({
   const jobPlan = {namespace,runKey,watchlist_version:'watchlist-v1',plans:prepared.map(p => p.plan),global_attempt_budget:24,local_candidate:true};
   const planDigest = digest(jobPlan);
   if (store.db.prepare('SELECT id FROM collector_jobs WHERE namespace=? AND id=?').get(namespace,runKey)) fail('collection_run_key_already_exists');
-  if (store.db.prepare('SELECT count(*) AS count FROM collector_jobs WHERE namespace=?').get(namespace).count >= 100) fail('collector_history_budget_exhausted');
+  for (const source of sources) {
+    const runId='collect-'+digest({namespace,runKey,sourceId:source.sourceId});
+    if (store.getRun(namespace,runId)) fail('collection_run_key_already_exists');
+  }
   store.db.prepare('INSERT INTO collector_jobs VALUES (?,?,?,?,?,?,?)').run(namespace,runKey,planDigest,store.now(),null,'planned',JSON.stringify(jobPlan));
   const budget = {remaining:24}; const outcomes = [];
   const runDeadline = AbortSignal.timeout(45000);
@@ -99,6 +103,7 @@ export async function runCollection({
     state,attempt_budget:24,attempted:24-budget.remaining,budget_remaining:budget.remaining,
     live_collection_executed:false,workflow_dispatch_succeeded:false,outcomes};
   store.db.prepare('UPDATE collector_jobs SET state=?,finished_at=?,payload=? WHERE namespace=? AND id=?').run(state,store.now(),JSON.stringify({plan:jobPlan,result:report}),namespace,runKey);
+  report.retention=pruneCollectorHistory(store,namespace);
   return report;
 }
 

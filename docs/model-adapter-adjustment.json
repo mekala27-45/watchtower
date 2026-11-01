@@ -1,0 +1,13 @@
+{
+  "schema": "watchtower-development-adjustment-v1",
+  "adjustment_number": 1,
+  "scope": "development_only_before_heldout",
+  "original_adapter": "eve + AI SDK @ai-sdk/openai-compatible + Ollama /v1/chat/completions",
+  "original_run": "reports/model/runs/development-2026-11-01T16-32-08-090Z/ledger.json",
+  "evidence": "Native Ollama probe returned a structured list_changes call. Both original eve development cases returned JSON-looking assistant text and no structured tool calls. These failures remain in their original archive.",
+  "adjusted_adapter": "eve + AI SDK LanguageModelV4 + native Ollama /api/chat",
+  "preserved": ["qwen3:0.6b", "pinned artifact digest", "Q4_K_M", "CPU only", "three model responses", "four tool calls", "256 output tokens", "60 seconds per sequence", "exact three runtime tools", "frozen heldout subset", "independent verifier"],
+  "prompt_refinement": "Development-only concise instructions preserve all action and evidence boundaries while explicitly distinguishing native tool calls from ordinary JSON text. Original prompt is archived at docs/sources/model-instructions-initial.md. This is not another model or adapter change. All attempts remain archived.",
+  "reason": "Use the provider's demonstrated native tool-call protocol. Only message.tool_calls is translated; assistant JSON text is never treated as a tool request.",
+  "sources": ["node_modules/eve/docs/agent-config.md", "node_modules/eve/dist/src/shared/agent-definition.d.ts", "node_modules/@ai-sdk/provider/src/language-model/v4/language-model-v4.ts", "https://docs.ollama.com/api/chat", "https://docs.ollama.com/capabilities/tool-calling"]
+}

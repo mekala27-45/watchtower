@@ -18,7 +18,7 @@
 </header>
 <section class="hero" aria-labelledby="page-title">
 <div><p class="eyebrow">A bounded release monitor</p><h1 id="page-title">Evidence before<br>a briefing.</h1><p class="lede">See what changed, what was checked, and what still remains unknown.</p></div>
-<aside class="issue"><span class="small-label">CURRENT EDITION</span><strong>Local candidate</strong><span id="readiness">Checking API readiness...</span><span class="issue-rule"></span><span>Public deployment: not verified</span><span>Actual model: see its separate report</span></aside>
+<aside class="issue"><span class="small-label">CURRENT EDITION</span><strong id="edition-state">Evidence build</strong><span id="readiness">Checking API readiness...</span><span class="issue-rule"></span><span id="deployment-state">Public deployment: not verified</span><span>Actual model: see its separate report</span></aside>
 </section>
 <nav class="tabs" aria-label="Watchtower sections">
 <button class="tab" id="tab-sources" data-view="sources" aria-current="page">Sources</button>
@@ -72,8 +72,8 @@
 <div class="report-methods"><section><h3><span class="mode-mark baseline" aria-hidden="true"></span>Baseline on the model subset</h3><div id="baseline-subset-results"><p>Measured results unavailable.</p></div></section><section><h3><span class="mode-mark actual" aria-hidden="true"></span>Actual local model</h3><div id="agent-results"><p>Measured results unavailable.</p></div></section></div>
 <details class="method-note"><summary>Full held-out deterministic baseline</summary><p>This is the full held-out dataset, separate from the shared subset above.</p><div id="baseline-results"><p>Measured results unavailable.</p></div></details>
 <details class="method-note"><summary>Show the query and source manifest</summary><p>These tables read the separate baseline and model records from <code>GET /api/reports/current</code>. Ratios are rendered only when their measured numerator and denominator are present. Null, missing and unexecuted values remain unavailable.</p><pre id="report-json">Unavailable</pre></details>
-<details class="method-note"><summary>Implementation and verification limits</summary><p>This candidate uses a local persistence adapter. Public API, public Pages flow, actual workflow dispatch, real local inference and hosted Postgres need their own successful evidence. Primary font files have not been installed or license-verified; system fallbacks are active. Static checks do not establish browser accessibility.</p></details>
-<p class="pushback">Public deployment, actual model execution and any unverified checks remain incomplete. A local test result cannot establish a successful hosted run.</p>
+<details class="method-note"><summary>Implementation and verification limits</summary><p>API readiness, the database backend and source revision come from the connected service. Publication, model inference and workflow dispatch need their own execution evidence. The primary Fontsource fonts are bundled with their SIL Open Font License files. Browser checks and hosted checks are recorded separately.</p></details>
+<p id="evidence-pushback" class="pushback">Any planned check without successful execution evidence remains incomplete. A local test result cannot establish a successful hosted run. Consult the completion checklist in the report.</p>
 </section>
 </main>
 <footer><div class="footer-brand">WATCHTOWER <span>Evidence, with boundaries.</span></div><p id="disclaimer">Portfolio demonstration using public release metadata and authored synthetic evaluation cases. Findings describe captured observations within a declared window. They are not security assessments or upgrade recommendations. Agent proposals, deterministic results, recordings and live observations are labeled separately. Incomplete coverage remains unknown.</p></footer>

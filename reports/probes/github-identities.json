@@ -1,0 +1,38 @@
+[
+  {
+    "label": "vercel/eve",
+    "status": 200,
+    "source_id": "1271113810",
+    "full_name": "vercel/eve",
+    "html_url": "https://github.com/vercel/eve",
+    "api_version_selected": "2026-03-10",
+    "checked_at": "2026-11-01T16:29:52.707Z"
+  },
+  {
+    "label": "ollama/ollama",
+    "status": 200,
+    "source_id": "658928958",
+    "full_name": "ollama/ollama",
+    "html_url": "https://github.com/ollama/ollama",
+    "api_version_selected": "2026-03-10",
+    "checked_at": "2026-11-01T16:29:52.694Z"
+  },
+  {
+    "label": "microsoft/playwright",
+    "status": 200,
+    "source_id": "221981891",
+    "full_name": "microsoft/playwright",
+    "html_url": "https://github.com/microsoft/playwright",
+    "api_version_selected": "2026-03-10",
+    "checked_at": "2026-11-01T16:29:52.703Z"
+  },
+  {
+    "label": "vitejs/vite",
+    "status": 200,
+    "source_id": "257485422",
+    "full_name": "vitejs/vite",
+    "html_url": "https://github.com/vitejs/vite",
+    "api_version_selected": "2026-03-10",
+    "checked_at": "2026-11-01T16:29:52.705Z"
+  }
+]

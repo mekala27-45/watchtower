@@ -1,0 +1,1399 @@
+{
+  "schema": "watchtower-model-ledger-v1",
+  "method": "local_agent",
+  "execution_mode": "actual_local_inference",
+  "namespace": "evaluation",
+  "dataset": "authored_temporal_development_probe",
+  "run_id": "development-2026-11-01T16-36-25-470Z",
+  "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+  "source_revision": "3de3342a04ba4527984890df743a4c208ba1d01f",
+  "subset_ids": [
+    "mutable_tag-development-02",
+    "unchanged_valid_200-development-01"
+  ],
+  "subset_digest": "d532269e33caa05a212f5f621120d30fcb529a50fb1c4842ff677724e79ca984",
+  "fixture_digest": "c76b7004eca1ace2c6dc35fbf338dee2bbf16dc24e9b0d6b9d1ab89c78949550",
+  "model": {
+    "model": "qwen3:0.6b",
+    "artifact_digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+    "runtime": "ollama",
+    "runtime_version": "0.40.13",
+    "quantization": "Q4_K_M",
+    "placement": "CPU",
+    "context": 8192,
+    "max_turns": 3,
+    "max_tool_calls": 4,
+    "sequence_deadline_ms": 60000,
+    "temperature": 0,
+    "seed": 23,
+    "status": "development_candidate"
+  },
+  "probe_artifact": "reports/model/runs/development-2026-11-01T16-36-25-470Z/probe.json",
+  "baseline_comparison_artifact": null,
+  "complete_evaluation": false,
+  "planned": 2,
+  "attempted": 2,
+  "completed": 2,
+  "failed": 0,
+  "unexecuted": 0,
+  "quality_available": true,
+  "summary": {
+    "expected": 1,
+    "emitted": 0,
+    "matched": 0,
+    "missed": 1,
+    "duplicates": 0,
+    "unsupported": 0,
+    "supported_proposals": 0,
+    "correct_noop_or_uncertainty": 0,
+    "unsupported_publications": 0
+  },
+  "model_metrics": {
+    "precision": {
+      "value": null,
+      "numerator": 0,
+      "denominator": 0,
+      "unit": "ratio",
+      "state": "not_applicable"
+    },
+    "recall": {
+      "value": 0,
+      "numerator": 0,
+      "denominator": 1,
+      "unit": "ratio",
+      "state": "available"
+    },
+    "supported_proposals": {
+      "value": 0,
+      "unit": "count",
+      "state": "available"
+    }
+  },
+  "demonstration_criteria": {
+    "all_24_attempted": false,
+    "supported_factual_proposal": false,
+    "correct_noop_or_uncertainty": false,
+    "no_unsupported_publications": true
+  },
+  "demonstration_passed": false,
+  "rows": [
+    {
+      "fixture_id": "mutable_tag-development-02",
+      "family": "mutable_tag",
+      "method": "local_agent",
+      "status": "completed",
+      "inference_attempted": true,
+      "reason": null,
+      "model_request_count": 1,
+      "model_requested_tool_calls": 0,
+      "handler_executions": 0,
+      "proposed_findings": [],
+      "elapsed_ms": 2079,
+      "generated_tokens": 72,
+      "supported_proposals": 0,
+      "correct_noop_or_uncertainty": false,
+      "quality_available": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "method": "local_agent",
+          "inference_attempted": true,
+          "bundle": {
+            "namespace": "synthetic:evaluation",
+            "source_id": 1001,
+            "before": {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "items": [
+                {
+                  "namespace": "synthetic:evaluation",
+                  "source_id": 1001,
+                  "release_id": 101,
+                  "tag_name": "v1.0.0",
+                  "draft": false,
+                  "prerelease": false,
+                  "published_at": "2026-10-01T12:00:00.000Z",
+                  "created_at": "2026-09-30T12:00:00.000Z",
+                  "assets": [
+                    {
+                      "id": 1010,
+                      "name": "fixture.tar.gz",
+                      "size": 1024,
+                      "content_type": "application/gzip"
+                    }
+                  ],
+                  "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+                  "notes_bytes": 31,
+                  "normalizer_version": "normalizer-v1",
+                  "digest": "c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+                  "id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119"
+                }
+              ],
+              "state": "captured",
+              "scope": "bounded-v1",
+              "coverage": {
+                "procedure_complete": true,
+                "uncovered_scope": []
+              },
+              "id": "obs_fd44f2e1c29126e8253548aa36234e1091f5d755ed8abd6af1d36e9d6cba617c",
+              "digest": "fd44f2e1c29126e8253548aa36234e1091f5d755ed8abd6af1d36e9d6cba617c",
+              "captured_at": null,
+              "checked_at": null
+            },
+            "after": {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "items": [
+                {
+                  "namespace": "synthetic:evaluation",
+                  "source_id": 1001,
+                  "release_id": 101,
+                  "tag_name": "v0.1.0",
+                  "draft": false,
+                  "prerelease": false,
+                  "published_at": "2026-10-01T12:00:00.000Z",
+                  "created_at": "2026-09-30T12:00:00.000Z",
+                  "assets": [
+                    {
+                      "id": 1010,
+                      "name": "fixture.tar.gz",
+                      "size": 1024,
+                      "content_type": "application/gzip"
+                    }
+                  ],
+                  "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+                  "notes_bytes": 31,
+                  "normalizer_version": "normalizer-v1",
+                  "digest": "bca6dafd368907da6f4502c98dd2d96247a45ec4c7f7c7b375fcd25d07a56c07",
+                  "id": "ev_bca6dafd368907da6f4502c98dd2d96247a45ec4c7f7c7b375fcd25d07a56c07"
+                }
+              ],
+              "state": "captured",
+              "scope": "bounded-v1",
+              "coverage": {
+                "procedure_complete": true,
+                "uncovered_scope": []
+              },
+              "id": "obs_1c2ebce6db50045dba4e808f15987321a1398e1fd9ace9132c85a4693a3fd688",
+              "digest": "1c2ebce6db50045dba4e808f15987321a1398e1fd9ace9132c85a4693a3fd688",
+              "captured_at": null,
+              "checked_at": null
+            },
+            "candidates": [
+              {
+                "id": "candidate_83c013d1572be79d08f1eefbd4979196e6df281a0a279a91c700ed1ba230fb45",
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 101,
+                "kind": "tag_changed",
+                "field": "tag_name",
+                "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+                "after_evidence_id": "ev_bca6dafd368907da6f4502c98dd2d96247a45ec4c7f7c7b375fcd25d07a56c07",
+                "watchlist_version": "watchlist-v1"
+              }
+            ],
+            "evidence": {
+              "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 101,
+                "tag_name": "v1.0.0",
+                "draft": false,
+                "prerelease": false,
+                "published_at": "2026-10-01T12:00:00.000Z",
+                "created_at": "2026-09-30T12:00:00.000Z",
+                "assets": [
+                  {
+                    "id": 1010,
+                    "name": "fixture.tar.gz",
+                    "size": 1024,
+                    "content_type": "application/gzip"
+                  }
+                ],
+                "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+                "notes_bytes": 31,
+                "normalizer_version": "normalizer-v1",
+                "digest": "c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+                "id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119"
+              },
+              "ev_bca6dafd368907da6f4502c98dd2d96247a45ec4c7f7c7b375fcd25d07a56c07": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 101,
+                "tag_name": "v0.1.0",
+                "draft": false,
+                "prerelease": false,
+                "published_at": "2026-10-01T12:00:00.000Z",
+                "created_at": "2026-09-30T12:00:00.000Z",
+                "assets": [
+                  {
+                    "id": 1010,
+                    "name": "fixture.tar.gz",
+                    "size": 1024,
+                    "content_type": "application/gzip"
+                  }
+                ],
+                "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+                "notes_bytes": 31,
+                "normalizer_version": "normalizer-v1",
+                "digest": "bca6dafd368907da6f4502c98dd2d96247a45ec4c7f7c7b375fcd25d07a56c07",
+                "id": "ev_bca6dafd368907da6f4502c98dd2d96247a45ec4c7f7c7b375fcd25d07a56c07"
+              }
+            },
+            "watchlist_version": "watchlist-v1",
+            "outcome": "changed",
+            "normalizer_version": "normalizer-v1",
+            "verifier_version": "verifier-v1",
+            "id": "bundle_510beb099bad6cd0736d05c45b8b0fedfecb8f46d2f56af925415383b2cf5a78",
+            "digest": "510beb099bad6cd0736d05c45b8b0fedfecb8f46d2f56af925415383b2cf5a78"
+          },
+          "bundle_digest": "510beb099bad6cd0736d05c45b8b0fedfecb8f46d2f56af925415383b2cf5a78",
+          "expected_outcome": "changed",
+          "outcome": null,
+          "expected_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "after_evidence_id": "ev_bca6dafd368907da6f4502c98dd2d96247a45ec4c7f7c7b375fcd25d07a56c07",
+              "kind": "tag_changed",
+              "field": "tag_name"
+            }
+          ],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 1,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 1,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": 0,
+              "numerator": 0,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "pass": false
+          },
+          "verification": [],
+          "review_previews": [],
+          "unsupported_publications": 0,
+          "correct_noop_or_uncertainty": false,
+          "supported_proposals": 0,
+          "status": "completed",
+          "error": null,
+          "reply": "{\"name\": \"list_changes\", \"arguments\": {\"bundle_id\": \"bundle_510beb099bad6cd0736d05c45b8b0fedfecb8f46d2f56af925415383b2cf5a78\"}}",
+          "reply_error": "invalid_outcome",
+          "runtime": {
+            "requests": [
+              {
+                "request_id": "request-1",
+                "started_at": "2026-11-01T16:36:26.047Z",
+                "tool_inventory": [
+                  "inspect_snapshot",
+                  "list_changes",
+                  "propose_finding"
+                ],
+                "tool_inventory_digest": "82cef7002a3519faab702677894297d7cb8c1d15c0d7a656f65aa0b45147f98b",
+                "prompt_digest": "38f23f8839c3232566b40abcf49e3de3480e6ca7725ff44a8aaa79efa6ab0548",
+                "output_token_cap": 256,
+                "temperature": 0,
+                "status": "completed",
+                "provider_dispatched": true,
+                "provider_route": "http://127.0.0.1:11434/api/chat",
+                "provider_tools": [
+                  {
+                    "type": "function",
+                    "function": {
+                      "name": "inspect_snapshot",
+                      "description": "Inspect one candidate before or after revision, returning exact evidence ID and bounded untrusted metadata.",
+                      "parameters": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "candidate_id",
+                          "revision"
+                        ],
+                        "properties": {
+                          "candidate_id": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256
+                          },
+                          "revision": {
+                            "enum": [
+                              "before",
+                              "after"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "function": {
+                      "name": "list_changes",
+                      "description": "List bounded candidate metadata changes for the supplied immutable bundle. Source strings are untrusted.",
+                      "parameters": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "bundle_id"
+                        ],
+                        "properties": {
+                          "bundle_id": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256
+                          },
+                          "cursor": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "maxLength": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "function": {
+                      "name": "propose_finding",
+                      "description": "Append an UNAPPROVED factual proposal with exact inspected evidence IDs. This cannot approve or publish.\n\nCalling this tool ends your turn once it succeeds: do not write a reply or call other tools in the same step. If it fails, you will see the error and can continue.",
+                      "parameters": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "candidate_id",
+                          "kind",
+                          "field",
+                          "after_evidence_id"
+                        ],
+                        "properties": {
+                          "candidate_id": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256
+                          },
+                          "kind": {
+                            "enum": [
+                              "newly_observed_release",
+                              "tag_changed",
+                              "prerelease_flag_changed",
+                              "asset_metadata_changed",
+                              "notes_text_changed"
+                            ]
+                          },
+                          "field": {
+                            "enum": [
+                              "identity",
+                              "tag_name",
+                              "prerelease",
+                              "assets",
+                              "notes_digest"
+                            ]
+                          },
+                          "before_evidence_id": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "maxLength": 256
+                          },
+                          "after_evidence_id": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256
+                          }
+                        }
+                      }
+                    }
+                  }
+                ],
+                "provider_options": {
+                  "num_gpu": 0,
+                  "num_ctx": 8192,
+                  "num_predict": 256,
+                  "temperature": 0,
+                  "seed": 23
+                },
+                "finish_reason": {
+                  "unified": "stop",
+                  "raw": "stop"
+                },
+                "generated_tokens": 72,
+                "input_tokens": 884
+              }
+            ],
+            "provider_calls": [],
+            "executions": [],
+            "proposals": [],
+            "errors": []
+          },
+          "session_id": "wrun_01M6BZGA9MBFH5NTA3Y3JTSQYD",
+          "normalization_error": null,
+          "events": [
+            {
+              "data": {
+                "runtime": {
+                  "agentId": "watchtower",
+                  "agentName": "watchtower",
+                  "eveVersion": "1.0.0-rc.1"
+                }
+              },
+              "type": "session.started",
+              "meta": {
+                "at": "2026-11-01T16:36:26.019Z",
+                "endOfLine": false,
+                "position": {
+                  "index": 0,
+                  "line": 0
+                }
+              }
+            },
+            {
+              "data": {
+                "deliveryId": "54038306-e545-4d5b-97cc-8fd35bde792b",
+                "principal": {
+                  "id": "local-dev",
+                  "type": "local-dev"
+                },
+                "source": {
+                  "channel": "channel:eve"
+                }
+              },
+              "type": "delivery.admitted",
+              "meta": {
+                "at": "2026-11-01T16:36:26.019Z",
+                "endOfLine": true,
+                "position": {
+                  "index": 1,
+                  "line": 0
+                }
+              }
+            },
+            {
+              "data": {
+                "cause": {
+                  "deliveryId": "54038306-e545-4d5b-97cc-8fd35bde792b"
+                },
+                "follows": null,
+                "trace": {
+                  "decision": {
+                    "action": "record",
+                    "recordInputs": true,
+                    "recordOutputs": true
+                  },
+                  "spanId": "0db96997c605f520",
+                  "traceFlags": 1,
+                  "traceId": "db427aeb56d4b2a55a09e13270819618"
+                },
+                "turnId": "turn_0"
+              },
+              "type": "turn.started",
+              "scope": {
+                "turnId": "turn_0"
+              },
+              "meta": {
+                "at": "2026-11-01T16:36:26.028Z",
+                "endOfLine": false,
+                "position": {
+                  "index": 0,
+                  "line": 1
+                }
+              }
+            },
+            {
+              "data": {
+                "deliveryId": "54038306-e545-4d5b-97cc-8fd35bde792b",
+                "parts": [
+                  {
+                    "kind": "text",
+                    "text": "Inspect this immutable observation bundle. {\"bundle_id\":\"bundle_510beb099bad6cd0736d05c45b8b0fedfecb8f46d2f56af925415383b2cf5a78\",\"namespace\":\"synthetic:evaluation\",\"source_id\":1001,\"before_state\":\"captured\",\"after_state\":\"captured\",\"before_scope\":\"bounded-v1\",\"after_scope\":\"bounded-v1\",\"uncovered_scope\":[],\"normalization_error\":null}"
+                  }
+                ],
+                "turnId": "turn_0"
+              },
+              "type": "delivery.consumed",
+              "scope": {
+                "turnId": "turn_0"
+              },
+              "meta": {
+                "at": "2026-11-01T16:36:26.028Z",
+                "endOfLine": true,
+                "position": {
+                  "index": 1,
+                  "line": 1
+                }
+              }
+            },
+            {
+              "data": {
+                "owner": {
+                  "turnId": "turn_0"
+                },
+                "runId": "run_0"
+              },
+              "type": "model.requested",
+              "scope": {
+                "runId": "run_0",
+                "turnId": "turn_0"
+              },
+              "meta": {
+                "at": "2026-11-01T16:36:26.033Z",
+                "endOfLine": true,
+                "position": {
+                  "index": 0,
+                  "line": 2
+                }
+              }
+            },
+            {
+              "data": {
+                "attempt": 0,
+                "modelId": "watchtower_ollama/qwen3:0.6b",
+                "runId": "run_0"
+              },
+              "type": "model.started",
+              "scope": {
+                "runId": "run_0",
+                "turnId": "turn_0"
+              },
+              "meta": {
+                "at": "2026-11-01T16:36:26.036Z",
+                "endOfLine": true,
+                "position": {
+                  "index": 0,
+                  "line": 3
+                }
+              }
+            },
+            {
+              "data": {
+                "delta": "{\"name\": \"list_changes\", \"arguments\": {\"bundle_id\": \"bundle_510beb099bad6cd0736d05c45b8b0fedfecb8f46d2f56af925415383b2cf5a78\"}}",
+                "kind": "text",
+                "partId": "run_0.0"
+              },
+              "scope": {
+                "runId": "run_0",
+                "turnId": "turn_0"
+              },
+              "type": "content.delta",
+              "meta": {
+                "at": "2026-11-01T16:36:26.036Z",
+                "endOfLine": true,
+                "position": {
+                  "index": 0,
+                  "line": 4
+                }
+              }
+            },
+            {
+              "data": {
+                "kind": "text",
+                "partId": "run_0.0",
+                "phase": "reply",
+                "runId": "run_0",
+                "value": "{\"name\": \"list_changes\", \"arguments\": {\"bundle_id\": \"bundle_510beb099bad6cd0736d05c45b8b0fedfecb8f46d2f56af925415383b2cf5a78\"}}"
+              },
+              "type": "content.completed",
+              "scope": {
+                "runId": "run_0",
+                "turnId": "turn_0"
+              },
+              "meta": {
+                "at": "2026-11-01T16:36:27.312Z",
+                "endOfLine": true,
+                "position": {
+                  "index": 0,
+                  "line": 5
+                }
+              }
+            },
+            {
+              "data": {
+                "finishReason": "stop",
+                "outcome": "completed",
+                "runId": "run_0"
+              },
+              "type": "model.settled",
+              "scope": {
+                "runId": "run_0",
+                "turnId": "turn_0"
+              },
+              "meta": {
+                "at": "2026-11-01T16:36:27.314Z",
+                "endOfLine": false,
+                "position": {
+                  "index": 0,
+                  "line": 6
+                }
+              }
+            },
+            {
+              "data": {
+                "kind": "model",
+                "owner": {
+                  "runId": "run_0"
+                },
+                "usage": {
+                  "cacheReadTokens": 0,
+                  "cacheWriteTokens": 0,
+                  "inputTokens": 884,
+                  "outputTokens": 72
+                }
+              },
+              "type": "usage.recorded",
+              "scope": {
+                "runId": "run_0",
+                "turnId": "turn_0"
+              },
+              "meta": {
+                "at": "2026-11-01T16:36:27.314Z",
+                "endOfLine": true,
+                "position": {
+                  "index": 1,
+                  "line": 6
+                }
+              }
+            },
+            {
+              "data": {
+                "outcome": "completed",
+                "reply": [
+                  "run_0.0"
+                ],
+                "turnId": "turn_0"
+              },
+              "type": "turn.settled",
+              "scope": {
+                "turnId": "turn_0"
+              },
+              "meta": {
+                "at": "2026-11-01T16:36:27.325Z",
+                "endOfLine": false,
+                "position": {
+                  "index": 0,
+                  "line": 7
+                }
+              }
+            },
+            {
+              "data": {
+                "deliveryId": "54038306-e545-4d5b-97cc-8fd35bde792b",
+                "outcome": "handled",
+                "turnId": "turn_0"
+              },
+              "type": "delivery.settled",
+              "meta": {
+                "at": "2026-11-01T16:36:27.325Z",
+                "endOfLine": true,
+                "position": {
+                  "index": 1,
+                  "line": 7
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fixture_id": "unchanged_valid_200-development-01",
+      "family": "unchanged_valid_200",
+      "method": "local_agent",
+      "status": "completed",
+      "inference_attempted": true,
+      "reason": null,
+      "model_request_count": 1,
+      "model_requested_tool_calls": 0,
+      "handler_executions": 0,
+      "proposed_findings": [],
+      "elapsed_ms": 2069,
+      "generated_tokens": 79,
+      "supported_proposals": 0,
+      "correct_noop_or_uncertainty": false,
+      "quality_available": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "method": "local_agent",
+          "inference_attempted": true,
+          "bundle": {
+            "namespace": "synthetic:evaluation",
+            "source_id": 1001,
+            "before": {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "items": [
+                {
+                  "namespace": "synthetic:evaluation",
+                  "source_id": 1001,
+                  "release_id": 101,
+                  "tag_name": "v1.0.0",
+                  "draft": false,
+                  "prerelease": false,
+                  "published_at": "2026-10-01T12:00:00.000Z",
+                  "created_at": "2026-09-30T12:00:00.000Z",
+                  "assets": [
+                    {
+                      "id": 1010,
+                      "name": "fixture.tar.gz",
+                      "size": 1024,
+                      "content_type": "application/gzip"
+                    }
+                  ],
+                  "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+                  "notes_bytes": 31,
+                  "normalizer_version": "normalizer-v1",
+                  "digest": "c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+                  "id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119"
+                },
+                {
+                  "namespace": "synthetic:evaluation",
+                  "source_id": 1001,
+                  "release_id": 102,
+                  "tag_name": "v1.0.0",
+                  "draft": false,
+                  "prerelease": false,
+                  "published_at": "2026-10-01T12:00:00.000Z",
+                  "created_at": "2026-09-30T12:00:00.000Z",
+                  "assets": [
+                    {
+                      "id": 1020,
+                      "name": "fixture.tar.gz",
+                      "size": 1024,
+                      "content_type": "application/gzip"
+                    }
+                  ],
+                  "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+                  "notes_bytes": 31,
+                  "normalizer_version": "normalizer-v1",
+                  "digest": "1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36",
+                  "id": "ev_1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36"
+                }
+              ],
+              "state": "captured",
+              "scope": "bounded-v1",
+              "coverage": {
+                "procedure_complete": true,
+                "uncovered_scope": []
+              },
+              "id": "obs_0ea31938b1c0e6effec4439e46c4f721e124fe31efb8ad5ea3521fe9586c4c66",
+              "digest": "0ea31938b1c0e6effec4439e46c4f721e124fe31efb8ad5ea3521fe9586c4c66",
+              "captured_at": null,
+              "checked_at": null
+            },
+            "after": {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "items": [
+                {
+                  "namespace": "synthetic:evaluation",
+                  "source_id": 1001,
+                  "release_id": 101,
+                  "tag_name": "v1.0.0",
+                  "draft": false,
+                  "prerelease": false,
+                  "published_at": "2026-10-01T12:00:00.000Z",
+                  "created_at": "2026-09-30T12:00:00.000Z",
+                  "assets": [
+                    {
+                      "id": 1010,
+                      "name": "fixture.tar.gz",
+                      "size": 1024,
+                      "content_type": "application/gzip"
+                    }
+                  ],
+                  "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+                  "notes_bytes": 31,
+                  "normalizer_version": "normalizer-v1",
+                  "digest": "c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+                  "id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119"
+                },
+                {
+                  "namespace": "synthetic:evaluation",
+                  "source_id": 1001,
+                  "release_id": 102,
+                  "tag_name": "v1.0.0",
+                  "draft": false,
+                  "prerelease": false,
+                  "published_at": "2026-10-01T12:00:00.000Z",
+                  "created_at": "2026-09-30T12:00:00.000Z",
+                  "assets": [
+                    {
+                      "id": 1020,
+                      "name": "fixture.tar.gz",
+                      "size": 1024,
+                      "content_type": "application/gzip"
+                    }
+                  ],
+                  "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+                  "notes_bytes": 31,
+                  "normalizer_version": "normalizer-v1",
+                  "digest": "1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36",
+                  "id": "ev_1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36"
+                }
+              ],
+              "state": "captured",
+              "scope": "bounded-v1",
+              "coverage": {
+                "procedure_complete": true,
+                "uncovered_scope": []
+              },
+              "id": "obs_0ea31938b1c0e6effec4439e46c4f721e124fe31efb8ad5ea3521fe9586c4c66",
+              "digest": "0ea31938b1c0e6effec4439e46c4f721e124fe31efb8ad5ea3521fe9586c4c66",
+              "captured_at": null,
+              "checked_at": null
+            },
+            "candidates": [],
+            "evidence": {
+              "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 101,
+                "tag_name": "v1.0.0",
+                "draft": false,
+                "prerelease": false,
+                "published_at": "2026-10-01T12:00:00.000Z",
+                "created_at": "2026-09-30T12:00:00.000Z",
+                "assets": [
+                  {
+                    "id": 1010,
+                    "name": "fixture.tar.gz",
+                    "size": 1024,
+                    "content_type": "application/gzip"
+                  }
+                ],
+                "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+                "notes_bytes": 31,
+                "normalizer_version": "normalizer-v1",
+                "digest": "c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+                "id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119"
+              },
+              "ev_1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 102,
+                "tag_name": "v1.0.0",
+                "draft": false,
+                "prerelease": false,
+                "published_at": "2026-10-01T12:00:00.000Z",
+                "created_at": "2026-09-30T12:00:00.000Z",
+                "assets": [
+                  {
+                    "id": 1020,
+                    "name": "fixture.tar.gz",
+                    "size": 1024,
+                    "content_type": "application/gzip"
+                  }
+                ],
+                "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+                "notes_bytes": 31,
+                "normalizer_version": "normalizer-v1",
+                "digest": "1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36",
+                "id": "ev_1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36"
+              }
+            },
+            "watchlist_version": "watchlist-v1",
+            "outcome": "unchanged_in_observed_scope",
+            "normalizer_version": "normalizer-v1",
+            "verifier_version": "verifier-v1",
+            "id": "bundle_1f6725f77260928f0d6788f90e1fc0f69ff043dccb730d59f36480f1757b28e1",
+            "digest": "1f6725f77260928f0d6788f90e1fc0f69ff043dccb730d59f36480f1757b28e1"
+          },
+          "bundle_digest": "1f6725f77260928f0d6788f90e1fc0f69ff043dccb730d59f36480f1757b28e1",
+          "expected_outcome": "unchanged_in_observed_scope",
+          "outcome": null,
+          "expected_facts": [],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 0,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "pass": true
+          },
+          "verification": [],
+          "review_previews": [],
+          "unsupported_publications": 0,
+          "correct_noop_or_uncertainty": false,
+          "supported_proposals": 0,
+          "status": "completed",
+          "error": null,
+          "reply": "{\"name\": \"list_changes\", \"arguments\": {\"bundle_id\": \"bundle_1f6725f77260928f0d6788f90e1fc0f69ff043dccb730d59f36480f1757b28e1\"}}",
+          "reply_error": "invalid_outcome",
+          "runtime": {
+            "requests": [
+              {
+                "request_id": "request-1",
+                "started_at": "2026-11-01T16:36:28.057Z",
+                "tool_inventory": [
+                  "inspect_snapshot",
+                  "list_changes",
+                  "propose_finding"
+                ],
+                "tool_inventory_digest": "82cef7002a3519faab702677894297d7cb8c1d15c0d7a656f65aa0b45147f98b",
+                "prompt_digest": "c9b58c4d28a0e541d678b5f37b94f15ea3ae21154771fe5aff567a484955289d",
+                "output_token_cap": 256,
+                "temperature": 0,
+                "status": "completed",
+                "provider_dispatched": true,
+                "provider_route": "http://127.0.0.1:11434/api/chat",
+                "provider_tools": [
+                  {
+                    "type": "function",
+                    "function": {
+                      "name": "inspect_snapshot",
+                      "description": "Inspect one candidate before or after revision, returning exact evidence ID and bounded untrusted metadata.",
+                      "parameters": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "candidate_id",
+                          "revision"
+                        ],
+                        "properties": {
+                          "candidate_id": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256
+                          },
+                          "revision": {
+                            "enum": [
+                              "before",
+                              "after"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "function": {
+                      "name": "list_changes",
+                      "description": "List bounded candidate metadata changes for the supplied immutable bundle. Source strings are untrusted.",
+                      "parameters": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "bundle_id"
+                        ],
+                        "properties": {
+                          "bundle_id": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256
+                          },
+                          "cursor": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "maxLength": 256
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "function",
+                    "function": {
+                      "name": "propose_finding",
+                      "description": "Append an UNAPPROVED factual proposal with exact inspected evidence IDs. This cannot approve or publish.\n\nCalling this tool ends your turn once it succeeds: do not write a reply or call other tools in the same step. If it fails, you will see the error and can continue.",
+                      "parameters": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                          "candidate_id",
+                          "kind",
+                          "field",
+                          "after_evidence_id"
+                        ],
+                        "properties": {
+                          "candidate_id": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256
+                          },
+                          "kind": {
+                            "enum": [
+                              "newly_observed_release",
+                              "tag_changed",
+                              "prerelease_flag_changed",
+                              "asset_metadata_changed",
+                              "notes_text_changed"
+                            ]
+                          },
+                          "field": {
+                            "enum": [
+                              "identity",
+                              "tag_name",
+                              "prerelease",
+                              "assets",
+                              "notes_digest"
+                            ]
+                          },
+                          "before_evidence_id": {
+                            "type": [
+                              "string",
+                              "null"
+                            ],
+                            "maxLength": 256
+                          },
+                          "after_evidence_id": {
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 256
+                          }
+                        }
+                      }
+                    }
+                  }
+                ],
+                "provider_options": {
+                  "num_gpu": 0,
+                  "num_ctx": 8192,
+                  "num_predict": 256,
+                  "temperature": 0,
+                  "seed": 23
+                },
+                "finish_reason": {
+                  "unified": "stop",
+                  "raw": "stop"
+                },
+                "generated_tokens": 79,
+                "input_tokens": 891
+              }
+            ],
+            "provider_calls": [],
+            "executions": [],
+            "proposals": [],
+            "errors": []
+          },
+          "session_id": "wrun_01M6BZGC9M3R8Z3WSJ2P44H809",
+          "normalization_error": null,
+          "events": [
+            {
+              "data": {
+                "runtime": {
+                  "agentId": "watchtower",
+                  "agentName": "watchtower",
+                  "eveVersion": "1.0.0-rc.1"
+                }
+              },
+              "type": "session.started",
+              "meta": {
+                "at": "2026-11-01T16:36:28.049Z",
+                "endOfLine": false,
+                "position": {
+                  "index": 0,
+                  "line": 0
+                }
+              }
+            },
+            {
+              "data": {
+                "deliveryId": "56be9395-5c11-415a-a7e1-9637cc98edad",
+                "principal": {
+                  "id": "local-dev",
+                  "type": "local-dev"
+                },
+                "source": {
+                  "channel": "channel:eve"
+                }
+              },
+              "type": "delivery.admitted",
+              "meta": {
+                "at": "2026-11-01T16:36:28.049Z",
+                "endOfLine": true,
+                "position": {
+                  "index": 1,
+                  "line": 0
+                }
+              }
+            },
+            {
+              "data": {
+                "cause": {
+                  "deliveryId": "56be9395-5c11-415a-a7e1-9637cc98edad"
+                },
+                "follows": null,
+                "trace": {
+                  "decision": {
+                    "action": "record",
+                    "recordInputs": true,
+                    "recordOutputs": true
+                  },
+                  "spanId": "dd2314172ab437b3",
+                  "traceFlags": 1,
+                  "traceId": "479dea5607f3009f9614025ceaa682e0"
+                },
+                "turnId": "turn_0"
+              },
+              "type": "turn.started",
+              "scope": {
+                "turnId": "turn_0"
+              },
+              "meta": {
+                "at": "2026-11-01T16:36:28.051Z",
+                "endOfLine": false,
+                "position": {
+                  "index": 0,
+                  "line": 1
+                }
+              }
+            },
+            {
+              "data": {
+                "deliveryId": "56be9395-5c11-415a-a7e1-9637cc98edad",
+                "parts": [
+                  {
+                    "kind": "text",
+                    "text": "Inspect this immutable observation bundle. {\"bundle_id\":\"bundle_1f6725f77260928f0d6788f90e1fc0f69ff043dccb730d59f36480f1757b28e1\",\"namespace\":\"synthetic:evaluation\",\"source_id\":1001,\"before_state\":\"captured\",\"after_state\":\"captured\",\"before_scope\":\"bounded-v1\",\"after_scope\":\"bounded-v1\",\"uncovered_scope\":[],\"normalization_error\":null}"
+                  }
+                ],
+                "turnId": "turn_0"
+              },
+              "type": "delivery.consumed",
+              "scope": {
+                "turnId": "turn_0"
+              },
+              "meta": {
+                "at": "2026-11-01T16:36:28.051Z",
+                "endOfLine": true,
+                "position": {
+                  "index": 1,
+                  "line": 1
+                }
+              }
+            },
+            {
+              "data": {
+                "owner": {
+                  "turnId": "turn_0"
+                },
+                "runId": "run_0"
+              },
+              "type": "model.requested",
+              "scope": {
+                "runId": "run_0",
+                "turnId": "turn_0"
+              },
+              "meta": {
+                "at": "2026-11-01T16:36:28.052Z",
+                "endOfLine": true,
+                "position": {
+                  "index": 0,
+                  "line": 2
+                }
+              }
+            },
+            {
+              "data": {
+                "attempt": 0,
+                "modelId": "watchtower_ollama/qwen3:0.6b",
+                "runId": "run_0"
+              },
+              "type": "model.started",
+              "scope": {
+                "runId": "run_0",
+                "turnId": "turn_0"
+              },
+              "meta": {
+                "at": "2026-11-01T16:36:28.053Z",
+                "endOfLine": true,
+                "position": {
+                  "index": 0,
+                  "line": 3
+                }
+              }
+            },
+            {
+              "data": {
+                "delta": "{\"name\": \"list_changes\", \"arguments\": {\"bundle_id\": \"bundle_1f6725f77260928f0d6788f90e1fc0f69ff043dccb730d59f36480f1757b28e1\"}}",
+                "kind": "text",
+                "partId": "run_0.0"
+              },
+              "scope": {
+                "runId": "run_0",
+                "turnId": "turn_0"
+              },
+              "type": "content.delta",
+              "meta": {
+                "at": "2026-11-01T16:36:28.053Z",
+                "endOfLine": true,
+                "position": {
+                  "index": 0,
+                  "line": 4
+                }
+              }
+            },
+            {
+              "data": {
+                "kind": "text",
+                "partId": "run_0.0",
+                "phase": "reply",
+                "runId": "run_0",
+                "value": "{\"name\": \"list_changes\", \"arguments\": {\"bundle_id\": \"bundle_1f6725f77260928f0d6788f90e1fc0f69ff043dccb730d59f36480f1757b28e1\"}}"
+              },
+              "type": "content.completed",
+              "scope": {
+                "runId": "run_0",
+                "turnId": "turn_0"
+              },
+              "meta": {
+                "at": "2026-11-01T16:36:29.436Z",
+                "endOfLine": true,
+                "position": {
+                  "index": 0,
+                  "line": 5
+                }
+              }
+            },
+            {
+              "data": {
+                "finishReason": "stop",
+                "outcome": "completed",
+                "runId": "run_0"
+              },
+              "type": "model.settled",
+              "scope": {
+                "runId": "run_0",
+                "turnId": "turn_0"
+              },
+              "meta": {
+                "at": "2026-11-01T16:36:29.436Z",
+                "endOfLine": false,
+                "position": {
+                  "index": 0,
+                  "line": 6
+                }
+              }
+            },
+            {
+              "data": {
+                "kind": "model",
+                "owner": {
+                  "runId": "run_0"
+                },
+                "usage": {
+                  "cacheReadTokens": 0,
+                  "cacheWriteTokens": 0,
+                  "inputTokens": 891,
+                  "outputTokens": 79
+                }
+              },
+              "type": "usage.recorded",
+              "scope": {
+                "runId": "run_0",
+                "turnId": "turn_0"
+              },
+              "meta": {
+                "at": "2026-11-01T16:36:29.436Z",
+                "endOfLine": true,
+                "position": {
+                  "index": 1,
+                  "line": 6
+                }
+              }
+            },
+            {
+              "data": {
+                "outcome": "completed",
+                "reply": [
+                  "run_0.0"
+                ],
+                "turnId": "turn_0"
+              },
+              "type": "turn.settled",
+              "scope": {
+                "turnId": "turn_0"
+              },
+              "meta": {
+                "at": "2026-11-01T16:36:29.444Z",
+                "endOfLine": false,
+                "position": {
+                  "index": 0,
+                  "line": 7
+                }
+              }
+            },
+            {
+              "data": {
+                "deliveryId": "56be9395-5c11-415a-a7e1-9637cc98edad",
+                "outcome": "handled",
+                "turnId": "turn_0"
+              },
+              "type": "delivery.settled",
+              "meta": {
+                "at": "2026-11-01T16:36:29.444Z",
+                "endOfLine": true,
+                "position": {
+                  "index": 1,
+                  "line": 7
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Authored synthetic fixtures; these are model proposals and independently verified review previews, not human approvals or public publications.",
+    "Failures and unexecuted transitions stay in the registered denominator; no retries or heldout tuning."
+  ],
+  "cpu_placement_valid": true,
+  "cpu_placement_after": {
+    "name": "qwen3:0.6b",
+    "model": "qwen3:0.6b",
+    "size": 1532367993,
+    "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "751.63M",
+      "quantization_level": "Q4_K_M"
+    },
+    "expires_at": "2026-11-01T12:06:29.4149435-05:00",
+    "size_vram": 0,
+    "context_length": 8192,
+    "runner": "llamacpp"
+  },
+  "cpu_error": null
+}
