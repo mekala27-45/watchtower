@@ -1,0 +1,19 @@
+{
+  "checked_at":"2026-11-01",
+  "runtime":{"node":"24.19.0","sqlite":"3.53.3"},
+  "installed_third_party_dependencies":[],
+  "required_candidates":[
+    {"package":"eve","candidate":"1.0.0-rc.1","status":"unverified"},
+    {"package":"ai","candidate":"7.0.159","status":"unverified"},
+    {"package":"@ai-sdk/openai-compatible","candidate":"3.0.82","status":"unverified"},
+    {"package":"pg","candidate":"8.23.1","status":"unverified"},
+    {"package":"zod","candidate":"4.6.7","status":"unverified"},
+    {"package":"typescript","candidate":"7.0.2","status":"unverified"},
+    {"package":"vite","candidate":"8.3.5","status":"unverified"},
+    {"package":"@playwright/test","candidate":"1.64.1","status":"unverified"}
+  ],
+  "registry_probe":"DNS failure; no integrity or compatibility claim",
+  "container_digest":null,
+  "fonts":{"Bodoni Moda":"not installed","Noto Sans":"not installed","Fira Mono":"not installed"},
+  "source":"day-23-watchtower-prompt.md inherited candidates, not installed versions"
+}
