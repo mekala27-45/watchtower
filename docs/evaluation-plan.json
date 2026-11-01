@@ -1,0 +1,101 @@
+{
+  "version": "evaluation-plan-v1",
+  "dataset_digest": "c76b7004eca1ace2c6dc35fbf338dee2bbf16dc24e9b0d6b9d1ab89c78949550",
+  "split_digest": "57ab85fbe3d8016307a4b79c7ed7fef6a884e374cae1847df38d7837bf1ebcdb",
+  "subset_ids": [
+    "asset_metadata_edit-heldout-04",
+    "asset_metadata_edit-heldout-05",
+    "duplicate_reorder-heldout-01",
+    "duplicate_reorder-heldout-02",
+    "first_observation-heldout-01",
+    "first_observation-heldout-06",
+    "hostile_metadata-heldout-02",
+    "hostile_metadata-heldout-04",
+    "mutable_tag-heldout-02",
+    "mutable_tag-heldout-04",
+    "new_prerelease-heldout-04",
+    "new_prerelease-heldout-06",
+    "new_stable_release-heldout-04",
+    "new_stable_release-heldout-06",
+    "notes_only_edit-heldout-01",
+    "notes_only_edit-heldout-04",
+    "throttle_outage-heldout-02",
+    "throttle_outage-heldout-06",
+    "truncated_moving_pages-heldout-01",
+    "truncated_moving_pages-heldout-05",
+    "unchanged_valid_200-heldout-01",
+    "unchanged_valid_200-heldout-05",
+    "valid_invalid_304-heldout-02",
+    "valid_invalid_304-heldout-05"
+  ],
+  "subset_digest": "48daa917fb30109651289b21090e10b4ef77a519fe01a47bfa7eb6c3ed34383c",
+  "methods": [
+    "deterministic_baseline",
+    "local_agent",
+    "recorded_local_agent"
+  ],
+  "generation_budgets": {
+    "model_turns": 3,
+    "tool_calls": 4,
+    "output_tokens": 256,
+    "seconds_per_sequence": 60
+  },
+  "collector_budgets": {
+    "list_pages": 2,
+    "page_size": 20,
+    "rechecks": 4,
+    "http_attempts_per_run": 24,
+    "window_days": 30
+  },
+  "retention_budgets": {
+    "recent_attempts_per_source": 100,
+    "max_rows": 10000,
+    "max_bytes": 16777216
+  },
+  "predicates": [
+    "newly_observed_release",
+    "tag_changed",
+    "prerelease_flag_changed",
+    "asset_metadata_changed",
+    "notes_text_changed"
+  ],
+  "source_policy_version": "source-policy-v1",
+  "fixture_generator_version": "authored-temporal-v1",
+  "exact_match_fields": [
+    "namespace",
+    "source_id",
+    "release_id",
+    "before_evidence_id",
+    "after_evidence_id",
+    "kind",
+    "field"
+  ],
+  "failure_policy": "Keep malformed, timeout, provider error and unexecuted rows. Unexecuted is not attempted.",
+  "model_demonstration": {
+    "all_24_attempted": true,
+    "supported_factual_proposal_min": 1,
+    "correct_noop_or_uncertainty_min": 1,
+    "unsupported_publications_max": 0
+  },
+  "metrics": [
+    "precision",
+    "recall",
+    "duplicates",
+    "unknown_handling",
+    "no_op",
+    "baseline_creation",
+    "verifier_false_acceptance",
+    "verifier_false_rejection"
+  ],
+  "fault_applicability": {
+    "timeout": "all",
+    "throttle": "all",
+    "missing_cache": "all",
+    "second_page_failure": "all",
+    "moving_conflict": "all",
+    "stale_lease": "all",
+    "transaction_process_death": "all",
+    "publication_response_loss": "sequences with expected findings"
+  },
+  "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558"
+}
