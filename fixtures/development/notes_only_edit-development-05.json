@@ -1,0 +1,96 @@
+{
+  "id": "notes_only_edit-development-05",
+  "family": "notes_only_edit",
+  "split": "development",
+  "lineage": "notes_only_edit-template-05",
+  "description": "Security word remains opaque digest",
+  "namespace": "synthetic:evaluation",
+  "source_id": 1001,
+  "observations": [
+    {
+      "state": "captured",
+      "scope": "bounded-v1",
+      "raw_items": [
+        {
+          "id": 101,
+          "tag_name": "v1.0.0",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-09-30T12:00:00Z",
+          "published_at": "2026-10-01T12:00:00Z",
+          "body": "Authored fixture release notes.",
+          "assets": [
+            {
+              "id": 1010,
+              "name": "fixture.tar.gz",
+              "size": 1024,
+              "content_type": "application/gzip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "captured",
+      "scope": "bounded-v1",
+      "raw_items": [
+        {
+          "id": 101,
+          "tag_name": "v1.0.0",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-09-30T12:00:00Z",
+          "published_at": "2026-10-01T12:00:00Z",
+          "body": "SECURITY does not establish a security fix.",
+          "assets": [
+            {
+              "id": 1010,
+              "name": "fixture.tar.gz",
+              "size": 1024,
+              "content_type": "application/gzip"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "truth": [
+    {
+      "outcome": "changed",
+      "expected_coverage": "captured",
+      "expected_normalized": [
+        {
+          "namespace": "synthetic:evaluation",
+          "source_id": 1001,
+          "release_id": 101,
+          "tag_name": "v1.0.0",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-09-30T12:00:00.000Z",
+          "published_at": "2026-10-01T12:00:00.000Z",
+          "assets": [
+            {
+              "id": 1010,
+              "name": "fixture.tar.gz",
+              "size": 1024,
+              "content_type": "application/gzip"
+            }
+          ],
+          "notes_digest": "d744531cc5de341c5fb2c06eadddf2458171999ff132091aca4c00e1719c9ed6",
+          "notes_bytes": 43,
+          "normalizer_version": "normalizer-v1",
+          "digest": "afac8ffd995d880d554131b08b5a222b585d5f870437764e51f6c1dd3c6288e1",
+          "id": "ev_afac8ffd995d880d554131b08b5a222b585d5f870437764e51f6c1dd3c6288e1"
+        }
+      ],
+      "findings": [
+        {
+          "release_id": 101,
+          "kind": "notes_text_changed",
+          "field": "notes_digest"
+        }
+      ],
+      "reason": "Security word remains opaque digest"
+    }
+  ]
+}

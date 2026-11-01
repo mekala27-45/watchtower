@@ -1,0 +1,101 @@
+{
+  "id": "new_prerelease-heldout-01",
+  "family": "new_prerelease",
+  "split": "heldout",
+  "lineage": "new_prerelease-template-07",
+  "description": "Flag and exact tag change together",
+  "namespace": "synthetic:evaluation",
+  "source_id": 1001,
+  "observations": [
+    {
+      "state": "captured",
+      "scope": "bounded-v1",
+      "raw_items": [
+        {
+          "id": 101,
+          "tag_name": "v1.0.0",
+          "draft": false,
+          "prerelease": true,
+          "created_at": "2026-09-30T12:00:00Z",
+          "published_at": "2026-10-01T12:00:00Z",
+          "body": "Authored fixture release notes.",
+          "assets": [
+            {
+              "id": 1010,
+              "name": "fixture.tar.gz",
+              "size": 1024,
+              "content_type": "application/gzip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "state": "captured",
+      "scope": "bounded-v1",
+      "raw_items": [
+        {
+          "id": 101,
+          "tag_name": "v2",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-09-30T12:00:00Z",
+          "published_at": "2026-10-01T12:00:00Z",
+          "body": "Authored fixture release notes.",
+          "assets": [
+            {
+              "id": 1010,
+              "name": "fixture.tar.gz",
+              "size": 1024,
+              "content_type": "application/gzip"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "truth": [
+    {
+      "outcome": "changed",
+      "expected_coverage": "captured",
+      "expected_normalized": [
+        {
+          "namespace": "synthetic:evaluation",
+          "source_id": 1001,
+          "release_id": 101,
+          "tag_name": "v2",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-09-30T12:00:00.000Z",
+          "published_at": "2026-10-01T12:00:00.000Z",
+          "assets": [
+            {
+              "id": 1010,
+              "name": "fixture.tar.gz",
+              "size": 1024,
+              "content_type": "application/gzip"
+            }
+          ],
+          "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+          "notes_bytes": 31,
+          "normalizer_version": "normalizer-v1",
+          "digest": "fe8583a0814fe9c634c6f3098879dc35238394a1a40c0b7bbe0407027365d298",
+          "id": "ev_fe8583a0814fe9c634c6f3098879dc35238394a1a40c0b7bbe0407027365d298"
+        }
+      ],
+      "findings": [
+        {
+          "release_id": 101,
+          "kind": "prerelease_flag_changed",
+          "field": "prerelease"
+        },
+        {
+          "release_id": 101,
+          "kind": "tag_changed",
+          "field": "tag_name"
+        }
+      ],
+      "reason": "Flag and exact tag change together"
+    }
+  ]
+}

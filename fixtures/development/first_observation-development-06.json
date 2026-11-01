@@ -1,0 +1,54 @@
+{
+  "id": "first_observation-development-06",
+  "family": "first_observation",
+  "split": "development",
+  "lineage": "first_observation-template-06",
+  "description": "No assets creates baseline",
+  "namespace": "synthetic:evaluation",
+  "source_id": 1001,
+  "observations": [
+    null,
+    {
+      "state": "captured",
+      "scope": "bounded-v1",
+      "raw_items": [
+        {
+          "id": 101,
+          "tag_name": "v1.0.0",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-09-30T12:00:00Z",
+          "published_at": "2026-10-01T12:00:00Z",
+          "body": "Authored fixture release notes.",
+          "assets": []
+        }
+      ]
+    }
+  ],
+  "truth": [
+    {
+      "outcome": "baseline_created",
+      "expected_coverage": "captured",
+      "expected_normalized": [
+        {
+          "namespace": "synthetic:evaluation",
+          "source_id": 1001,
+          "release_id": 101,
+          "tag_name": "v1.0.0",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-09-30T12:00:00.000Z",
+          "published_at": "2026-10-01T12:00:00.000Z",
+          "assets": [],
+          "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+          "notes_bytes": 31,
+          "normalizer_version": "normalizer-v1",
+          "digest": "635a29e1974196298adf3169038177230665d1b21c5d86d198a7d653408cec9d",
+          "id": "ev_635a29e1974196298adf3169038177230665d1b21c5d86d198a7d653408cec9d"
+        }
+      ],
+      "findings": [],
+      "reason": "No assets creates baseline"
+    }
+  ]
+}

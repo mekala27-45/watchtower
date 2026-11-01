@@ -1,0 +1,26 @@
+{
+  "id": "first_observation-development-05",
+  "family": "first_observation",
+  "split": "development",
+  "lineage": "first_observation-template-05",
+  "description": "Empty procedure creates baseline",
+  "namespace": "synthetic:evaluation",
+  "source_id": 1001,
+  "observations": [
+    null,
+    {
+      "state": "captured",
+      "scope": "bounded-v1",
+      "raw_items": []
+    }
+  ],
+  "truth": [
+    {
+      "outcome": "baseline_created",
+      "expected_coverage": "captured",
+      "expected_normalized": [],
+      "findings": [],
+      "reason": "Empty procedure creates baseline"
+    }
+  ]
+}

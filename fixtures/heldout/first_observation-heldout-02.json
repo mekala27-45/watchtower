@@ -1,0 +1,68 @@
+{
+  "id": "first_observation-heldout-02",
+  "family": "first_observation",
+  "split": "heldout",
+  "lineage": "first_observation-template-08",
+  "description": "Unknown tag creates baseline",
+  "namespace": "synthetic:evaluation",
+  "source_id": 1001,
+  "observations": [
+    null,
+    {
+      "state": "captured",
+      "scope": "bounded-v1",
+      "raw_items": [
+        {
+          "id": 101,
+          "tag_name": "not-semver",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-09-30T12:00:00Z",
+          "published_at": "2026-10-01T12:00:00Z",
+          "body": "Authored fixture release notes.",
+          "assets": [
+            {
+              "id": 1010,
+              "name": "fixture.tar.gz",
+              "size": 1024,
+              "content_type": "application/gzip"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "truth": [
+    {
+      "outcome": "baseline_created",
+      "expected_coverage": "captured",
+      "expected_normalized": [
+        {
+          "namespace": "synthetic:evaluation",
+          "source_id": 1001,
+          "release_id": 101,
+          "tag_name": "not-semver",
+          "draft": false,
+          "prerelease": false,
+          "created_at": "2026-09-30T12:00:00.000Z",
+          "published_at": "2026-10-01T12:00:00.000Z",
+          "assets": [
+            {
+              "id": 1010,
+              "name": "fixture.tar.gz",
+              "size": 1024,
+              "content_type": "application/gzip"
+            }
+          ],
+          "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+          "notes_bytes": 31,
+          "normalizer_version": "normalizer-v1",
+          "digest": "f2ae81ab8c54b5cf2478307ee2eb89437d795ee3ce996f61230a5386d85ffc01",
+          "id": "ev_f2ae81ab8c54b5cf2478307ee2eb89437d795ee3ce996f61230a5386d85ffc01"
+        }
+      ],
+      "findings": [],
+      "reason": "Unknown tag creates baseline"
+    }
+  ]
+}

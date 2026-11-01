@@ -1,0 +1,30 @@
+{
+  "id": "unchanged_valid_200-heldout-05",
+  "family": "unchanged_valid_200",
+  "split": "heldout",
+  "lineage": "unchanged_valid_200-template-11",
+  "description": "Empty bounded list stays empty",
+  "namespace": "synthetic:evaluation",
+  "source_id": 1001,
+  "observations": [
+    {
+      "state": "captured",
+      "scope": "bounded-v1",
+      "raw_items": []
+    },
+    {
+      "state": "captured",
+      "scope": "bounded-v1",
+      "raw_items": []
+    }
+  ],
+  "truth": [
+    {
+      "outcome": "unchanged_in_observed_scope",
+      "expected_coverage": "captured",
+      "expected_normalized": [],
+      "findings": [],
+      "reason": "Empty bounded list stays empty"
+    }
+  ]
+}
