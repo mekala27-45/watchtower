@@ -1,0 +1,36 @@
+{
+  "code_revision": "0e13886d2f37e5726492a86707360d81fe616889",
+  "generated_at": "2026-11-01T16:51:31.541Z",
+  "tests": {
+    "total": 156,
+    "passed": 155,
+    "failed": 1,
+    "skipped": 0,
+    "exit_code": 1,
+    "evidence": "reports/verification/tests.tap"
+  },
+  "syntax": {
+    "status": "passed",
+    "failures": []
+  },
+  "scan": {
+    "status": "passed",
+    "files": 390,
+    "commits": 47,
+    "failures": [],
+    "scope": "pattern-based secret and release-body scan; not a complete security audit"
+  },
+  "prose": {
+    "status": "passed",
+    "failures": [],
+    "vocabulary_source": "supplied prompt_checker.py",
+    "vocabulary_source_sha256": "de18417c7d2c39548b76ab0b3eb3d1e367e4b000af0aaf4dfd82713c89a61fb1",
+    "excluded_runtime_prompt_evidence": [
+      "agent/instructions.md",
+      "docs/sources/model-instructions-initial.md"
+    ]
+  },
+  "required_remote_checks": "reports/verification/delivery.json",
+  "actual_model_gate": "scripts/verify-report-evidence.mjs validates actual archives separately",
+  "local_checks_passed": false
+}

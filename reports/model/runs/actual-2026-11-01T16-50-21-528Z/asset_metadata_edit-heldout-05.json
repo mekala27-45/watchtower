@@ -1,0 +1,1659 @@
+{
+  "fixture_id": "asset_metadata_edit-heldout-05",
+  "family": "asset_metadata_edit",
+  "method": "local_agent",
+  "status": "failed",
+  "inference_attempted": true,
+  "reason": null,
+  "model_request_count": 3,
+  "model_requested_tool_calls": 2,
+  "handler_executions": 1,
+  "proposed_findings": [],
+  "elapsed_ms": 8840,
+  "generated_tokens": 339,
+  "supported_proposals": 0,
+  "correct_noop_or_uncertainty": false,
+  "quality_available": true,
+  "transitions": [
+    {
+      "transition": 1,
+      "method": "local_agent",
+      "inference_attempted": true,
+      "bundle": {
+        "namespace": "synthetic:evaluation",
+        "source_id": 1001,
+        "before": {
+          "namespace": "synthetic:evaluation",
+          "source_id": 1001,
+          "items": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "tag_name": "v1.0.0",
+              "draft": false,
+              "prerelease": false,
+              "published_at": "2026-10-01T12:00:00.000Z",
+              "created_at": "2026-09-30T12:00:00.000Z",
+              "assets": [
+                {
+                  "id": 1010,
+                  "name": "fixture.tar.gz",
+                  "size": 1024,
+                  "content_type": "application/gzip"
+                }
+              ],
+              "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+              "notes_bytes": 31,
+              "normalizer_version": "normalizer-v1",
+              "digest": "c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119"
+            }
+          ],
+          "state": "captured",
+          "scope": "bounded-v1",
+          "coverage": {
+            "procedure_complete": true,
+            "uncovered_scope": []
+          },
+          "id": "obs_fd44f2e1c29126e8253548aa36234e1091f5d755ed8abd6af1d36e9d6cba617c",
+          "digest": "fd44f2e1c29126e8253548aa36234e1091f5d755ed8abd6af1d36e9d6cba617c",
+          "captured_at": null,
+          "checked_at": null
+        },
+        "after": {
+          "namespace": "synthetic:evaluation",
+          "source_id": 1001,
+          "items": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "tag_name": "v1.0.0",
+              "draft": false,
+              "prerelease": false,
+              "published_at": "2026-10-01T12:00:00.000Z",
+              "created_at": "2026-09-30T12:00:00.000Z",
+              "assets": [
+                {
+                  "id": 9003,
+                  "name": "same-content-unproven",
+                  "size": 1024,
+                  "content_type": "application/gzip"
+                }
+              ],
+              "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+              "notes_bytes": 31,
+              "normalizer_version": "normalizer-v1",
+              "digest": "870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9",
+              "id": "ev_870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9"
+            }
+          ],
+          "state": "captured",
+          "scope": "bounded-v1",
+          "coverage": {
+            "procedure_complete": true,
+            "uncovered_scope": []
+          },
+          "id": "obs_943b09abe239fb1539df75fcbd6193680d100c5935e580ba42406fdaa6dfc9fd",
+          "digest": "943b09abe239fb1539df75fcbd6193680d100c5935e580ba42406fdaa6dfc9fd",
+          "captured_at": null,
+          "checked_at": null
+        },
+        "candidates": [
+          {
+            "id": "candidate_452d72e3115b7d6d4127109e9cd0f9108a7c43623e2829c05458eb68c3c2494a",
+            "namespace": "synthetic:evaluation",
+            "source_id": 1001,
+            "release_id": 101,
+            "kind": "asset_metadata_changed",
+            "field": "assets",
+            "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+            "after_evidence_id": "ev_870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9",
+            "watchlist_version": "watchlist-v1"
+          }
+        ],
+        "evidence": {
+          "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119": {
+            "namespace": "synthetic:evaluation",
+            "source_id": 1001,
+            "release_id": 101,
+            "tag_name": "v1.0.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-10-01T12:00:00.000Z",
+            "created_at": "2026-09-30T12:00:00.000Z",
+            "assets": [
+              {
+                "id": 1010,
+                "name": "fixture.tar.gz",
+                "size": 1024,
+                "content_type": "application/gzip"
+              }
+            ],
+            "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+            "notes_bytes": 31,
+            "normalizer_version": "normalizer-v1",
+            "digest": "c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+            "id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119"
+          },
+          "ev_870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9": {
+            "namespace": "synthetic:evaluation",
+            "source_id": 1001,
+            "release_id": 101,
+            "tag_name": "v1.0.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-10-01T12:00:00.000Z",
+            "created_at": "2026-09-30T12:00:00.000Z",
+            "assets": [
+              {
+                "id": 9003,
+                "name": "same-content-unproven",
+                "size": 1024,
+                "content_type": "application/gzip"
+              }
+            ],
+            "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+            "notes_bytes": 31,
+            "normalizer_version": "normalizer-v1",
+            "digest": "870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9",
+            "id": "ev_870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9"
+          }
+        },
+        "watchlist_version": "watchlist-v1",
+        "outcome": "changed",
+        "normalizer_version": "normalizer-v1",
+        "verifier_version": "verifier-v1",
+        "id": "bundle_a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3",
+        "digest": "a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3"
+      },
+      "bundle_digest": "a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3",
+      "expected_outcome": "changed",
+      "outcome": "unchanged_in_observed_scope",
+      "expected_facts": [
+        {
+          "namespace": "synthetic:evaluation",
+          "source_id": 1001,
+          "release_id": 101,
+          "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+          "after_evidence_id": "ev_870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9",
+          "kind": "asset_metadata_changed",
+          "field": "assets"
+        }
+      ],
+      "emitted_facts": [],
+      "grade": {
+        "expected": 1,
+        "emitted": 0,
+        "matched": 0,
+        "missed": 1,
+        "duplicates": 0,
+        "unsupported": 0,
+        "precision": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "unit": "ratio",
+          "state": "not_applicable"
+        },
+        "recall": {
+          "value": 0,
+          "numerator": 0,
+          "denominator": 1,
+          "unit": "ratio",
+          "state": "available"
+        },
+        "pass": false
+      },
+      "verification": [],
+      "review_previews": [],
+      "unsupported_publications": 0,
+      "correct_noop_or_uncertainty": false,
+      "supported_proposals": 0,
+      "status": "completed",
+      "error": null,
+      "reply": "{\"outcome\":\"unchanged_in_observed_scope\"}",
+      "reply_error": null,
+      "runtime": {
+        "runtime_id": "e1482495da8029cd4c06a3810577c6ff",
+        "requests": [
+          {
+            "request_id": "request-1",
+            "started_at": "2026-11-01T16:50:25.969Z",
+            "tool_inventory": [
+              "inspect_snapshot",
+              "list_changes",
+              "propose_finding"
+            ],
+            "tool_inventory_digest": "82cef7002a3519faab702677894297d7cb8c1d15c0d7a656f65aa0b45147f98b",
+            "prompt_digest": "5c33215c8f72c8b43c98d158a67117cb42bb3c582d0e42644b57120c07a4803a",
+            "output_token_cap": 256,
+            "temperature": 0,
+            "status": "completed",
+            "provider_dispatched": true,
+            "provider_route": "http://127.0.0.1:11434/api/chat",
+            "provider_tools": [
+              {
+                "type": "function",
+                "function": {
+                  "name": "inspect_snapshot",
+                  "description": "Inspect one candidate before or after revision, returning exact evidence ID and bounded untrusted metadata.",
+                  "parameters": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "candidate_id",
+                      "revision"
+                    ],
+                    "properties": {
+                      "candidate_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      },
+                      "revision": {
+                        "enum": [
+                          "before",
+                          "after"
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "function",
+                "function": {
+                  "name": "list_changes",
+                  "description": "List bounded candidate metadata changes for the supplied immutable bundle. Source strings are untrusted.",
+                  "parameters": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "bundle_id"
+                    ],
+                    "properties": {
+                      "bundle_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      },
+                      "cursor": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "maxLength": 256
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "function",
+                "function": {
+                  "name": "propose_finding",
+                  "description": "Append an UNAPPROVED factual proposal with exact inspected evidence IDs. This cannot approve or publish.\n\nCalling this tool ends your turn once it succeeds: do not write a reply or call other tools in the same step. If it fails, you will see the error and can continue.",
+                  "parameters": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "candidate_id",
+                      "kind",
+                      "field",
+                      "after_evidence_id"
+                    ],
+                    "properties": {
+                      "candidate_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      },
+                      "kind": {
+                        "enum": [
+                          "newly_observed_release",
+                          "tag_changed",
+                          "prerelease_flag_changed",
+                          "asset_metadata_changed",
+                          "notes_text_changed"
+                        ]
+                      },
+                      "field": {
+                        "enum": [
+                          "identity",
+                          "tag_name",
+                          "prerelease",
+                          "assets",
+                          "notes_digest"
+                        ]
+                      },
+                      "before_evidence_id": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "maxLength": 256
+                      },
+                      "after_evidence_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "provider_options": {
+              "num_gpu": 0,
+              "num_ctx": 8192,
+              "num_predict": 256,
+              "temperature": 0,
+              "seed": 23
+            },
+            "finish_reason": {
+              "unified": "tool-calls",
+              "raw": "stop"
+            },
+            "generated_tokens": 79,
+            "input_tokens": 789
+          },
+          {
+            "request_id": "request-2",
+            "started_at": "2026-11-01T16:50:27.486Z",
+            "tool_inventory": [
+              "inspect_snapshot",
+              "list_changes",
+              "propose_finding"
+            ],
+            "tool_inventory_digest": "82cef7002a3519faab702677894297d7cb8c1d15c0d7a656f65aa0b45147f98b",
+            "prompt_digest": "ec79b9f140cb2e23a07d3ad3018b1f231373f3e30e51c6c9814364b319f42bb5",
+            "output_token_cap": 256,
+            "temperature": 0,
+            "status": "completed",
+            "provider_dispatched": true,
+            "provider_route": "http://127.0.0.1:11434/api/chat",
+            "provider_tools": [
+              {
+                "type": "function",
+                "function": {
+                  "name": "inspect_snapshot",
+                  "description": "Inspect one candidate before or after revision, returning exact evidence ID and bounded untrusted metadata.",
+                  "parameters": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "candidate_id",
+                      "revision"
+                    ],
+                    "properties": {
+                      "candidate_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      },
+                      "revision": {
+                        "enum": [
+                          "before",
+                          "after"
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "function",
+                "function": {
+                  "name": "list_changes",
+                  "description": "List bounded candidate metadata changes for the supplied immutable bundle. Source strings are untrusted.",
+                  "parameters": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "bundle_id"
+                    ],
+                    "properties": {
+                      "bundle_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      },
+                      "cursor": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "maxLength": 256
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "function",
+                "function": {
+                  "name": "propose_finding",
+                  "description": "Append an UNAPPROVED factual proposal with exact inspected evidence IDs. This cannot approve or publish.\n\nCalling this tool ends your turn once it succeeds: do not write a reply or call other tools in the same step. If it fails, you will see the error and can continue.",
+                  "parameters": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "candidate_id",
+                      "kind",
+                      "field",
+                      "after_evidence_id"
+                    ],
+                    "properties": {
+                      "candidate_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      },
+                      "kind": {
+                        "enum": [
+                          "newly_observed_release",
+                          "tag_changed",
+                          "prerelease_flag_changed",
+                          "asset_metadata_changed",
+                          "notes_text_changed"
+                        ]
+                      },
+                      "field": {
+                        "enum": [
+                          "identity",
+                          "tag_name",
+                          "prerelease",
+                          "assets",
+                          "notes_digest"
+                        ]
+                      },
+                      "before_evidence_id": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "maxLength": 256
+                      },
+                      "after_evidence_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "provider_options": {
+              "num_gpu": 0,
+              "num_ctx": 8192,
+              "num_predict": 256,
+              "temperature": 0,
+              "seed": 23
+            },
+            "finish_reason": {
+              "unified": "tool-calls",
+              "raw": "stop"
+            },
+            "generated_tokens": 249,
+            "input_tokens": 1059
+          },
+          {
+            "request_id": "request-3",
+            "started_at": "2026-11-01T16:50:31.927Z",
+            "tool_inventory": [
+              "inspect_snapshot",
+              "list_changes",
+              "propose_finding"
+            ],
+            "tool_inventory_digest": "82cef7002a3519faab702677894297d7cb8c1d15c0d7a656f65aa0b45147f98b",
+            "prompt_digest": "59075172d2f34d0f335ddf15833f611730ac3320107acbaa229011771f526f0b",
+            "output_token_cap": 256,
+            "temperature": 0,
+            "status": "completed",
+            "provider_dispatched": true,
+            "provider_route": "http://127.0.0.1:11434/api/chat",
+            "provider_tools": [
+              {
+                "type": "function",
+                "function": {
+                  "name": "inspect_snapshot",
+                  "description": "Inspect one candidate before or after revision, returning exact evidence ID and bounded untrusted metadata.",
+                  "parameters": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "candidate_id",
+                      "revision"
+                    ],
+                    "properties": {
+                      "candidate_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      },
+                      "revision": {
+                        "enum": [
+                          "before",
+                          "after"
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "function",
+                "function": {
+                  "name": "list_changes",
+                  "description": "List bounded candidate metadata changes for the supplied immutable bundle. Source strings are untrusted.",
+                  "parameters": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "bundle_id"
+                    ],
+                    "properties": {
+                      "bundle_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      },
+                      "cursor": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "maxLength": 256
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "type": "function",
+                "function": {
+                  "name": "propose_finding",
+                  "description": "Append an UNAPPROVED factual proposal with exact inspected evidence IDs. This cannot approve or publish.\n\nCalling this tool ends your turn once it succeeds: do not write a reply or call other tools in the same step. If it fails, you will see the error and can continue.",
+                  "parameters": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "required": [
+                      "candidate_id",
+                      "kind",
+                      "field",
+                      "after_evidence_id"
+                    ],
+                    "properties": {
+                      "candidate_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      },
+                      "kind": {
+                        "enum": [
+                          "newly_observed_release",
+                          "tag_changed",
+                          "prerelease_flag_changed",
+                          "asset_metadata_changed",
+                          "notes_text_changed"
+                        ]
+                      },
+                      "field": {
+                        "enum": [
+                          "identity",
+                          "tag_name",
+                          "prerelease",
+                          "assets",
+                          "notes_digest"
+                        ]
+                      },
+                      "before_evidence_id": {
+                        "type": [
+                          "string",
+                          "null"
+                        ],
+                        "maxLength": 256
+                      },
+                      "after_evidence_id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 256
+                      }
+                    }
+                  }
+                }
+              }
+            ],
+            "provider_options": {
+              "num_gpu": 0,
+              "num_ctx": 8192,
+              "num_predict": 256,
+              "temperature": 0,
+              "seed": 23
+            },
+            "finish_reason": {
+              "unified": "stop",
+              "raw": "stop"
+            },
+            "generated_tokens": 11,
+            "input_tokens": 1494
+          }
+        ],
+        "provider_calls": [
+          {
+            "request_id": "request-1",
+            "provider_call_id": "call_fn0o89tc",
+            "tool": "list_changes",
+            "input_text": "{\"bundle_id\":\"bundle_a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3\"}",
+            "model_requested": true,
+            "origin": "ollama_provider_response",
+            "provider_executed": false,
+            "arguments": {
+              "bundle_id": "bundle_a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3"
+            },
+            "budget_ordinal": 1
+          },
+          {
+            "request_id": "request-2",
+            "provider_call_id": "call_b2a8bz8l",
+            "tool": "inspect_snapshot",
+            "input_text": "{\"bundle_id\":\"bundle_a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3\",\"candidate_id\":\"candidate_452d72e3115b7d6d4127109e9cd0f9108a7c43623e2829c05458eb68c3c2494a\",\"before_evidence_id\":\"1001\",\"after_evidence_id\":\"101\",\"field\":\"assets\",\"kind\":\"asset_metadata_changed\"}",
+            "model_requested": true,
+            "origin": "ollama_provider_response",
+            "provider_executed": false,
+            "arguments": {
+              "bundle_id": "bundle_a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3",
+              "candidate_id": "candidate_452d72e3115b7d6d4127109e9cd0f9108a7c43623e2829c05458eb68c3c2494a",
+              "before_evidence_id": "1001",
+              "after_evidence_id": "101",
+              "field": "assets",
+              "kind": "asset_metadata_changed"
+            },
+            "budget_ordinal": 2
+          }
+        ],
+        "executions": [
+          {
+            "sequence": 1,
+            "tool": "list_changes",
+            "origin": "eve_tool_execute",
+            "model_requested": true,
+            "handler_executed": true,
+            "arguments_digest": "37c3177a998abefe6f0cf4f4bf6349ec4ba0fc1fb50f279fe56844f104244951",
+            "status": "completed",
+            "result_digest": "e03ed190484af37f198377172dc68b02b9d67e6a83cb4b45362513bdb6bb661d",
+            "elapsed_ms": 0.06829999992623925,
+            "provider_call_id": "call_fn0o89tc",
+            "eve_call_id": "call_fn0o89tc",
+            "request_id": "request-1",
+            "arguments": {
+              "bundle_id": "bundle_a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3"
+            },
+            "result": {
+              "namespace": "synthetic:evaluation",
+              "bundle_id": "bundle_a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3",
+              "candidates": [
+                {
+                  "candidate_id": "candidate_452d72e3115b7d6d4127109e9cd0f9108a7c43623e2829c05458eb68c3c2494a",
+                  "source_id": 1001,
+                  "release_id": 101,
+                  "permitted_kinds": [
+                    "asset_metadata_changed"
+                  ],
+                  "field": "assets"
+                }
+              ],
+              "next_cursor": null,
+              "coverage": "captured"
+            },
+            "bundle_digest": "a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3",
+            "namespace": "synthetic:evaluation"
+          }
+        ],
+        "proposals": [],
+        "errors": []
+      },
+      "session_id": "wrun_01M6C09YJ75NCRMTPSZY0S2K1E",
+      "normalization_error": null,
+      "events": [
+        {
+          "data": {
+            "runtime": {
+              "agentId": "watchtower",
+              "agentName": "watchtower",
+              "eveVersion": "1.0.0-rc.1"
+            }
+          },
+          "type": "session.started",
+          "meta": {
+            "at": "2026-11-01T16:50:25.956Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 0
+            }
+          }
+        },
+        {
+          "data": {
+            "deliveryId": "86b12e26-653a-4898-8b45-525dc341f506",
+            "principal": {
+              "id": "local-dev",
+              "type": "local-dev"
+            },
+            "source": {
+              "channel": "channel:eve"
+            }
+          },
+          "type": "delivery.admitted",
+          "meta": {
+            "at": "2026-11-01T16:50:25.956Z",
+            "endOfLine": true,
+            "position": {
+              "index": 1,
+              "line": 0
+            }
+          }
+        },
+        {
+          "data": {
+            "cause": {
+              "deliveryId": "86b12e26-653a-4898-8b45-525dc341f506"
+            },
+            "follows": null,
+            "trace": {
+              "decision": {
+                "action": "record",
+                "recordInputs": true,
+                "recordOutputs": true
+              },
+              "spanId": "c1e60c6b723a0547",
+              "traceFlags": 1,
+              "traceId": "fbd22eccab712b72c2ec3fc6176e48e6"
+            },
+            "turnId": "turn_0"
+          },
+          "type": "turn.started",
+          "scope": {
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:25.960Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 1
+            }
+          }
+        },
+        {
+          "data": {
+            "deliveryId": "86b12e26-653a-4898-8b45-525dc341f506",
+            "parts": [
+              {
+                "kind": "text",
+                "text": "Inspect this immutable observation bundle. {\"bundle_id\":\"bundle_a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3\",\"namespace\":\"synthetic:evaluation\",\"source_id\":1001,\"before_state\":\"captured\",\"after_state\":\"captured\",\"before_scope\":\"bounded-v1\",\"after_scope\":\"bounded-v1\",\"uncovered_scope\":[],\"normalization_error\":null}"
+              }
+            ],
+            "turnId": "turn_0"
+          },
+          "type": "delivery.consumed",
+          "scope": {
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:25.960Z",
+            "endOfLine": true,
+            "position": {
+              "index": 1,
+              "line": 1
+            }
+          }
+        },
+        {
+          "data": {
+            "owner": {
+              "turnId": "turn_0"
+            },
+            "runId": "run_0"
+          },
+          "type": "model.requested",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:25.962Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 2
+            }
+          }
+        },
+        {
+          "data": {
+            "attempt": 0,
+            "modelId": "watchtower_ollama/qwen3:0.6b",
+            "runId": "run_0"
+          },
+          "type": "model.started",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:25.963Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 3
+            }
+          }
+        },
+        {
+          "data": {
+            "callId": "call_fn0o89tc",
+            "capability": {
+              "kind": "tool",
+              "name": "list_changes"
+            },
+            "input": {
+              "bundle_id": "bundle_a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3"
+            },
+            "owner": {
+              "runId": "run_0"
+            }
+          },
+          "type": "call.requested",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:27.373Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 4
+            }
+          }
+        },
+        {
+          "data": {
+            "callId": "call_fn0o89tc"
+          },
+          "type": "call.started",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:27.378Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 5
+            }
+          }
+        },
+        {
+          "data": {
+            "callId": "call_fn0o89tc",
+            "outcome": "completed",
+            "output": {
+              "namespace": "synthetic:evaluation",
+              "bundle_id": "bundle_a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3",
+              "candidates": [
+                {
+                  "candidate_id": "candidate_452d72e3115b7d6d4127109e9cd0f9108a7c43623e2829c05458eb68c3c2494a",
+                  "source_id": 1001,
+                  "release_id": 101,
+                  "permitted_kinds": [
+                    "asset_metadata_changed"
+                  ],
+                  "field": "assets"
+                }
+              ],
+              "next_cursor": null,
+              "coverage": "captured"
+            }
+          },
+          "type": "call.settled",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:27.385Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 6
+            }
+          }
+        },
+        {
+          "data": {
+            "finishReason": "tool-calls",
+            "outcome": "completed",
+            "runId": "run_0"
+          },
+          "type": "model.settled",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:27.386Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 7
+            }
+          }
+        },
+        {
+          "data": {
+            "kind": "model",
+            "owner": {
+              "runId": "run_0"
+            },
+            "usage": {
+              "cacheReadTokens": 0,
+              "cacheWriteTokens": 0,
+              "inputTokens": 789,
+              "outputTokens": 79
+            }
+          },
+          "type": "usage.recorded",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:27.386Z",
+            "endOfLine": true,
+            "position": {
+              "index": 1,
+              "line": 7
+            }
+          }
+        },
+        {
+          "data": {
+            "owner": {
+              "turnId": "turn_0"
+            },
+            "runId": "run_1"
+          },
+          "type": "model.requested",
+          "scope": {
+            "runId": "run_1",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:27.478Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 8
+            }
+          }
+        },
+        {
+          "data": {
+            "attempt": 0,
+            "modelId": "watchtower_ollama/qwen3:0.6b",
+            "runId": "run_1"
+          },
+          "type": "model.started",
+          "scope": {
+            "runId": "run_1",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:27.479Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 9
+            }
+          }
+        },
+        {
+          "data": {
+            "finishReason": "tool-calls",
+            "outcome": "completed",
+            "runId": "run_1"
+          },
+          "type": "model.settled",
+          "scope": {
+            "runId": "run_1",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:31.859Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 10
+            }
+          }
+        },
+        {
+          "data": {
+            "kind": "model",
+            "owner": {
+              "runId": "run_1"
+            },
+            "usage": {
+              "cacheReadTokens": 0,
+              "cacheWriteTokens": 0,
+              "inputTokens": 1059,
+              "outputTokens": 249
+            }
+          },
+          "type": "usage.recorded",
+          "scope": {
+            "runId": "run_1",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:31.859Z",
+            "endOfLine": true,
+            "position": {
+              "index": 1,
+              "line": 10
+            }
+          }
+        },
+        {
+          "data": {
+            "owner": {
+              "turnId": "turn_0"
+            },
+            "runId": "run_2"
+          },
+          "type": "model.requested",
+          "scope": {
+            "runId": "run_2",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:31.921Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 11
+            }
+          }
+        },
+        {
+          "data": {
+            "attempt": 0,
+            "modelId": "watchtower_ollama/qwen3:0.6b",
+            "runId": "run_2"
+          },
+          "type": "model.started",
+          "scope": {
+            "runId": "run_2",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:31.922Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 12
+            }
+          }
+        },
+        {
+          "data": {
+            "delta": "{\"outcome\":\"unchanged_in_observed_scope\"}",
+            "kind": "text",
+            "partId": "run_2.0"
+          },
+          "scope": {
+            "runId": "run_2",
+            "turnId": "turn_0"
+          },
+          "type": "content.delta",
+          "meta": {
+            "at": "2026-11-01T16:50:31.922Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 13
+            }
+          }
+        },
+        {
+          "data": {
+            "kind": "text",
+            "partId": "run_2.0",
+            "phase": "reply",
+            "runId": "run_2",
+            "value": "{\"outcome\":\"unchanged_in_observed_scope\"}"
+          },
+          "type": "content.completed",
+          "scope": {
+            "runId": "run_2",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:33.044Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 14
+            }
+          }
+        },
+        {
+          "data": {
+            "finishReason": "stop",
+            "outcome": "completed",
+            "runId": "run_2"
+          },
+          "type": "model.settled",
+          "scope": {
+            "runId": "run_2",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:33.045Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 15
+            }
+          }
+        },
+        {
+          "data": {
+            "kind": "model",
+            "owner": {
+              "runId": "run_2"
+            },
+            "usage": {
+              "cacheReadTokens": 0,
+              "cacheWriteTokens": 0,
+              "inputTokens": 1494,
+              "outputTokens": 11
+            }
+          },
+          "type": "usage.recorded",
+          "scope": {
+            "runId": "run_2",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:33.045Z",
+            "endOfLine": true,
+            "position": {
+              "index": 1,
+              "line": 15
+            }
+          }
+        },
+        {
+          "data": {
+            "outcome": "completed",
+            "reply": [
+              "run_2.0"
+            ],
+            "turnId": "turn_0"
+          },
+          "type": "turn.settled",
+          "scope": {
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:33.057Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 16
+            }
+          }
+        },
+        {
+          "data": {
+            "deliveryId": "86b12e26-653a-4898-8b45-525dc341f506",
+            "outcome": "handled",
+            "turnId": "turn_0"
+          },
+          "type": "delivery.settled",
+          "meta": {
+            "at": "2026-11-01T16:50:33.057Z",
+            "endOfLine": true,
+            "position": {
+              "index": 1,
+              "line": 16
+            }
+          }
+        }
+      ]
+    },
+    {
+      "transition": 2,
+      "method": "local_agent",
+      "inference_attempted": false,
+      "bundle": {
+        "namespace": "synthetic:evaluation",
+        "source_id": 1001,
+        "before": {
+          "namespace": "synthetic:evaluation",
+          "source_id": 1001,
+          "items": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "tag_name": "v1.0.0",
+              "draft": false,
+              "prerelease": false,
+              "published_at": "2026-10-01T12:00:00.000Z",
+              "created_at": "2026-09-30T12:00:00.000Z",
+              "assets": [
+                {
+                  "id": 9003,
+                  "name": "same-content-unproven",
+                  "size": 1024,
+                  "content_type": "application/gzip"
+                }
+              ],
+              "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+              "notes_bytes": 31,
+              "normalizer_version": "normalizer-v1",
+              "digest": "870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9",
+              "id": "ev_870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9"
+            }
+          ],
+          "state": "captured",
+          "scope": "bounded-v1",
+          "coverage": {
+            "procedure_complete": true,
+            "uncovered_scope": []
+          },
+          "id": "obs_943b09abe239fb1539df75fcbd6193680d100c5935e580ba42406fdaa6dfc9fd",
+          "digest": "943b09abe239fb1539df75fcbd6193680d100c5935e580ba42406fdaa6dfc9fd",
+          "captured_at": null,
+          "checked_at": null
+        },
+        "after": {
+          "namespace": "synthetic:evaluation",
+          "source_id": 1001,
+          "items": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "tag_name": "v1.0.0",
+              "draft": false,
+              "prerelease": false,
+              "published_at": "2026-10-01T12:00:00.000Z",
+              "created_at": "2026-09-30T12:00:00.000Z",
+              "assets": [
+                {
+                  "id": 1010,
+                  "name": "fixture.tar.gz",
+                  "size": 1024,
+                  "content_type": "application/gzip"
+                }
+              ],
+              "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+              "notes_bytes": 31,
+              "normalizer_version": "normalizer-v1",
+              "digest": "c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119"
+            }
+          ],
+          "state": "captured",
+          "scope": "bounded-v1",
+          "coverage": {
+            "procedure_complete": true,
+            "uncovered_scope": []
+          },
+          "id": "obs_fd44f2e1c29126e8253548aa36234e1091f5d755ed8abd6af1d36e9d6cba617c",
+          "digest": "fd44f2e1c29126e8253548aa36234e1091f5d755ed8abd6af1d36e9d6cba617c",
+          "captured_at": null,
+          "checked_at": null
+        },
+        "candidates": [
+          {
+            "id": "candidate_42c108b81dc950c2e63d22591d0a850b014c184dad2b4aac55b78335f1396c7a",
+            "namespace": "synthetic:evaluation",
+            "source_id": 1001,
+            "release_id": 101,
+            "kind": "asset_metadata_changed",
+            "field": "assets",
+            "before_evidence_id": "ev_870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9",
+            "after_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+            "watchlist_version": "watchlist-v1"
+          }
+        ],
+        "evidence": {
+          "ev_870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9": {
+            "namespace": "synthetic:evaluation",
+            "source_id": 1001,
+            "release_id": 101,
+            "tag_name": "v1.0.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-10-01T12:00:00.000Z",
+            "created_at": "2026-09-30T12:00:00.000Z",
+            "assets": [
+              {
+                "id": 9003,
+                "name": "same-content-unproven",
+                "size": 1024,
+                "content_type": "application/gzip"
+              }
+            ],
+            "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+            "notes_bytes": 31,
+            "normalizer_version": "normalizer-v1",
+            "digest": "870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9",
+            "id": "ev_870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9"
+          },
+          "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119": {
+            "namespace": "synthetic:evaluation",
+            "source_id": 1001,
+            "release_id": 101,
+            "tag_name": "v1.0.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-10-01T12:00:00.000Z",
+            "created_at": "2026-09-30T12:00:00.000Z",
+            "assets": [
+              {
+                "id": 1010,
+                "name": "fixture.tar.gz",
+                "size": 1024,
+                "content_type": "application/gzip"
+              }
+            ],
+            "notes_digest": "98b0d6485b003b034e9c91469bf20cbd5f2adab82d3cc2e465400bee70ada6e7",
+            "notes_bytes": 31,
+            "normalizer_version": "normalizer-v1",
+            "digest": "c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+            "id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119"
+          }
+        },
+        "watchlist_version": "watchlist-v1",
+        "outcome": "changed",
+        "normalizer_version": "normalizer-v1",
+        "verifier_version": "verifier-v1",
+        "id": "bundle_3b84b6df68419715f620be30005b359e30da9938f6e54124a90e3271a49c1cca",
+        "digest": "3b84b6df68419715f620be30005b359e30da9938f6e54124a90e3271a49c1cca"
+      },
+      "bundle_digest": "3b84b6df68419715f620be30005b359e30da9938f6e54124a90e3271a49c1cca",
+      "expected_outcome": "changed",
+      "outcome": null,
+      "expected_facts": [
+        {
+          "namespace": "synthetic:evaluation",
+          "source_id": 1001,
+          "release_id": 101,
+          "before_evidence_id": "ev_870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9",
+          "after_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+          "kind": "asset_metadata_changed",
+          "field": "assets"
+        }
+      ],
+      "emitted_facts": [],
+      "grade": {
+        "expected": 1,
+        "emitted": 0,
+        "matched": 0,
+        "missed": 1,
+        "duplicates": 0,
+        "unsupported": 0,
+        "precision": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "unit": "ratio",
+          "state": "not_applicable"
+        },
+        "recall": {
+          "value": 0,
+          "numerator": 0,
+          "denominator": 1,
+          "unit": "ratio",
+          "state": "available"
+        },
+        "pass": false
+      },
+      "verification": [],
+      "review_previews": [],
+      "unsupported_publications": 0,
+      "correct_noop_or_uncertainty": false,
+      "supported_proposals": 0,
+      "status": "failed",
+      "error": {
+        "code": "MODEL_CALL_FAILED",
+        "id": "d3a03521-6bf3-41b5-a0e4-e00ee548f10d",
+        "message": "model_turn_budget_exhausted"
+      },
+      "reply": null,
+      "reply_error": null,
+      "runtime": {
+        "runtime_id": "eeabcf48a4cbdaa0819aded1436f3232",
+        "requests": [],
+        "provider_calls": [],
+        "executions": [],
+        "proposals": [],
+        "errors": []
+      },
+      "session_id": "wrun_01M6C0A67PHYH4JNN45AH7F0K0",
+      "normalization_error": null,
+      "events": [
+        {
+          "data": {
+            "runtime": {
+              "agentId": "watchtower",
+              "agentName": "watchtower",
+              "eveVersion": "1.0.0-rc.1"
+            }
+          },
+          "type": "session.started",
+          "meta": {
+            "at": "2026-11-01T16:50:33.524Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 0
+            }
+          }
+        },
+        {
+          "data": {
+            "deliveryId": "d2459661-dadf-4431-bedc-c74d1b04e826",
+            "principal": {
+              "id": "local-dev",
+              "type": "local-dev"
+            },
+            "source": {
+              "channel": "channel:eve"
+            }
+          },
+          "type": "delivery.admitted",
+          "meta": {
+            "at": "2026-11-01T16:50:33.524Z",
+            "endOfLine": true,
+            "position": {
+              "index": 1,
+              "line": 0
+            }
+          }
+        },
+        {
+          "data": {
+            "cause": {
+              "deliveryId": "d2459661-dadf-4431-bedc-c74d1b04e826"
+            },
+            "follows": null,
+            "trace": {
+              "decision": {
+                "action": "record",
+                "recordInputs": true,
+                "recordOutputs": true
+              },
+              "spanId": "cb8ed60ec2f256e4",
+              "traceFlags": 1,
+              "traceId": "9f6f86c53beabd9995865f6e3a3d4722"
+            },
+            "turnId": "turn_0"
+          },
+          "type": "turn.started",
+          "scope": {
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:33.526Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 1
+            }
+          }
+        },
+        {
+          "data": {
+            "deliveryId": "d2459661-dadf-4431-bedc-c74d1b04e826",
+            "parts": [
+              {
+                "kind": "text",
+                "text": "Inspect this immutable observation bundle. {\"bundle_id\":\"bundle_3b84b6df68419715f620be30005b359e30da9938f6e54124a90e3271a49c1cca\",\"namespace\":\"synthetic:evaluation\",\"source_id\":1001,\"before_state\":\"captured\",\"after_state\":\"captured\",\"before_scope\":\"bounded-v1\",\"after_scope\":\"bounded-v1\",\"uncovered_scope\":[],\"normalization_error\":null}"
+              }
+            ],
+            "turnId": "turn_0"
+          },
+          "type": "delivery.consumed",
+          "scope": {
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:33.526Z",
+            "endOfLine": true,
+            "position": {
+              "index": 1,
+              "line": 1
+            }
+          }
+        },
+        {
+          "data": {
+            "owner": {
+              "turnId": "turn_0"
+            },
+            "runId": "run_0"
+          },
+          "type": "model.requested",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:33.528Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 2
+            }
+          }
+        },
+        {
+          "data": {
+            "attempt": 0,
+            "modelId": "watchtower_ollama/qwen3:0.6b",
+            "runId": "run_0"
+          },
+          "type": "model.started",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:33.529Z",
+            "endOfLine": true,
+            "position": {
+              "index": 0,
+              "line": 3
+            }
+          }
+        },
+        {
+          "data": {
+            "runId": "run_0",
+            "outcome": "failed",
+            "error": {
+              "code": "MODEL_CALL_FAILED",
+              "id": "d3a03521-6bf3-41b5-a0e4-e00ee548f10d",
+              "message": "model_turn_budget_exhausted"
+            }
+          },
+          "type": "model.settled",
+          "scope": {
+            "runId": "run_0",
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:33.548Z",
+            "endOfLine": false,
+            "position": {
+              "index": 0,
+              "line": 4
+            }
+          }
+        },
+        {
+          "data": {
+            "error": {
+              "code": "MODEL_CALL_FAILED",
+              "id": "d3a03521-6bf3-41b5-a0e4-e00ee548f10d",
+              "message": "model_turn_budget_exhausted"
+            },
+            "outcome": "failed",
+            "turnId": "turn_0"
+          },
+          "type": "turn.settled",
+          "scope": {
+            "turnId": "turn_0"
+          },
+          "meta": {
+            "at": "2026-11-01T16:50:33.548Z",
+            "endOfLine": false,
+            "position": {
+              "index": 1,
+              "line": 4
+            }
+          }
+        },
+        {
+          "data": {
+            "deliveryId": "d2459661-dadf-4431-bedc-c74d1b04e826",
+            "outcome": "handled",
+            "turnId": "turn_0"
+          },
+          "type": "delivery.settled",
+          "meta": {
+            "at": "2026-11-01T16:50:33.548Z",
+            "endOfLine": true,
+            "position": {
+              "index": 2,
+              "line": 4
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

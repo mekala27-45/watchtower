@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
+import {readFileSync,mkdtempSync,mkdirSync,copyFileSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join,relative,isAbsolute} from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {canonical,digest,normalizeRelease,validateEvidence,makeObservation,detect,makeBundle,baseline,verify,renderFinding} from '../packages/domain/index.mjs';
 import {gradeFacts,expectedFacts,summarizeRows} from '../packages/domain/grader.mjs';
@@ -131,9 +133,20 @@ test('fixture plan covers twelve disjoint lineages per family and a balanced fro
 });
 test('fixture generation is deterministic in two fresh processes',()=>{
   const before=canonical(JSON.parse(readFileSync('fixtures/manifest.json','utf8')));
-  const first=execFileSync(process.execPath,['scripts/generate-fixtures.mjs'],{encoding:'utf8'});
-  const second=execFileSync(process.execPath,['scripts/generate-fixtures.mjs'],{encoding:'utf8'});
-  assert.equal(first,second);assert.equal(canonical(JSON.parse(readFileSync('fixtures/manifest.json','utf8'))),before);
+  const directory=mkdtempSync(join(tmpdir(),'watchtower-fixture-generation-'));
+  try{
+    const results=['first','second'].map(name=>{
+      const root=join(directory,name);mkdirSync(join(root,'scripts'),{recursive:true});
+      copyFileSync('scripts/generate-fixtures.mjs',join(root,'scripts/generate-fixtures.mjs'));
+      const output=execFileSync(process.execPath,[join(root,'scripts/generate-fixtures.mjs')],{cwd:root,encoding:'utf8'});
+      return {output,manifest:canonical(JSON.parse(readFileSync(join(root,'fixtures/manifest.json'),'utf8')))};
+    });
+    assert.deepEqual(results[0],results[1]);assert.equal(results[0].manifest,before);
+    assert.equal(canonical(JSON.parse(readFileSync('fixtures/manifest.json','utf8'))),before);
+  }finally{
+    const within=relative(tmpdir(),directory);assert.ok(within&&!within.startsWith('..')&&!isAbsolute(within));
+    rmSync(directory,{recursive:true,force:true});
+  }
 });
 test('every development fixture is independently normalized and fact-graded',()=>{
   const manifest=JSON.parse(readFileSync('fixtures/manifest.json','utf8'));

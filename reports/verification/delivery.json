@@ -1,0 +1,32 @@
+{
+  "backend": "postgres",
+  "fonts": "installed",
+  "browser": "passed_local_and_postgres",
+  "api": {
+    "url": null,
+    "verified": false,
+    "browser_verified": false,
+    "separate_client_verified": false,
+    "blocker": "Automatic approval review requires explicit approval before storing the dedicated Neon DATABASE_URL in Vercel Production."
+  },
+  "site": {
+    "url": null,
+    "verified": false,
+    "blocker": "GitHub repository creation requires a restored Chrome window; current native windows are minimized and browser provider unavailable."
+  },
+  "dispatch": {
+    "verified": false,
+    "run_url": null,
+    "operator_collection": "reports/collection/operator-20261101T1645.json",
+    "schedule_configured": true,
+    "schedule_enabled": false,
+    "scheduled_run_observed": false
+  },
+  "release": {
+    "verified": false,
+    "url": null,
+    "public": false
+  },
+  "browser_evidence": "reports/browser/postgres.json",
+  "demo_gif": "reports/browser/postgres-demo.gif"
+}

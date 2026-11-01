@@ -1,20 +1,24 @@
 {
-  "run_id": "unavailable-20261101160250720-e70a4d71",
-  "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
-  "source_revision": "7f636a3d681a986e13cbadf58cae35172e1c2c30",
+  "schema": "watchtower-model-provenance-v1",
   "method": "local_agent",
-  "actual_inference": false,
-  "model": null,
-  "artifact_digest": null,
-  "cpu_placement": null,
-  "generation_settings": {
+  "execution_mode": "actual_local_inference",
+  "actual_inference": true,
+  "model": "qwen3:0.6b",
+  "artifact_digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+  "cpu_placement": {
+    "size_vram": 0,
+    "size": 1532367993,
+    "context_length": 8192
+  },
+  "source_revision": "0e13886d2f37e5726492a86707360d81fe616889",
+  "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+  "generation": {
     "model_turns": 3,
     "tool_calls": 4,
     "output_tokens": 256,
     "seconds_per_sequence": 60
   },
-  "subset_digest": "48daa917fb30109651289b21090e10b4ef77a519fe01a47bfa7eb6c3ed34383c",
-  "ordered_subset_ids": [
+  "subset_ids": [
     "asset_metadata_edit-heldout-04",
     "asset_metadata_edit-heldout-05",
     "duplicate_reorder-heldout-01",
@@ -40,13 +44,19 @@
     "valid_invalid_304-heldout-02",
     "valid_invalid_304-heldout-05"
   ],
-  "tool_inventory": [
-    "list_changes",
-    "inspect_snapshot",
-    "propose_finding"
-  ],
-  "actual_runtime_inventory_verified": false,
-  "probe_artifact": "docs/sources/model-probe.json",
-  "rows_artifact": "reports/model/current.json",
-  "reason": "No verified eve adapter or local model runtime is available."
+  "subset_digest": "48daa917fb30109651289b21090e10b4ef77a519fe01a47bfa7eb6c3ed34383c",
+  "runtime_inventory_verified": true,
+  "run_id": "actual-2026-11-01T16-50-21-528Z",
+  "adapter": "eve-native-ollama-v1",
+  "prompt_digest": "9e6e376cf9f426ddf469ae2613e5c3d1f06d05a8daa07d8c5e0536aa51981815",
+  "hardware": {
+    "os": "win32",
+    "release": "10.0.26300",
+    "architecture": "x64",
+    "cpu": "Intel(R) Core(TM) Ultra 9 275HX",
+    "logical_cpus": 24,
+    "total_memory_bytes": 33737986048,
+    "free_memory_bytes": 2076385280
+  },
+  "freeze_digest": "9fce50bd188ebcd087dc3c447771303436f9396c0a058098e00e73aebecd3e62"
 }

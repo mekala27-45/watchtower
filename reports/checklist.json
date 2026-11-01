@@ -2,91 +2,91 @@
   {
     "item": "Source, dependency and free-host probes are recorded and checked.",
     "status": "not done",
-    "evidence": "docs/sources/host-probes.json records registry DNS failure and unverified free-host, direct TLS and source identity checks."
+    "evidence": "reports/probes records verified source IDs, package integrity, CPU artifact, Neon Free direct TLS and Vercel Hobby; public GitHub and container deployment checks remain blocked."
   },
   {
     "item": "Claim renderer and every required gate pass their three cases.",
     "status": "not done",
-    "evidence": "Report, domain, collector and workflow local gates pass; actual-runtime and full browser gates have not executed."
+    "evidence": "Contract gates are tested; the registered useful-model criterion failed because actual supported proposals are zero. See reports/model/current.json."
   },
   {
     "item": "Temporal fixtures, independent truth and evaluation plan are frozen.",
     "status": "done",
-    "evidence": "fixtures/manifest.json and the committed docs/evaluation-plan.json identify the frozen corpus and subset."
+    "evidence": "fixtures/manifest.json and docs/evaluation-plan.json retain the original 144-sequence corpus and frozen 24-case subset; docs/model-freeze.json pins the actual runtime."
   },
   {
     "item": "Collector enforces metadata policy, cache scope and honest coverage.",
     "status": "done",
-    "evidence": "Collector and collection-command tests cover policy, exact cache scope, atomic persistence and incomplete-source handling; transport is injected."
+    "evidence": "reports/collection/operator-20261101T1645.json records 8 real HTTP attempts and 4 partial captures with no false usable heads; collector and Postgres retention tests verify exact cache scope."
   },
   {
     "item": "Durable source state and fenced leases pass independent checks.",
-    "status": "not done",
-    "evidence": "SQLite passes separate-connection and process checks; the required Neon Postgres runtime is unimplemented and unverified."
+    "status": "done",
+    "evidence": "tests/postgres.test.mjs verifies independent pools, immutable observations, lease expiry and stale generation refusal against Neon; reports/faults/postgres-matrix.json adds stored-state proofs."
   },
   {
     "item": "Typed detector and verifier pass independent truth and mutation tests.",
     "status": "done",
-    "evidence": "reports/baseline/full.json records independent truth grading and rejection of forged proposals."
+    "evidence": "reports/baseline/full.json records 72 held-out sequences,42/42 matched findings and 210 forged-proposal rejections against independent truth."
   },
   {
     "item": "Digest-bound review and atomic publication pass stale and retry cases.",
-    "status": "not done",
-    "evidence": "Local SQLite tests pass stale review and receipt recovery; required hosted Postgres transactions remain unverified."
+    "status": "done",
+    "evidence": "reports/browser/postgres.json and Postgres tests verify named stale dependencies, digest-bound approval and one receipt recovered through an independent client."
   },
   {
     "item": "Functional API is live and verified by browser and separate client.",
     "status": "not done",
-    "evidence": "Only in-process request-handler tests ran; no public API URL or browser-to-API evidence exists."
+    "evidence": "The Postgres API works locally in browser and separate-client checks; public Vercel deployment is blocked on database-secret destination approval."
   },
   {
     "item": "One actual local agent executes only the three permitted tools.",
-    "status": "not done",
-    "evidence": "reports/model/provenance.json records no actual eve runtime or model-requested handler execution."
+    "status": "done",
+    "evidence": "reports/model/current.json records actual provider-directed calls and 26 handler executions; every dispatched inventory contains only the 3 permitted tools."
   },
   {
     "item": "Full baseline and declared model subset ran with complete denominators.",
-    "status": "not done",
-    "evidence": "The baseline ran fully; model rows are retained as unexecuted, so the required actual-model subset did not run."
+    "status": "done",
+    "evidence": "reports/baseline/full.json ran 72 sequences; reports/model/current.json preserves all 24 actual sequence attempts,20 completed and 4 failed, including all 28 transition denominators."
   },
   {
     "item": "Actual model quality is reported, including whether supported proposals occurred.",
-    "status": "not done",
-    "evidence": "reports/model/current.json marks quality unavailable because inference was not attempted; no supported model output is claimed."
+    "status": "done",
+    "evidence": "reports/model/current.json reports 0 supported proposals,0/13 recall and 5 correct no-op or uncertainty outcomes; the useful-model criterion did not pass."
   },
   {
     "item": "Applicable failure cases recover with independent stored-state assertions.",
-    "status": "not done",
-    "evidence": "reports/faults/matrix.json records local recovery; the required Postgres and actual HTTP recovery checks remain unverified."
+    "status": "done",
+    "evidence": "reports/faults/postgres-matrix.json records 541/541 applicable cases recovered,35 not applicable and 109 real process terminations, with independent database assertions."
   },
   {
     "item": "Proof-sheet UI, both themes and accessibility checks are complete.",
-    "status": "not done",
-    "evidence": "Static UI and contrast tests pass; browser rendering, keyboard accessibility, primary fonts and the supplied palette validator are unverified."
+    "status": "done",
+    "evidence": "reports/browser/postgres.json records 14 passed real-browser checks across both themes, mobile, focus, stale review and receipt recovery; reports/verification/palette.json has zero failures."
   },
   {
     "item": "Public Pages site completes the visible API review and receipt flow.",
     "status": "not done",
-    "evidence": "No public Pages deployment or visible public API flow has been executed."
+    "evidence": "No public Pages site exists yet; repository creation requires an accessible restored Chrome window."
   },
   {
     "item": "Governance, notices, source policy, skills and retention checks are complete.",
-    "status": "not done",
-    "evidence": "Governance and local reference-safe retention exist; collector history pruning and target integration checks remain incomplete."
+    "status": "done",
+    "evidence": "Notices, source policy, operator helpers and repository skills are committed; actual Postgres retention tests pass 5/5 with no skipped cases."
   },
   {
     "item": "Actual dispatch succeeded and schedule configuration is reported honestly.",
     "status": "not done",
-    "evidence": "The candidate workflow contains a guarded UTC schedule; no actual dispatch or scheduled success is recorded."
+    "evidence": "The local operator collection succeeded with honest partial coverage; no Actions dispatch has run. The committed UTC schedule remains gated off."
   },
   {
     "item": "Final reports, scans, live checks and clean worktree rederivation pass.",
     "status": "not done",
-    "evidence": "Local evidence and rederivation are recorded in reports/verification; required live checks remain unexecuted."
+    "evidence": "Final report and clean-worktree checks are being preserved; public live checks remain blocked, so this requirement is not done."
   },
   {
     "item": "Release commits and tag are verified, with public release state explicit.",
     "status": "not done",
-    "evidence": "Local candidate history and tag are prepared and verified; no tag push or public release has occurred."
+    "evidence": "The local candidate release is prepared; the required public repository, remote tag and release remain pending."
   }
 ]

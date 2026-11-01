@@ -2,939 +2,939 @@ TAP version 13
 # Subtest: actual boundary rejects extra runtime tools before dispatch and enforces model turns
 ok 1 - actual boundary rejects extra runtime tools before dispatch and enforces model turns
   ---
-  duration_ms: 1.5558
+  duration_ms: 1.4794
   type: 'test'
   ...
 # Subtest: configured tool and valid arguments alone cannot manufacture model origin
 ok 2 - configured tool and valid arguments alone cannot manufacture model origin
   ---
-  duration_ms: 0.4136
+  duration_ms: 0.3003
   type: 'test'
   ...
 # Subtest: provider observed tool request executes once, rejects changed arguments and replay
 ok 3 - provider observed tool request executes once, rejects changed arguments and replay
   ---
-  duration_ms: 1.8164
+  duration_ms: 1.7377
   type: 'test'
   ...
 # Subtest: runtime replay restores opaque pagination cursors without crossing sessions
 ok 4 - runtime replay restores opaque pagination cursors without crossing sessions
   ---
-  duration_ms: 1.9403
+  duration_ms: 1.7738
   type: 'test'
   ...
 # Subtest: malformed provider JSON stays recorded but cannot execute; timeouts fail closed
 ok 5 - malformed provider JSON stays recorded but cannot execute; timeouts fail closed
   ---
-  duration_ms: 0.3007
+  duration_ms: 0.3556
   type: 'test'
   ...
 # Subtest: malformed model calls consume the shared four-call budget before eve validation
 ok 6 - malformed model calls consume the shared four-call budget before eve validation
   ---
-  duration_ms: 0.2416
+  duration_ms: 0.2513
   type: 'test'
   ...
 # Subtest: independent model grading uses executed proposals and cannot count contract provenance
 ok 7 - independent model grading uses executed proposals and cannot count contract provenance
   ---
-  duration_ms: 2.0364
+  duration_ms: 2.0491
   type: 'test'
   ...
 # Subtest: native transport maps actual tool calls but never promotes JSON assistant text to tools
 ok 8 - native transport maps actual tool calls but never promotes JSON assistant text to tools
   ---
-  duration_ms: 0.8092
+  duration_ms: 0.9883
   type: 'test'
   ...
 # Subtest: inventory admits exact three names and rejects added, duplicate and empty inventories
 ok 9 - inventory admits exact three names and rejects added, duplicate and empty inventories
   ---
-  duration_ms: 2.1593
+  duration_ms: 0.8384
   type: 'test'
   ...
 # Subtest: bundle gate admits immutable scope, rejects forged digest and refuses empty bundle
 ok 10 - bundle gate admits immutable scope, rejects forged digest and refuses empty bundle
   ---
-  duration_ms: 2.6482
+  duration_ms: 1.8445
   type: 'test'
   ...
 # Subtest: list gate clean, wrong bundle and empty input
 ok 11 - list gate clean, wrong bundle and empty input
   ---
-  duration_ms: 0.4732
+  duration_ms: 0.5497
   type: 'test'
   ...
 # Subtest: inspect gate clean, unknown candidate and empty input
 ok 12 - inspect gate clean, unknown candidate and empty input
   ---
-  duration_ms: 0.3178
+  duration_ms: 0.3706
   type: 'test'
   ...
 # Subtest: proposal gate clean, false authority fields and empty input
 ok 13 - proposal gate clean, false authority fields and empty input
   ---
-  duration_ms: 0.4505
+  duration_ms: 0.8707
   type: 'test'
   ...
 # Subtest: proposals reject forged revisions, selector and unsupported inference
 ok 14 - proposals reject forged revisions, selector and unsupported inference
   ---
-  duration_ms: 0.26
+  duration_ms: 0.2937
   type: 'test'
   ...
 # Subtest: cross namespace evidence and duplicate candidate identities fail session admission
 ok 15 - cross namespace evidence and duplicate candidate identities fail session admission
   ---
-  duration_ms: 0.3356
+  duration_ms: 0.406
   type: 'test'
   ...
 # Subtest: opaque cursor belongs to one immutable session
 ok 16 - opaque cursor belongs to one immutable session
   ---
-  duration_ms: 1.1724
+  duration_ms: 1.0541
   type: 'test'
   ...
 # Subtest: hostile metadata remains a string and excluded fields cannot reach model snapshots
 ok 17 - hostile metadata remains a string and excluded fields cannot reach model snapshots
   ---
-  duration_ms: 0.6299
+  duration_ms: 0.5948
   type: 'test'
   ...
 # Subtest: input, output and call budgets fail closed with no appended proposal
 ok 18 - input, output and call budgets fail closed with no appended proposal
   ---
-  duration_ms: 0.5555
+  duration_ms: 0.4708
   type: 'test'
   ...
 # Subtest: contract traces cannot count as model requests or provider executions
 ok 19 - contract traces cannot count as model requests or provider executions
   ---
-  duration_ms: 0.314
+  duration_ms: 0.3536
   type: 'test'
   ...
 # Subtest: missing model ledger keeps complete denominator without inventing failed attempts or quality
 ok 20 - missing model ledger keeps complete denominator without inventing failed attempts or quality
   ---
-  duration_ms: 0.4335
+  duration_ms: 1.0774
   type: 'test'
   ...
 # Subtest: missing model ledger rejects missing fixture, subset mismatch and empty plan
 ok 21 - missing model ledger rejects missing fixture, subset mismatch and empty plan
   ---
-  duration_ms: 0.2547
+  duration_ms: 0.2932
   type: 'test'
   ...
 # Subtest: admitted fixture completes four-call handler contract and independent predicate verification
 ok 22 - admitted fixture completes four-call handler contract and independent predicate verification
   ---
-  duration_ms: 4.5937
+  duration_ms: 4.7211
   type: 'test'
   ...
 # Subtest: in-process API demo survives fresh store and recovers one receipt
 ok 23 - in-process API demo survives fresh store and recovers one receipt
   ---
-  duration_ms: 236.785
+  duration_ms: 201.746
   type: 'test'
   ...
 # Subtest: in-process API refuses origin injection schemas empty bodies and capabilities
 ok 24 - in-process API refuses origin injection schemas empty bodies and capabilities
   ---
-  duration_ms: 3.3033
+  duration_ms: 3.1269
   type: 'test'
   ...
 # Subtest: local adapter refuses production startup
 ok 25 - local adapter refuses production startup
   ---
-  duration_ms: 0.4081
+  duration_ms: 0.4159
   type: 'test'
   ...
 # Subtest: preflight separates verified source identity from backend readiness and refuses malformed scope
 ok 26 - preflight separates verified source identity from backend readiness and refuses malformed scope
   ---
-  duration_ms: 2.0396
+  duration_ms: 4.4262
   type: 'test'
   ...
 # Subtest: local command refuses live namespace and arbitrary source before requests
 ok 27 - local command refuses live namespace and arbitrary source before requests
   ---
-  duration_ms: 151.9229
+  duration_ms: 117.9452
   type: 'test'
   ...
 # Subtest: persistent scoped cache survives fresh connection, revalidation, and failed later collection
 ok 28 - persistent scoped cache survives fresh connection, revalidation, and failed later collection
   ---
-  duration_ms: 201.3364
+  duration_ms: 208.3323
   type: 'test'
   ...
 # Subtest: global request budget covers four fixed sources and no transaction encloses transport
 ok 29 - global request budget covers four fixed sources and no transaction encloses transport
   ---
-  duration_ms: 185.6869
+  duration_ms: 190.4291
   type: 'test'
   ...
 # Subtest: artifact insertion failure rolls back evidence, observation, head, attempts and cache together
 ok 30 - artifact insertion failure rolls back evidence, observation, head, attempts and cache together
   ---
-  duration_ms: 140.6313
+  duration_ms: 143.6402
   type: 'test'
   ...
 # Subtest: returning stale worker cannot commit staged cache after replacement worker advances head
 ok 31 - returning stale worker cannot commit staged cache after replacement worker advances head
   ---
-  duration_ms: 138.9172
+  duration_ms: 139.9068
   type: 'test'
   ...
 # Subtest: reused run key refuses without replaying requests
 ok 32 - reused run key refuses without replaying requests
   ---
-  duration_ms: 137.4831
+  duration_ms: 133.7194
   type: 'test'
   ...
 # Subtest: source policy clean case admits only a pinned allowlisted repository
 ok 33 - source policy clean case admits only a pinned allowlisted repository
   ---
-  duration_ms: 1.7616
+  duration_ms: 1.2422
   type: 'test'
   ...
 # Subtest: source policy deliberate violations reject hosts, redirects scope, identities and URLs
 ok 34 - source policy deliberate violations reject hosts, redirects scope, identities and URLs
   ---
-  duration_ms: 0.6827
+  duration_ms: 0.4295
   type: 'test'
   ...
 # Subtest: source policy empty input refuses
 ok 35 - source policy empty input refuses
   ---
-  duration_ms: 0.1849
+  duration_ms: 0.2553
   type: 'test'
   ...
 # Subtest: safe source links use validated fixed host and encoded captured tag only
 ok 36 - safe source links use validated fixed host and encoded captured tag only
   ---
-  duration_ms: 3.1703
+  duration_ms: 2.6347
   type: 'test'
   ...
 # Subtest: cache key includes all scopes and never stores a credential
 ok 37 - cache key includes all scopes and never stores a credential
   ---
-  duration_ms: 0.8949
+  duration_ms: 0.5414
   type: 'test'
   ...
 # Subtest: planner selects approved IDs then newest prior identities with stable numeric ties
 ok 38 - planner selects approved IDs then newest prior identities with stable numeric ties
   ---
-  duration_ms: 1.3125
+  duration_ms: 0.3134
   type: 'test'
   ...
 # Subtest: collection clean pass normalizes metadata only and declares bounded non-atomic coverage
 ok 39 - collection clean pass normalizes metadata only and declares bounded non-atomic coverage
   ---
-  duration_ms: 2.0197
+  duration_ms: 1.7783
   type: 'test'
   ...
 # Subtest: collection valid empty 200 is captured empty scope and never a deletion or no-change claim
 ok 40 - collection valid empty 200 is captured empty scope and never a deletion or no-change claim
   ---
-  duration_ms: 0.7745
+  duration_ms: 0.6961
   type: 'test'
   ...
 # Subtest: 304 valid cache retains content timestamp and refreshes successful check time
 ok 41 - 304 valid cache retains content timestamp and refreshes successful check time
   ---
-  duration_ms: 1.1136
+  duration_ms: 0.6491
   type: 'test'
   ...
 # Subtest: 304 missing cache performs one unconditional recovery within the shared attempt budget
 ok 42 - 304 missing cache performs one unconditional recovery within the shared attempt budget
   ---
-  duration_ms: 1.5747
+  duration_ms: 0.5105
   type: 'test'
   ...
 # Subtest: 304 missing or corrupt cache without recovery remains unavailable and cannot become empty baseline
 ok 43 - 304 missing or corrupt cache without recovery remains unavailable and cannot become empty baseline
   ---
-  duration_ms: 1.0857
+  duration_ms: 0.6105
   type: 'test'
   ...
 # Subtest: expired cache and cross-namespace cache evidence are refused
 ok 44 - expired cache and cross-namespace cache evidence are refused
   ---
-  duration_ms: 0.751
+  duration_ms: 0.7147
   type: 'test'
   ...
 # Subtest: cache rejects a forged inner evidence digest even with a recomputed outer cache digest
 ok 45 - cache rejects a forged inner evidence digest even with a recomputed outer cache digest
   ---
-  duration_ms: 1.0202
+  duration_ms: 0.573
   type: 'test'
   ...
 # Subtest: page one valid and page two malformed retains positive evidence with partial coverage
 ok 46 - page one valid and page two malformed retains positive evidence with partial coverage
   ---
-  duration_ms: 0.827
+  duration_ms: 0.6441
   type: 'test'
   ...
 # Subtest: a successfully observed empty first page followed by failure remains partial
 ok 47 - a successfully observed empty first page followed by failure remains partial
   ---
-  duration_ms: 6.7174
+  duration_ms: 0.6665
   type: 'test'
   ...
 # Subtest: bounded pagination reports uncovered pages and refuses forged next links
 ok 48 - bounded pagination reports uncovered pages and refuses forged next links
   ---
-  duration_ms: 3.5754
+  duration_ms: 0.6519
   type: 'test'
   ...
 # Subtest: numeric GitHub pagination alias is pinned to the verified repository and never used as an outbound URL
 ok 49 - numeric GitHub pagination alias is pinned to the verified repository and never used as an outbound URL
   ---
-  duration_ms: 1.4895
+  duration_ms: 1.8503
   type: 'test'
   ...
 # Subtest: same duplicate identity is deduplicated and conflicting pages are unstable
 ok 50 - same duplicate identity is deduplicated and conflicting pages are unstable
   ---
-  duration_ms: 0.7002
+  duration_ms: 0.533
   type: 'test'
   ...
 # Subtest: timeout and 404 remain unavailable observations and never imply removal
 ok 51 - timeout and 404 remain unavailable observations and never imply removal
   ---
-  duration_ms: 0.5921
+  duration_ms: 0.4187
   type: 'test'
   ...
 # Subtest: transport deadline terminates even an injected transport that ignores its abort signal
 ok 52 - transport deadline terminates even an injected transport that ignores its abort signal
   ---
-  duration_ms: 5.1737
+  duration_ms: 6.6833
   type: 'test'
   ...
 # Subtest: throttle records a future retry timestamp and stops without sleeping or another request
 ok 53 - throttle records a future retry timestamp and stops without sleeping or another request
   ---
-  duration_ms: 0.5599
+  duration_ms: 0.4356
   type: 'test'
   ...
 # Subtest: request budget is shared and exhaustion cannot yield a complete procedure
 ok 54 - request budget is shared and exhaustion cannot yield a complete procedure
   ---
-  duration_ms: 0.4086
+  duration_ms: 0.2548
   type: 'test'
   ...
 # Subtest: response gates reject redirect, media mismatch, oversize, malformed schema and empty input
 ok 55 - response gates reject redirect, media mismatch, oversize, malformed schema and empty input
   ---
-  duration_ms: 2.0619
+  duration_ms: 0.5585
   type: 'test'
   ...
 # Subtest: size-capped response streams preserve valid evidence and reject streamed oversize
 ok 56 - size-capped response streams preserve valid evidence and reject streamed oversize
   ---
-  duration_ms: 3.7498
+  duration_ms: 4.2992
   type: 'test'
   ...
 # Subtest: a hanging body stream is bounded by the request timeout after headers return
 ok 57 - a hanging body stream is bounded by the request timeout after headers return
   ---
-  duration_ms: 15.5502
+  duration_ms: 15.4837
   type: 'test'
   ...
 # Subtest: controlled HTTP transport exercises actual size-capped body stream and redirect refusal
 ok 58 - controlled HTTP transport exercises actual size-capped body stream and redirect refusal
   ---
-  duration_ms: 64.707
+  duration_ms: 49.2811
   type: 'test'
   ...
 # Subtest: canonical digest is stable across object key order and refuses absent values
 ok 59 - canonical digest is stable across object key order and refuses absent values
   ---
-  duration_ms: 1.697
+  duration_ms: 2.923
   type: 'test'
   ...
 # Subtest: normalizer clean gate keeps only factual fields and discards note prose
 ok 60 - normalizer clean gate keeps only factual fields and discards note prose
   ---
-  duration_ms: 2.3881
+  duration_ms: 2.2821
   type: 'test'
   ...
 # Subtest: normalizer violation gate refuses malformed, oversized and control data
 ok 61 - normalizer violation gate refuses malformed, oversized and control data
   ---
-  duration_ms: 0.8195
+  duration_ms: 1.0462
   type: 'test'
   ...
 # Subtest: normalizer empty gate refuses missing release and namespace
 ok 62 - normalizer empty gate refuses missing release and namespace
   ---
-  duration_ms: 0.2976
+  duration_ms: 0.5587
   type: 'test'
   ...
 # Subtest: normalized schema cannot be forged merely by recomputing its digest
 ok 63 - normalized schema cannot be forged merely by recomputing its digest
   ---
-  duration_ms: 0.292
+  duration_ms: 0.215
   type: 'test'
   ...
 # Subtest: baseline creation avoids historical alert flood and scope changes refuse comparison
 ok 64 - baseline creation avoids historical alert flood and scope changes refuse comparison
   ---
-  duration_ms: 0.9802
+  duration_ms: 0.7489
   type: 'test'
   ...
 # Subtest: missing IDs and empty listings do not become deletion findings
 ok 65 - missing IDs and empty listings do not become deletion findings
   ---
-  duration_ms: 0.862
+  duration_ms: 0.9171
   type: 'test'
   ...
 # Subtest: partial retains supported positive facts but unknown never becomes no-op
 ok 66 - partial retains supported positive facts but unknown never becomes no-op
   ---
-  duration_ms: 1.6132
+  duration_ms: 1.591
   type: 'test'
   ...
 # Subtest: each exact predicate verifies separately and rendering does not imply semantics
 ok 67 - each exact predicate verifies separately and rendering does not imply semantics
   ---
-  duration_ms: 9.2734
+  duration_ms: 6.9892
   type: 'test'
   ...
 # Subtest: tag revert has distinct transition key and duplicate evidence does not multiply facts
 ok 68 - tag revert has distinct transition key and duplicate evidence does not multiply facts
   ---
-  duration_ms: 0.5925
+  duration_ms: 0.6071
   type: 'test'
   ...
 # Subtest: conflicting duplicate identity marks unstable without unsupported candidates
 ok 69 - conflicting duplicate identity marks unstable without unsupported candidates
   ---
-  duration_ms: 2.1248
+  duration_ms: 0.3187
   type: 'test'
   ...
 # Subtest: verifier clean gate checks supported operands
 ok 70 - verifier clean gate checks supported operands
   ---
-  duration_ms: 1.0488
+  duration_ms: 0.6033
   type: 'test'
   ...
 # Subtest: verifier violation gate rejects wrong identity, predicate, revision and digest
 ok 71 - verifier violation gate rejects wrong identity, predicate, revision and digest
   ---
-  duration_ms: 1.5795
+  duration_ms: 1.3853
   type: 'test'
   ...
 # Subtest: verifier empty gate and claim rendering refuse absence or fabricated decision
 ok 72 - verifier empty gate and claim rendering refuse absence or fabricated decision
   ---
-  duration_ms: 0.7723
+  duration_ms: 0.7119
   type: 'test'
   ...
 # Subtest: verifier independently rejects a false predicate with structurally valid identities
 ok 73 - verifier independently rejects a false predicate with structurally valid identities
   ---
-  duration_ms: 0.618
+  duration_ms: 0.6542
   type: 'test'
   ...
 # Subtest: independent grader catches missing, extra, duplicate, wrong identity and predicate mutations
 ok 74 - independent grader catches missing, extra, duplicate, wrong identity and predicate mutations
   ---
-  duration_ms: 0.5295
+  duration_ms: 0.3308
   type: 'test'
   ...
 # Subtest: fixture plan covers twelve disjoint lineages per family and a balanced frozen model subset
 ok 75 - fixture plan covers twelve disjoint lineages per family and a balanced frozen model subset
   ---
-  duration_ms: 24.9069
+  duration_ms: 20.7224
   type: 'test'
   ...
 # Subtest: fixture generation is deterministic in two fresh processes
 ok 76 - fixture generation is deterministic in two fresh processes
   ---
-  duration_ms: 295.1334
+  duration_ms: 362.024
   type: 'test'
   ...
 # Subtest: every development fixture is independently normalized and fact-graded
 ok 77 - every development fixture is independently normalized and fact-graded
   ---
-  duration_ms: 28.0892
+  duration_ms: 27.2863
   type: 'test'
   ...
 # Subtest: real collection process death rolls back evidence, observation and event across a fresh connection
 ok 78 - real collection process death rolls back evidence, observation and event across a fresh connection
   ---
-  duration_ms: 279.1174
+  duration_ms: 241.3373
   type: 'test'
   ...
 # Subtest: real process death after publication commit recovers the original receipt without a duplicate effect
 ok 79 - real process death after publication commit recovers the original receipt without a duplicate effect
   ---
-  duration_ms: 223.0158
+  duration_ms: 227.2301
   type: 'test'
   ...
 # Subtest: Postgres config enforces verified TLS without connection-string SSL override
 ok 80 - Postgres config enforces verified TLS without connection-string SSL override
   ---
-  duration_ms: 1.9789
+  duration_ms: 2.2669
   type: 'test'
   ...
 # Subtest: actual PostgreSQL workflow contracts
     # Subtest: durable immutable evidence is visible on a second connection
     ok 1 - durable immutable evidence is visible on a second connection
       ---
-      duration_ms: 1089.346
+      duration_ms: 1061.6666
       type: 'test'
       ...
     # Subtest: competing workers have one active lease generation
     ok 2 - competing workers have one active lease generation
       ---
-      duration_ms: 1915.1924
+      duration_ms: 1281.3079
       type: 'test'
       ...
     # Subtest: stale generation and database clock expiry reject returning worker
     ok 3 - stale generation and database clock expiry reject returning worker
       ---
-      duration_ms: 1914.813
+      duration_ms: 1341.2707
       type: 'test'
       ...
     # Subtest: expiry during asynchronous commit hook rolls back all durable writes
     ok 4 - expiry during asynchronous commit hook rolls back all durable writes
       ---
-      duration_ms: 3419.5251
+      duration_ms: 3040.7146
       type: 'test'
       ...
     # Subtest: expected head is independent of current lease ownership
     ok 5 - expected head is independent of current lease ownership
       ---
-      duration_ms: 1331.7614
+      duration_ms: 1114.3048
       type: 'test'
       ...
     # Subtest: failed attempts preserve usable comparison head
     ok 6 - failed attempts preserve usable comparison head
       ---
-      duration_ms: 1715.5973
+      duration_ms: 1583.9685
       type: 'test'
       ...
     # Subtest: fault after evidence leaves no evidence observation head or event residue
     ok 7 - fault after evidence leaves no evidence observation head or event residue
       ---
-      duration_ms: 1453.1741
+      duration_ms: 2670.8169
       type: 'test'
       ...
     # Subtest: canonical briefing persists bundle typed proposal verifier receipt and pins
     ok 8 - canonical briefing persists bundle typed proposal verifier receipt and pins
       ---
-      duration_ms: 4414.3363
+      duration_ms: 3309.3948
       type: 'test'
       ...
     # Subtest: same key concurrent publications commit one receipt and recover identically
     ok 9 - same key concurrent publications commit one receipt and recover identically
       ---
-      duration_ms: 4910.263
+      duration_ms: 3833.617
       type: 'test'
       ...
     # Subtest: postcommit response loss is recovered across connections before stale state checks
     ok 10 - postcommit response loss is recovered across connections before stale state checks
       ---
-      duration_ms: 5483.4379
+      duration_ms: 6563.1415
       type: 'test'
       ...
     # Subtest: changed payload under same operation key conflicts
     ok 11 - changed payload under same operation key conflicts
       ---
-      duration_ms: 5379.0057
+      duration_ms: 3772.3742
       type: 'test'
       ...
     # Subtest: different operation key cannot create second publication or erase receipt
     ok 12 - different operation key cannot create second publication or erase receipt
       ---
-      duration_ms: 5258.9738
+      duration_ms: 4244.0339
       type: 'test'
       ...
     # Subtest: reviewer scope must equal namespace
     ok 13 - reviewer scope must equal namespace
       ---
-      duration_ms: 4292.3396
+      duration_ms: 2731.6053
       type: 'test'
       ...
     # Subtest: new source invalidates previously reviewed source set
     ok 14 - new source invalidates previously reviewed source set
       ---
-      duration_ms: 4467.4309
+      duration_ms: 3298.5086
       type: 'test'
       ...
     # Subtest: expired approval cannot publish
     ok 15 - expired approval cannot publish
       ---
-      duration_ms: 5021.8581
+      duration_ms: 3129.3102
       type: 'test'
       ...
     # Subtest: changed normalizer version marks review required and refuses approval
     ok 16 - changed normalizer version marks review required and refuses approval
       ---
-      duration_ms: 4093.6638
+      duration_ms: 2880.5336
       type: 'test'
       ...
     # Subtest: capabilities and evidence cannot cross namespaces
     ok 17 - capabilities and evidence cannot cross namespaces
       ---
-      duration_ms: 4737.6246
+      duration_ms: 3407.3644
       type: 'test'
       ...
     # Subtest: session creation quota is atomic across connections
     ok 18 - session creation quota is atomic across connections
       ---
-      duration_ms: 1916.7539
+      duration_ms: 1611.5106
       type: 'test'
       ...
     # Subtest: session mutation quota cannot overconsume under concurrency
     ok 19 - session mutation quota cannot overconsume under concurrency
       ---
-      duration_ms: 611.0322
+      duration_ms: 554.6417
       type: 'test'
       ...
     # Subtest: baseline labels cannot be promoted to actual model provenance
     ok 20 - baseline labels cannot be promoted to actual model provenance
       ---
-      duration_ms: 0.2198
+      duration_ms: 0.3028
       type: 'test'
       ...
     # Subtest: unpersisted model-like observation lineage cannot be admitted
     ok 21 - unpersisted model-like observation lineage cannot be admitted
       ---
-      duration_ms: 499.2179
+      duration_ms: 442.7014
       type: 'test'
       ...
     # Subtest: retention preserves pins and refuses an impossible budget atomically
     ok 22 - retention preserves pins and refuses an impossible budget atomically
       ---
-      duration_ms: 4006.8639
+      duration_ms: 3468.9367
       type: 'test'
       ...
     1..22
 ok 81 - actual PostgreSQL workflow contracts
   ---
-  duration_ms: 68465.4432
+  duration_ms: 56555.6504
   type: 'test'
   ...
 # Subtest: report input gate admits aligned evidence and real execution records
 ok 82 - report input gate admits aligned evidence and real execution records
   ---
-  duration_ms: 27.007
+  duration_ms: 24.9378
   type: 'test'
   ...
 # Subtest: report input gate rejects tampering stale plans and model substitution
 ok 83 - report input gate rejects tampering stale plans and model substitution
   ---
-  duration_ms: 67.3029
+  duration_ms: 68.5044
   type: 'test'
   ...
 # Subtest: report input gate refuses missing and empty execution evidence
 ok 84 - report input gate refuses missing and empty execution evidence
   ---
-  duration_ms: 15.548
+  duration_ms: 13.4753
   type: 'test'
   ...
 # Subtest: actual report gate independently regrades complete denominators and separates model quality
 ok 85 - actual report gate independently regrades complete denominators and separates model quality
   ---
-  duration_ms: 45.8079
+  duration_ms: 44.5808
   type: 'test'
   ...
 # Subtest: actual report gate rejects forged origin expanded inventory and tampered grading
 ok 86 - actual report gate rejects forged origin expanded inventory and tampered grading
   ---
-  duration_ms: 85.9411
+  duration_ms: 83.3694
   type: 'test'
   ...
 # Subtest: actual report gate rejects lost failure cases unsupported previews and undispatched inference
 ok 87 - actual report gate rejects lost failure cases unsupported previews and undispatched inference
   ---
-  duration_ms: 74.1542
+  duration_ms: 77.075
   type: 'test'
   ...
 # Subtest: report gate accepts admitted metric with evidence
 ok 88 - report gate accepts admitted metric with evidence
   ---
-  duration_ms: 1.4858
+  duration_ms: 1.8065
   type: 'test'
   ...
 # Subtest: report gate refuses tampering, stale revision and unbound numbers
 ok 89 - report gate refuses tampering, stale revision and unbound numbers
   ---
-  duration_ms: 0.6053
+  duration_ms: 0.8483
   type: 'test'
   ...
 # Subtest: report gate refuses empty input and preserves unavailable
 ok 90 - report gate refuses empty input and preserves unavailable
   ---
-  duration_ms: 1.1234
+  duration_ms: 0.3297
   type: 'test'
   ...
 # Subtest: report gate binds every metric to one plan and rejects fabricated model quality
 ok 91 - report gate binds every metric to one plan and rejects fabricated model quality
   ---
-  duration_ms: 0.4658
+  duration_ms: 1.1355
   type: 'test'
   ...
 # Subtest: Postgres collector empty scope and unverified live configuration refuse before network
 ok 92 - Postgres collector empty scope and unverified live configuration refuse before network
   ---
-  duration_ms: 1.5854
+  duration_ms: 1.9186
   type: 'test'
   ...
 # Subtest: actual PostgreSQL collector and reference retention contracts
     # Subtest: fenced captures, cached 304 and exact published dependencies survive history pruning
     ok 1 - fenced captures, cached 304 and exact published dependencies survive history pruning
       ---
-      duration_ms: 25452.0807
+      duration_ms: 22582.4929
       type: 'test'
       ...
     # Subtest: error after cache and attempts staging rolls all fenced state back
     ok 2 - error after cache and attempts staging rolls all fenced state back
       ---
-      duration_ms: 3053.7424
+      duration_ms: 2602.9143
       type: 'test'
       ...
     # Subtest: returning worker cannot commit cache or attempts after replacement advances head
     ok 3 - returning worker cannot commit cache or attempts after replacement advances head
       ---
-      duration_ms: 3669.4624
+      duration_ms: 2958.1139
       type: 'test'
       ...
     1..3
 ok 93 - actual PostgreSQL collector and reference retention contracts
   ---
-  duration_ms: 32706.9936
+  duration_ms: 29888.6845
   type: 'test'
   ...
 # Subtest: collector retention clean: more than 100 jobs succeed, fresh connection preserves domain history and latest two revisions
 ok 94 - collector retention clean: more than 100 jobs succeed, fresh connection preserves domain history and latest two revisions
   ---
-  duration_ms: 2101.7474
+  duration_ms: 2264.0869
   type: 'test'
   ...
 # Subtest: collector retention preserves old approved and published exact before/after manifests
 ok 95 - collector retention preserves old approved and published exact before/after manifests
   ---
-  duration_ms: 248.7458
+  duration_ms: 263.416
   type: 'test'
   ...
 # Subtest: collector retention violation: impossible budget and interrupted deletes roll back with no cross-namespace change
 ok 96 - collector retention violation: impossible budget and interrupted deletes roll back with no cross-namespace change
   ---
-  duration_ms: 159.2163
+  duration_ms: 173.7175
   type: 'test'
   ...
 # Subtest: collector retention removes only expired cache and respects an unfinished job with live lease
 ok 97 - collector retention removes only expired cache and respects an unfinished job with live lease
   ---
-  duration_ms: 138.8699
+  duration_ms: 165.8768
   type: 'test'
   ...
 # Subtest: collector retention empty input and mixed scope refuse before writes
 ok 98 - collector retention empty input and mixed scope refuse before writes
   ---
-  duration_ms: 88.6875
+  duration_ms: 102.5679
   type: 'test'
   ...
 # Subtest: secret scan accepts inert placeholder
 ok 99 - secret scan accepts inert placeholder
   ---
-  duration_ms: 0.9838
+  duration_ms: 1.2715
   type: 'test'
   ...
 # Subtest: secret scan rejects constructed credential
 ok 100 - secret scan rejects constructed credential
   ---
-  duration_ms: 0.2553
+  duration_ms: 0.4256
   type: 'test'
   ...
 # Subtest: secret scan empty text is not a repository pass
 ok 101 - secret scan empty text is not a repository pass
   ---
-  duration_ms: 0.8171
+  duration_ms: 0.9479
   type: 'test'
   ...
 # Subtest: unavailable evidence never renders as zero or a successful negative
 ok 102 - unavailable evidence never renders as zero or a successful negative
   ---
-  duration_ms: 0.7268
+  duration_ms: 0.9812
   type: 'test'
   ...
 # Subtest: ratios retain denominator and refuse missing, empty and impossible values
 ok 103 - ratios retain denominator and refuse missing, empty and impossible values
   ---
-  duration_ms: 0.1147
+  duration_ms: 0.1826
   type: 'test'
   ...
 # Subtest: baseline, actual inference and recorded inference remain separate
 ok 104 - baseline, actual inference and recorded inference remain separate
   ---
-  duration_ms: 0.4788
+  duration_ms: 0.5796
   type: 'test'
   ...
 # Subtest: links admit allowlisted GitHub release locations only
 ok 105 - links admit allowlisted GitHub release locations only
   ---
-  duration_ms: 0.1996
+  duration_ms: 0.2595
   type: 'test'
   ...
 # Subtest: before and after evidence fields retain false booleans and hostile metadata as text
 ok 106 - before and after evidence fields retain false booleans and hostile metadata as text
   ---
-  duration_ms: 0.672
+  duration_ms: 1.0152
   type: 'test'
   ...
 # Subtest: UI shell exposes readable states and keyboard affordances without success placeholders
 ok 107 - UI shell exposes readable states and keyboard affordances without success placeholders
   ---
-  duration_ms: 0.4999
+  duration_ms: 1.6055
   type: 'test'
   ...
 # Subtest: exact palette retains the requested magnitude ramps and text contrast
 ok 108 - exact palette retains the requested magnitude ramps and text contrast
   ---
-  duration_ms: 0.4722
+  duration_ms: 1.4218
   type: 'test'
   ...
 # Subtest: source view consumes the real store shape and preserves failed attempt versus usable head
 ok 109 - source view consumes the real store shape and preserves failed attempt versus usable head
   ---
-  duration_ms: 4.64
+  duration_ms: 4.2665
   type: 'test'
   ...
 # Subtest: actual generated model rows retain every fixture identity and reported quality state
 ok 110 - actual generated model rows retain every fixture identity and reported quality state
   ---
-  duration_ms: 0.7932
+  duration_ms: 4.4237
   type: 'test'
   ...
 # Subtest: public API configuration is an origin without credentials or arbitrary path
 ok 111 - public API configuration is an origin without credentials or arbitrary path
   ---
-  duration_ms: 0.3331
+  duration_ms: 0.4028
   type: 'test'
   ...
 # Subtest: actual baseline summary is rendered with its denominators and independent verifier counts
 ok 112 - actual baseline summary is rendered with its denominators and independent verifier counts
   ---
-  duration_ms: 2.5603
+  duration_ms: 6.6403
   type: 'test'
   ...
 # Subtest: workflow gate clean: second connection sees the source head and immutable evidence
 ok 113 - workflow gate clean: second connection sees the source head and immutable evidence
   ---
-  duration_ms: 148.5317
+  duration_ms: 132.3695
   type: 'test'
   ...
 # Subtest: workflow gate violation: stale returning worker cannot commit after a replacement
 ok 114 - workflow gate violation: stale returning worker cannot commit after a replacement
   ---
-  duration_ms: 143.008
+  duration_ms: 140.8314
   type: 'test'
   ...
 # Subtest: workflow gate empty input refuses
 ok 115 - workflow gate empty input refuses
   ---
-  duration_ms: 95.3747
+  duration_ms: 105.9635
   type: 'test'
   ...
 # Subtest: matching lease generation is insufficient after database clock expiry
 ok 116 - matching lease generation is insufficient after database clock expiry
   ---
-  duration_ms: 121.8102
+  duration_ms: 112.5759
   type: 'test'
   ...
 # Subtest: expected head conflict rejects a matching live lease
 ok 117 - expected head conflict rejects a matching live lease
   ---
-  duration_ms: 112.7879
+  duration_ms: 115.9817
   type: 'test'
   ...
 # Subtest: failed attempt advances latest attempt without erasing comparison baseline
 ok 118 - failed attempt advances latest attempt without erasing comparison baseline
   ---
-  duration_ms: 122.0933
+  duration_ms: 109.8533
   type: 'test'
   ...
 # Subtest: partial positive evidence is retained without a complete negative claim
 ok 119 - partial positive evidence is retained without a complete negative claim
   ---
-  duration_ms: 115.6219
+  duration_ms: 118.2275
   type: 'test'
   ...
 # Subtest: an exception inside collection rolls evidence, head and event back together
 ok 120 - an exception inside collection rolls evidence, head and event back together
   ---
-  duration_ms: 114.4351
+  duration_ms: 98.106
   type: 'test'
   ...
 # Subtest: publication clean: identical retry recovers one immutable receipt from another connection
 ok 121 - publication clean: identical retry recovers one immutable receipt from another connection
   ---
-  duration_ms: 140.231
+  duration_ms: 175.8626
   type: 'test'
   ...
 # Subtest: publication violation: a changed payload under the same operation key conflicts
 ok 122 - publication violation: a changed payload under the same operation key conflicts
   ---
-  duration_ms: 123.1711
+  duration_ms: 150.7872
   type: 'test'
   ...
 # Subtest: publication empty input refuses
 ok 123 - publication empty input refuses
   ---
-  duration_ms: 82.9199
+  duration_ms: 92.0081
   type: 'test'
   ...
 # Subtest: approval is required and namespace scoped
 ok 124 - approval is required and namespace scoped
   ---
-  duration_ms: 116.4371
+  duration_ms: 124.725
   type: 'test'
   ...
 # Subtest: source version change makes approval stale without rewriting history
 ok 125 - source version change makes approval stale without rewriting history
   ---
-  duration_ms: 123.4671
+  duration_ms: 130.9488
   type: 'test'
   ...
 # Subtest: committed retry precedes approval expiry while a new effect requires unexpired approval
 ok 126 - committed retry precedes approval expiry while a new effect requires unexpired approval
   ---
-  duration_ms: 163.1096
+  duration_ms: 162.1596
   type: 'test'
   ...
 # Subtest: demo capability hash, expiry, quota and cross-namespace isolation are durable
 ok 127 - demo capability hash, expiry, quota and cross-namespace isolation are durable
   ---
-  duration_ms: 123.2036
+  duration_ms: 145.0473
   type: 'test'
   ...
 # Subtest: global session creation quota is shared across connections
 ok 128 - global session creation quota is shared across connections
   ---
-  duration_ms: 109.1701
+  duration_ms: 158.6492
   type: 'test'
   ...
 # Subtest: retention retains pinned briefing evidence and latest two revisions, second connection verifies
 ok 129 - retention retains pinned briefing evidence and latest two revisions, second connection verifies
   ---
-  duration_ms: 141.3069
+  duration_ms: 158.0179
   type: 'test'
   ...
 # Subtest: retention rejects invalid empty limits and cannot delete pinned evidence through FK
 ok 130 - retention rejects invalid empty limits and cannot delete pinned evidence through FK
   ---
-  duration_ms: 117.4655
+  duration_ms: 127.7103
   type: 'test'
   ...
 # Subtest: briefing gate rejects forged supported flags and false predicates
 ok 131 - briefing gate rejects forged supported flags and false predicates
   ---
-  duration_ms: 109.3553
+  duration_ms: 119.8469
   type: 'test'
   ...
 1..131
@@ -945,4 +945,4 @@ ok 131 - briefing gate rejects forged supported flags and false predicates
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 68641.7859
+# duration_ms 56722.5903

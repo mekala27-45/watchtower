@@ -1,8 +1,8 @@
 {
   "schema": "watchtower-browser-verification-v1",
   "label": "postgres",
-  "started_at": "2026-11-01T16:40:40.134Z",
-  "source_revision": "3de3342a04ba4527984890df743a4c208ba1d01f",
+  "started_at": "2026-11-01T16:58:06.650Z",
+  "source_revision": "0e13886d2f37e5726492a86707360d81fe616889",
   "backend": "postgres",
   "tests": [
     {
@@ -41,10 +41,10 @@
       "name": "real HTTP prepare approve publish and identical receipt recovery",
       "status": "passed",
       "detail": {
-        "receipt_id": "b6e7030a-a349-4227-aa8e-79def949c499",
-        "published_at": 1793551246363,
-        "briefing_digest": "f120a7aa001e40dc51fcb8fb9dd8167c9c5702fc8799f546e7ce9f54f30b5028",
-        "namespace": "demo:b06fa55e-b2a3-4aac-ae27-4af0b355cb13"
+        "receipt_id": "66b2333e-7768-4209-9f50-fb354f354c4e",
+        "published_at": 1793552293367,
+        "briefing_digest": "3a6d0b206eec73ae31e003cfa80228ee2863e791b9f1b61a67165222326a036c",
+        "namespace": "demo:640b201e-77da-4c0b-b4ca-c36ced31a9b4"
       }
     },
     {
@@ -52,7 +52,7 @@
       "status": "passed",
       "detail": {
         "receipt_count": 1,
-        "receipt_id": "b6e7030a-a349-4227-aa8e-79def949c499"
+        "receipt_id": "66b2333e-7768-4209-9f50-fb354f354c4e"
       }
     },
     {
@@ -140,7 +140,7 @@
       "detail": {
         "kind": "actual_backend_head_change",
         "backend": "postgres",
-        "namespace": "demo:8937f045-61e0-4030-9312-b128d990273d",
+        "namespace": "demo:dd2d510e-cee6-4ab2-841f-88f7a24ea276",
         "publication_status": 409,
         "receipt_count": 0
       }
@@ -171,12 +171,14 @@
     "postgres-mobile-sources.png"
   ],
   "errors": [],
-  "site_url": "http://127.0.0.1:65304",
+  "isolated_client_identity": true,
+  "client_identity_scope": "Test-only per-run identity; the same persistent quota applies to all requests within this run.",
+  "site_url": "http://127.0.0.1:60493",
   "browser_version": "156.0.8078.74",
-  "api_revision": "3de3342a04ba4527984890df743a4c208ba1d01f",
-  "api_url": "http://127.0.0.1:65304",
+  "api_revision": "0e13886d2f37e5726492a86707360d81fe616889",
+  "api_url": "http://127.0.0.1:60493",
   "status": "passed",
-  "finished_at": "2026-11-01T16:41:00.863Z",
+  "finished_at": "2026-11-01T16:58:27.228Z",
   "passed": 14,
   "failed": 0
 }

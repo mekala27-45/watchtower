@@ -1,0 +1,16 @@
+{
+  "schema": "watchtower-verification-amendment-v1",
+  "evaluated_source_revision": "0e13886d2f37e5726492a86707360d81fe616889",
+  "reason": "The concurrent full test suite exposed a test isolation bug: the determinism test rewrote the shared fixture corpus while report-input tests were reading JSON files, causing an intermittent truncated JSON parse. This was a verification-harness race, not a model or corpus change.",
+  "changes": [
+    "The fixture determinism test copies the unchanged generator into two fresh temporary roots and compares independently generated manifests without writing the shared corpus.",
+    "Archived verification scopes revision equality to calculation and inference inputs. Test harnesses, checker code, UI code and operator documents may be amended without relabelling an earlier model execution.",
+    "The original committed model-freeze snapshot, its provenance digest, every frozen source byte and dependency version are revalidated against the original evaluated revision and current checkout.",
+    "The renderer accepts an explicit preserved source revision only after the same calculation-input and frozen-byte checks pass.",
+    "The local PostgreSQL browser harness isolates its test client identity per run while retaining persistent quotas within the run. Production API behavior is unchanged.",
+    "The README renderer adds the verified recorded GIF, an actual failed-case link and explicit supported and unsupported claim boundaries. These are presentation changes."
+  ],
+  "unchanged": ["Model artifact", "Agent prompt", "Provider adapter", "Tool schemas and runtime", "Generation budgets", "Fixture corpus", "Evaluation plan", "Baseline calculation", "Model grading and receipt admission"],
+  "actual_inference_repeated": false,
+  "recorded_model_source_revision_preserved": true
+}

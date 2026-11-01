@@ -1,0 +1,65 @@
+{
+  "schema": "postgres-matrix-source-attestation-v1",
+  "checked_at": "2026-11-01T16:52:28.449Z",
+  "matrix_run_id": "postgres-2026-11-01T16-46-21-416Z-830d45cb",
+  "matrix_artifact": "reports/faults/postgres-matrix.json",
+  "matrix_sha256": "717a111eab42b26e18d7a430870c062cec7431af9c10da0d9568dd240a6a4be5",
+  "executed_worktree_base_revision": "9b78bb87d0349e4816a5c5a34458fb5085b674c8",
+  "verified_source_revision": "0e13886d2f37e5726492a86707360d81fe616889",
+  "all_executed_implementation_bytes_match_committed_source": true,
+  "files": [
+    {
+      "path": "scripts/fault-matrix-postgres.mjs",
+      "runtime_sha256": "397da0e42240a55fcd446c63a7ceeebc146b068fd5a8d386b90823e7fc246fb0",
+      "committed_sha256": "397da0e42240a55fcd446c63a7ceeebc146b068fd5a8d386b90823e7fc246fb0",
+      "worktree_sha256": "397da0e42240a55fcd446c63a7ceeebc146b068fd5a8d386b90823e7fc246fb0",
+      "matches_committed": true
+    },
+    {
+      "path": "scripts/fault-worker-postgres.mjs",
+      "runtime_sha256": "c36bbef13e296e6d977f23e5d5dd3af4c110b54f6a564f49366d3f860372bbce",
+      "committed_sha256": "c36bbef13e296e6d977f23e5d5dd3af4c110b54f6a564f49366d3f860372bbce",
+      "worktree_sha256": "c36bbef13e296e6d977f23e5d5dd3af4c110b54f6a564f49366d3f860372bbce",
+      "matches_committed": true
+    },
+    {
+      "path": "packages/workflow/postgres.mjs",
+      "runtime_sha256": "507b45b92b55aabe5a865c5400e256d2c22ed976d91ff2be9122605b44ae9d3e",
+      "committed_sha256": "507b45b92b55aabe5a865c5400e256d2c22ed976d91ff2be9122605b44ae9d3e",
+      "worktree_sha256": "507b45b92b55aabe5a865c5400e256d2c22ed976d91ff2be9122605b44ae9d3e",
+      "matches_committed": true
+    },
+    {
+      "path": "packages/domain/index.mjs",
+      "runtime_sha256": "79647d2b50dfeefb07db79fc04c8b50d43326f20347c36622eb9ee297be3ad52",
+      "committed_sha256": "79647d2b50dfeefb07db79fc04c8b50d43326f20347c36622eb9ee297be3ad52",
+      "worktree_sha256": "79647d2b50dfeefb07db79fc04c8b50d43326f20347c36622eb9ee297be3ad52",
+      "matches_committed": true
+    },
+    {
+      "path": "packages/domain/fixture-loader.mjs",
+      "runtime_sha256": "e8874507ecffc355d5086e74e667a761bcc00fa2fe22c9aa8a2a385267958d88",
+      "committed_sha256": "e8874507ecffc355d5086e74e667a761bcc00fa2fe22c9aa8a2a385267958d88",
+      "worktree_sha256": "e8874507ecffc355d5086e74e667a761bcc00fa2fe22c9aa8a2a385267958d88",
+      "matches_committed": true
+    },
+    {
+      "path": "packages/collector/index.mjs",
+      "runtime_sha256": "c6e69ea0b0b6e0e1ecca5643854cf6a4e43e06ce461d78396174cda503e66b0e",
+      "committed_sha256": "c6e69ea0b0b6e0e1ecca5643854cf6a4e43e06ce461d78396174cda503e66b0e",
+      "worktree_sha256": "c6e69ea0b0b6e0e1ecca5643854cf6a4e43e06ce461d78396174cda503e66b0e",
+      "matches_committed": true
+    }
+  ],
+  "independent_assertions": {
+    "unique_planned_cases": 576,
+    "applicable_recovered": 541,
+    "not_applicable": 35,
+    "process_deaths": {
+      "process_death_pre_commit": 72,
+      "process_death_post_commit": 37
+    },
+    "distinct_database_connections": true
+  },
+  "note": "The runtime recorded its working-tree base and exact implementation content hashes. This attestation maps those recorded bytes to committed source without relabelling the original execution revision."
+}

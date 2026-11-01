@@ -38,7 +38,7 @@ const json=(base,path)=>JSON.parse(readFileSync(resolve(base,path),'utf8'));
 try{
  const npmCli=process.env.npm_execpath??resolve(dirname(process.execPath),'node_modules/npm/bin/npm-cli.js');
  if(!existsSync(npmCli))throw Error('npm_cli_not_found');
- run(npmCli,['ci','--no-audit','--no-fund'],[0],'npm-ci');
+ run(npmCli,['ci','--ignore-scripts','--no-audit','--no-fund'],[0],'npm-ci');
  run('scripts/verify-report-evidence.mjs',['--archived']);
  report.actual_model_evidence_regraded=true;
  const baselinePaths=['reports/baseline/full.json','reports/baseline/model-subset.json'];

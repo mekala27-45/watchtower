@@ -4,6 +4,7 @@ import {readFile,mkdir,writeFile} from 'node:fs/promises';
 import {existsSync} from 'node:fs';
 import {resolve,extname} from 'node:path';
 import {execFileSync} from 'node:child_process';
+import {randomUUID} from 'node:crypto';
 import {createApp} from '../apps/api/server.mjs';
 import {PostgresStore} from '../packages/workflow/postgres.mjs';
 
@@ -35,6 +36,12 @@ try{
   let siteURL=process.env.WATCHTOWER_BROWSER_URL;
   if(!siteURL){
     const store=process.env.WATCHTOWER_BROWSER_POSTGRES==='1'?await PostgresStore.create({connectionString:process.env.DATABASE_URL}):undefined;
+    if(store){
+      const createSession=store.createDemoSession.bind(store),clientPrefix='browser-test-'+randomUUID();
+      store.createDemoSession=input=>createSession({...input,clientKey:clientPrefix+'-'+(input.clientKey??'browser')});
+      report.isolated_client_identity=true;
+      report.client_identity_scope='Test-only per-run identity; the same persistent quota applies to all requests within this run.';
+    }
     app=createApp({dbPath:':memory:',store,revision:report.source_revision});
     await new Promise(r=>app.server.listen(0,'127.0.0.1',r));
     const apiURL='http://127.0.0.1:'+app.server.address().port;
