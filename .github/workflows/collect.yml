@@ -1,0 +1,21 @@
+name: Bounded source collection candidate
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: watchtower-watchlist
+  cancel-in-progress: false
+jobs:
+  collect:
+    if: vars.WATCHTOWER_COLLECTION_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Require verified target adapter
+        run: node -e "import('node:fs').then(fs=>{if(!fs.existsSync('packages/workflow/postgres.mjs'))throw Error('Postgres adapter incomplete')})"
+      - run: node scripts/collect.mjs --check
