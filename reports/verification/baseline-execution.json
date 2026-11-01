@@ -1,0 +1,49 @@
+{
+  "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+  "source_revision": "7f636a3d681a986e13cbadf58cae35172e1c2c30",
+  "summary": {
+    "sequences": 72,
+    "transitions": 87,
+    "expected": 42,
+    "emitted": 42,
+    "matched": 42,
+    "missed": 0,
+    "duplicates": 0,
+    "unsupported": 0,
+    "exact_sequences": 72,
+    "normalization_passed": 72,
+    "no_op": {
+      "correct": 21,
+      "total": 21
+    },
+    "unknown": {
+      "correct": 22,
+      "total": 22
+    },
+    "baseline": {
+      "correct": 6,
+      "total": 6
+    },
+    "verifier": {
+      "supported": 42,
+      "false_acceptance": 0,
+      "false_rejection": 0,
+      "forged_challenges": 210
+    },
+    "precision": {
+      "value": 1,
+      "numerator": 42,
+      "denominator": 42,
+      "unit": "ratio",
+      "state": "available"
+    },
+    "recall": {
+      "value": 1,
+      "numerator": 42,
+      "denominator": 42,
+      "unit": "ratio",
+      "state": "available"
+    }
+  },
+  "failed_ids": []
+}

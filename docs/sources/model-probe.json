@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-01T15:49:43.501Z",
+  "checked_at": "2026-11-01T16:02:50.720Z",
   "runtime": {
     "node": "v24.19.0",
     "platform": "win32",
@@ -18,7 +18,7 @@
     "route": "fixed_loopback_ollama",
     "state": "unavailable",
     "safe_error_code": "EACCES",
-    "probe_duration_ms": 17.5985
+    "probe_duration_ms": 19.349000000000004
   },
   "actual_model_artifact": null,
   "actual_model_artifact_digest": null,

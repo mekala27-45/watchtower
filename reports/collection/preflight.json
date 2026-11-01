@@ -1,0 +1,42 @@
+{
+  "schema_version": "collection-preflight-v1",
+  "namespace": "live",
+  "mode": "operator_preflight",
+  "backend": "sqlite_local_candidate",
+  "watchlist_version": "watchlist-v1",
+  "sources": [
+    {
+      "label": "vercel/eve",
+      "source_id": null,
+      "identity_verified": false
+    },
+    {
+      "label": "ollama/ollama",
+      "source_id": null,
+      "identity_verified": false
+    },
+    {
+      "label": "microsoft/playwright",
+      "source_id": null,
+      "identity_verified": false
+    },
+    {
+      "label": "vitejs/vite",
+      "source_id": null,
+      "identity_verified": false
+    }
+  ],
+  "blockers": [
+    "repository_numeric_identities_unresolved",
+    "rest_api_version_unverified",
+    "direct_postgres_adapter_unavailable"
+  ],
+  "ready_for_live_collection": false,
+  "requests_attempted": 0,
+  "live_collection_executed": false,
+  "workflow_dispatch_succeeded": false,
+  "planned_global_attempt_budget": 24,
+  "planned_source_deadline_ms": 45000,
+  "planned_lease_ms": 120000,
+  "next_action": "Resolve fixed repository identities through the actual runner, verify the REST API version, and complete the direct Postgres adapter before live dispatch."
+}

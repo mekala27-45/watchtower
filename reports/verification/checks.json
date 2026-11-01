@@ -1,0 +1,31 @@
+{
+  "code_revision": "1ba8a7e4e661b995e9d462fac3eaf0ca14178dbb",
+  "generated_at": "2026-11-01T16:02:00.251Z",
+  "tests": {
+    "total": 109,
+    "passed": 108,
+    "failed": 0,
+    "skipped": 1,
+    "exit_code": 0,
+    "evidence": "reports/verification/tests.tap"
+  },
+  "syntax": {
+    "status": "passed",
+    "failures": []
+  },
+  "scan": {
+    "status": "passed",
+    "files": 243,
+    "commits": 41,
+    "failures": [],
+    "scope": "pattern-based secret and release-body scan; not a complete security audit"
+  },
+  "prose": {
+    "status": "passed",
+    "failures": [],
+    "vocabulary_source": "Inherited Day 7 banned vocabulary unavailable; this gate covers ASCII and quote rules only."
+  },
+  "required_remote_checks": "not_executed",
+  "actual_model_gate": "not_executed",
+  "local_checks_passed": true
+}
