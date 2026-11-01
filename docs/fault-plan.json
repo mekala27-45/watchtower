@@ -1,0 +1,38 @@
+{
+  "version": "fault-plan-v1",
+  "registeredBeforeMatrixExecution": true,
+  "backend": "sqlite_local_candidate",
+  "truthCorpus": "fixtures/heldout",
+  "plannedSequences": 72,
+  "overlays": [
+    "request_timeout",
+    "throttle_deferred",
+    "missing_cache_304",
+    "second_page_invalid",
+    "conflicting_duplicate",
+    "expired_replaced_lease",
+    "process_death_pre_commit",
+    "process_death_post_commit"
+  ],
+  "applicability": {
+    "request_timeout": "Every sequence: collection transport boundary.",
+    "throttle_deferred": "Every sequence: collection transport boundary.",
+    "missing_cache_304": "Every sequence: conditional-request boundary.",
+    "second_page_invalid": "Every sequence: bounded paginated collection boundary.",
+    "conflicting_duplicate": "Every sequence: bounded paginated collection boundary.",
+    "expired_replaced_lease": "Every sequence: persisted source commit boundary.",
+    "process_death_pre_commit": "Every sequence: evidence transaction boundary.",
+    "process_death_post_commit": "Only sequences whose authored truth includes one or more eligible facts. No publication boundary exists otherwise."
+  },
+  "assertions": {
+    "collector": "Independent expected state, no false complete negative outcome, budget bounded.",
+    "lease": "Independent SQLite connection verifies replacement head and rejects old worker.",
+    "preCommit": "Real child termination; fresh SQLite connection finds no uncommitted evidence/head/event.",
+    "postCommit": "Real child termination; fresh SQLite connection recovers original receipt with one effect."
+  },
+  "limitations": [
+    "SQLite evidence does not satisfy hosted Postgres and Neon requirements.",
+    "HTTP transport is injected when localhost bind is unavailable; no real socket claim.",
+    "No remote live-source or public API proof implied."
+  ]
+}
