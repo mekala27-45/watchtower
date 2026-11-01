@@ -1,0 +1,49 @@
+{
+  "version": "watchlist-v1",
+  "procedure_version": "bounded-github-v1",
+  "source_policy_version": "source-policy-v1",
+  "api_version": "2026-03-10",
+  "api_version_verified": false,
+  "namespace": "live",
+  "sources": [
+    {
+      "label": "vercel/eve",
+      "source_id": null,
+      "identity_verified": false,
+      "identity_evidence": null,
+      "watched_ids": []
+    },
+    {
+      "label": "ollama/ollama",
+      "source_id": null,
+      "identity_verified": false,
+      "identity_evidence": null,
+      "watched_ids": []
+    },
+    {
+      "label": "microsoft/playwright",
+      "source_id": null,
+      "identity_verified": false,
+      "identity_evidence": null,
+      "watched_ids": []
+    },
+    {
+      "label": "vitejs/vite",
+      "source_id": null,
+      "identity_verified": false,
+      "identity_evidence": null,
+      "watched_ids": []
+    }
+  ],
+  "budgets": {
+    "http_attempts": 24,
+    "list_pages": 2,
+    "page_size": 20,
+    "item_rechecks": 4,
+    "source_deadline_ms": 45000,
+    "lease_ms": 120000
+  },
+  "state": "unresolved",
+  "reason": "Numeric repository identities and API version require an actual runner probe. Do not invent identity values."
+}
+
