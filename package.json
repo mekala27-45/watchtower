@@ -1,0 +1,22 @@
+{
+  "name": "watchtower",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "test:domain": "node --test tests/domain.test.mjs",
+    "test:workflow": "node --test tests/workflow.test.mjs",
+    "fixtures": "node scripts/generate-fixtures.mjs",
+    "evaluate": "node scripts/evaluate.mjs",
+    "start": "node apps/api/server.mjs",
+    "reports": "node scripts/render-reports.mjs",
+    "check": "node scripts/check.mjs",
+    "eval:model": "node agent/run-model.mjs"
+  },
+  "license": "MIT",
+  "author": "Ajay Mekala <mekalaajayk@gmail.com>"
+}
