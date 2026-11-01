@@ -1,0 +1,32 @@
+{
+  "state": "local_candidate_only",
+  "candidate_tag": "day23-watchtower-local-candidate",
+  "validated_revision": "88c830b8ae5db2f369aa073fa55d059fedea1de1",
+  "public_release": false,
+  "artifacts": [
+    {
+      "path": "reports/baseline/full.json",
+      "sha256": "96c49127959e04f401777aee94555e715bb6b2738b64444d9bb53bd3ff66f6d2"
+    },
+    {
+      "path": "reports/baseline/model-subset.json",
+      "sha256": "b397c0501d1eea8939156c32a92158c6e604fa03f733a3d71f07ff234ec8db58"
+    },
+    {
+      "path": "reports/model/current.json",
+      "sha256": "406dea3b952f899ea418fe41b49f8965ec430b12608950b80ffd329e8444ce0d"
+    },
+    {
+      "path": "reports/faults/matrix.json",
+      "sha256": "823dcbc1403c80ec8e4798f9f30e4c4a611d00c03e058baaa3a8e2412d16b2dc"
+    },
+    {
+      "path": "reports/verification/rederive.json",
+      "sha256": "1662ec5e46a1ee9e5b34d87967dae7f2938a7d95ea74a6ed524fb19cab810f9e"
+    },
+    {
+      "path": "docs/evaluation-plan.json",
+      "sha256": "2ac30e960db3c20053d1a0ab9d01e85886402397326dcb7de389a2fee459b38e"
+    }
+  ]
+}

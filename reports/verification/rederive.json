@@ -1,0 +1,84 @@
+{
+  "revision": "88c830b8ae5db2f369aa073fa55d059fedea1de1",
+  "worktree": "C:\\Users\\mekal\\Documents\\Codex\\2026-11-01\\new-chat\\work\\watchtower-rederive-88c830b8ae",
+  "started_clean": true,
+  "fresh_database_state": "Tests and fault harness create independent temporary databases, no original state copied.",
+  "commands": [
+    {
+      "script": "scripts/generate-fixtures.mjs",
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ]
+    },
+    {
+      "script": "scripts/evaluate.mjs",
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ]
+    },
+    {
+      "script": "agent/run-model.mjs",
+      "exit_code": 2,
+      "allowed_exit_codes": [
+        2
+      ]
+    },
+    {
+      "script": "scripts/check.mjs",
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ]
+    },
+    {
+      "script": "scripts/fault-matrix.mjs",
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ]
+    },
+    {
+      "script": "scripts/render-reports.mjs",
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "path": "reports/baseline/full.json",
+      "expected": "488fed426fd36e35c88a1595eaad0d60f153f52da7b8372082aaebbd83c76552",
+      "actual": "488fed426fd36e35c88a1595eaad0d60f153f52da7b8372082aaebbd83c76552",
+      "match": true
+    },
+    {
+      "path": "reports/baseline/model-subset.json",
+      "expected": "a4bc36d5ab9519449de03d42b5f2badd804a424ade49b556e7a3e8331269af78",
+      "actual": "a4bc36d5ab9519449de03d42b5f2badd804a424ade49b556e7a3e8331269af78",
+      "match": true
+    },
+    {
+      "path": "fixtures/manifest.json",
+      "expected": "9fb4e3a8443a245469e954085b2a0dc5adcdb4b6fb614bc248283dd5496e271b",
+      "actual": "9fb4e3a8443a245469e954085b2a0dc5adcdb4b6fb614bc248283dd5496e271b",
+      "match": true
+    },
+    {
+      "path": "reports/faults/matrix.json stable outcomes",
+      "expected": "33c6739760269210b8299c0b4cf49b840311e603eb86d93c28ad616d7408a348",
+      "actual": "33c6739760269210b8299c0b4cf49b840311e603eb86d93c28ad616d7408a348",
+      "match": true
+    },
+    {
+      "path": "reports/model/current.json unexecuted rows",
+      "match": true
+    }
+  ],
+  "local_rederivation_passed": true,
+  "actual_model_executed": false,
+  "public_checks_executed": false,
+  "generated_at": "2026-11-01T16:04:42.988Z"
+}

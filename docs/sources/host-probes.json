@@ -1,15 +1,57 @@
 {
   "observed_at": "2026-11-01",
   "execution_host": "Windows local managed workspace",
-  "node": {"status":"passed","version":"24.19.0"},
-  "local_sqlite": {"status":"passed","version":"3.53.3","scope":"local candidate only"},
-  "npm_registry": {"status":"blocked","evidence":"Invoke-WebRequest registry.npmjs.org/eve/latest returned No such host is known"},
-  "github_cli": {"status":"blocked","evidence":"gh auth status returned no authenticated hosts"},
-  "required_npm_cache": {"status":"unavailable","evidence":"npm cache ls eve ai pg zod typescript vite @playwright/test @ai-sdk/openai-compatible returned no entries"},
-  "neon": {"account_listing":"passed","direct_tls":"not_executed","free_eligibility":"unverified","watchtower_database_created":false},
-  "vercel": {"account_listing":"passed","team":"team_NNcxgB3J9dHQnUJYJJYvRMda","hobby_eligibility":"unverified","container_probe":"not_executed"},
-  "pages": {"deployment":"not_executed","public_url":null},
-  "dispatch": {"status":"not_executed","run_url":null},
-  "schedule": {"configured":false,"observed_scheduled_success":false},
-  "remote_mutations": []
+  "node": {
+    "status": "passed",
+    "version": "24.19.0"
+  },
+  "local_sqlite": {
+    "status": "passed",
+    "version": "3.53.3",
+    "scope": "local candidate only"
+  },
+  "npm_registry": {
+    "status": "blocked",
+    "evidence": "Invoke-WebRequest registry.npmjs.org/eve/latest returned No such host is known"
+  },
+  "github_cli": {
+    "status": "blocked",
+    "evidence": "gh auth status returned no authenticated hosts"
+  },
+  "required_npm_cache": {
+    "status": "unavailable",
+    "evidence": "npm cache ls eve ai pg zod typescript vite @playwright/test @ai-sdk/openai-compatible returned no entries"
+  },
+  "neon": {
+    "account_listing": "passed",
+    "direct_tls": "not_executed",
+    "free_eligibility": "unverified",
+    "watchtower_database_created": false
+  },
+  "vercel": {
+    "account_listing": "passed",
+    "team": "team_NNcxgB3J9dHQnUJYJJYvRMda",
+    "hobby_eligibility": "unverified",
+    "container_probe": "not_executed"
+  },
+  "pages": {
+    "deployment": "not_executed",
+    "public_url": null
+  },
+  "dispatch": {
+    "status": "not_executed",
+    "run_url": null
+  },
+  "schedule": {
+    "configured": true,
+    "observed_scheduled_success": false,
+    "enabled": false
+  },
+  "remote_mutations": [],
+  "loopback_client": {
+    "error": "EACCES",
+    "status": "blocked",
+    "listener_bind": "available",
+    "browser_inventory": "empty"
+  }
 }
