@@ -1,0 +1,4 @@
+CC0 1.0 Universal
+
+Ajay Mekala waives copyright and related rights in the original synthetic temporal fixture data and independently authored truth records to the extent possible under law. The data is provided without warranty. See https://creativecommons.org/publicdomain/zero/1.0/legalcode for the complete CC0 1.0 dedication.
+
