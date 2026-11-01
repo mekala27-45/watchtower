@@ -1,4 +1,4 @@
-import {METHOD_LABELS, printable, timestamp, shortId, coverageLabel, metricValue, safeSourceUrl, normalizeSources, findingText, evidenceFields} from './view-model.mjs';
+import {METHOD_LABELS, printable, timestamp, shortId, coverageLabel, metricValue, safeSourceUrl, normalizeSources, findingText, evidenceFields, modelCaseId, reportMetrics} from './view-model.mjs';
 const $ = id => document.getElementById(id);
 const state = {session:null,briefing:null,receipt:null,report:null,operationKey:null,lastRead:null,busy:false};
 const apiBase = document.documentElement.dataset.apiBase ?? '';
@@ -34,8 +34,8 @@ function renderSources(data) {
     if(link){const a=el('a',row.label);a.href=link;a.target='_blank';a.rel='noopener noreferrer';th.append(a);}else th.append(el('span',row.label));
     th.append(el('span',row.sourceId ? 'Repository ID '+row.sourceId : 'Numeric identity not verified','source-id'));tr.append(th);
     const coverage=el('td');const badge=el('span',coverageLabel(row.coverage),'badge'+(['captured','complete'].includes(row.coverage)?' good':row.coverage==='unavailable'?' bad':''));coverage.append(badge);tr.append(coverage);
-    const attempt=row.lastAttempt ?? row.latestAttempt?.finishedAt ?? row.latest_attempt?.finished_at;
-    const usable=row.lastUsableEvidence ?? row.comparisonHead?.capturedAt ?? row.comparison_head?.captured_at;
+    const attempt=row.lastAttempt;
+    const usable=row.lastUsableEvidence;
     for(const value of [attempt,usable]) {const td=el('td');td.append(el('span',timestamp(typeof value==='object'?value?.at:value),'mono'));tr.append(td);}
     const outcome=el('td',row.outcome ?? row.comparisonOutcome ?? 'Insufficient evidence');tr.append(outcome);tbody.append(tr);
   }
@@ -57,7 +57,7 @@ async function refresh() {
 $('refresh').addEventListener('click',refresh);
 function metricsTable(record,caption) {
   const table=el('table',undefined,'metrics');table.append(el('caption',caption));const body=el('tbody');
-  const candidates=Array.isArray(record?.metrics)?record.metrics:record?.metrics && typeof record.metrics==='object'?Object.entries(record.metrics).map(([id,m])=>({id,...(typeof m==='object'?m:{value:m})})):null;
+  const candidates=reportMetrics(record);
   if(candidates?.length)for(const metric of candidates){const tr=el('tr');const th=el('th',metric.label ?? metric.id ?? 'Metric');th.scope='row';tr.append(th,el('td',metricValue(metric)));body.append(tr);}
   else {
     for(const [key,value] of Object.entries(record ?? {})) {
@@ -71,12 +71,14 @@ function metricsTable(record,caption) {
 function renderReport(report) {
   state.report=report;$('report-json').textContent=JSON.stringify(report,null,2);$('download-report').disabled=false;
   const baseline=report.baseline ?? report.methods?.deterministic_baseline ?? report.deterministic_baseline;
+  const baselineSubset=report.baseline_subset;
   const model=report.model ?? report.methods?.local_agent ?? report.local_agent;
   $('baseline-results').replaceChildren(metricsTable(baseline,'Full deterministic held-out set; see manifest for dataset and denominator.'));
+  $('baseline-subset-results').replaceChildren(metricsTable(baselineSubset,'Deterministic results on the same registered cases as the local-model subset.'));
   $('agent-results').replaceChildren(metricsTable(model,'Registered local-model subset. Missing inference is not a baseline result.'));
   $('model-json').textContent=model?JSON.stringify(model,null,2):'Actual model report unavailable.';
   $('report-summary').replaceChildren();
-  if(report.planDigest){const line=el('p','Evaluation plan: ','micro');line.append(el('code',report.planDigest));$('report-summary').append(line);}
+  if(report.planDigest ?? report.plan_digest){const line=el('p','Evaluation plan: ','micro');line.append(el('code',report.planDigest ?? report.plan_digest));$('report-summary').append(line);}
   if(report.generatedAt ?? report.generated_at)$('report-summary').append(el('p','Report generated: '+timestamp(report.generatedAt ?? report.generated_at),'micro'));
   const modelAttempted=model?.attempted ?? model?.actualAttempts ?? model?.attemptedCount ?? model?.summary?.attempted ?? 0;
   const message=el('div');message.append(el('strong',modelAttempted>0?'Actual model outcomes are recorded separately.':'Actual model execution is unavailable.'),el('p',modelAttempted>0?'Inspect attempted, failed and supported outcomes in the model report.':'Baseline outputs are excluded from this method. Unexecuted cases remain visible.'));
@@ -85,7 +87,7 @@ function renderReport(report) {
   const rows=model?.rows ?? model?.cases;
   if(Array.isArray(rows) && rows.length) {
     const table=el('table',undefined,'metrics');table.append(el('caption','Every declared model case, including unexecuted rows.'));const head=el('thead');const hr=el('tr');for(const t of ['Sequence','Outcome','Method']){const th=el('th',t);th.scope='col';hr.append(th);}head.append(hr);table.append(head);const body=el('tbody');
-    for(const row of rows){const tr=el('tr');const th=el('th',row.id ?? row.fixtureId ?? row.sequenceId ?? 'Unspecified');th.scope='row';tr.append(th,el('td',row.outcome ?? row.status ?? 'Unavailable'),el('td',row.method ?? 'local_agent'));body.append(tr);}table.append(body);$('model-results').append(table);
+    for(const row of rows){const tr=el('tr');const th=el('th',modelCaseId(row));th.scope='row';tr.append(th,el('td',row.outcome ?? row.status ?? 'Unavailable'),el('td',row.method ?? 'local_agent'));body.append(tr);}table.append(body);$('model-results').append(table);
   }
 }
 $('download-report').addEventListener('click',()=>{if(!state.report)return;const blob=new Blob([JSON.stringify(state.report,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=el('a');a.href=url;a.download='watchtower-current-report.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
