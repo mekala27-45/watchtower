@@ -1,0 +1,25 @@
+{
+  "version": "fault-plan-postgres-v1",
+  "registeredBeforeMatrixExecution": true,
+  "backend": "postgres",
+  "truthCorpus": "fixtures/heldout",
+  "plannedSequences": 72,
+  "overlays": ["request_timeout", "throttle_deferred", "missing_cache_304", "second_page_invalid", "conflicting_duplicate", "expired_replaced_lease", "process_death_pre_commit", "process_death_post_commit"],
+  "applicability": {
+    "collection_and_lease": "Every sequence receives each of the first seven overlays at its applicable persistence or collection boundary.",
+    "process_death_post_commit": "Only sequences whose authored truth includes at least one eligible factual publication. No publication boundary exists otherwise."
+  },
+  "assertions": {
+    "collector": "Injected transport failure has the independently expected incomplete state and bounded attempt count; a separate PostgreSQL connection verifies the latest attempt and unchanged comparison head.",
+    "lease": "Database-time expiry permits a replacement generation; an old worker is rejected and a separate connection verifies the replacement head.",
+    "preCommit": "A separate child is killed after evidence insertion but before transaction commit. Independent SQL finds identical evidence, observation, run, event and publication counts with no uncommitted evidence. Recovery commits from a separate connection.",
+    "postCommit": "A separate child is killed after publication COMMIT but before response. A separate connection recovers the exact receipt and independently counts one publication, receipt, idempotency record and publication event."
+  },
+  "maxConcurrentCases": 4,
+  "namespacePolicy": "Each run and each case use a new test:matrix_ namespace. No existing namespace or live source is changed. Evidence is retained for independent inspection.",
+  "limitations": [
+    "HTTP faults are deliberately injected. They do not claim an actual provider outage or production HTTP request.",
+    "PostgreSQL transactions and process deaths are real. They do not establish a public API or a successful Actions dispatch.",
+    "Authored test namespaces are retained as bounded evidence. No existing records are removed."
+  ]
+}
