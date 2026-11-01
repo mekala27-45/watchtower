@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Watchtower compares captured release metadata and keeps unknown coverage visible.">
+<title>Watchtower | Evidence before a briefing</title>
+<link rel="stylesheet" href="./styles.css">
+<script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to evidence</a>
+<div class="page">
+<header class="masthead">
+<div class="wordmark"><span class="brand-mark" aria-hidden="true"></span><span>WATCHTOWER</span><span class="edition">FIELD NOTES / DAY 23</span></div>
+<button id="theme-toggle" class="quiet" aria-pressed="false">Use dark theme</button>
+</header>
+<section class="hero" aria-labelledby="page-title">
+<div><p class="eyebrow">A bounded release monitor</p><h1 id="page-title">Evidence before<br>a briefing.</h1><p class="lede">See what changed, what was checked, and what still remains unknown.</p></div>
+<aside class="issue"><span class="small-label">CURRENT EDITION</span><strong>Local candidate</strong><span id="readiness">Checking API readiness...</span><span class="issue-rule"></span><span>Public deployment: not verified</span><span>Actual model: see its separate report</span></aside>
+</section>
+<nav class="tabs" aria-label="Watchtower sections">
+<button class="tab" id="tab-sources" data-view="sources" aria-current="page">Sources</button>
+<button class="tab" id="tab-briefings" data-view="briefings">Briefings</button>
+<button class="tab" id="tab-trace" data-view="trace">Agent Trace</button>
+<button class="tab" id="tab-evidence" data-view="evidence">Evidence</button>
+</nav>
+<main id="main" tabindex="-1">
+<div id="global-status" class="status-line" role="status" aria-live="polite"></div>
+<section id="view-sources" class="view" aria-labelledby="sources-title">
+<div class="section-top"><div><p class="eyebrow">01 / Observation desk</p><h2 id="sources-title">The watched sources</h2></div><button id="refresh" class="quiet">Refresh source status</button></div>
+<div class="mode-strip"><span class="mode-mark actual" aria-hidden="true"></span><strong>Live-source status</strong><span>Read-only operational evidence. No synthetic observations are inserted here.</span></div>
+<div id="sources-summary" class="coverage-banner"><span class="state-icon" aria-hidden="true">?</span><div><strong>Coverage is unknown until collection succeeds.</strong><p>A missing response is not evidence that nothing changed.</p></div></div>
+<div class="table-scroll"><table class="sources-table"><caption class="sr-only">Coverage and freshness for each allowlisted source</caption><thead><tr><th scope="col">Source</th><th scope="col">Coverage</th><th scope="col">Last attempt</th><th scope="col">Last usable evidence</th><th scope="col">Comparison</th></tr></thead><tbody id="source-rows"></tbody></table></div>
+<p id="source-read-time" class="micro">No successful API read yet.</p>
+<details class="method-note"><summary>What the observation window means</summary><p>A collection run uses a declared bounded procedure. It does not establish complete release history. The requested window, returned identities, page boundaries and direct checks belong in its capture manifest. A failed or partial run retains the previous comparison evidence without describing the current scope as unchanged.</p></details>
+<p class="pushback">Bounded metadata collection does not establish complete release history. An unavailable source remains unknown even when its previous evidence is still readable.</p>
+</section>
+<section id="view-briefings" class="view" hidden aria-labelledby="briefings-title">
+<div class="section-top"><div><p class="eyebrow">02 / Review desk</p><h2 id="briefings-title">A specific revision.<br>A specific approval.</h2></div><span class="label baseline">Deterministic baseline</span></div>
+<p class="intro">This isolated synthetic demo uses authored evidence. Prepare a briefing, inspect its captured fields, approve the exact digest, then publish one internal receipt.</p>
+<div class="demo-controls"><button id="start-demo" class="primary">Prepare a synthetic briefing</button><button id="new-demo" class="quiet" hidden>Start a new session</button><span id="session-state" class="micro">No demo session is active.</span></div>
+<div id="demo-status" class="status-line" role="status" aria-live="polite"></div>
+<article id="briefing" class="briefing-sheet" hidden>
+<div class="sheet-head"><p class="eyebrow">Synthetic / deterministic_baseline</p><span id="briefing-state" class="label">Prepared</span></div>
+<h3 id="briefing-title">Captured metadata change</h3>
+<p id="coverage-warning" class="warning-copy"></p>
+<div id="findings"></div>
+<div class="compare" aria-label="Evidence comparison"><section><div class="compare-title"><span class="small-label">BEFORE</span><span id="before-id" class="mono"></span></div><dl id="before-fields" class="fields"></dl></section><section><div class="compare-title"><span class="small-label">AFTER</span><span id="after-id" class="mono"></span></div><dl id="after-fields" class="fields"></dl></section></div>
+<div class="digest-block"><span class="small-label">REVISION DIGEST</span><code id="briefing-digest"></code><button id="copy-digest" class="quiet small">Copy digest</button></div>
+<p class="review-note">The synthetic reviewer approves only the displayed revision and its dependency versions. Approval does not publish a briefing.</p>
+<div class="review-actions"><button id="approve" class="primary">Approve this revision</button><button id="publish" class="primary" disabled>Publish internal briefing</button><button id="recover" class="quiet" hidden>Recover the same receipt</button></div>
+<section id="receipt" class="receipt" hidden aria-label="Publication receipt"><span class="small-label">INTERNAL PUBLICATION RECEIPT</span><strong id="receipt-title"></strong><dl id="receipt-fields" class="fields"></dl></section>
+<details class="method-note"><summary>Show the exact briefing record</summary><pre id="briefing-json"></pre></details>
+</article>
+<p class="pushback">Verified metadata changes do not establish upgrade safety. This demo performs no email, messaging, package upgrade or external business action.</p>
+</section>
+<section id="view-trace" class="view" hidden aria-labelledby="trace-title">
+<div class="section-top"><div><p class="eyebrow">03 / Agent notebook</p><h2 id="trace-title">Model behavior,<br>kept in its own column.</h2></div><span class="label actual">Actual local model</span></div>
+<p class="intro">A model request is not a handler execution. A valid citation is not factual support. The trace records those boundaries separately.</p>
+<div id="model-state" class="coverage-banner"><span class="state-icon" aria-hidden="true">?</span><div><strong>Actual model results are unavailable.</strong><p>No deterministic result is substituted into this method.</p></div></div>
+<div class="tool-inventory"><p class="small-label">PERMITTED TOOL INVENTORY</p><ol><li><code>list_changes</code><span>Bounded candidates from the current evidence bundle.</span></li><li><code>inspect_snapshot</code><span>Captured before or after metadata, scoped to that bundle.</span></li><li><code>propose_finding</code><span>An unapproved typed proposal. No publication authority.</span></li></ol></div>
+<div id="model-results"></div>
+<details class="method-note"><summary>Show the model report data</summary><pre id="model-json">Unavailable</pre></details>
+<p class="pushback">A small synthetic local-model test does not establish production performance. Recorded traces must retain their original provenance and cannot be presented as fresh inference.</p>
+</section>
+<section id="view-evidence" class="view" hidden aria-labelledby="evidence-title">
+<div class="section-top"><div><p class="eyebrow">04 / Evidence index</p><h2 id="evidence-title">The denominator<br>stays visible.</h2></div><button id="download-report" class="quiet" disabled>Download current report</button></div>
+<p class="intro">The full deterministic evaluation and the registered model subset are separate measurements. Missing execution stays missing.</p>
+<div id="report-summary"></div>
+<div class="report-methods"><section><h3><span class="mode-mark baseline" aria-hidden="true"></span>Deterministic baseline</h3><div id="baseline-results"><p>Measured results unavailable.</p></div></section><section><h3><span class="mode-mark actual" aria-hidden="true"></span>Actual local model</h3><div id="agent-results"><p>Measured results unavailable.</p></div></section></div>
+<details class="method-note"><summary>Show the query and source manifest</summary><p>These tables read the separate baseline and model records from <code>GET /api/reports/current</code>. Ratios are rendered only when their measured numerator and denominator are present. Null, missing and unexecuted values remain unavailable.</p><pre id="report-json">Unavailable</pre></details>
+<details class="method-note"><summary>Implementation and verification limits</summary><p>This candidate uses a local persistence adapter. Public API, public Pages flow, actual workflow dispatch, real local inference and hosted Postgres need their own successful evidence. Primary font files have not been installed or license-verified; system fallbacks are active. Static checks do not establish browser accessibility.</p></details>
+<p class="pushback">Public deployment, actual model execution and any unverified checks remain incomplete. A local test result cannot establish a successful hosted run.</p>
+</section>
+</main>
+<footer><div class="footer-brand">WATCHTOWER <span>Evidence, with boundaries.</span></div><p id="disclaimer">Portfolio demonstration using public release metadata and authored synthetic evaluation cases. Findings describe captured observations within a declared window. They are not security assessments or upgrade recommendations. Agent proposals, deterministic results, recordings and live observations are labeled separately. Incomplete coverage remains unknown.</p></footer>
+</div>
+</body>
+</html>
