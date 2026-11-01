@@ -1,0 +1,22 @@
+{
+  "version":"source-policy-v1",
+  "read_date":"2026-11-01",
+  "source_labels":["vercel/eve","ollama/ollama","microsoft/playwright","vitejs/vite"],
+  "source_numeric_ids":"unresolved; live command must refuse",
+  "origin":"https://api.github.com",
+  "api_version":"2026-03-10",
+  "allowed_fields":["id","tag_name","draft","prerelease","published_at","created_at","asset id","asset name","asset size bytes","asset content_type","body sha256","body byte count"],
+  "forbidden_persisted_fields":["body text","author","login","avatar","profile","download count","authorization","cookie","signed URL"],
+  "retention":"Keep latest two usable item revisions and all retained briefing dependencies; refuse impossible budgets.",
+  "redistribution":"Only admitted factual metadata; no copied release prose or personal profiles.",
+  "terms":"https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+  "documentation":[
+    "https://docs.github.com/en/rest/releases/releases",
+    "https://docs.github.com/en/rest/using-the-rest-api/best-practices-for-using-the-rest-api",
+    "https://docs.github.com/en/rest/using-the-rest-api/using-pagination-in-the-rest-api",
+    "https://docs.github.com/en/rest/about-the-rest-api/api-versions",
+    "https://vercel.com/kb/guide/docker"
+  ],
+  "live_rest_compatibility":"not executed",
+  "limitations":["Bounded procedure is not an atomic snapshot.","Absence is not deletion.","Metadata changes are not upgrade advice."]
+}
