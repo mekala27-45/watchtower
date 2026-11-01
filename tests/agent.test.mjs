@@ -3,6 +3,9 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { createToolSession, assertToolInventory, TOOL_NAMES } from '../agent/tools.mjs';
 import { buildUnavailableLedger } from '../agent/model-ledger.mjs';
+import { loadFixtureBundle } from '../packages/domain/fixture-loader.mjs';
+import { verify } from '../packages/domain/index.mjs';
+import { readFileSync } from 'node:fs';
 
 const stable = value => Array.isArray(value) ? value.map(stable) : value && typeof value === 'object' ? Object.fromEntries(Object.keys(value).sort().map(k => [k, stable(value[k])])) : value;
 const digest = value => createHash('sha256').update(JSON.stringify(stable(value))).digest('hex');
@@ -126,5 +129,20 @@ test('missing model ledger rejects missing fixture, subset mismatch and empty pl
   const wrong = unavailableInputs(); wrong.manifest.modelSubsetIds = [];
   assert.throws(() => buildUnavailableLedger(wrong), /invalid_model_subset/);
   assert.throws(() => buildUnavailableLedger({}), /invalid_model_plan/);
+});
+
+test('admitted fixture completes four-call handler contract and independent predicate verification', () => {
+  const fixture = JSON.parse(readFileSync(new URL('../fixtures/development/mutable_tag-development-02.json', import.meta.url), 'utf8'));
+  const b = loadFixtureBundle(fixture);
+  const s = createToolSession(b);
+  const list = s.invokeTest('list_changes', { bundle_id: b.id });
+  const id = list.candidates[0].candidate_id;
+  const before = s.invokeTest('inspect_snapshot', { candidate_id: id, revision: 'before' });
+  const after = s.invokeTest('inspect_snapshot', { candidate_id: id, revision: 'after' });
+  const result = s.invokeTest('propose_finding', { candidate_id: id, kind: 'tag_changed', field: 'tag_name', before_evidence_id: before.evidence_id, after_evidence_id: after.evidence_id });
+  assert.equal(verify(result.proposal.payload, b).status, 'supported');
+  assert.equal(s.trace.length, 4);
+  assert.ok(s.trace.every(event => event.model_requested === false));
+  assert.equal(result.proposal.execution_mode, 'contract_test');
 });
 

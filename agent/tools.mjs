@@ -6,7 +6,7 @@ export const FINDING_FIELDS = Object.freeze({
   tag_changed: 'tag_name',
   prerelease_flag_changed: 'prerelease',
   asset_metadata_changed: 'assets',
-  notes_text_changed: 'body_digest',
+  notes_text_changed: 'notes_digest',
 });
 const stable = value => {
   if (Array.isArray(value)) return value.map(stable);
@@ -54,7 +54,10 @@ export function createToolSession(inputBundle, options = {}) {
   const bundle = deepFreeze(clone(inputBundle));
   const candidates = new Map();
   for (const candidate of bundle.candidates) {
-    if (!record(candidate) || !token(candidate.id) || candidate.namespace !== bundle.namespace || candidates.has(candidate.id)) fail('invalid_candidate_scope');
+    if (!record(candidate) || !token(candidate.id) || candidate.namespace !== bundle.namespace || candidates.has(candidate.id) ||
+        !Number.isSafeInteger(candidate.source_id) || candidate.source_id < 1 || candidate.source_id !== bundle.source_id ||
+        !Number.isSafeInteger(candidate.release_id) || candidate.release_id < 1 ||
+        !Object.hasOwn(FINDING_FIELDS, candidate.kind) || candidate.field !== FINDING_FIELDS[candidate.kind]) fail('invalid_candidate_scope');
     candidates.set(candidate.id, candidate);
     for (const id of [candidate.before_evidence_id, candidate.after_evidence_id].filter(Boolean)) {
       const ev = bundle.evidence[id];
@@ -113,8 +116,9 @@ export function createToolSession(inputBundle, options = {}) {
       if (args.after_evidence_id !== candidate.after_evidence_id ||
           (args.before_evidence_id ?? null) !== (candidate.before_evidence_id ?? null)) fail('evidence_scope_mismatch');
       if (args.kind !== 'newly_observed_release' && !args.before_evidence_id) fail('before_evidence_required');
+      const payload = { ...clone(args), before_evidence_id: args.before_evidence_id ?? null, method: 'local_agent' };
       const proposal = {
-        ...clone(args), before_evidence_id: args.before_evidence_id ?? null,
+        payload,
         namespace: bundle.namespace, method: 'local_agent', execution_mode: 'contract_test', model_requested: false,
         bundle_digest: bundle.digest, approval_status: 'unapproved',
       };
