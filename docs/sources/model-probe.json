@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-11-01T15:49:43.501Z",
+  "runtime": {
+    "node": "v24.19.0",
+    "platform": "win32",
+    "arch": "x64",
+    "os_release": "10.0.26300",
+    "cpu": "Intel(R) Core(TM) Ultra 9 275HX",
+    "memory_bytes": 33737986048
+  },
+  "dependencies": {
+    "eve": "not_installed",
+    "ai": "not_installed",
+    "zod": "not_installed",
+    "@ai-sdk/openai-compatible": "not_installed"
+  },
+  "endpoint": {
+    "route": "fixed_loopback_ollama",
+    "state": "unavailable",
+    "safe_error_code": "EACCES",
+    "probe_duration_ms": 17.5985
+  },
+  "actual_model_artifact": null,
+  "actual_model_artifact_digest": null,
+  "cpu_placement_evidence": null,
+  "gpu_layers": null,
+  "inference_attempted": false,
+  "installed_eve_documentation_read": false,
+  "actual_runtime_inventory_verified": false,
+  "implemented_domain_inventory": [
+    "list_changes",
+    "inspect_snapshot",
+    "propose_finding"
+  ],
+  "domain_inventory_is_runtime_proof": false,
+  "adapter_state": "not_implemented",
+  "documentation_read_at": "2026-11-01",
+  "documentation_sources": [
+    "https://github.com/vercel/eve/blob/main/docs/concepts/built-in-tools.md",
+    "https://github.com/vercel/eve/blob/main/docs/agent-config.md",
+    "https://docs.ollama.com/capabilities/tool-calling"
+  ],
+  "conclusion": "Actual inference and eve runtime tool execution are not done."
+}
