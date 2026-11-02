@@ -101,15 +101,15 @@ See reports/faults for stored-state assertions and process-death evidence. See r
 
 13. **done** Proof-sheet UI, both themes and accessibility checks are complete. reports/browser/postgres.json records 14 passed real-browser checks across both themes, mobile, focus, stale review and receipt recovery; reports/verification/palette.json has zero failures.
 
-14. **not done** Public Pages site completes the visible API review and receipt flow. No public Pages site exists yet; repository creation requires an accessible restored Chrome window.
+14. **not done** Public Pages site completes the visible API review and receipt flow. No public Pages site exists yet. Computer Use stopped on November 2 because it could not verify the browser URL safely; no repository was created.
 
 15. **done** Governance, notices, source policy, skills and retention checks are complete. Notices, source policy, operator helpers and repository skills are committed; actual Postgres retention tests pass 5/5 with no skipped cases.
 
 16. **not done** Actual dispatch succeeded and schedule configuration is reported honestly. The local operator collection succeeded with honest partial coverage; no Actions dispatch has run. The committed UTC schedule remains gated off.
 
-17. **not done** Final reports, scans, live checks and clean worktree rederivation pass. Final report and clean-worktree checks are being preserved; public live checks remain blocked, so this requirement is not done.
+17. **not done** Final reports, scans, live checks and clean worktree rederivation pass. reports/verification/rederive.json passes clean-checkout regeneration, 156 tests and both fault matrices using the separate empty database proved in rederive-database-isolation.json. Public live checks remain blocked.
 
-18. **not done** Release commits and tag are verified, with public release state explicit. The local candidate release is prepared; the required public repository, remote tag and release remain pending.
+18. **not done** Release commits and tag are verified, with public release state explicit. Local candidate tag day23-watchtower-verified-candidate is verified by the packaged provenance/release-verification.json. The required public repository, remote tag and release remain pending.
 
 
 Recorded failed case: [asset_metadata_edit-heldout-05](reports/model/runs/actual-2026-11-01T16-50-21-528Z/asset_metadata_edit-heldout-05.json). Its recorded failure code is model_turn_budget_exhausted. This case remains in the declared denominator.

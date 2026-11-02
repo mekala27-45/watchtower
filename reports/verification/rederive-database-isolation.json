@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-11-01T17:00:28.858Z",
+  "database": "watchtower_rederive_20261101",
+  "primary_database": "watchtower",
+  "different_database": true,
+  "prior_watchtower_tables": 0,
+  "empty_before_migration": true,
+  "migrations": [
+    "001_watchtower.sql",
+    "002_runtime_adapter.sql"
+  ],
+  "existing_application_state_copied": false
+}

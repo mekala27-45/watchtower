@@ -1,0 +1,2653 @@
+{
+  "method": "deterministic_baseline",
+  "dataset": "registered_model_subset",
+  "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+  "dataset_digest": "c76b7004eca1ace2c6dc35fbf338dee2bbf16dc24e9b0d6b9d1ab89c78949550",
+  "subset_ids": [
+    "asset_metadata_edit-heldout-04",
+    "asset_metadata_edit-heldout-05",
+    "duplicate_reorder-heldout-01",
+    "duplicate_reorder-heldout-02",
+    "first_observation-heldout-01",
+    "first_observation-heldout-06",
+    "hostile_metadata-heldout-02",
+    "hostile_metadata-heldout-04",
+    "mutable_tag-heldout-02",
+    "mutable_tag-heldout-04",
+    "new_prerelease-heldout-04",
+    "new_prerelease-heldout-06",
+    "new_stable_release-heldout-04",
+    "new_stable_release-heldout-06",
+    "notes_only_edit-heldout-01",
+    "notes_only_edit-heldout-04",
+    "throttle_outage-heldout-02",
+    "throttle_outage-heldout-06",
+    "truncated_moving_pages-heldout-01",
+    "truncated_moving_pages-heldout-05",
+    "unchanged_valid_200-heldout-01",
+    "unchanged_valid_200-heldout-05",
+    "valid_invalid_304-heldout-02",
+    "valid_invalid_304-heldout-05"
+  ],
+  "summary": {
+    "sequences": 24,
+    "transitions": 28,
+    "expected": 13,
+    "emitted": 13,
+    "matched": 13,
+    "missed": 0,
+    "duplicates": 0,
+    "unsupported": 0,
+    "exact_sequences": 24,
+    "normalization_passed": 24,
+    "no_op": {
+      "correct": 6,
+      "total": 6
+    },
+    "unknown": {
+      "correct": 8,
+      "total": 8
+    },
+    "baseline": {
+      "correct": 2,
+      "total": 2
+    },
+    "verifier": {
+      "supported": 13,
+      "false_acceptance": 0,
+      "false_rejection": 0,
+      "forged_challenges": 65
+    },
+    "precision": {
+      "value": 1,
+      "numerator": 13,
+      "denominator": 13,
+      "unit": "ratio",
+      "state": "available"
+    },
+    "recall": {
+      "value": 1,
+      "numerator": 13,
+      "denominator": 13,
+      "unit": "ratio",
+      "state": "available"
+    }
+  },
+  "rows": [
+    {
+      "id": "asset_metadata_edit-heldout-04",
+      "family": "asset_metadata_edit",
+      "lineage": "asset_metadata_edit-template-10",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "changed",
+          "outcome": "changed",
+          "expected_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "after_evidence_id": "ev_703ba8ed1ce250e49025f9db26f52463502d66a0cde1c3a0698a6a0716d29b5c",
+              "kind": "asset_metadata_changed",
+              "field": "assets"
+            }
+          ],
+          "emitted_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "after_evidence_id": "ev_703ba8ed1ce250e49025f9db26f52463502d66a0cde1c3a0698a6a0716d29b5c",
+              "kind": "asset_metadata_changed",
+              "field": "assets"
+            }
+          ],
+          "grade": {
+            "expected": 1,
+            "emitted": 1,
+            "matched": 1,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "recall": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "pass": true
+          },
+          "verification": [
+            {
+              "status": "supported",
+              "reason": "predicate_supported",
+              "method": "deterministic_baseline",
+              "bundle_digest": "c15a73c091ac055978b1fd6c37048a32e559d12015210a86d7af04554f7e89e9",
+              "verifier_version": "verifier-v1",
+              "operands": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 101,
+                "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+                "after_evidence_id": "ev_703ba8ed1ce250e49025f9db26f52463502d66a0cde1c3a0698a6a0716d29b5c",
+                "kind": "asset_metadata_changed",
+                "field": "assets"
+              },
+              "execution_receipt": "7e0f708f577f0b287cad43769dba6004d96c8bd8a49ce99ffcd03e3269deb0e3"
+            }
+          ],
+          "forged_decisions": [
+            {
+              "status": "unsupported",
+              "reason": "candidate_identity",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "c15a73c091ac055978b1fd6c37048a32e559d12015210a86d7af04554f7e89e9"
+            },
+            {
+              "status": "unsupported",
+              "reason": "after_scope",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "c15a73c091ac055978b1fd6c37048a32e559d12015210a86d7af04554f7e89e9"
+            },
+            {
+              "status": "unsupported",
+              "reason": "wrong_before_revision",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "c15a73c091ac055978b1fd6c37048a32e559d12015210a86d7af04554f7e89e9"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_predicate",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "c15a73c091ac055978b1fd6c37048a32e559d12015210a86d7af04554f7e89e9"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_proposal_schema",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "c15a73c091ac055978b1fd6c37048a32e559d12015210a86d7af04554f7e89e9"
+            }
+          ],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "7f06ab699c4ba884f90fb0e0965299285f7817f41404d5c05dd821130804a7ac"
+            },
+            {
+              "stage": "detection",
+              "receipt": "06339546921201121e67bd7891252d21e259c74ee7378b63837308c6e0551a36"
+            },
+            {
+              "stage": "verification",
+              "receipt": "0da0092a35abb3364c6f7f316c5c1cc29bf39fa3fc80552b19256ca0e378064b"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "asset_metadata_edit-heldout-05",
+      "family": "asset_metadata_edit",
+      "lineage": "asset_metadata_edit-template-11",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "changed",
+          "outcome": "changed",
+          "expected_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "after_evidence_id": "ev_870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9",
+              "kind": "asset_metadata_changed",
+              "field": "assets"
+            }
+          ],
+          "emitted_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "after_evidence_id": "ev_870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9",
+              "kind": "asset_metadata_changed",
+              "field": "assets"
+            }
+          ],
+          "grade": {
+            "expected": 1,
+            "emitted": 1,
+            "matched": 1,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "recall": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "pass": true
+          },
+          "verification": [
+            {
+              "status": "supported",
+              "reason": "predicate_supported",
+              "method": "deterministic_baseline",
+              "bundle_digest": "a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3",
+              "verifier_version": "verifier-v1",
+              "operands": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 101,
+                "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+                "after_evidence_id": "ev_870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9",
+                "kind": "asset_metadata_changed",
+                "field": "assets"
+              },
+              "execution_receipt": "a8d5838a9a7497f5aa08e8da0d15cb537175e327f19f2e2b4b6388c23674d801"
+            }
+          ],
+          "forged_decisions": [
+            {
+              "status": "unsupported",
+              "reason": "candidate_identity",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3"
+            },
+            {
+              "status": "unsupported",
+              "reason": "after_scope",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3"
+            },
+            {
+              "status": "unsupported",
+              "reason": "wrong_before_revision",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_predicate",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_proposal_schema",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "a53e2d3105226b29e946f784e75d012f859f4787cfdce6be140faf0429591ee3"
+            }
+          ],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "6755bdb1de16ed1af2f27acb43ffa301d488695026d604832ba5e2d8deff14c4"
+            },
+            {
+              "stage": "detection",
+              "receipt": "462baf1cf1404057deb5657e5a78cb504c47e11ca4149170a0ab671c3d853e31"
+            },
+            {
+              "stage": "verification",
+              "receipt": "ad929d8270f982c176b773d179fc580648a77f10e88e33ae16dd1718561cb6ef"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "transition": 2,
+          "expected_outcome": "changed",
+          "outcome": "changed",
+          "expected_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9",
+              "after_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "kind": "asset_metadata_changed",
+              "field": "assets"
+            }
+          ],
+          "emitted_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9",
+              "after_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "kind": "asset_metadata_changed",
+              "field": "assets"
+            }
+          ],
+          "grade": {
+            "expected": 1,
+            "emitted": 1,
+            "matched": 1,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "recall": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "pass": true
+          },
+          "verification": [
+            {
+              "status": "supported",
+              "reason": "predicate_supported",
+              "method": "deterministic_baseline",
+              "bundle_digest": "3b84b6df68419715f620be30005b359e30da9938f6e54124a90e3271a49c1cca",
+              "verifier_version": "verifier-v1",
+              "operands": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 101,
+                "before_evidence_id": "ev_870a17699a41c0a0ca1ce7f68676fadd80d65969266798147e58338ea6c090f9",
+                "after_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+                "kind": "asset_metadata_changed",
+                "field": "assets"
+              },
+              "execution_receipt": "20c7e0b2497cb0de2e097c52db3088e93fea7041f22dd87766870a0c8201ddfa"
+            }
+          ],
+          "forged_decisions": [
+            {
+              "status": "unsupported",
+              "reason": "candidate_identity",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "3b84b6df68419715f620be30005b359e30da9938f6e54124a90e3271a49c1cca"
+            },
+            {
+              "status": "unsupported",
+              "reason": "after_scope",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "3b84b6df68419715f620be30005b359e30da9938f6e54124a90e3271a49c1cca"
+            },
+            {
+              "status": "unsupported",
+              "reason": "wrong_before_revision",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "3b84b6df68419715f620be30005b359e30da9938f6e54124a90e3271a49c1cca"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_predicate",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "3b84b6df68419715f620be30005b359e30da9938f6e54124a90e3271a49c1cca"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_proposal_schema",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "3b84b6df68419715f620be30005b359e30da9938f6e54124a90e3271a49c1cca"
+            }
+          ],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "854672d4b81f8aa69ea975c0b1c7670f73e9a85d450a996f9329ac2a5ac5e87a"
+            },
+            {
+              "stage": "detection",
+              "receipt": "bae3dda92aab6174d986d37e771e90cfa29ed3111499de07c8fbdc087ef4d33c"
+            },
+            {
+              "stage": "verification",
+              "receipt": "245f1fb0ce01f8c7f93126256ddc778d047cb95cceef3f81dc0e4b05bfc36143"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "duplicate_reorder-heldout-01",
+      "family": "duplicate_reorder",
+      "lineage": "duplicate_reorder-template-07",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "unchanged_in_observed_scope",
+          "outcome": "unchanged_in_observed_scope",
+          "expected_facts": [],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 0,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "pass": true
+          },
+          "verification": [],
+          "forged_decisions": [],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "803fde726f859c4691e36fc26357899546d88565cedb8da398a6fe09199802bd"
+            },
+            {
+              "stage": "detection",
+              "receipt": "eb581ec9fda9293389b586209f87952097e68590b2c1fe0bdf785b15d9bfc766"
+            },
+            {
+              "stage": "verification",
+              "receipt": "9ce601e90707c5fd81eb11945b2ee08a8b31bb9d0ecdeb821fe52dfff5d31f9a"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "duplicate_reorder-heldout-02",
+      "family": "duplicate_reorder",
+      "lineage": "duplicate_reorder-template-08",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "changed",
+          "outcome": "changed",
+          "expected_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 102,
+              "before_evidence_id": "ev_1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36",
+              "after_evidence_id": "ev_d76936cb4090869ba0a4cc882f147aa919cec87d0963bb64e947ef02c2e1493f",
+              "kind": "asset_metadata_changed",
+              "field": "assets"
+            }
+          ],
+          "emitted_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 102,
+              "before_evidence_id": "ev_1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36",
+              "after_evidence_id": "ev_d76936cb4090869ba0a4cc882f147aa919cec87d0963bb64e947ef02c2e1493f",
+              "kind": "asset_metadata_changed",
+              "field": "assets"
+            }
+          ],
+          "grade": {
+            "expected": 1,
+            "emitted": 1,
+            "matched": 1,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "recall": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "pass": true
+          },
+          "verification": [
+            {
+              "status": "supported",
+              "reason": "predicate_supported",
+              "method": "deterministic_baseline",
+              "bundle_digest": "0a5eec7dac38cb882afa26d550874f4bbe6169b732bebb2441eb0742492ccb7f",
+              "verifier_version": "verifier-v1",
+              "operands": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 102,
+                "before_evidence_id": "ev_1ced9c9c69cd5daed3f4870c25a18904824db55d3380077eee7edd32bc0c8a36",
+                "after_evidence_id": "ev_d76936cb4090869ba0a4cc882f147aa919cec87d0963bb64e947ef02c2e1493f",
+                "kind": "asset_metadata_changed",
+                "field": "assets"
+              },
+              "execution_receipt": "e57a242113d006325d06e721b08a8148568c8e48724a2ca8a1faaccb5682b3f4"
+            }
+          ],
+          "forged_decisions": [
+            {
+              "status": "unsupported",
+              "reason": "candidate_identity",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "0a5eec7dac38cb882afa26d550874f4bbe6169b732bebb2441eb0742492ccb7f"
+            },
+            {
+              "status": "unsupported",
+              "reason": "after_scope",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "0a5eec7dac38cb882afa26d550874f4bbe6169b732bebb2441eb0742492ccb7f"
+            },
+            {
+              "status": "unsupported",
+              "reason": "wrong_before_revision",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "0a5eec7dac38cb882afa26d550874f4bbe6169b732bebb2441eb0742492ccb7f"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_predicate",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "0a5eec7dac38cb882afa26d550874f4bbe6169b732bebb2441eb0742492ccb7f"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_proposal_schema",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "0a5eec7dac38cb882afa26d550874f4bbe6169b732bebb2441eb0742492ccb7f"
+            }
+          ],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "805f78349f2932f5fe4e9464f3b34ac636b5db939b37511c484932a5b171b996"
+            },
+            {
+              "stage": "detection",
+              "receipt": "f1fe5e4341d1519a5313fe1d80e13a52106c20b1b42dd2c7ad57513e23c2b7a3"
+            },
+            {
+              "stage": "verification",
+              "receipt": "9375e085a2f28a3fb1b25e2d9193ba4132ef8d118066f265f25c91b1aa68d2cd"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "transition": 2,
+          "expected_outcome": "unchanged_in_observed_scope",
+          "outcome": "unchanged_in_observed_scope",
+          "expected_facts": [],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 0,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "pass": true
+          },
+          "verification": [],
+          "forged_decisions": [],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "a27fac15eef39a69b73cd200d4e6b9b813197eae232347d33a21f02a930e10bb"
+            },
+            {
+              "stage": "detection",
+              "receipt": "03d4ec223050f181a9640ab2fdacd6df4e3b7466ca3e7f3f6425f5aa454d084c"
+            },
+            {
+              "stage": "verification",
+              "receipt": "68e5d6cd32736c380279d2638d0185554ec224192302f1c3f8a3368484a93a9c"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "first_observation-heldout-01",
+      "family": "first_observation",
+      "lineage": "first_observation-template-07",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "baseline_created",
+          "outcome": "baseline_created",
+          "expected_facts": [],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 0,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "pass": true
+          },
+          "verification": [],
+          "forged_decisions": [],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "c95ec3b53365c3e41e5f1b660a28feb5add1b1dde8891ac6158ab64677cd3b3f"
+            },
+            {
+              "stage": "detection",
+              "receipt": "13286d4be0ea3fc167f4799d7abe5e59425cbd4e2a77326d3a277e81d7cae2fa"
+            },
+            {
+              "stage": "verification",
+              "receipt": "61938f01388d5a1c149d936c36da9c51f83feadc7fed22ef62e41b315a8d9cf9"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "first_observation-heldout-06",
+      "family": "first_observation",
+      "lineage": "first_observation-template-12",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "baseline_created",
+          "outcome": "baseline_created",
+          "expected_facts": [],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 0,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "pass": true
+          },
+          "verification": [],
+          "forged_decisions": [],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "9a0549be9469ad85699a3aa1b072aef0217cda79c60a27c9add9750a79cee196"
+            },
+            {
+              "stage": "detection",
+              "receipt": "2d573948777a3decbc6cb8ebda91d385fb53e337a2818bdf3f027aa3945f468f"
+            },
+            {
+              "stage": "verification",
+              "receipt": "4ad47c37992365675abe679e3566b0343c8cf2353985310c95e9d99c69f8997e"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "hostile_metadata-heldout-02",
+      "family": "hostile_metadata",
+      "lineage": "hostile_metadata-template-08",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "insufficient_evidence",
+          "outcome": "insufficient_evidence",
+          "expected_facts": [],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 0,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "pass": true
+          },
+          "verification": [],
+          "forged_decisions": [],
+          "normalization_error": "invalid_created_at",
+          "execution_receipts": [
+            {
+              "stage": "normalization_refusal",
+              "receipt": "b977d81f3437b67b271a2c5a9b8bb3a4c853a7405cd2704d8febf57870abacc0"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "hostile_metadata-heldout-04",
+      "family": "hostile_metadata",
+      "lineage": "hostile_metadata-template-10",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "insufficient_evidence",
+          "outcome": "insufficient_evidence",
+          "expected_facts": [],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 0,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "pass": true
+          },
+          "verification": [],
+          "forged_decisions": [],
+          "normalization_error": "duplicate_asset_id",
+          "execution_receipts": [
+            {
+              "stage": "normalization_refusal",
+              "receipt": "617d372026f73e24d7577614991b9147b87a1ac849ba6f8a21a977cee8ab851f"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "mutable_tag-heldout-02",
+      "family": "mutable_tag",
+      "lineage": "mutable_tag-template-08",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "changed",
+          "outcome": "changed",
+          "expected_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "after_evidence_id": "ev_36196a6b4f671fa74e82815fb4072f1feec2b18510223258bac4411116037ec3",
+              "kind": "tag_changed",
+              "field": "tag_name"
+            }
+          ],
+          "emitted_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "after_evidence_id": "ev_36196a6b4f671fa74e82815fb4072f1feec2b18510223258bac4411116037ec3",
+              "kind": "tag_changed",
+              "field": "tag_name"
+            }
+          ],
+          "grade": {
+            "expected": 1,
+            "emitted": 1,
+            "matched": 1,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "recall": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "pass": true
+          },
+          "verification": [
+            {
+              "status": "supported",
+              "reason": "predicate_supported",
+              "method": "deterministic_baseline",
+              "bundle_digest": "8be4f495cbeeac8faabfd655716bbff22d8e9e7a5e6c93208468c8a5a4df9935",
+              "verifier_version": "verifier-v1",
+              "operands": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 101,
+                "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+                "after_evidence_id": "ev_36196a6b4f671fa74e82815fb4072f1feec2b18510223258bac4411116037ec3",
+                "kind": "tag_changed",
+                "field": "tag_name"
+              },
+              "execution_receipt": "a7e958b1b0e1868771e9749733c5ae7a66fe8c621839606b02eee576970134f7"
+            }
+          ],
+          "forged_decisions": [
+            {
+              "status": "unsupported",
+              "reason": "candidate_identity",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "8be4f495cbeeac8faabfd655716bbff22d8e9e7a5e6c93208468c8a5a4df9935"
+            },
+            {
+              "status": "unsupported",
+              "reason": "after_scope",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "8be4f495cbeeac8faabfd655716bbff22d8e9e7a5e6c93208468c8a5a4df9935"
+            },
+            {
+              "status": "unsupported",
+              "reason": "wrong_before_revision",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "8be4f495cbeeac8faabfd655716bbff22d8e9e7a5e6c93208468c8a5a4df9935"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_predicate",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "8be4f495cbeeac8faabfd655716bbff22d8e9e7a5e6c93208468c8a5a4df9935"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_proposal_schema",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "8be4f495cbeeac8faabfd655716bbff22d8e9e7a5e6c93208468c8a5a4df9935"
+            }
+          ],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "74c8bbe981acd21137d8dc88d319366678c1ab0068be5604976481450d4f62f6"
+            },
+            {
+              "stage": "detection",
+              "receipt": "cc3ffad4d7fd95629d6b044beb16879420cd49e6e4cc0c6facc4df3c73b3dd2a"
+            },
+            {
+              "stage": "verification",
+              "receipt": "85d34172e7e1e0543c9eda1febcc7eac2008efed674e38d3262a40698d6ee041"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "transition": 2,
+          "expected_outcome": "unchanged_in_observed_scope",
+          "outcome": "unchanged_in_observed_scope",
+          "expected_facts": [],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 0,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "pass": true
+          },
+          "verification": [],
+          "forged_decisions": [],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "28ecd3fd2c1a4e6bf7eeb341befcce8445371af74b3ef619d40cf2c37cc3a2d5"
+            },
+            {
+              "stage": "detection",
+              "receipt": "e447dfdefe942d406f7e420c1a6e49e7076b9b495afb10b7321072add8140704"
+            },
+            {
+              "stage": "verification",
+              "receipt": "271f69a4536c5e71d88d46472ebdeca85b2cdc964c4c9b3405488e3e76376610"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "mutable_tag-heldout-04",
+      "family": "mutable_tag",
+      "lineage": "mutable_tag-template-10",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "changed",
+          "outcome": "changed",
+          "expected_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "after_evidence_id": "ev_2a7f0928f807929b2232a3fef1b79b1edb6621677f9ac8c0a919e7924f7aab0f",
+              "kind": "tag_changed",
+              "field": "tag_name"
+            }
+          ],
+          "emitted_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "after_evidence_id": "ev_2a7f0928f807929b2232a3fef1b79b1edb6621677f9ac8c0a919e7924f7aab0f",
+              "kind": "tag_changed",
+              "field": "tag_name"
+            }
+          ],
+          "grade": {
+            "expected": 1,
+            "emitted": 1,
+            "matched": 1,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "recall": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "pass": true
+          },
+          "verification": [
+            {
+              "status": "supported",
+              "reason": "predicate_supported",
+              "method": "deterministic_baseline",
+              "bundle_digest": "bb4fd6e1b155c441dc6d5ac31f844d04d12a798b3cb2b8bf6f4a566df64a7df2",
+              "verifier_version": "verifier-v1",
+              "operands": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 101,
+                "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+                "after_evidence_id": "ev_2a7f0928f807929b2232a3fef1b79b1edb6621677f9ac8c0a919e7924f7aab0f",
+                "kind": "tag_changed",
+                "field": "tag_name"
+              },
+              "execution_receipt": "404abfea3dbe9d01cd9122ad0b1e62c64517df9a4551bcc7910ac3fa67daa37d"
+            }
+          ],
+          "forged_decisions": [
+            {
+              "status": "unsupported",
+              "reason": "candidate_identity",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "bb4fd6e1b155c441dc6d5ac31f844d04d12a798b3cb2b8bf6f4a566df64a7df2"
+            },
+            {
+              "status": "unsupported",
+              "reason": "after_scope",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "bb4fd6e1b155c441dc6d5ac31f844d04d12a798b3cb2b8bf6f4a566df64a7df2"
+            },
+            {
+              "status": "unsupported",
+              "reason": "wrong_before_revision",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "bb4fd6e1b155c441dc6d5ac31f844d04d12a798b3cb2b8bf6f4a566df64a7df2"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_predicate",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "bb4fd6e1b155c441dc6d5ac31f844d04d12a798b3cb2b8bf6f4a566df64a7df2"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_proposal_schema",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "bb4fd6e1b155c441dc6d5ac31f844d04d12a798b3cb2b8bf6f4a566df64a7df2"
+            }
+          ],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "83a2efb4ac2544505a289a0d08dfc4df887493e160b83842e3b218fc59e15a4c"
+            },
+            {
+              "stage": "detection",
+              "receipt": "13000eb9bcf9b2fd2a9358c25ad6a5c4091eb188e8e2a2dc35fba432e3c777d2"
+            },
+            {
+              "stage": "verification",
+              "receipt": "4904f16498212ee81195ab1bb78f3740b00d96a192ba16f0c4432a8fa829395b"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "new_prerelease-heldout-04",
+      "family": "new_prerelease",
+      "lineage": "new_prerelease-template-10",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "changed",
+          "outcome": "changed",
+          "expected_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 310,
+              "before_evidence_id": null,
+              "after_evidence_id": "ev_7aa033b7a463837dc5bb75bcc76194e9bc1b78418730666500d35acd3f176435",
+              "kind": "newly_observed_release",
+              "field": "identity"
+            }
+          ],
+          "emitted_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 310,
+              "before_evidence_id": null,
+              "after_evidence_id": "ev_7aa033b7a463837dc5bb75bcc76194e9bc1b78418730666500d35acd3f176435",
+              "kind": "newly_observed_release",
+              "field": "identity"
+            }
+          ],
+          "grade": {
+            "expected": 1,
+            "emitted": 1,
+            "matched": 1,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "recall": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "pass": true
+          },
+          "verification": [
+            {
+              "status": "supported",
+              "reason": "predicate_supported",
+              "method": "deterministic_baseline",
+              "bundle_digest": "1aa7bef9ff831b8e3680573f2ee54aa0454055bc6839c76bf06562a230a315b1",
+              "verifier_version": "verifier-v1",
+              "operands": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 310,
+                "before_evidence_id": null,
+                "after_evidence_id": "ev_7aa033b7a463837dc5bb75bcc76194e9bc1b78418730666500d35acd3f176435",
+                "kind": "newly_observed_release",
+                "field": "identity"
+              },
+              "execution_receipt": "357cb342ccb6fc88e09c8a2deb8efee895b3bad649f40f59effd5cbfc7f7e006"
+            }
+          ],
+          "forged_decisions": [
+            {
+              "status": "unsupported",
+              "reason": "candidate_identity",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "1aa7bef9ff831b8e3680573f2ee54aa0454055bc6839c76bf06562a230a315b1"
+            },
+            {
+              "status": "unsupported",
+              "reason": "after_scope",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "1aa7bef9ff831b8e3680573f2ee54aa0454055bc6839c76bf06562a230a315b1"
+            },
+            {
+              "status": "unsupported",
+              "reason": "unexpected_before_revision",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "1aa7bef9ff831b8e3680573f2ee54aa0454055bc6839c76bf06562a230a315b1"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_predicate",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "1aa7bef9ff831b8e3680573f2ee54aa0454055bc6839c76bf06562a230a315b1"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_proposal_schema",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "1aa7bef9ff831b8e3680573f2ee54aa0454055bc6839c76bf06562a230a315b1"
+            }
+          ],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "55ea0edf62977859d844388897f4c89a947c8ed96ddd2196c0e46364d5ec5cab"
+            },
+            {
+              "stage": "detection",
+              "receipt": "451c05ded708bd006241968042f7fcb4693ffdcaaddfbcbf49cb3a99feec3323"
+            },
+            {
+              "stage": "verification",
+              "receipt": "beb255332145710ca7e8e7478866b30410c0ae250aa965b8727c6b30f873fcc0"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "new_prerelease-heldout-06",
+      "family": "new_prerelease",
+      "lineage": "new_prerelease-template-12",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "changed",
+          "outcome": "changed",
+          "expected_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 312,
+              "before_evidence_id": null,
+              "after_evidence_id": "ev_1eb6db4cb371436a129d939ce41d276166c226ef2a194895ef02b7bd12d69775",
+              "kind": "newly_observed_release",
+              "field": "identity"
+            }
+          ],
+          "emitted_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 312,
+              "before_evidence_id": null,
+              "after_evidence_id": "ev_1eb6db4cb371436a129d939ce41d276166c226ef2a194895ef02b7bd12d69775",
+              "kind": "newly_observed_release",
+              "field": "identity"
+            }
+          ],
+          "grade": {
+            "expected": 1,
+            "emitted": 1,
+            "matched": 1,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "recall": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "pass": true
+          },
+          "verification": [
+            {
+              "status": "supported",
+              "reason": "predicate_supported",
+              "method": "deterministic_baseline",
+              "bundle_digest": "f2a6eb7ce631411adb731ce26b6d148ca99d020f1bc73eb74559bc2bc4c94408",
+              "verifier_version": "verifier-v1",
+              "operands": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 312,
+                "before_evidence_id": null,
+                "after_evidence_id": "ev_1eb6db4cb371436a129d939ce41d276166c226ef2a194895ef02b7bd12d69775",
+                "kind": "newly_observed_release",
+                "field": "identity"
+              },
+              "execution_receipt": "42da314e722978c1c4fcb7cdf8ebcfa3927bf40559341ebeb83cc13deb606327"
+            }
+          ],
+          "forged_decisions": [
+            {
+              "status": "unsupported",
+              "reason": "candidate_identity",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "f2a6eb7ce631411adb731ce26b6d148ca99d020f1bc73eb74559bc2bc4c94408"
+            },
+            {
+              "status": "unsupported",
+              "reason": "after_scope",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "f2a6eb7ce631411adb731ce26b6d148ca99d020f1bc73eb74559bc2bc4c94408"
+            },
+            {
+              "status": "unsupported",
+              "reason": "unexpected_before_revision",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "f2a6eb7ce631411adb731ce26b6d148ca99d020f1bc73eb74559bc2bc4c94408"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_predicate",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "f2a6eb7ce631411adb731ce26b6d148ca99d020f1bc73eb74559bc2bc4c94408"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_proposal_schema",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "f2a6eb7ce631411adb731ce26b6d148ca99d020f1bc73eb74559bc2bc4c94408"
+            }
+          ],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "ca8f2a370b3605a5163a9831b601849dff39d5d8253e78deeb8cd5125a64d5df"
+            },
+            {
+              "stage": "detection",
+              "receipt": "9bf0675a93952ffa5a72c4da7fe6156329a2b9aa4ad0ac82499a6c16ca68da75"
+            },
+            {
+              "stage": "verification",
+              "receipt": "b925c0c1e61d3b6f452ab65a554643f5e9b7669b8cd57ce0f67e27caeca04fd7"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "new_stable_release-heldout-04",
+      "family": "new_stable_release",
+      "lineage": "new_stable_release-template-10",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "changed",
+          "outcome": "changed",
+          "expected_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 210,
+              "before_evidence_id": null,
+              "after_evidence_id": "ev_35f1056e9b5e603b5bb2a54afa7315e1da55c771ef682d38d20bf9b83afdfa34",
+              "kind": "newly_observed_release",
+              "field": "identity"
+            }
+          ],
+          "emitted_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 210,
+              "before_evidence_id": null,
+              "after_evidence_id": "ev_35f1056e9b5e603b5bb2a54afa7315e1da55c771ef682d38d20bf9b83afdfa34",
+              "kind": "newly_observed_release",
+              "field": "identity"
+            }
+          ],
+          "grade": {
+            "expected": 1,
+            "emitted": 1,
+            "matched": 1,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "recall": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "pass": true
+          },
+          "verification": [
+            {
+              "status": "supported",
+              "reason": "predicate_supported",
+              "method": "deterministic_baseline",
+              "bundle_digest": "75aa4f902cad30d4e5bf63af6fbcc4b000cfc56fe20cdae3a3f54d4c2597ffea",
+              "verifier_version": "verifier-v1",
+              "operands": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 210,
+                "before_evidence_id": null,
+                "after_evidence_id": "ev_35f1056e9b5e603b5bb2a54afa7315e1da55c771ef682d38d20bf9b83afdfa34",
+                "kind": "newly_observed_release",
+                "field": "identity"
+              },
+              "execution_receipt": "6031518a21084cf51feb23056092e95daa0e8377a3aa4934ec2171bfec4a3572"
+            }
+          ],
+          "forged_decisions": [
+            {
+              "status": "unsupported",
+              "reason": "candidate_identity",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "75aa4f902cad30d4e5bf63af6fbcc4b000cfc56fe20cdae3a3f54d4c2597ffea"
+            },
+            {
+              "status": "unsupported",
+              "reason": "after_scope",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "75aa4f902cad30d4e5bf63af6fbcc4b000cfc56fe20cdae3a3f54d4c2597ffea"
+            },
+            {
+              "status": "unsupported",
+              "reason": "unexpected_before_revision",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "75aa4f902cad30d4e5bf63af6fbcc4b000cfc56fe20cdae3a3f54d4c2597ffea"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_predicate",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "75aa4f902cad30d4e5bf63af6fbcc4b000cfc56fe20cdae3a3f54d4c2597ffea"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_proposal_schema",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "75aa4f902cad30d4e5bf63af6fbcc4b000cfc56fe20cdae3a3f54d4c2597ffea"
+            }
+          ],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "9ebc54a37c17972caeee8d6dedb0a244a91d94253088169387a2a048176bcf10"
+            },
+            {
+              "stage": "detection",
+              "receipt": "e89dd4a6eca036d6a0ab29ae6336cd2b12dd9a4b9f70b062a69a13422a81d639"
+            },
+            {
+              "stage": "verification",
+              "receipt": "b4ad1cecd583552b893e51cf70e1398128433f3e3dc4837e7abaedf66e5db733"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "new_stable_release-heldout-06",
+      "family": "new_stable_release",
+      "lineage": "new_stable_release-template-12",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "changed",
+          "outcome": "changed",
+          "expected_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 212,
+              "before_evidence_id": null,
+              "after_evidence_id": "ev_c03d40ead54eda2b2786378476d545127fc1e3e4b93c6b9a555f8bf83549555a",
+              "kind": "newly_observed_release",
+              "field": "identity"
+            }
+          ],
+          "emitted_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 212,
+              "before_evidence_id": null,
+              "after_evidence_id": "ev_c03d40ead54eda2b2786378476d545127fc1e3e4b93c6b9a555f8bf83549555a",
+              "kind": "newly_observed_release",
+              "field": "identity"
+            }
+          ],
+          "grade": {
+            "expected": 1,
+            "emitted": 1,
+            "matched": 1,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "recall": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "pass": true
+          },
+          "verification": [
+            {
+              "status": "supported",
+              "reason": "predicate_supported",
+              "method": "deterministic_baseline",
+              "bundle_digest": "8488854de1a99faa06729304a104b838a40075a8dbb04cfbf459420f9b8bd548",
+              "verifier_version": "verifier-v1",
+              "operands": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 212,
+                "before_evidence_id": null,
+                "after_evidence_id": "ev_c03d40ead54eda2b2786378476d545127fc1e3e4b93c6b9a555f8bf83549555a",
+                "kind": "newly_observed_release",
+                "field": "identity"
+              },
+              "execution_receipt": "ea7c06b1ee3bffc45dd4a934546a293f7fe5c31d91f26d5110f6af6e23a2f3a4"
+            }
+          ],
+          "forged_decisions": [
+            {
+              "status": "unsupported",
+              "reason": "candidate_identity",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "8488854de1a99faa06729304a104b838a40075a8dbb04cfbf459420f9b8bd548"
+            },
+            {
+              "status": "unsupported",
+              "reason": "after_scope",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "8488854de1a99faa06729304a104b838a40075a8dbb04cfbf459420f9b8bd548"
+            },
+            {
+              "status": "unsupported",
+              "reason": "unexpected_before_revision",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "8488854de1a99faa06729304a104b838a40075a8dbb04cfbf459420f9b8bd548"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_predicate",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "8488854de1a99faa06729304a104b838a40075a8dbb04cfbf459420f9b8bd548"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_proposal_schema",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "8488854de1a99faa06729304a104b838a40075a8dbb04cfbf459420f9b8bd548"
+            }
+          ],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "6ed6af738a8e836dfed958c1b6c497189bdf8f0aa1bbbea6340cae0867d23aa8"
+            },
+            {
+              "stage": "detection",
+              "receipt": "f71299a7f260790e1d44fbe4db5e4b80dcd9168847b52da227142aae51447dde"
+            },
+            {
+              "stage": "verification",
+              "receipt": "99edd064007e1de22b574d6c3a2e31fa201c9ed8bd8a39601d2d2655bf627a9d"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "notes_only_edit-heldout-01",
+      "family": "notes_only_edit",
+      "lineage": "notes_only_edit-template-07",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "changed",
+          "outcome": "changed",
+          "expected_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "after_evidence_id": "ev_ff7b4506036d97aee167fb884eebaeffbeafdeb038e8b6af6b6b054ac1e60a0b",
+              "kind": "notes_text_changed",
+              "field": "notes_digest"
+            }
+          ],
+          "emitted_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "after_evidence_id": "ev_ff7b4506036d97aee167fb884eebaeffbeafdeb038e8b6af6b6b054ac1e60a0b",
+              "kind": "notes_text_changed",
+              "field": "notes_digest"
+            }
+          ],
+          "grade": {
+            "expected": 1,
+            "emitted": 1,
+            "matched": 1,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "recall": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "pass": true
+          },
+          "verification": [
+            {
+              "status": "supported",
+              "reason": "predicate_supported",
+              "method": "deterministic_baseline",
+              "bundle_digest": "157b942b138489211d06bea59b5845c0c33e6741d19d4cabeb4de0a3c40aab67",
+              "verifier_version": "verifier-v1",
+              "operands": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 101,
+                "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+                "after_evidence_id": "ev_ff7b4506036d97aee167fb884eebaeffbeafdeb038e8b6af6b6b054ac1e60a0b",
+                "kind": "notes_text_changed",
+                "field": "notes_digest"
+              },
+              "execution_receipt": "dadcb2ef6ce5ff23c4d9f13d4153f5e69f44ad4caef3046dd54e2d63421713b0"
+            }
+          ],
+          "forged_decisions": [
+            {
+              "status": "unsupported",
+              "reason": "candidate_identity",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "157b942b138489211d06bea59b5845c0c33e6741d19d4cabeb4de0a3c40aab67"
+            },
+            {
+              "status": "unsupported",
+              "reason": "after_scope",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "157b942b138489211d06bea59b5845c0c33e6741d19d4cabeb4de0a3c40aab67"
+            },
+            {
+              "status": "unsupported",
+              "reason": "wrong_before_revision",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "157b942b138489211d06bea59b5845c0c33e6741d19d4cabeb4de0a3c40aab67"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_predicate",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "157b942b138489211d06bea59b5845c0c33e6741d19d4cabeb4de0a3c40aab67"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_proposal_schema",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "157b942b138489211d06bea59b5845c0c33e6741d19d4cabeb4de0a3c40aab67"
+            }
+          ],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "88834b302a6798712848fe0c0f9f7286b4aa0e131219919bbf40793bcb0fb769"
+            },
+            {
+              "stage": "detection",
+              "receipt": "820da036ab5d4e0346a4f1c5009a1a9606a784c531d49a4c3552fcf254f33cef"
+            },
+            {
+              "stage": "verification",
+              "receipt": "d31608185160c3a81bed1ad6bc96d023a33205be16a4d81129f2688cab2de89b"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "notes_only_edit-heldout-04",
+      "family": "notes_only_edit",
+      "lineage": "notes_only_edit-template-10",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "changed",
+          "outcome": "changed",
+          "expected_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "after_evidence_id": "ev_c4df982d9e25b88a40d44fc78d34791b0798e8ea3a2e694f995881f1da288ab2",
+              "kind": "notes_text_changed",
+              "field": "notes_digest"
+            }
+          ],
+          "emitted_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "after_evidence_id": "ev_c4df982d9e25b88a40d44fc78d34791b0798e8ea3a2e694f995881f1da288ab2",
+              "kind": "notes_text_changed",
+              "field": "notes_digest"
+            }
+          ],
+          "grade": {
+            "expected": 1,
+            "emitted": 1,
+            "matched": 1,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "recall": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "pass": true
+          },
+          "verification": [
+            {
+              "status": "supported",
+              "reason": "predicate_supported",
+              "method": "deterministic_baseline",
+              "bundle_digest": "5d51ef6f0aad5d5a3fe7756f907bd1aae02c317294aed521960f3df0256184a6",
+              "verifier_version": "verifier-v1",
+              "operands": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 101,
+                "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+                "after_evidence_id": "ev_c4df982d9e25b88a40d44fc78d34791b0798e8ea3a2e694f995881f1da288ab2",
+                "kind": "notes_text_changed",
+                "field": "notes_digest"
+              },
+              "execution_receipt": "6fda30762a3a3c76e0203140978329d37c1943a618c0ff55149fcb5ec806c2ce"
+            }
+          ],
+          "forged_decisions": [
+            {
+              "status": "unsupported",
+              "reason": "candidate_identity",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "5d51ef6f0aad5d5a3fe7756f907bd1aae02c317294aed521960f3df0256184a6"
+            },
+            {
+              "status": "unsupported",
+              "reason": "after_scope",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "5d51ef6f0aad5d5a3fe7756f907bd1aae02c317294aed521960f3df0256184a6"
+            },
+            {
+              "status": "unsupported",
+              "reason": "wrong_before_revision",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "5d51ef6f0aad5d5a3fe7756f907bd1aae02c317294aed521960f3df0256184a6"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_predicate",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "5d51ef6f0aad5d5a3fe7756f907bd1aae02c317294aed521960f3df0256184a6"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_proposal_schema",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "5d51ef6f0aad5d5a3fe7756f907bd1aae02c317294aed521960f3df0256184a6"
+            }
+          ],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "a82cb905efd37eabb2735c70dc39540d2c372a3dd2576c7ec6ed048001dbe16e"
+            },
+            {
+              "stage": "detection",
+              "receipt": "e3ae9f4ed1e2f495769836248e3a55e9ad6f3a967911cefe5c3ae55fc753b443"
+            },
+            {
+              "stage": "verification",
+              "receipt": "05e6c48e67da947f068c8f7be24b28ea3c28ae63178d07c25971f0fec6673d45"
+            }
+          ],
+          "pass": true
+        },
+        {
+          "transition": 2,
+          "expected_outcome": "unchanged_in_observed_scope",
+          "outcome": "unchanged_in_observed_scope",
+          "expected_facts": [],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 0,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "pass": true
+          },
+          "verification": [],
+          "forged_decisions": [],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "cd362fc1501b651fa6304d52bf1017e1976a03208eac9ae5a181ba83ee324a6d"
+            },
+            {
+              "stage": "detection",
+              "receipt": "50f80f7439c36758b6f33d2eab231b9da3ba8a52cf6d8af01fc34139891a0ebc"
+            },
+            {
+              "stage": "verification",
+              "receipt": "f7841adae1e53b3ac284fe79c63cac358fc3ffb9ba946b5e4c237170c04a8670"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "throttle_outage-heldout-02",
+      "family": "throttle_outage",
+      "lineage": "throttle_outage-template-08",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "source_unavailable",
+          "outcome": "source_unavailable",
+          "expected_facts": [],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 0,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "pass": true
+          },
+          "verification": [],
+          "forged_decisions": [],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "9f00cc2595e265a537660cfa78e2435f7d948bdffd5cfdbedb38760e26cc10bb"
+            },
+            {
+              "stage": "detection",
+              "receipt": "13559d968b8c8bc949b6a14a0311dff5dc099716c2e7e207fd30c935de03d29f"
+            },
+            {
+              "stage": "verification",
+              "receipt": "e0dc51b2297941c4d84ab15689d26a6f6bae35997097f881925c5a7130cd4b07"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "throttle_outage-heldout-06",
+      "family": "throttle_outage",
+      "lineage": "throttle_outage-template-12",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "source_unavailable",
+          "outcome": "source_unavailable",
+          "expected_facts": [],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 0,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "pass": true
+          },
+          "verification": [],
+          "forged_decisions": [],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "6efaaf049332748fad67ff7ad128fd81d5838ebd9f46a11c30a71df6039ffd5d"
+            },
+            {
+              "stage": "detection",
+              "receipt": "fe804537431fc238795b17b18abb83db00f47976156858367239006de6b4b545"
+            },
+            {
+              "stage": "verification",
+              "receipt": "27ba68300054a5133b6d3af9dbd7dd76a18817eda2bd98aea77402a2af2ed638"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "truncated_moving_pages-heldout-01",
+      "family": "truncated_moving_pages",
+      "lineage": "truncated_moving_pages-template-07",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "partial_observation",
+          "outcome": "partial_observation",
+          "expected_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "after_evidence_id": "ev_21a2dfc3a6e1c2739153c21262ff9c5d65b759694b4599a1369c11bc887e313d",
+              "kind": "tag_changed",
+              "field": "tag_name"
+            }
+          ],
+          "emitted_facts": [
+            {
+              "namespace": "synthetic:evaluation",
+              "source_id": 1001,
+              "release_id": 101,
+              "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+              "after_evidence_id": "ev_21a2dfc3a6e1c2739153c21262ff9c5d65b759694b4599a1369c11bc887e313d",
+              "kind": "tag_changed",
+              "field": "tag_name"
+            }
+          ],
+          "grade": {
+            "expected": 1,
+            "emitted": 1,
+            "matched": 1,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "recall": {
+              "value": 1,
+              "numerator": 1,
+              "denominator": 1,
+              "unit": "ratio",
+              "state": "available"
+            },
+            "pass": true
+          },
+          "verification": [
+            {
+              "status": "supported",
+              "reason": "predicate_supported",
+              "method": "deterministic_baseline",
+              "bundle_digest": "81531fcacc3e23a9aa6414eff6f4d0c6c4622db730edb41dee8f57cbaebebee5",
+              "verifier_version": "verifier-v1",
+              "operands": {
+                "namespace": "synthetic:evaluation",
+                "source_id": 1001,
+                "release_id": 101,
+                "before_evidence_id": "ev_c02d016ab07424a30d4800c4ee24c5518823089b3b30be34275aa250b7886119",
+                "after_evidence_id": "ev_21a2dfc3a6e1c2739153c21262ff9c5d65b759694b4599a1369c11bc887e313d",
+                "kind": "tag_changed",
+                "field": "tag_name"
+              },
+              "execution_receipt": "033150a2c2595d388415a7ebeecba19686571eca0bf418444028d3cf297db2f5"
+            }
+          ],
+          "forged_decisions": [
+            {
+              "status": "unsupported",
+              "reason": "candidate_identity",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "81531fcacc3e23a9aa6414eff6f4d0c6c4622db730edb41dee8f57cbaebebee5"
+            },
+            {
+              "status": "unsupported",
+              "reason": "after_scope",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "81531fcacc3e23a9aa6414eff6f4d0c6c4622db730edb41dee8f57cbaebebee5"
+            },
+            {
+              "status": "unsupported",
+              "reason": "wrong_before_revision",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "81531fcacc3e23a9aa6414eff6f4d0c6c4622db730edb41dee8f57cbaebebee5"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_predicate",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "81531fcacc3e23a9aa6414eff6f4d0c6c4622db730edb41dee8f57cbaebebee5"
+            },
+            {
+              "status": "unsupported",
+              "reason": "invalid_proposal_schema",
+              "method": "deterministic_baseline",
+              "verifier_version": "verifier-v1",
+              "bundle_digest": "81531fcacc3e23a9aa6414eff6f4d0c6c4622db730edb41dee8f57cbaebebee5"
+            }
+          ],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "be8d266af721368a0b831a9303ee19f08996841d653447bb8318256d9346b42b"
+            },
+            {
+              "stage": "detection",
+              "receipt": "c511f6aab0f7766902602cedcca707655cf892e6eaf01d23c71ad269db1122b9"
+            },
+            {
+              "stage": "verification",
+              "receipt": "53aa9568b7176185115c60f90984fafdc78d289c020628d0404605afb9edba0a"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "truncated_moving_pages-heldout-05",
+      "family": "truncated_moving_pages",
+      "lineage": "truncated_moving_pages-template-11",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "unstable_observation",
+          "outcome": "unstable_observation",
+          "expected_facts": [],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 0,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "pass": true
+          },
+          "verification": [],
+          "forged_decisions": [],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "6b0fee6f662914981ac792f6ebaa81b7b7f20e159cd23b2c32eea9a5bee22346"
+            },
+            {
+              "stage": "detection",
+              "receipt": "e71a8c670af01d9e817415035707c2423f541b8de62bd2822f265cc9d83b1773"
+            },
+            {
+              "stage": "verification",
+              "receipt": "a08d36a6e662bbe420fee499cc67abaaa9843c6d47e1c5bcb3e073d44c94884c"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "unchanged_valid_200-heldout-01",
+      "family": "unchanged_valid_200",
+      "lineage": "unchanged_valid_200-template-07",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "unchanged_in_observed_scope",
+          "outcome": "unchanged_in_observed_scope",
+          "expected_facts": [],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 0,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "pass": true
+          },
+          "verification": [],
+          "forged_decisions": [],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "12fdfcea825514552bace0dbab1fc94ab2d632f9fb2d48007cea92869a8d9faa"
+            },
+            {
+              "stage": "detection",
+              "receipt": "dc7023a15c8b972cd01c2ecfcd731dd3bbc31173bb5a831a36d247b8ed3e2cf8"
+            },
+            {
+              "stage": "verification",
+              "receipt": "bf6bcc10f0458b6e3542a714e1cc3ce14369922be80fa9d43b5d545898281c99"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "unchanged_valid_200-heldout-05",
+      "family": "unchanged_valid_200",
+      "lineage": "unchanged_valid_200-template-11",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "unchanged_in_observed_scope",
+          "outcome": "unchanged_in_observed_scope",
+          "expected_facts": [],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 0,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "pass": true
+          },
+          "verification": [],
+          "forged_decisions": [],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "77d514ca6a72b952a16c0aed4d9db26b86de064b16a92d54ce0285e761ef8e93"
+            },
+            {
+              "stage": "detection",
+              "receipt": "4a14fc0f5647700b0a6c41024d9900eb00f17e5237cd11c96cba159fd345cfe9"
+            },
+            {
+              "stage": "verification",
+              "receipt": "b14303995ba8d65213be5f346323ab3152196f73de9512f6e567b3f5d2adcbab"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "valid_invalid_304-heldout-02",
+      "family": "valid_invalid_304",
+      "lineage": "valid_invalid_304-template-08",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "source_unavailable",
+          "outcome": "source_unavailable",
+          "expected_facts": [],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 0,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "pass": true
+          },
+          "verification": [],
+          "forged_decisions": [],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "cd9bebbb873f9498eab73b8b4a166d25ce5902ab38cae123fccfd94da62630d2"
+            },
+            {
+              "stage": "detection",
+              "receipt": "cce3df44b08faa919628584420b5d14128c31d957e1c978b71377e2d08b7c58e"
+            },
+            {
+              "stage": "verification",
+              "receipt": "ffc01061a48c8fc821ff34432110570bcf2cf3c5bf31ad34e497e36568aadaa5"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "valid_invalid_304-heldout-05",
+      "family": "valid_invalid_304",
+      "lineage": "valid_invalid_304-template-11",
+      "method": "deterministic_baseline",
+      "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+      "normalization_passed": true,
+      "transitions": [
+        {
+          "transition": 1,
+          "expected_outcome": "source_unavailable",
+          "outcome": "source_unavailable",
+          "expected_facts": [],
+          "emitted_facts": [],
+          "grade": {
+            "expected": 0,
+            "emitted": 0,
+            "matched": 0,
+            "missed": 0,
+            "duplicates": 0,
+            "unsupported": 0,
+            "precision": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "recall": {
+              "value": null,
+              "numerator": 0,
+              "denominator": 0,
+              "unit": "ratio",
+              "state": "not_applicable"
+            },
+            "pass": true
+          },
+          "verification": [],
+          "forged_decisions": [],
+          "normalization_error": null,
+          "execution_receipts": [
+            {
+              "stage": "normalization",
+              "receipt": "9a698b19e8fcea902b0d236cbfb05b9ba257033184b5a482c92c5eec0ba1e2e8"
+            },
+            {
+              "stage": "detection",
+              "receipt": "c9d73160d6b8210bfdbc62e497a7facdcbc39e3273b26a0e4cd2f5c15e1c6640"
+            },
+            {
+              "stage": "verification",
+              "receipt": "b034ece56fa35b85dc49eaf4ccf4e437cda012a2ac3833f897caf2658dead0a9"
+            }
+          ],
+          "pass": true
+        }
+      ],
+      "pass": true
+    }
+  ],
+  "stable_digest": "a4bc36d5ab9519449de03d42b5f2badd804a424ade49b556e7a3e8331269af78",
+  "execution": {
+    "run_started": "2026-11-01T17:00:40.644Z",
+    "run_finished": "2026-11-01T17:00:40.687Z",
+    "elapsed_ms": 42.91509999999998,
+    "source_revision": "87dd52b866969cdc7be5734e4c9a4ba88ee4e0c8",
+    "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
+    "executed_stages": [
+      "normalization",
+      "detection",
+      "verification"
+    ],
+    "not_executed_stages": [
+      "live_collection",
+      "model_inference",
+      "human_review",
+      "publication"
+    ],
+    "mode": "authored_synthetic",
+    "runtime": "v24.19.0"
+  }
+}

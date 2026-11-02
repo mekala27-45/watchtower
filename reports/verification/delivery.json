@@ -12,7 +12,7 @@
   "site": {
     "url": null,
     "verified": false,
-    "blocker": "GitHub repository creation requires a restored Chrome window; current native windows are minimized and browser provider unavailable."
+    "blocker": "Computer Use stopped on November 2 because the current browser URL could not be verified safely. No repository was created or changed."
   },
   "dispatch": {
     "verified": false,
@@ -25,8 +25,15 @@
   "release": {
     "verified": false,
     "url": null,
-    "public": false
+    "public": false,
+    "local_tag": "day23-watchtower-verified-candidate",
+    "verification": "packaged provenance/release-verification.json"
   },
   "browser_evidence": "reports/browser/postgres.json",
-  "demo_gif": "reports/browser/postgres-demo.gif"
+  "demo_gif": "reports/browser/postgres-demo.gif",
+  "rederivation": {
+    "passed": true,
+    "evidence": "reports/verification/rederive.json",
+    "separate_empty_database_evidence": "reports/verification/rederive-database-isolation.json"
+  }
 }

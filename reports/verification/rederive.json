@@ -1,50 +1,115 @@
 {
-  "revision": "88c830b8ae5db2f369aa073fa55d059fedea1de1",
-  "worktree": "C:\\Users\\mekal\\Documents\\Codex\\2026-11-01\\new-chat\\work\\watchtower-rederive-88c830b8ae",
+  "revision": "87dd52b866969cdc7be5734e4c9a4ba88ee4e0c8",
+  "worktree": "C:\\Users\\mekal\\Documents\\Codex\\2026-11-01\\new-chat\\work\\watchtower-rederive-87dd52b866-20261101170028937",
   "started_clean": true,
-  "fresh_database_state": "Tests and fault harness create independent temporary databases, no original state copied.",
   "commands": [
     {
-      "script": "scripts/generate-fixtures.mjs",
+      "script": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+      "args": [
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
       "exit_code": 0,
       "allowed_exit_codes": [
         0
-      ]
+      ],
+      "log": "reports/verification/rederive-npm-ci.log"
+    },
+    {
+      "script": "scripts/verify-report-evidence.mjs",
+      "args": [
+        "--archived"
+      ],
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ],
+      "log": "reports/verification/rederive-verify-report-evidence.mjs.log"
+    },
+    {
+      "script": "scripts/generate-fixtures.mjs",
+      "args": [],
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ],
+      "log": "reports/verification/rederive-generate-fixtures.mjs.log"
     },
     {
       "script": "scripts/evaluate.mjs",
+      "args": [],
       "exit_code": 0,
       "allowed_exit_codes": [
         0
-      ]
-    },
-    {
-      "script": "agent/run-model.mjs",
-      "exit_code": 2,
-      "allowed_exit_codes": [
-        2
-      ]
+      ],
+      "log": "reports/verification/rederive-evaluate.mjs.log"
     },
     {
       "script": "scripts/check.mjs",
+      "args": [],
       "exit_code": 0,
       "allowed_exit_codes": [
         0
-      ]
+      ],
+      "log": "reports/verification/rederive-check.mjs.log"
     },
     {
       "script": "scripts/fault-matrix.mjs",
+      "args": [],
       "exit_code": 0,
       "allowed_exit_codes": [
         0
-      ]
+      ],
+      "log": "reports/verification/rederive-fault-matrix.mjs.log"
+    },
+    {
+      "script": "scripts/fault-matrix-postgres.mjs",
+      "args": [],
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ],
+      "log": "reports/verification/rederive-fault-matrix-postgres.mjs.log"
+    },
+    {
+      "script": "node_modules/typescript/bin/tsc",
+      "args": [],
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ],
+      "log": "reports/verification/rederive-typecheck.log"
+    },
+    {
+      "script": "scripts/build-site.mjs",
+      "args": [],
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ],
+      "log": "reports/verification/rederive-build-site.mjs.log"
+    },
+    {
+      "script": "tests/browser-flow.mjs",
+      "args": [],
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ],
+      "log": "reports/verification/rederive-browser-flow.mjs.log"
     },
     {
       "script": "scripts/render-reports.mjs",
+      "args": [
+        "--archived"
+      ],
       "exit_code": 0,
       "allowed_exit_codes": [
         0
-      ]
+      ],
+      "log": "reports/verification/rederive-render-reports.mjs.log"
     }
   ],
   "comparisons": [
@@ -73,12 +138,98 @@
       "match": true
     },
     {
-      "path": "reports/model/current.json unexecuted rows",
+      "path": "reports/faults/postgres-matrix.json stable outcomes",
+      "expected": "33c6739760269210b8299c0b4cf49b840311e603eb86d93c28ad616d7408a348",
+      "actual": "33c6739760269210b8299c0b4cf49b840311e603eb86d93c28ad616d7408a348",
+      "match": true
+    },
+    {
+      "path": "reports/model/current.json preserved actual inference archive",
+      "expected": "face3c02eff80b09e9efdf5f553c475d79c54e540c301d5ea76b13fc32819780",
+      "actual": "face3c02eff80b09e9efdf5f553c475d79c54e540c301d5ea76b13fc32819780",
       "match": true
     }
   ],
-  "local_rederivation_passed": true,
+  "preserved_artifacts": [
+    {
+      "source": "reports/verification/rederive-npm-ci.log",
+      "path": "reports/verification/rederived-artifacts/rederive-npm-ci.log"
+    },
+    {
+      "source": "reports/verification/rederive-verify-report-evidence.mjs.log",
+      "path": "reports/verification/rederived-artifacts/rederive-verify-report-evidence.mjs.log"
+    },
+    {
+      "source": "reports/verification/rederive-generate-fixtures.mjs.log",
+      "path": "reports/verification/rederived-artifacts/rederive-generate-fixtures.mjs.log"
+    },
+    {
+      "source": "reports/verification/rederive-evaluate.mjs.log",
+      "path": "reports/verification/rederived-artifacts/rederive-evaluate.mjs.log"
+    },
+    {
+      "source": "reports/verification/rederive-check.mjs.log",
+      "path": "reports/verification/rederived-artifacts/rederive-check.mjs.log"
+    },
+    {
+      "source": "reports/verification/rederive-fault-matrix.mjs.log",
+      "path": "reports/verification/rederived-artifacts/rederive-fault-matrix.mjs.log"
+    },
+    {
+      "source": "reports/verification/rederive-fault-matrix-postgres.mjs.log",
+      "path": "reports/verification/rederived-artifacts/rederive-fault-matrix-postgres.mjs.log"
+    },
+    {
+      "source": "reports/verification/rederive-typecheck.log",
+      "path": "reports/verification/rederived-artifacts/rederive-typecheck.log"
+    },
+    {
+      "source": "reports/verification/rederive-build-site.mjs.log",
+      "path": "reports/verification/rederived-artifacts/rederive-build-site.mjs.log"
+    },
+    {
+      "source": "reports/verification/rederive-browser-flow.mjs.log",
+      "path": "reports/verification/rederived-artifacts/rederive-browser-flow.mjs.log"
+    },
+    {
+      "source": "reports/verification/rederive-render-reports.mjs.log",
+      "path": "reports/verification/rederived-artifacts/rederive-render-reports.mjs.log"
+    },
+    {
+      "source": "reports/verification/checks.json",
+      "path": "reports/verification/rederived-artifacts/reports-verification-checks.json"
+    },
+    {
+      "source": "reports/verification/tests.tap",
+      "path": "reports/verification/rederived-artifacts/reports-verification-tests.tap"
+    },
+    {
+      "source": "reports/verification/rederived-full.json",
+      "path": "reports/verification/rederived-artifacts/reports-verification-rederived-full.json"
+    },
+    {
+      "source": "reports/verification/rederived-model-subset.json",
+      "path": "reports/verification/rederived-artifacts/reports-verification-rederived-model-subset.json"
+    },
+    {
+      "source": "reports/faults/matrix.json",
+      "path": "reports/verification/rederived-artifacts/reports-faults-matrix.json"
+    },
+    {
+      "source": "reports/faults/postgres-matrix.json",
+      "path": "reports/verification/rederived-artifacts/reports-faults-postgres-matrix.json"
+    },
+    {
+      "source": "reports/browser/rederive.json",
+      "path": "reports/verification/rederived-artifacts/reports-browser-rederive.json"
+    }
+  ],
+  "fresh_database_state": "SQLite tests use fresh temporary or in-memory stores. PostgreSQL tests, when configured, use fresh random test namespaces and independent connections. No original application database or model session state is copied.",
   "actual_model_executed": false,
+  "actual_model_evidence_regraded": true,
   "public_checks_executed": false,
-  "generated_at": "2026-11-01T16:04:42.988Z"
+  "postgres_tests_configured": true,
+  "started_at": "2026-11-01T17:00:29.299Z",
+  "local_rederivation_passed": true,
+  "finished_at": "2026-11-01T17:06:57.857Z"
 }

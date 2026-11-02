@@ -1,0 +1,182 @@
+{
+  "schema": "watchtower-browser-verification-v1",
+  "label": "rederive",
+  "started_at": "2026-11-01T17:06:54.352Z",
+  "source_revision": "87dd52b866969cdc7be5734e4c9a4ba88ee4e0c8",
+  "backend": "sqlite_local_candidate",
+  "tests": [
+    {
+      "name": "compiled site loads local fonts and four labeled views",
+      "status": "passed",
+      "detail": {
+        "fontFaces": [
+          {
+            "family": "Bodoni Moda",
+            "status": "loaded"
+          },
+          {
+            "family": "Noto Sans",
+            "status": "loaded"
+          },
+          {
+            "family": "Noto Sans",
+            "status": "loaded"
+          },
+          {
+            "family": "Noto Sans",
+            "status": "loaded"
+          },
+          {
+            "family": "Fira Mono",
+            "status": "loaded"
+          }
+        ]
+      }
+    },
+    {
+      "name": "keyboard skip link and section focus are visible",
+      "status": "passed"
+    },
+    {
+      "name": "real HTTP prepare approve publish and identical receipt recovery",
+      "status": "passed",
+      "detail": {
+        "receipt_id": "74a1a966-8d5a-4163-99c5-bbd410ff37da",
+        "published_at": 1793552815271,
+        "briefing_digest": "163f5707f31898b2747fd7f31b45345de142f5949f31d2fcc86e5a6350a2dad1",
+        "namespace": "demo:28ff96d9-ff8c-4424-9244-0bd87ff4c1c8"
+      }
+    },
+    {
+      "name": "separate HTTP client sees exactly one committed receipt",
+      "status": "passed",
+      "detail": {
+        "receipt_count": 1,
+        "receipt_id": "74a1a966-8d5a-4163-99c5-bbd410ff37da"
+      }
+    },
+    {
+      "name": "light theme real rendered text contrast and four views",
+      "status": "passed",
+      "detail": [
+        {
+          "view": "sources",
+          "checked": 61,
+          "worst": 5.798269134032843
+        },
+        {
+          "view": "briefings",
+          "checked": 66,
+          "worst": 6.073828333888035
+        },
+        {
+          "view": "trace",
+          "checked": 136,
+          "worst": 5.798269134032843
+        },
+        {
+          "view": "evidence",
+          "checked": 99,
+          "worst": 6.073828333888035
+        }
+      ]
+    },
+    {
+      "name": "dark theme real rendered text contrast and four views",
+      "status": "passed",
+      "detail": [
+        {
+          "view": "sources",
+          "checked": 61,
+          "worst": 8.769416394215044
+        },
+        {
+          "view": "briefings",
+          "checked": 66,
+          "worst": 6.937896300492237
+        },
+        {
+          "view": "trace",
+          "checked": 136,
+          "worst": 8.769416394215044
+        },
+        {
+          "view": "evidence",
+          "checked": 99,
+          "worst": 8.910879174833159
+        }
+      ]
+    },
+    {
+      "name": "narrow mobile layout keeps controls and aligned evidence readable",
+      "status": "passed"
+    },
+    {
+      "name": "reduced motion and screen reader labels",
+      "status": "passed"
+    },
+    {
+      "name": "unknown and empty source states keep successful negative claims absent",
+      "status": "passed"
+    },
+    {
+      "name": "loading and partial source response remain labeled",
+      "status": "passed",
+      "detail": {
+        "kind": "controlled_browser_response",
+        "scope": "UI loading and partial-state boundary"
+      }
+    },
+    {
+      "name": "failed API refresh offers retry and timestamps retained data",
+      "status": "passed",
+      "detail": {
+        "kind": "controlled_network_failure"
+      }
+    },
+    {
+      "name": "stale approval names source and blocks publish until a fresh review",
+      "status": "passed",
+      "detail": {
+        "kind": "actual_backend_head_change",
+        "backend": "sqlite_local_candidate",
+        "namespace": "demo:3f80b069-e744-425a-aafd-1cdab6b3c122",
+        "publication_status": 409,
+        "receipt_count": 0
+      }
+    },
+    {
+      "name": "real expired session is rejected and UI asks for a fresh session",
+      "status": "passed"
+    },
+    {
+      "name": "no uncaught browser errors",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    "rederive-briefing-review.png",
+    "rederive-briefing-approved.png",
+    "rederive-briefing-published.png",
+    "rederive-briefing-recovered.png",
+    "rederive-light-sources.png",
+    "rederive-light-briefings.png",
+    "rederive-light-trace.png",
+    "rederive-light-evidence.png",
+    "rederive-dark-sources.png",
+    "rederive-dark-briefings.png",
+    "rederive-dark-trace.png",
+    "rederive-dark-evidence.png",
+    "rederive-mobile-briefing.png",
+    "rederive-mobile-sources.png"
+  ],
+  "errors": [],
+  "site_url": "http://127.0.0.1:63443",
+  "browser_version": "156.0.8078.74",
+  "api_revision": "87dd52b866969cdc7be5734e4c9a4ba88ee4e0c8",
+  "api_url": "http://127.0.0.1:63443",
+  "status": "passed",
+  "finished_at": "2026-11-01T17:06:56.783Z",
+  "passed": 14,
+  "failed": 0
+}

@@ -67,7 +67,7 @@
   {
     "item": "Public Pages site completes the visible API review and receipt flow.",
     "status": "not done",
-    "evidence": "No public Pages site exists yet; repository creation requires an accessible restored Chrome window."
+    "evidence": "No public Pages site exists yet. Computer Use stopped on November 2 because it could not verify the browser URL safely; no repository was created."
   },
   {
     "item": "Governance, notices, source policy, skills and retention checks are complete.",
@@ -82,11 +82,11 @@
   {
     "item": "Final reports, scans, live checks and clean worktree rederivation pass.",
     "status": "not done",
-    "evidence": "Final report and clean-worktree checks are being preserved; public live checks remain blocked, so this requirement is not done."
+    "evidence": "reports/verification/rederive.json passes clean-checkout regeneration, 156 tests and both fault matrices using the separate empty database proved in rederive-database-isolation.json. Public live checks remain blocked."
   },
   {
     "item": "Release commits and tag are verified, with public release state explicit.",
     "status": "not done",
-    "evidence": "The local candidate release is prepared; the required public repository, remote tag and release remain pending."
+    "evidence": "Local candidate tag day23-watchtower-verified-candidate is verified by the packaged provenance/release-verification.json. The required public repository, remote tag and release remain pending."
   }
 ]

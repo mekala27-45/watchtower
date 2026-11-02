@@ -29,6 +29,8 @@
     "repository": null,
     "pages": null,
     "dispatch": null,
-    "reason": "No repository create connector; native Chrome windows minimized and unavailable to browser controls."
+    "reason": "Computer Use stopped on November 2 because the current browser URL could not be verified safely. No repository was created or changed.",
+    "prior_browser_blocker": "No repository create connector; native Chrome windows minimized and unavailable to browser controls.",
+    "followup_date": "2026-11-02"
   }
 }

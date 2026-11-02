@@ -1,0 +1,234 @@
+{
+  "schema": "watchtower-prepared-deployment-v1",
+  "candidate_tag": "day23-watchtower-verified-candidate",
+  "target": "production",
+  "project": {
+    "name": "watchtower",
+    "id": "prj_lYRZi3drj3O1KVLqx98pdpBEPAZL",
+    "team_id": "team_NNcxgB3J9dHQnUJYJJYvRMda",
+    "plan": "hobby",
+    "framework": "container"
+  },
+  "required_secret": {
+    "name": "DATABASE_URL",
+    "destination": "Watchtower Vercel project Production environment",
+    "source_project": "sparkling-mode-99569565",
+    "source_database": "watchtower",
+    "value_in_artifact": false,
+    "approval": "pending_destination_specific_user_approval"
+  },
+  "intended_repository": "mekala27-45/watchtower",
+  "public_deployment_executed": false,
+  "files": [
+    {
+      "path": "Dockerfile.vercel",
+      "bytes": 518,
+      "sha256": "2762f055d3a1e872ceeea5bf40a15d4b64ed12848c8bcdcc84bcb77643d697c3"
+    },
+    {
+      "path": "apps/api/server.mjs",
+      "bytes": 7887,
+      "sha256": "5bf8614f27155fa36c93f72e40b4725e8445429957017156e0f79eec30bcef21"
+    },
+    {
+      "path": "apps/site/app.mjs",
+      "bytes": 19560,
+      "sha256": "63f9e1d315e0b746598f379ba8c06f118fa22e6b811fb255793b40c91ba62127"
+    },
+    {
+      "path": "apps/site/contracts.ts",
+      "bytes": 401,
+      "sha256": "642e264e98dcf11db99f7f739a47fe18524fc81055b0958f8918abab7f2e83bd"
+    },
+    {
+      "path": "apps/site/fonts/bodoni-moda-LICENSE.txt",
+      "bytes": 4526,
+      "sha256": "6c64f717433eadd29b058d6254fe25c1ee2d249ce3772f843bb21f73285779c2"
+    },
+    {
+      "path": "apps/site/fonts/bodoni-moda-latin-400-normal.woff2",
+      "bytes": 14528,
+      "sha256": "e2863d3bbe2e094f1ce98053ee3c6200cfa35f82b9f4cc6fd95fbaead4125d4f"
+    },
+    {
+      "path": "apps/site/fonts/fira-mono-LICENSE.txt",
+      "bytes": 4314,
+      "sha256": "18aabf190848725e2576eefb5c29ba06aac1029d02132252a7f312eac2e50cf3"
+    },
+    {
+      "path": "apps/site/fonts/fira-mono-latin-400-normal.woff2",
+      "bytes": 16640,
+      "sha256": "8d1e753569ea7964a3beacda126450f8469b70c14c161ae8062cf4c12835e947"
+    },
+    {
+      "path": "apps/site/fonts/noto-sans-LICENSE.txt",
+      "bytes": 4518,
+      "sha256": "54ec7b5a35310ad66f9f3091426f7028484cbf9ae1ab5da30122ee412a3009e1"
+    },
+    {
+      "path": "apps/site/fonts/noto-sans-latin-400-normal.woff2",
+      "bytes": 13120,
+      "sha256": "09aee8065d25508f23a4c3d92cd777ac869c52d93fd868a88f025d888a7937d6"
+    },
+    {
+      "path": "apps/site/fonts/noto-sans-latin-600-normal.woff2",
+      "bytes": 13496,
+      "sha256": "79e274470d1c5a0118eb325e2ea6f2eb2a449336d7fde1a4f20a2f32fe1119ed"
+    },
+    {
+      "path": "apps/site/fonts/noto-sans-latin-700-normal.woff2",
+      "bytes": 13464,
+      "sha256": "e77bfe1db912f687b0319b60de158cfada67f89c8ee4f8e2bd6020f970accbfb"
+    },
+    {
+      "path": "apps/site/fonts/provenance.json",
+      "bytes": 1587,
+      "sha256": "ca87fde7e10edf75bafb547455486dffd32fa2470bb80b530b5408fb151d5b5b"
+    },
+    {
+      "path": "apps/site/index.html",
+      "bytes": 10511,
+      "sha256": "e99b1182ee701fda475d2cb0ea002e172066bd691806d0cfcd236dcba4f75c75"
+    },
+    {
+      "path": "apps/site/runtime-config.mjs",
+      "bytes": 755,
+      "sha256": "c4b06d8261202cbf251029ed5266ee0a29622a317b6b1f1c9f1a413b729faf94"
+    },
+    {
+      "path": "apps/site/styles.css",
+      "bytes": 13497,
+      "sha256": "bf542e96fbfd8882d8f2f16047547e86e365357dbbf5eb6e14871908f8691761"
+    },
+    {
+      "path": "apps/site/view-model.mjs",
+      "bytes": 6675,
+      "sha256": "46bfa2284c9d843e2f57552e6098e61650dbc14a981602fb9a74c7059cfe2181"
+    },
+    {
+      "path": "config/prose-rules.json",
+      "bytes": 821,
+      "sha256": "be77190a766f399faecf137a674416435efd94383679efac4691396c60841b04"
+    },
+    {
+      "path": "config/watchlist.json",
+      "bytes": 1221,
+      "sha256": "98ff0e1ce6f83d1b68541a0807cdeb9a6ada510f54268123535e9c2ed91753ce"
+    },
+    {
+      "path": "db/README.md",
+      "bytes": 2514,
+      "sha256": "abf4f0b0002400abd1170ce2bf0d948834722ed501673e3b26e72800c14b03fb"
+    },
+    {
+      "path": "db/migrations/001_watchtower.sql",
+      "bytes": 21700,
+      "sha256": "93906ce8523e54f11f426acdfbb9b9ee4b81ba3c92d4721751c6a860cc875a72"
+    },
+    {
+      "path": "db/migrations/002_runtime_adapter.sql",
+      "bytes": 3564,
+      "sha256": "34202e1c08bfb4a62736963e737c3ec9dbde65623d90e770955a28bd09acd87a"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 58579,
+      "sha256": "b87ad16ca4990efa5ac423cfc8b31acd6da6409ab52c3c7fbbc805b6979e078a"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1259,
+      "sha256": "8902d6e9d94943bb40ada2904c73899b080a31120ae541ad96e3dc551778730c"
+    },
+    {
+      "path": "packages/collector/RETENTION.md",
+      "bytes": 2450,
+      "sha256": "8d4b20e8a0078d8a2907b4189422912bbb911c9e73a36efd015a4454dd331a63"
+    },
+    {
+      "path": "packages/collector/index.mjs",
+      "bytes": 19647,
+      "sha256": "c6e69ea0b0b6e0e1ecca5643854cf6a4e43e06ce461d78396174cda503e66b0e"
+    },
+    {
+      "path": "packages/collector/persistent-cache.mjs",
+      "bytes": 6717,
+      "sha256": "a10e21dbe58d00a83c79583bd8ba745021522c359350e1475f616f08e30950c0"
+    },
+    {
+      "path": "packages/collector/postgres-cache.mjs",
+      "bytes": 4063,
+      "sha256": "48279e121aed014ea3aa010ce47dd597e8fad8a0d4feaae7d86d7daeae5a5caa"
+    },
+    {
+      "path": "packages/collector/retention-postgres.mjs",
+      "bytes": 3996,
+      "sha256": "68407e21374eb11148cefc83d8b1d8da37e80b5ac9f553b20fb85bf0da13f8bf"
+    },
+    {
+      "path": "packages/collector/retention.mjs",
+      "bytes": 9094,
+      "sha256": "257622a04bec6be6d6d4978b6c4f75bdd35f9f8448835dc8817190a03dc26163"
+    },
+    {
+      "path": "packages/domain/fixture-loader.mjs",
+      "bytes": 1158,
+      "sha256": "e8874507ecffc355d5086e74e667a761bcc00fa2fe22c9aa8a2a385267958d88"
+    },
+    {
+      "path": "packages/domain/grader.mjs",
+      "bytes": 5419,
+      "sha256": "ef7b1c5af4d4beb78c91b7056637afd9e0272e9f18c68b30ca2a18635dbf617d"
+    },
+    {
+      "path": "packages/domain/index.mjs",
+      "bytes": 16689,
+      "sha256": "79647d2b50dfeefb07db79fc04c8b50d43326f20347c36622eb9ee297be3ad52"
+    },
+    {
+      "path": "packages/reports/index.mjs",
+      "bytes": 5000,
+      "sha256": "7da25928e0811a6d23f29eeac358ec11478446bf565c2c87aa1611a159d6f66d"
+    },
+    {
+      "path": "packages/reports/input.mjs",
+      "bytes": 3146,
+      "sha256": "11065d44693fb79c3d143d99e557d509c3f5cc18b9c02528835f9175d3f1a380"
+    },
+    {
+      "path": "packages/reports/model-input.mjs",
+      "bytes": 12662,
+      "sha256": "2ee965c54efbdfa9190b95786c13846e8f566af4a1e743393b588b98da1f556c"
+    },
+    {
+      "path": "packages/workflow/POSTGRES.md",
+      "bytes": 4925,
+      "sha256": "a47c5fb5d6d09631edeca34490fa636f841da24b05c86f9ebab367cfd3d89fe6"
+    },
+    {
+      "path": "packages/workflow/README.md",
+      "bytes": 3891,
+      "sha256": "01abf334efbcb2e2cd1171d0f942755b3fd4152120ff1ffb56d597da939a13c2"
+    },
+    {
+      "path": "packages/workflow/postgres.mjs",
+      "bytes": 36211,
+      "sha256": "507b45b92b55aabe5a865c5400e256d2c22ed976d91ff2be9122605b44ae9d3e"
+    },
+    {
+      "path": "packages/workflow/store.mjs",
+      "bytes": 31218,
+      "sha256": "8bf374eb41ef4d6c0e38b7ed27ed6e61ec400dd98879188b507f1c8077041f88"
+    },
+    {
+      "path": "reports/current.json",
+      "bytes": 1499332,
+      "sha256": "3206c5888323162f8e01ff5122c36b38c50a4a42dcfa532284ac6a0d19b1a313"
+    },
+    {
+      "path": "vercel.json",
+      "bytes": 45,
+      "sha256": "2cb9c0b5d6f22cd30b7bfdb2be86ad5a8df70c716ac4b08156d9f5a6b0e51bf9"
+    }
+  ]
+}

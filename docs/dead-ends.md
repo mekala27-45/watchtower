@@ -11,3 +11,5 @@ The first live collector run rejected valid GitHub pagination links because the 
 A concurrent test regenerated shared fixture files while another test read them. The resulting JSON read failure is preserved under reports/verification/prior-attempts. Verification-only changes now generate fixtures in separate temporary roots. The actual model inputs and frozen source bytes remain unchanged.
 
 Automatic approval review rejected transferring the dedicated Neon credential to Vercel because destination-specific user approval is required. Native browser controls cannot access the minimized Chrome windows needed to create the GitHub repository. Deployment and publication remain pending those two actions.
+
+On November 2 the browser inventory was refreshed. Computer Use ended because it could not verify the current URL safely. No repository was created or changed. Independent packaging and evidence verification continued.

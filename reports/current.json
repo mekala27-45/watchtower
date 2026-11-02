@@ -4,7 +4,7 @@
   "mode": "separate_methods",
   "code_revision": "0e13886d2f37e5726492a86707360d81fe616889",
   "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
-  "generated_at": "2026-11-01T16:58:08.401Z",
+  "generated_at": "2026-11-02T15:30:10.949Z",
   "metrics": [
     {
       "id": "baseline.full.sequences",
@@ -38849,7 +38849,7 @@
     {
       "item": "Public Pages site completes the visible API review and receipt flow.",
       "status": "not done",
-      "evidence": "No public Pages site exists yet; repository creation requires an accessible restored Chrome window."
+      "evidence": "No public Pages site exists yet. Computer Use stopped on November 2 because it could not verify the browser URL safely; no repository was created."
     },
     {
       "item": "Governance, notices, source policy, skills and retention checks are complete.",
@@ -38864,12 +38864,12 @@
     {
       "item": "Final reports, scans, live checks and clean worktree rederivation pass.",
       "status": "not done",
-      "evidence": "Final report and clean-worktree checks are being preserved; public live checks remain blocked, so this requirement is not done."
+      "evidence": "reports/verification/rederive.json passes clean-checkout regeneration, 156 tests and both fault matrices using the separate empty database proved in rederive-database-isolation.json. Public live checks remain blocked."
     },
     {
       "item": "Release commits and tag are verified, with public release state explicit.",
       "status": "not done",
-      "evidence": "The local candidate release is prepared; the required public repository, remote tag and release remain pending."
+      "evidence": "Local candidate tag day23-watchtower-verified-candidate is verified by the packaged provenance/release-verification.json. The required public repository, remote tag and release remain pending."
     }
   ],
   "completion": [
@@ -38941,7 +38941,7 @@
     {
       "item": "Public Pages site completes the visible API review and receipt flow.",
       "status": "not done",
-      "evidence": "No public Pages site exists yet; repository creation requires an accessible restored Chrome window."
+      "evidence": "No public Pages site exists yet. Computer Use stopped on November 2 because it could not verify the browser URL safely; no repository was created."
     },
     {
       "item": "Governance, notices, source policy, skills and retention checks are complete.",
@@ -38956,12 +38956,12 @@
     {
       "item": "Final reports, scans, live checks and clean worktree rederivation pass.",
       "status": "not done",
-      "evidence": "Final report and clean-worktree checks are being preserved; public live checks remain blocked, so this requirement is not done."
+      "evidence": "reports/verification/rederive.json passes clean-checkout regeneration, 156 tests and both fault matrices using the separate empty database proved in rederive-database-isolation.json. Public live checks remain blocked."
     },
     {
       "item": "Release commits and tag are verified, with public release state explicit.",
       "status": "not done",
-      "evidence": "The local candidate release is prepared; the required public repository, remote tag and release remain pending."
+      "evidence": "Local candidate tag day23-watchtower-verified-candidate is verified by the packaged provenance/release-verification.json. The required public repository, remote tag and release remain pending."
     }
   ],
   "runs": {
@@ -39018,5 +39018,5 @@
   },
   "disclaimer": "Portfolio demonstration using public release metadata and authored synthetic evaluation cases. Findings describe captured observations within a declared window. They are not security assessments or upgrade recommendations. Agent proposals, deterministic results, recordings and live observations are labeled separately. Incomplete coverage remains unknown.",
   "disclaimer_digest": "d09b14e10ff9d4a2f57228087a40f7577bc618daa2cf1ecaecfa6648c44c52b5",
-  "digest": "7f09d6502954c7ef5f52091ec5da09e532ce4a18732953ab87878ba0bca2c0b0"
+  "digest": "88744a05b29d8b26a8b8eb1b62723e87795b73c054e1321cd7f8f9d441ed2b59"
 }
