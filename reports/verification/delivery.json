@@ -1,18 +1,23 @@
 {
   "backend": "postgres",
   "fonts": "installed",
-  "browser": "passed_local_and_postgres",
+  "browser": "passed_local_postgres_and_public_api",
   "api": {
-    "url": null,
-    "verified": false,
-    "browser_verified": false,
-    "separate_client_verified": false,
-    "blocker": "Automatic approval review requires explicit approval before storing the dedicated Neon DATABASE_URL in Vercel Production."
+    "url": "https://watchtower-mekala27-45s-projects.vercel.app",
+    "verified": true,
+    "browser_verified": true,
+    "separate_client_verified": true,
+    "source_revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24",
+    "deployment_id": "dpl_4q5w3qndov9DbwxBeriS5JZz4q42",
+    "health_evidence": "reports/verification/public-live.json",
+    "browser_evidence": "reports/browser/public-api.json",
+    "ui_serving": "native_modules_from_apps_site",
+    "blocker": null
   },
   "site": {
     "url": null,
     "verified": false,
-    "blocker": "Computer Use stopped on November 2 because the current browser URL could not be verified safely. No repository was created or changed."
+    "blocker": "GitHub CLI has no authenticated host. The requested Chrome profile was visible but minimized before reliable GitHub account verification. No repository was created, and no TinyFish profile has a recorded GitHub sign-in."
   },
   "dispatch": {
     "verified": false,
@@ -26,14 +31,15 @@
     "verified": false,
     "url": null,
     "public": false,
-    "local_tag": "day23-watchtower-verified-candidate",
+    "local_tag": "day23-watchtower-public-api-candidate",
     "verification": "packaged provenance/release-verification.json"
   },
   "browser_evidence": "reports/browser/postgres.json",
-  "demo_gif": "reports/browser/postgres-demo.gif",
+  "demo_gif": "reports/browser/public-api-demo.gif",
   "rederivation": {
     "passed": true,
     "evidence": "reports/verification/rederive.json",
     "separate_empty_database_evidence": "reports/verification/rederive-database-isolation.json"
-  }
+  },
+  "public_browser_evidence": "reports/browser/public-api.json"
 }

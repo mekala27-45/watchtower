@@ -12,9 +12,9 @@ Open RESULTS.md for code-rendered baseline and actual-model tables. Actual infer
 
 Recorded failed case: [asset_metadata_edit-heldout-05](reports/model/runs/actual-2026-11-01T16-50-21-528Z/asset_metadata_edit-heldout-05.json). Its recorded failure code is model_turn_budget_exhausted. This case remains in the declared denominator.
 
-A public API is not verified. A public Pages site is not verified. Actual Actions dispatch is not verified. A public release is not verified.
+Verified API: https://watchtower-mekala27-45s-projects.vercel.app. A public Pages site is not verified. Actual Actions dispatch is not verified. A public release is not verified.
 
-![Recorded Watchtower review and receipt demonstration](reports/browser/postgres-demo.gif)
+![Recorded Watchtower review and receipt demonstration](reports/browser/public-api-demo.gif)
 
 Recorded browser demonstration. This image is not a live service status.
 
@@ -35,7 +35,7 @@ Recorded browser demonstration. This image is not a live service status.
 
 ## Completion
 
-1. **not done** Source, dependency and free-host probes are recorded and checked. reports/probes records verified source IDs, package integrity, CPU artifact, Neon Free direct TLS and Vercel Hobby; public GitHub and container deployment checks remain blocked.
+1. **not done** Source, dependency and free-host probes are recorded and checked. reports/probes records verified source IDs, dependency integrity, CPU model, Neon Free direct TLS and a READY Vercel Hobby container. Public GitHub Pages host checks remain unexecuted.
 
 2. **not done** Claim renderer and every required gate pass their three cases. Contract gates are tested; the registered useful-model criterion failed because actual supported proposals are zero. See reports/model/current.json.
 
@@ -49,7 +49,7 @@ Recorded browser demonstration. This image is not a live service status.
 
 7. **done** Digest-bound review and atomic publication pass stale and retry cases. reports/browser/postgres.json and Postgres tests verify named stale dependencies, digest-bound approval and one receipt recovered through an independent client.
 
-8. **not done** Functional API is live and verified by browser and separate client. The Postgres API works locally in browser and separate-client checks; public Vercel deployment is blocked on database-secret destination approval.
+8. **done** Functional API is live and verified by browser and separate client. reports/verification/public-live.json verifies public PostgreSQL readiness, exact revision and CORS. reports/browser/public-api.json passes 9 browser checks, including publication, identical receipt recovery and a separate client finding exactly one receipt.
 
 9. **done** One actual local agent executes only the three permitted tools. reports/model/current.json records actual provider-directed calls and 26 handler executions; every dispatched inventory contains only the 3 permitted tools.
 
@@ -59,14 +59,14 @@ Recorded browser demonstration. This image is not a live service status.
 
 12. **done** Applicable failure cases recover with independent stored-state assertions. reports/faults/postgres-matrix.json records 541/541 applicable cases recovered,35 not applicable and 109 real process terminations, with independent database assertions.
 
-13. **done** Proof-sheet UI, both themes and accessibility checks are complete. reports/browser/postgres.json records 14 passed real-browser checks across both themes, mobile, focus, stale review and receipt recovery; reports/verification/palette.json has zero failures.
+13. **done** Proof-sheet UI, both themes and accessibility checks are complete. reports/browser/postgres.json passes 14 checks and reports/browser/public-api.json passes 9 public checks across both themes, mobile, keyboard, labels and actual receipt recovery; palette verification has zero failures.
 
-14. **not done** Public Pages site completes the visible API review and receipt flow. No public Pages site exists yet. Computer Use stopped on November 2 because it could not verify the browser URL safely; no repository was created.
+14. **not done** Public Pages site completes the visible API review and receipt flow. The Vercel API-hosted review interface is verified, but the required GitHub Pages site does not exist. GitHub authentication and reliable access to the requested Chrome profile remain unavailable.
 
 15. **done** Governance, notices, source policy, skills and retention checks are complete. Notices, source policy, operator helpers and repository skills are committed; actual Postgres retention tests pass 5/5 with no skipped cases.
 
 16. **not done** Actual dispatch succeeded and schedule configuration is reported honestly. The local operator collection succeeded with honest partial coverage; no Actions dispatch has run. The committed UTC schedule remains gated off.
 
-17. **not done** Final reports, scans, live checks and clean worktree rederivation pass. reports/verification/rederive.json passes clean-checkout regeneration, 156 tests and both fault matrices using the separate empty database proved in rederive-database-isolation.json. Public live checks remain blocked.
+17. **not done** Final reports, scans, live checks and clean worktree rederivation pass. Clean-checkout rederivation passes 156 tests and both fault matrices using a proven separate empty database. Public API checks now pass; required Pages and Actions live checks remain unexecuted.
 
-18. **not done** Release commits and tag are verified, with public release state explicit. Local candidate tag day23-watchtower-verified-candidate is verified by the packaged provenance/release-verification.json. The required public repository, remote tag and release remain pending.
+18. **not done** Release commits and tag are verified, with public release state explicit. The local day23-watchtower-public-api-candidate tag is verified by packaged provenance/release-verification.json, alongside preserved earlier tags. The required public repository, remote tag and public release remain pending.

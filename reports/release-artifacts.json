@@ -1,20 +1,20 @@
 {
-  "state": "local_candidate_only",
-  "candidate_tag": "day23-watchtower-local-candidate",
-  "validated_revision": "88c830b8ae5db2f369aa073fa55d059fedea1de1",
+  "state": "public_api_verified_public_repository_pending",
+  "candidate_tag": "day23-watchtower-public-api-candidate",
+  "validated_revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24",
   "public_release": false,
   "artifacts": [
     {
       "path": "reports/baseline/full.json",
-      "sha256": "96c49127959e04f401777aee94555e715bb6b2738b64444d9bb53bd3ff66f6d2"
+      "sha256": "5a09eed3ba5810a7abbea5cab870a9d65ae498ef632d6cbb3778f0b52200cd1c"
     },
     {
       "path": "reports/baseline/model-subset.json",
-      "sha256": "b397c0501d1eea8939156c32a92158c6e604fa03f733a3d71f07ff234ec8db58"
+      "sha256": "3bc6bbf8d37709cf228d05d6bfa0247cf5ebfda0f1a660501921d0c7cd30c990"
     },
     {
       "path": "reports/model/current.json",
-      "sha256": "406dea3b952f899ea418fe41b49f8965ec430b12608950b80ffd329e8444ce0d"
+      "sha256": "56b10174ad8b9c443efe57edfa45a0a17c0c5a588e9de330976bf665f3117a89"
     },
     {
       "path": "reports/faults/matrix.json",
@@ -22,11 +22,33 @@
     },
     {
       "path": "reports/verification/rederive.json",
-      "sha256": "1662ec5e46a1ee9e5b34d87967dae7f2938a7d95ea74a6ed524fb19cab810f9e"
+      "sha256": "102b4b1441b47728302f56a6b5b7b3ab404c64cddbb6660cdf2c1bdbfd319b95"
     },
     {
       "path": "docs/evaluation-plan.json",
       "sha256": "2ac30e960db3c20053d1a0ab9d01e85886402397326dcb7de389a2fee459b38e"
+    },
+    {
+      "path": "reports/verification/public-live.json",
+      "sha256": "e2b5fa91b79325a67a233f8b27cb10abfd8d9dbdc345afd90472094d4f8c36a1"
+    },
+    {
+      "path": "reports/verification/public-deployment.json",
+      "sha256": "e80fdce59a275199cf8f5dcad36a041f2ee1dea1b92c838bb04994b1a6e035de"
+    },
+    {
+      "path": "reports/browser/public-api.json",
+      "sha256": "d2d5ed3e4f2ee2373be396497c259ad5108546efad07a1f2cbddeb4ec7dabbcf"
     }
-  ]
+  ],
+  "historical_candidate": {
+    "tag": "day23-watchtower-local-candidate",
+    "revision": "88c830b8ae5db2f369aa073fa55d059fedea1de1"
+  },
+  "public_api": "https://watchtower-mekala27-45s-projects.vercel.app",
+  "previous_verified_candidate": {
+    "tag": "day23-watchtower-verified-candidate",
+    "revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24"
+  },
+  "evidence_package_revision": "See packaged provenance/release-verification.json"
 }

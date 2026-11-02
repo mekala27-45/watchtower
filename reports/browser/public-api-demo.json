@@ -1,0 +1,37 @@
+{
+  "schema": "watchtower-screenshot-sequence-v1",
+  "artifact": "public-api-demo.gif",
+  "kind": "presentation_sequence_from_actual_browser_screenshots",
+  "not_elapsed_time_video": true,
+  "backend": "postgres",
+  "source_revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24",
+  "browser_report": "reports/browser/public-api.json",
+  "capture_started_at": "2026-11-02T15:47:24.742Z",
+  "capture_finished_at": "2026-11-02T15:47:33.093Z",
+  "processing": "Repeated masthead/footer cropped; frames padded and resized uniformly; no generated interface content.",
+  "duration_ms": [
+    2600,
+    1800,
+    2400,
+    3000
+  ],
+  "sources": [
+    {
+      "file": "public-api-briefing-review.png",
+      "sha256": "3559d5c912bd50dc48ab9badeea359c5c05e033c071636abe833ff570c792e13"
+    },
+    {
+      "file": "public-api-briefing-approved.png",
+      "sha256": "86b61b549c20004e2a99655a9d3172bb04cc144d2752986e5aa4e758863cdd48"
+    },
+    {
+      "file": "public-api-briefing-published.png",
+      "sha256": "c161f3be2cccb3afc02b9e283dc4a234f975651875f044dc30499040b1b2ef26"
+    },
+    {
+      "file": "public-api-briefing-recovered.png",
+      "sha256": "7dee18dbaa10b51ea462f9b760b80bd5f98163f9dfadaf0c3968818c39de64f3"
+    }
+  ],
+  "sha256": "c869bb479b69eb827e5b419551804a3d4dca5f5990f547da67b13cf8987738b8"
+}

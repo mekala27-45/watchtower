@@ -1,0 +1,30 @@
+{
+  "schema": "watchtower-public-deployment-v1",
+  "recorded_at": "2026-11-02T15:47:54.370Z",
+  "provider": "vercel",
+  "project_id": "prj_lYRZi3drj3O1KVLqx98pdpBEPAZL",
+  "team_id": "team_NNcxgB3J9dHQnUJYJJYvRMda",
+  "target": "production",
+  "plan": "hobby",
+  "framework": "container",
+  "deployment_id": "dpl_4q5w3qndov9DbwxBeriS5JZz4q42",
+  "deployment_url": "https://watchtower-kmciq1jlm-mekala27-45s-projects.vercel.app",
+  "public_url": "https://watchtower-mekala27-45s-projects.vercel.app",
+  "state": "READY",
+  "source_revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24",
+  "secret_destination": "Watchtower Vercel Production",
+  "secret_key": "DATABASE_URL",
+  "secret_value_recorded": false,
+  "explicit_user_approval_date": "2026-11-02",
+  "allowed_origins": [
+    "https://mekala27-45.github.io",
+    "https://watchtower-mekala27-45s-projects.vercel.app"
+  ],
+  "build_duration_ms": 44305,
+  "runtime_error_scan": {
+    "window": "30m",
+    "errors": 0,
+    "checked_at": "2026-11-02T15:47:54.371Z"
+  },
+  "public_github_repository": null
+}

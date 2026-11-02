@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-01T16:39:22.833Z",
+  "checked_at": "2026-11-02T15:49:50.796Z",
   "neon": {
     "project_id": "sparkling-mode-99569565",
     "branch_id": "br-gentle-feather-b5gitp6s",
@@ -22,14 +22,21 @@
     "team_id": "team_NNcxgB3J9dHQnUJYJJYvRMda",
     "plan": "hobby",
     "framework": "container",
-    "production_deployment": null,
-    "database_secret": "approval_blocked"
+    "production_deployment": {
+      "id": "dpl_4q5w3qndov9DbwxBeriS5JZz4q42",
+      "url": "https://watchtower-mekala27-45s-projects.vercel.app",
+      "state": "READY",
+      "source_revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24"
+    },
+    "database_secret": "stored_in_approved_production_destination",
+    "public_verification": "reports/verification/public-live.json",
+    "browser_verification": "reports/browser/public-api.json"
   },
   "github": {
     "repository": null,
     "pages": null,
     "dispatch": null,
-    "reason": "Computer Use stopped on November 2 because the current browser URL could not be verified safely. No repository was created or changed.",
+    "reason": "GitHub CLI has no authenticated host. The requested Chrome profile was visible but minimized before reliable GitHub account verification. No repository was created, and no TinyFish profile has a recorded GitHub sign-in.",
     "prior_browser_blocker": "No repository create connector; native Chrome windows minimized and unavailable to browser controls.",
     "followup_date": "2026-11-02"
   }

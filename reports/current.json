@@ -4,7 +4,7 @@
   "mode": "separate_methods",
   "code_revision": "0e13886d2f37e5726492a86707360d81fe616889",
   "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
-  "generated_at": "2026-11-02T15:30:10.949Z",
+  "generated_at": "2026-11-02T15:53:18.726Z",
   "metrics": [
     {
       "id": "baseline.full.sequences",
@@ -38784,7 +38784,7 @@
     {
       "item": "Source, dependency and free-host probes are recorded and checked.",
       "status": "not done",
-      "evidence": "reports/probes records verified source IDs, package integrity, CPU artifact, Neon Free direct TLS and Vercel Hobby; public GitHub and container deployment checks remain blocked."
+      "evidence": "reports/probes records verified source IDs, dependency integrity, CPU model, Neon Free direct TLS and a READY Vercel Hobby container. Public GitHub Pages host checks remain unexecuted."
     },
     {
       "item": "Claim renderer and every required gate pass their three cases.",
@@ -38818,8 +38818,8 @@
     },
     {
       "item": "Functional API is live and verified by browser and separate client.",
-      "status": "not done",
-      "evidence": "The Postgres API works locally in browser and separate-client checks; public Vercel deployment is blocked on database-secret destination approval."
+      "status": "done",
+      "evidence": "reports/verification/public-live.json verifies public PostgreSQL readiness, exact revision and CORS. reports/browser/public-api.json passes 9 browser checks, including publication, identical receipt recovery and a separate client finding exactly one receipt."
     },
     {
       "item": "One actual local agent executes only the three permitted tools.",
@@ -38844,12 +38844,12 @@
     {
       "item": "Proof-sheet UI, both themes and accessibility checks are complete.",
       "status": "done",
-      "evidence": "reports/browser/postgres.json records 14 passed real-browser checks across both themes, mobile, focus, stale review and receipt recovery; reports/verification/palette.json has zero failures."
+      "evidence": "reports/browser/postgres.json passes 14 checks and reports/browser/public-api.json passes 9 public checks across both themes, mobile, keyboard, labels and actual receipt recovery; palette verification has zero failures."
     },
     {
       "item": "Public Pages site completes the visible API review and receipt flow.",
       "status": "not done",
-      "evidence": "No public Pages site exists yet. Computer Use stopped on November 2 because it could not verify the browser URL safely; no repository was created."
+      "evidence": "The Vercel API-hosted review interface is verified, but the required GitHub Pages site does not exist. GitHub authentication and reliable access to the requested Chrome profile remain unavailable."
     },
     {
       "item": "Governance, notices, source policy, skills and retention checks are complete.",
@@ -38864,19 +38864,19 @@
     {
       "item": "Final reports, scans, live checks and clean worktree rederivation pass.",
       "status": "not done",
-      "evidence": "reports/verification/rederive.json passes clean-checkout regeneration, 156 tests and both fault matrices using the separate empty database proved in rederive-database-isolation.json. Public live checks remain blocked."
+      "evidence": "Clean-checkout rederivation passes 156 tests and both fault matrices using a proven separate empty database. Public API checks now pass; required Pages and Actions live checks remain unexecuted."
     },
     {
       "item": "Release commits and tag are verified, with public release state explicit.",
       "status": "not done",
-      "evidence": "Local candidate tag day23-watchtower-verified-candidate is verified by the packaged provenance/release-verification.json. The required public repository, remote tag and release remain pending."
+      "evidence": "The local day23-watchtower-public-api-candidate tag is verified by packaged provenance/release-verification.json, alongside preserved earlier tags. The required public repository, remote tag and public release remain pending."
     }
   ],
   "completion": [
     {
       "item": "Source, dependency and free-host probes are recorded and checked.",
       "status": "not done",
-      "evidence": "reports/probes records verified source IDs, package integrity, CPU artifact, Neon Free direct TLS and Vercel Hobby; public GitHub and container deployment checks remain blocked."
+      "evidence": "reports/probes records verified source IDs, dependency integrity, CPU model, Neon Free direct TLS and a READY Vercel Hobby container. Public GitHub Pages host checks remain unexecuted."
     },
     {
       "item": "Claim renderer and every required gate pass their three cases.",
@@ -38910,8 +38910,8 @@
     },
     {
       "item": "Functional API is live and verified by browser and separate client.",
-      "status": "not done",
-      "evidence": "The Postgres API works locally in browser and separate-client checks; public Vercel deployment is blocked on database-secret destination approval."
+      "status": "done",
+      "evidence": "reports/verification/public-live.json verifies public PostgreSQL readiness, exact revision and CORS. reports/browser/public-api.json passes 9 browser checks, including publication, identical receipt recovery and a separate client finding exactly one receipt."
     },
     {
       "item": "One actual local agent executes only the three permitted tools.",
@@ -38936,12 +38936,12 @@
     {
       "item": "Proof-sheet UI, both themes and accessibility checks are complete.",
       "status": "done",
-      "evidence": "reports/browser/postgres.json records 14 passed real-browser checks across both themes, mobile, focus, stale review and receipt recovery; reports/verification/palette.json has zero failures."
+      "evidence": "reports/browser/postgres.json passes 14 checks and reports/browser/public-api.json passes 9 public checks across both themes, mobile, keyboard, labels and actual receipt recovery; palette verification has zero failures."
     },
     {
       "item": "Public Pages site completes the visible API review and receipt flow.",
       "status": "not done",
-      "evidence": "No public Pages site exists yet. Computer Use stopped on November 2 because it could not verify the browser URL safely; no repository was created."
+      "evidence": "The Vercel API-hosted review interface is verified, but the required GitHub Pages site does not exist. GitHub authentication and reliable access to the requested Chrome profile remain unavailable."
     },
     {
       "item": "Governance, notices, source policy, skills and retention checks are complete.",
@@ -38956,12 +38956,12 @@
     {
       "item": "Final reports, scans, live checks and clean worktree rederivation pass.",
       "status": "not done",
-      "evidence": "reports/verification/rederive.json passes clean-checkout regeneration, 156 tests and both fault matrices using the separate empty database proved in rederive-database-isolation.json. Public live checks remain blocked."
+      "evidence": "Clean-checkout rederivation passes 156 tests and both fault matrices using a proven separate empty database. Public API checks now pass; required Pages and Actions live checks remain unexecuted."
     },
     {
       "item": "Release commits and tag are verified, with public release state explicit.",
       "status": "not done",
-      "evidence": "Local candidate tag day23-watchtower-verified-candidate is verified by the packaged provenance/release-verification.json. The required public repository, remote tag and release remain pending."
+      "evidence": "The local day23-watchtower-public-api-candidate tag is verified by packaged provenance/release-verification.json, alongside preserved earlier tags. The required public repository, remote tag and public release remain pending."
     }
   ],
   "runs": {
@@ -39009,14 +39009,14 @@
   },
   "limits": {
     "backend": "postgres",
-    "public_api": null,
+    "public_api": "https://watchtower-mekala27-45s-projects.vercel.app",
     "public_site": null,
     "dispatch": null,
     "fonts": "installed",
-    "browser": "passed_local_and_postgres",
+    "browser": "passed_local_postgres_and_public_api",
     "delivery_evidence": "reports/verification/delivery.json"
   },
   "disclaimer": "Portfolio demonstration using public release metadata and authored synthetic evaluation cases. Findings describe captured observations within a declared window. They are not security assessments or upgrade recommendations. Agent proposals, deterministic results, recordings and live observations are labeled separately. Incomplete coverage remains unknown.",
   "disclaimer_digest": "d09b14e10ff9d4a2f57228087a40f7577bc618daa2cf1ecaecfa6648c44c52b5",
-  "digest": "88744a05b29d8b26a8b8eb1b62723e87795b73c054e1321cd7f8f9d441ed2b59"
+  "digest": "246476b0152e28bc5473a941054a4e45c8c94b92562c5c96daced6893f410a98"
 }

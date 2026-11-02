@@ -1,0 +1,50 @@
+{
+  "schema": "watchtower-public-live-verification-v1",
+  "started_at": "2026-11-02T15:46:21.466Z",
+  "api_origin": "https://watchtower-mekala27-45s-projects.vercel.app",
+  "expected_revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24",
+  "site_url": null,
+  "allowed_origin": "https://mekala27-45.github.io",
+  "allowed_origin_source": "intended_watchtower_pages_origin",
+  "method": "uncredentialed_http_get",
+  "mutation_endpoints_called": false,
+  "checks": [
+    {
+      "name": "public_api_health_and_exact_source_revision",
+      "status": "passed",
+      "http_status": 200,
+      "health": {
+        "alive": true,
+        "ready": true,
+        "productionReady": true,
+        "database": {
+          "backend": "postgres",
+          "state": "connected"
+        },
+        "revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24",
+        "contract": "watchtower-local-v1"
+      }
+    },
+    {
+      "name": "pages_origin_allowed_exactly",
+      "status": "passed",
+      "http_status": 200,
+      "allow_origin_matches": true,
+      "vary_includes_origin": true,
+      "revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24"
+    },
+    {
+      "name": "untrusted_origin_rejected",
+      "status": "passed",
+      "http_status": 403,
+      "named_origin_rejection": true,
+      "allow_origin_absent": true
+    }
+  ],
+  "finished_at": "2026-11-02T15:46:22.834Z",
+  "passed": 3,
+  "failed": 0,
+  "status": "passed",
+  "pages_build_checked": false,
+  "browser_flow_checked": false
+}

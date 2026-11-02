@@ -1,0 +1,148 @@
+{
+  "schema": "watchtower-browser-verification-v1",
+  "label": "public-api",
+  "started_at": "2026-11-02T15:47:24.742Z",
+  "source_revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24",
+  "backend": "postgres",
+  "tests": [
+    {
+      "name": "compiled site loads local fonts and four labeled views",
+      "status": "passed",
+      "detail": {
+        "fontFaces": [
+          {
+            "family": "Bodoni Moda",
+            "status": "loaded"
+          },
+          {
+            "family": "Noto Sans",
+            "status": "loaded"
+          },
+          {
+            "family": "Noto Sans",
+            "status": "loaded"
+          },
+          {
+            "family": "Noto Sans",
+            "status": "loaded"
+          },
+          {
+            "family": "Fira Mono",
+            "status": "loaded"
+          }
+        ]
+      }
+    },
+    {
+      "name": "keyboard skip link and section focus are visible",
+      "status": "passed"
+    },
+    {
+      "name": "real HTTP prepare approve publish and identical receipt recovery",
+      "status": "passed",
+      "detail": {
+        "receipt_id": "60cf35fb-92f1-4c71-a722-0f40ddcb1cec",
+        "published_at": 1793634450765,
+        "briefing_digest": "a175a613ffc4d38ed5457cac8b85d8182932cbd978c505f56e51204dab496e9b",
+        "namespace": "demo:90c62aff-3b6b-43a5-9a95-f07fc363025e"
+      }
+    },
+    {
+      "name": "separate HTTP client sees exactly one committed receipt",
+      "status": "passed",
+      "detail": {
+        "receipt_count": 1,
+        "receipt_id": "60cf35fb-92f1-4c71-a722-0f40ddcb1cec"
+      }
+    },
+    {
+      "name": "light theme real rendered text contrast and four views",
+      "status": "passed",
+      "detail": [
+        {
+          "view": "sources",
+          "checked": 61,
+          "worst": 5.798269134032843
+        },
+        {
+          "view": "briefings",
+          "checked": 66,
+          "worst": 6.073828333888035
+        },
+        {
+          "view": "trace",
+          "checked": 136,
+          "worst": 5.798269134032843
+        },
+        {
+          "view": "evidence",
+          "checked": 99,
+          "worst": 6.073828333888035
+        }
+      ]
+    },
+    {
+      "name": "dark theme real rendered text contrast and four views",
+      "status": "passed",
+      "detail": [
+        {
+          "view": "sources",
+          "checked": 61,
+          "worst": 8.769416394215044
+        },
+        {
+          "view": "briefings",
+          "checked": 66,
+          "worst": 6.937896300492237
+        },
+        {
+          "view": "trace",
+          "checked": 136,
+          "worst": 8.769416394215044
+        },
+        {
+          "view": "evidence",
+          "checked": 99,
+          "worst": 8.910879174833159
+        }
+      ]
+    },
+    {
+      "name": "narrow mobile layout keeps controls and aligned evidence readable",
+      "status": "passed"
+    },
+    {
+      "name": "reduced motion and screen reader labels",
+      "status": "passed"
+    },
+    {
+      "name": "no uncaught browser errors",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    "public-api-briefing-review.png",
+    "public-api-briefing-approved.png",
+    "public-api-briefing-published.png",
+    "public-api-briefing-recovered.png",
+    "public-api-light-sources.png",
+    "public-api-light-briefings.png",
+    "public-api-light-trace.png",
+    "public-api-light-evidence.png",
+    "public-api-dark-sources.png",
+    "public-api-dark-briefings.png",
+    "public-api-dark-trace.png",
+    "public-api-dark-evidence.png",
+    "public-api-mobile-briefing.png",
+    "public-api-mobile-sources.png"
+  ],
+  "errors": [],
+  "site_url": "https://watchtower-mekala27-45s-projects.vercel.app",
+  "browser_version": "156.0.8078.74",
+  "api_revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24",
+  "api_url": "https://watchtower-mekala27-45s-projects.vercel.app",
+  "status": "passed",
+  "finished_at": "2026-11-02T15:47:33.093Z",
+  "passed": 9,
+  "failed": 0
+}
