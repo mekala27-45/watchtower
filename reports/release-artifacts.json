@@ -1,7 +1,7 @@
 {
-  "state": "public_api_verified_public_repository_pending",
-  "candidate_tag": "day23-watchtower-public-api-candidate",
-  "validated_revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24",
+  "state": "public_api_and_gate_contracts_verified_github_pending",
+  "candidate_tag": "day23-watchtower-gates-candidate",
+  "validated_revision": "744e9c86cfcc008526af22282019bfcf5d41fb57",
   "public_release": false,
   "artifacts": [
     {
@@ -39,6 +39,14 @@
     {
       "path": "reports/browser/public-api.json",
       "sha256": "d2d5ed3e4f2ee2373be396497c259ad5108546efad07a1f2cbddeb4ec7dabbcf"
+    },
+    {
+      "path": "reports/verification/gate-three-cases.json",
+      "sha256": "9d731f026e195956681136027c98b1554a3e8b5182b484aabce9f2310c8b5fe8"
+    },
+    {
+      "path": "reports/verification/access-status-20261103.json",
+      "sha256": "8741a405cfd868ac89206822130c35cbe0b0c8fc4a28e0ccb29bbca0ced711b7"
     }
   ],
   "historical_candidate": {
@@ -50,5 +58,9 @@
     "tag": "day23-watchtower-verified-candidate",
     "revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24"
   },
-  "evidence_package_revision": "See packaged provenance/release-verification.json"
+  "evidence_package_revision": "See packaged provenance/release-verification.json",
+  "previous_public_api_candidate": {
+    "tag": "day23-watchtower-public-api-candidate",
+    "revision": "744e9c86cfcc008526af22282019bfcf5d41fb57"
+  }
 }

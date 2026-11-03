@@ -1,0 +1,459 @@
+{
+  "schema_version": 1,
+  "scope": "The eight admission gates named in section 19, the claim renderer named in section 20 line 2, and additional runtime and repository admission gates. This is contract evidence, not a model-quality or release-success claim.",
+  "prompt": {
+    "library_file_id": "libfile_8e1d71b248848191a4757a04ba8541ad",
+    "filename": "day-23-watchtower-prompt.md",
+    "requirements": [
+      {
+        "lines": "68-69",
+        "text": "Every gate gets three tests: clean pass, deliberate violation, refuses on nothing."
+      },
+      {
+        "lines": "1245",
+        "text": "Every gate has a clean pass, a deliberate violation and an empty-input refusal. This includes source policy, normalization, coverage, proposal schema, predicate verification, approval, publication and report rendering."
+      },
+      {
+        "lines": "1270",
+        "text": "Claim renderer and every required gate pass their three cases."
+      }
+    ]
+  },
+  "checked_base_revision": "744e9c86cfcc008526af22282019bfcf5d41fb57",
+  "generated_at": "2026-11-03T15:22:40.333Z",
+  "runs": {
+    "prior_full_check": {
+      "evidence": "reports/verification/tests.tap",
+      "summary": "reports/verification/checks.json",
+      "code_revision": "0e13886d2f37e5726492a86707360d81fe616889",
+      "tests": 156,
+      "passed": 156,
+      "failed": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "scope": "Existing unchanged contract tests. This historical check does not claim to cover the new assertions."
+    },
+    "focused_gate_check": {
+      "node_version": "v24.19.0",
+      "command": "node --test --test-reporter=tap tests/scan-repository.test.mjs tests/scan.test.mjs tests/domain.test.mjs tests/workflow.test.mjs",
+      "environment_note": "TEMP and TMP pointed to the explicitly writable Windows user temporary directory; the default redirected AppContainer temporary directory denied Git initialization.",
+      "tests": 45,
+      "passed": 45,
+      "failed": 0,
+      "skipped": 0,
+      "exit_code": 0,
+      "test_file_sha256": {
+        "tests/scan-repository.test.mjs": "08eed5cf489a85d438a1c1b3cb8b63be42fc68d29ef0c113c9770e22f399f299",
+        "tests/domain.test.mjs": "880800f937e337bf971d10d9db0c45e610864d7fe3c4a8cf8cd2c18e9043ac82",
+        "tests/workflow.test.mjs": "2b9812c996faa9a4d2f3d95f02696a578f179aaa78ca8ffbfed86327712027f5",
+        "tests/scan.test.mjs": "6c1d66e19d9af61dd2427406c5d84c267eb48aa8631a95b4a60c7cfc7e99f3e1"
+      },
+      "passed_tap_rows": [
+        "ok 1 - canonical digest is stable across object key order and refuses absent values",
+        "ok 2 - normalizer clean gate keeps only factual fields and discards note prose",
+        "ok 3 - normalizer violation gate refuses malformed, oversized and control data",
+        "ok 4 - normalizer empty gate refuses missing release and namespace",
+        "ok 5 - normalized schema cannot be forged merely by recomputing its digest",
+        "ok 6 - baseline creation avoids historical alert flood and scope changes refuse comparison",
+        "ok 7 - missing IDs and empty listings do not become deletion findings",
+        "ok 8 - partial retains supported positive facts but unknown never becomes no-op",
+        "ok 9 - each exact predicate verifies separately and rendering does not imply semantics",
+        "ok 10 - tag revert has distinct transition key and duplicate evidence does not multiply facts",
+        "ok 11 - conflicting duplicate identity marks unstable without unsupported candidates",
+        "ok 12 - verifier clean gate checks supported operands",
+        "ok 13 - verifier violation gate rejects wrong identity, predicate, revision and digest",
+        "ok 14 - verifier empty gate and claim rendering refuse absence or fabricated decision",
+        "ok 15 - verifier independently rejects a false predicate with structurally valid identities",
+        "ok 16 - independent grader catches missing, extra, duplicate, wrong identity and predicate mutations",
+        "ok 17 - fixture plan covers twelve disjoint lineages per family and a balanced frozen model subset",
+        "ok 18 - fixture generation is deterministic in two fresh processes",
+        "ok 19 - every development fixture is independently normalized and fact-graded",
+        "ok 20 - repository scan clean gate admits committed inert placeholders",
+        "ok 21 - repository scan violation gate detects a removed synthetic credential in commit history",
+        "ok 22 - repository scan empty gate refuses a repository without files or commits",
+        "ok 23 - secret scan accepts inert placeholder",
+        "ok 24 - secret scan rejects constructed credential",
+        "ok 25 - secret scan empty text is not a repository pass",
+        "ok 26 - workflow gate clean: second connection sees the source head and immutable evidence",
+        "ok 27 - workflow gate violation: stale returning worker cannot commit after a replacement",
+        "ok 28 - workflow gate empty input refuses",
+        "ok 29 - matching lease generation is insufficient after database clock expiry",
+        "ok 30 - expected head conflict rejects a matching live lease",
+        "ok 31 - failed attempt advances latest attempt without erasing comparison baseline",
+        "ok 32 - partial positive evidence is retained without a complete negative claim",
+        "ok 33 - an exception inside collection rolls evidence, head and event back together",
+        "ok 34 - publication clean: identical retry recovers one immutable receipt from another connection",
+        "ok 35 - publication violation: a changed payload under the same operation key conflicts",
+        "ok 36 - publication empty input refuses",
+        "ok 37 - approval is required and namespace scoped",
+        "ok 38 - approval empty gate refuses absent review inputs without recording approval",
+        "ok 39 - source version change makes approval stale without rewriting history",
+        "ok 40 - committed retry precedes approval expiry while a new effect requires unexpired approval",
+        "ok 41 - demo capability hash, expiry, quota and cross-namespace isolation are durable",
+        "ok 42 - global session creation quota is shared across connections",
+        "ok 43 - retention retains pinned briefing evidence and latest two revisions, second connection verifies",
+        "ok 44 - retention rejects invalid empty limits and cannot delete pinned evidence through FK",
+        "ok 45 - briefing gate rejects forged supported flags and false predicates"
+      ]
+    }
+  },
+  "gates": [
+    {
+      "gate": "source_policy",
+      "prompt": "section 19",
+      "clean": {
+        "file": "tests/collector.test.mjs",
+        "test": "source policy clean case admits only a pinned allowlisted repository",
+        "run": "prior_full_check"
+      },
+      "violation": {
+        "file": "tests/collector.test.mjs",
+        "test": "source policy deliberate violations reject hosts, redirects scope, identities and URLs",
+        "run": "prior_full_check"
+      },
+      "empty": {
+        "file": "tests/collector.test.mjs",
+        "test": "source policy empty input refuses",
+        "run": "prior_full_check"
+      },
+      "status": "done"
+    },
+    {
+      "gate": "normalization",
+      "prompt": "section 19",
+      "clean": {
+        "file": "tests/domain.test.mjs",
+        "test": "normalizer clean gate keeps only factual fields and discards note prose",
+        "run": "focused_gate_check"
+      },
+      "violation": {
+        "file": "tests/domain.test.mjs",
+        "test": "normalizer violation gate refuses malformed, oversized and control data",
+        "run": "focused_gate_check"
+      },
+      "empty": {
+        "file": "tests/domain.test.mjs",
+        "test": "normalizer empty gate refuses missing release and namespace",
+        "run": "focused_gate_check"
+      },
+      "status": "done"
+    },
+    {
+      "gate": "coverage",
+      "prompt": "section 19",
+      "clean": {
+        "file": "tests/collector.test.mjs",
+        "test": "collection clean pass normalizes metadata only and declares bounded non-atomic coverage",
+        "run": "prior_full_check"
+      },
+      "violation": {
+        "file": "tests/collector.test.mjs",
+        "test": "page one valid and page two malformed retains positive evidence with partial coverage",
+        "run": "prior_full_check"
+      },
+      "empty": {
+        "file": "tests/collector.test.mjs",
+        "test": "response gates reject redirect, media mismatch, oversize, malformed schema and empty input",
+        "run": "prior_full_check"
+      },
+      "semantics": "An empty response body is unavailable and cannot establish complete coverage. A valid HTTP 200 [] is captured empty scope, not missing evidence or a deletion claim. Partial observations never become complete through supplied coverage flags.",
+      "status": "done"
+    },
+    {
+      "gate": "proposal_schema",
+      "prompt": "section 19",
+      "clean": {
+        "file": "tests/agent.test.mjs",
+        "test": "proposal gate clean, false authority fields and empty input",
+        "run": "prior_full_check"
+      },
+      "violation": {
+        "file": "tests/agent.test.mjs",
+        "test": "proposal gate clean, false authority fields and empty input",
+        "run": "prior_full_check"
+      },
+      "empty": {
+        "file": "tests/agent.test.mjs",
+        "test": "proposal gate clean, false authority fields and empty input",
+        "run": "prior_full_check"
+      },
+      "status": "done"
+    },
+    {
+      "gate": "predicate_verification",
+      "prompt": "section 19",
+      "clean": {
+        "file": "tests/domain.test.mjs",
+        "test": "verifier clean gate checks supported operands",
+        "run": "focused_gate_check"
+      },
+      "violation": {
+        "file": "tests/domain.test.mjs",
+        "test": "verifier violation gate rejects wrong identity, predicate, revision and digest",
+        "run": "focused_gate_check"
+      },
+      "empty": {
+        "file": "tests/domain.test.mjs",
+        "test": "verifier empty gate and claim rendering refuse absence or fabricated decision",
+        "run": "focused_gate_check"
+      },
+      "status": "done"
+    },
+    {
+      "gate": "approval",
+      "prompt": "section 19",
+      "clean": {
+        "file": "tests/workflow.test.mjs",
+        "test": "publication clean: identical retry recovers one immutable receipt from another connection",
+        "run": "focused_gate_check"
+      },
+      "violation": {
+        "file": "tests/workflow.test.mjs",
+        "test": "approval is required and namespace scoped",
+        "run": "focused_gate_check"
+      },
+      "empty": {
+        "file": "tests/workflow.test.mjs",
+        "test": "approval empty gate refuses absent review inputs without recording approval",
+        "run": "focused_gate_check"
+      },
+      "semantics": "The clean test creates a scoped approval before publication. Empty namespace, missing reviewer, and missing briefing digest refuse with no approval row inserted.",
+      "status": "done"
+    },
+    {
+      "gate": "publication",
+      "prompt": "section 19",
+      "clean": {
+        "file": "tests/workflow.test.mjs",
+        "test": "publication clean: identical retry recovers one immutable receipt from another connection",
+        "run": "focused_gate_check"
+      },
+      "violation": {
+        "file": "tests/workflow.test.mjs",
+        "test": "publication violation: a changed payload under the same operation key conflicts",
+        "run": "focused_gate_check"
+      },
+      "empty": {
+        "file": "tests/workflow.test.mjs",
+        "test": "publication empty input refuses",
+        "run": "focused_gate_check"
+      },
+      "status": "done"
+    },
+    {
+      "gate": "report_rendering",
+      "prompt": "section 19",
+      "clean": {
+        "file": "tests/reports.test.mjs",
+        "test": "report gate accepts admitted metric with evidence",
+        "run": "prior_full_check"
+      },
+      "violation": {
+        "file": "tests/reports.test.mjs",
+        "test": "report gate refuses tampering, stale revision and unbound numbers",
+        "run": "prior_full_check"
+      },
+      "empty": {
+        "file": "tests/reports.test.mjs",
+        "test": "report gate refuses empty input and preserves unavailable",
+        "run": "prior_full_check"
+      },
+      "status": "done"
+    },
+    {
+      "gate": "claim_renderer",
+      "prompt": "section 20 line 2",
+      "clean": {
+        "file": "tests/domain.test.mjs",
+        "test": "each exact predicate verifies separately and rendering does not imply semantics",
+        "run": "focused_gate_check"
+      },
+      "violation": {
+        "file": "tests/domain.test.mjs",
+        "test": "verifier empty gate and claim rendering refuse absence or fabricated decision",
+        "run": "focused_gate_check"
+      },
+      "empty": {
+        "file": "tests/domain.test.mjs",
+        "test": "verifier empty gate and claim rendering refuse absence or fabricated decision",
+        "run": "focused_gate_check"
+      },
+      "semantics": "The renderer itself now refuses a null proposal and null bundle. A fabricated supported decision cannot substitute for verifier evidence.",
+      "status": "done"
+    },
+    {
+      "gate": "repository_secret_scan",
+      "prompt": "section 19 artifact tests and general gate rule",
+      "clean": {
+        "file": "tests/scan-repository.test.mjs",
+        "test": "repository scan clean gate admits committed inert placeholders",
+        "run": "focused_gate_check"
+      },
+      "violation": {
+        "file": "tests/scan-repository.test.mjs",
+        "test": "repository scan violation gate detects a removed synthetic credential in commit history",
+        "run": "focused_gate_check"
+      },
+      "empty": {
+        "file": "tests/scan-repository.test.mjs",
+        "test": "repository scan empty gate refuses a repository without files or commits",
+        "run": "focused_gate_check"
+      },
+      "semantics": "Independent temporary Git repositories exercise the actual scanner subprocess. The inert syntactic fixture is constructed only at runtime. A current clean tree still fails when prior commit history contains the fixture.",
+      "status": "done"
+    },
+    {
+      "gate": "workflow",
+      "clean": {
+        "file": "tests/workflow.test.mjs",
+        "test": "workflow gate clean: second connection sees the source head and immutable evidence",
+        "run": "focused_gate_check"
+      },
+      "violation": {
+        "file": "tests/workflow.test.mjs",
+        "test": "workflow gate violation: stale returning worker cannot commit after a replacement",
+        "run": "focused_gate_check"
+      },
+      "empty": {
+        "file": "tests/workflow.test.mjs",
+        "test": "workflow gate empty input refuses",
+        "run": "focused_gate_check"
+      },
+      "status": "done"
+    },
+    {
+      "gate": "tool_inventory",
+      "clean": {
+        "file": "tests/agent.test.mjs",
+        "test": "inventory admits exact three names and rejects added, duplicate and empty inventories",
+        "run": "prior_full_check"
+      },
+      "violation": {
+        "file": "tests/agent.test.mjs",
+        "test": "inventory admits exact three names and rejects added, duplicate and empty inventories",
+        "run": "prior_full_check"
+      },
+      "empty": {
+        "file": "tests/agent.test.mjs",
+        "test": "inventory admits exact three names and rejects added, duplicate and empty inventories",
+        "run": "prior_full_check"
+      },
+      "status": "done"
+    },
+    {
+      "gate": "bundle_admission",
+      "clean": {
+        "file": "tests/agent.test.mjs",
+        "test": "bundle gate admits immutable scope, rejects forged digest and refuses empty bundle",
+        "run": "prior_full_check"
+      },
+      "violation": {
+        "file": "tests/agent.test.mjs",
+        "test": "bundle gate admits immutable scope, rejects forged digest and refuses empty bundle",
+        "run": "prior_full_check"
+      },
+      "empty": {
+        "file": "tests/agent.test.mjs",
+        "test": "bundle gate admits immutable scope, rejects forged digest and refuses empty bundle",
+        "run": "prior_full_check"
+      },
+      "status": "done"
+    },
+    {
+      "gate": "list_changes",
+      "clean": {
+        "file": "tests/agent.test.mjs",
+        "test": "list gate clean, wrong bundle and empty input",
+        "run": "prior_full_check"
+      },
+      "violation": {
+        "file": "tests/agent.test.mjs",
+        "test": "list gate clean, wrong bundle and empty input",
+        "run": "prior_full_check"
+      },
+      "empty": {
+        "file": "tests/agent.test.mjs",
+        "test": "list gate clean, wrong bundle and empty input",
+        "run": "prior_full_check"
+      },
+      "status": "done"
+    },
+    {
+      "gate": "inspect_snapshot",
+      "clean": {
+        "file": "tests/agent.test.mjs",
+        "test": "inspect gate clean, unknown candidate and empty input",
+        "run": "prior_full_check"
+      },
+      "violation": {
+        "file": "tests/agent.test.mjs",
+        "test": "inspect gate clean, unknown candidate and empty input",
+        "run": "prior_full_check"
+      },
+      "empty": {
+        "file": "tests/agent.test.mjs",
+        "test": "inspect gate clean, unknown candidate and empty input",
+        "run": "prior_full_check"
+      },
+      "status": "done"
+    },
+    {
+      "gate": "report_input",
+      "clean": {
+        "file": "tests/report-input.test.mjs",
+        "test": "report input gate admits aligned evidence and real execution records",
+        "run": "prior_full_check"
+      },
+      "violation": {
+        "file": "tests/report-input.test.mjs",
+        "test": "report input gate rejects tampering stale plans and model substitution",
+        "run": "prior_full_check"
+      },
+      "empty": {
+        "file": "tests/report-input.test.mjs",
+        "test": "report input gate refuses missing and empty execution evidence",
+        "run": "prior_full_check"
+      },
+      "status": "done"
+    },
+    {
+      "gate": "collector_retention",
+      "clean": {
+        "file": "tests/retention.test.mjs",
+        "test": "collector retention clean: more than 100 jobs succeed, fresh connection preserves domain history and latest two revisions",
+        "run": "prior_full_check"
+      },
+      "violation": {
+        "file": "tests/retention.test.mjs",
+        "test": "collector retention violation: impossible budget and interrupted deletes roll back with no cross-namespace change",
+        "run": "prior_full_check"
+      },
+      "empty": {
+        "file": "tests/retention.test.mjs",
+        "test": "collector retention empty input and mixed scope refuse before writes",
+        "run": "prior_full_check"
+      },
+      "status": "done"
+    }
+  ],
+  "missing_cases": [],
+  "boundaries": [
+    "No production scanner, model, adapter, frozen plan, fixture subset, or actual model archive was changed.",
+    "A successful contract test is never actual model inference.",
+    "Syntax, prose, palette, licenses, and deployment remain separately reported artifact and delivery checks. This matrix does not replace their observed results."
+  ],
+  "empirical_model_quality": {
+    "run_id": "actual-2026-11-01T16-50-21-528Z",
+    "evidence": "reports/model/current.json",
+    "supported_proposals": 0,
+    "criterion_passed": false,
+    "required_followup": "Preserve and report this frozen outcome. A second model comparison is optional stretch step 21, not a prerequisite for mandatory step 18.",
+    "prompt_lines": [
+      "798",
+      "820",
+      "822",
+      "1204",
+      "1289"
+    ]
+  }
+}

@@ -17,7 +17,7 @@
   "site": {
     "url": null,
     "verified": false,
-    "blocker": "GitHub CLI has no authenticated host. The requested Chrome profile was visible but minimized before reliable GitHub account verification. No repository was created, and no TinyFish profile has a recorded GitHub sign-in."
+    "blocker": "GitHub CLI device sign-in awaits completion in the requested Chrome profile. The GitHub connector is signed in as mekala27-45, but the intended repository returns 404 and the native Chrome window is minimized."
   },
   "dispatch": {
     "verified": false,
@@ -31,7 +31,7 @@
     "verified": false,
     "url": null,
     "public": false,
-    "local_tag": "day23-watchtower-public-api-candidate",
+    "local_tag": "day23-watchtower-gates-candidate",
     "verification": "packaged provenance/release-verification.json"
   },
   "browser_evidence": "reports/browser/postgres.json",
@@ -41,5 +41,6 @@
     "evidence": "reports/verification/rederive.json",
     "separate_empty_database_evidence": "reports/verification/rederive-database-isolation.json"
   },
-  "public_browser_evidence": "reports/browser/public-api.json"
+  "public_browser_evidence": "reports/browser/public-api.json",
+  "gate_contract_evidence": "reports/verification/gate-three-cases.json"
 }

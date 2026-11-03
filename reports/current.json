@@ -4,7 +4,7 @@
   "mode": "separate_methods",
   "code_revision": "0e13886d2f37e5726492a86707360d81fe616889",
   "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
-  "generated_at": "2026-11-02T15:53:18.726Z",
+  "generated_at": "2026-11-03T15:24:05.004Z",
   "metrics": [
     {
       "id": "baseline.full.sequences",
@@ -38788,8 +38788,8 @@
     },
     {
       "item": "Claim renderer and every required gate pass their three cases.",
-      "status": "not done",
-      "evidence": "Contract gates are tested; the registered useful-model criterion failed because actual supported proposals are zero. See reports/model/current.json."
+      "status": "done",
+      "evidence": "reports/verification/gate-three-cases.json maps 17 admission gates to clean, deliberate-violation and empty-input cases. The 45-test focused run passes without skips; actual model quality remains separately failed."
     },
     {
       "item": "Temporal fixtures, independent truth and evaluation plan are frozen.",
@@ -38869,7 +38869,7 @@
     {
       "item": "Release commits and tag are verified, with public release state explicit.",
       "status": "not done",
-      "evidence": "The local day23-watchtower-public-api-candidate tag is verified by packaged provenance/release-verification.json, alongside preserved earlier tags. The required public repository, remote tag and public release remain pending."
+      "evidence": "The local day23-watchtower-gates-candidate tag is verified by packaged provenance/release-verification.json, with all earlier tags preserved. The required public repository, remote tag and release remain pending."
     }
   ],
   "completion": [
@@ -38880,8 +38880,8 @@
     },
     {
       "item": "Claim renderer and every required gate pass their three cases.",
-      "status": "not done",
-      "evidence": "Contract gates are tested; the registered useful-model criterion failed because actual supported proposals are zero. See reports/model/current.json."
+      "status": "done",
+      "evidence": "reports/verification/gate-three-cases.json maps 17 admission gates to clean, deliberate-violation and empty-input cases. The 45-test focused run passes without skips; actual model quality remains separately failed."
     },
     {
       "item": "Temporal fixtures, independent truth and evaluation plan are frozen.",
@@ -38961,7 +38961,7 @@
     {
       "item": "Release commits and tag are verified, with public release state explicit.",
       "status": "not done",
-      "evidence": "The local day23-watchtower-public-api-candidate tag is verified by packaged provenance/release-verification.json, alongside preserved earlier tags. The required public repository, remote tag and public release remain pending."
+      "evidence": "The local day23-watchtower-gates-candidate tag is verified by packaged provenance/release-verification.json, with all earlier tags preserved. The required public repository, remote tag and release remain pending."
     }
   ],
   "runs": {
@@ -39018,5 +39018,5 @@
   },
   "disclaimer": "Portfolio demonstration using public release metadata and authored synthetic evaluation cases. Findings describe captured observations within a declared window. They are not security assessments or upgrade recommendations. Agent proposals, deterministic results, recordings and live observations are labeled separately. Incomplete coverage remains unknown.",
   "disclaimer_digest": "d09b14e10ff9d4a2f57228087a40f7577bc618daa2cf1ecaecfa6648c44c52b5",
-  "digest": "246476b0152e28bc5473a941054a4e45c8c94b92562c5c96daced6893f410a98"
+  "digest": "3eeb51d8fd489fcdf689d0c3dec87361b104736f9f49a0b2f6a56fb10d6e7f88"
 }

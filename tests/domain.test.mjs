@@ -94,6 +94,8 @@ test('verifier violation gate rejects wrong identity, predicate, revision and di
 test('verifier empty gate and claim rendering refuse absence or fabricated decision',()=>{
   const bundle=change(),p=baseline(bundle).proposals[0];assert.notEqual(verify(null,bundle).status,'supported');
   assert.notEqual(verify({},null).status,'supported');
+  assert.throws(()=>renderFinding(null,bundle),/unsupported_claim/);
+  assert.throws(()=>renderFinding(p,null),/unsupported_claim/);
   assert.throws(()=>renderFinding(p,bundle,{status:'supported',bundle_digest:bundle.digest}),/unsupported_claim/);
 });
 test('verifier independently rejects a false predicate with structurally valid identities',()=>{

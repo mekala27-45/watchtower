@@ -37,7 +37,7 @@ Recorded browser demonstration. This image is not a live service status.
 
 1. **not done** Source, dependency and free-host probes are recorded and checked. reports/probes records verified source IDs, dependency integrity, CPU model, Neon Free direct TLS and a READY Vercel Hobby container. Public GitHub Pages host checks remain unexecuted.
 
-2. **not done** Claim renderer and every required gate pass their three cases. Contract gates are tested; the registered useful-model criterion failed because actual supported proposals are zero. See reports/model/current.json.
+2. **done** Claim renderer and every required gate pass their three cases. reports/verification/gate-three-cases.json maps 17 admission gates to clean, deliberate-violation and empty-input cases. The 45-test focused run passes without skips; actual model quality remains separately failed.
 
 3. **done** Temporal fixtures, independent truth and evaluation plan are frozen. fixtures/manifest.json and docs/evaluation-plan.json retain the original 144-sequence corpus and frozen 24-case subset; docs/model-freeze.json pins the actual runtime.
 
@@ -69,4 +69,4 @@ Recorded browser demonstration. This image is not a live service status.
 
 17. **not done** Final reports, scans, live checks and clean worktree rederivation pass. Clean-checkout rederivation passes 156 tests and both fault matrices using a proven separate empty database. Public API checks now pass; required Pages and Actions live checks remain unexecuted.
 
-18. **not done** Release commits and tag are verified, with public release state explicit. The local day23-watchtower-public-api-candidate tag is verified by packaged provenance/release-verification.json, alongside preserved earlier tags. The required public repository, remote tag and public release remain pending.
+18. **not done** Release commits and tag are verified, with public release state explicit. The local day23-watchtower-gates-candidate tag is verified by packaged provenance/release-verification.json, with all earlier tags preserved. The required public repository, remote tag and release remain pending.

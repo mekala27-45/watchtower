@@ -1,6 +1,6 @@
 {
   "schema": "watchtower-prepared-deployment-v1",
-  "candidate_tag": "day23-watchtower-public-api-candidate",
+  "candidate_tag": "day23-watchtower-gates-candidate",
   "target": "production",
   "project": {
     "name": "watchtower",
@@ -223,8 +223,8 @@
     },
     {
       "path": "reports/current.json",
-      "bytes": 1499800,
-      "sha256": "765cf88726fb31db466980bb6ad44d8c0c1b231d08ce125bd5ad63e2f483dd16"
+      "bytes": 1499898,
+      "sha256": "a4915733f5170a2ec95566a20c21284a70f1bcc60cd03caafe5a6a57edd52804"
     },
     {
       "path": "vercel.json",

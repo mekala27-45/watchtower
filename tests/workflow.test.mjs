@@ -70,6 +70,13 @@ test('approval is required and namespace scoped',()=>withStore(s=>{
  assert.throws(()=>s.publishDemo(session.id,session.capability,{briefingDigest:b.digest,operationKey:'no-approval'}),codes('approval_required'));
  assert.throws(()=>s.approveBriefing(session.namespace,b.digest,{reviewer:'synthetic',scope:'live'}),codes('reviewer_scope'));
 }));
+test('approval empty gate refuses absent review inputs without recording approval',()=>withStore(s=>{
+ const session=s.createDemoSession(),b=s.prepareDemo(session.id,session.capability);
+ assert.throws(()=>s.approveBriefing(),codes('invalid_namespace'));
+ assert.throws(()=>s.approveBriefing(session.namespace,b.digest),codes('invalid_reviewer'));
+ assert.throws(()=>s.approveBriefing(session.namespace,undefined,{reviewer:'synthetic',scope:session.namespace}),codes('invalid_briefing'));
+ assert.equal(s.db.prepare('SELECT count(*) AS n FROM approvals WHERE namespace=?').get(session.namespace).n,0);
+}));
 test('source version change makes approval stale without rewriting history',()=>withStore(s=>{
  const {session,briefing}=demo(s);const lease=s.acquireLease(session.namespace,23,'new-observation');
  s.recordObservation({namespace:session.namespace,sourceId:23,lease,expectedHead:lease.expectedHead,status:'unavailable',coverage:{complete:false,reason:'timeout'},runId:'newer-attempt'});
