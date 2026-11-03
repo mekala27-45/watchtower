@@ -1,0 +1,43 @@
+{
+  "observed_at": "2026-11-03T15:49:04.693Z",
+  "run_url": "https://github.com/mekala27-45/watchtower/actions/runs/41666299010",
+  "source_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+  "provider_conclusion": "success",
+  "checks": {
+    "code_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+    "generated_at": "2026-11-03T15:40:44.047Z",
+    "tests": {
+      "total": 135,
+      "passed": 133,
+      "failed": 0,
+      "skipped": 2,
+      "exit_code": 0,
+      "evidence": "reports/verification/tests.tap"
+    },
+    "syntax": {
+      "status": "passed",
+      "failures": []
+    },
+    "scan": {
+      "status": "passed",
+      "files": 453,
+      "commits": 51,
+      "failures": [],
+      "scope": "pattern-based secret and release-body scan; not a complete security audit"
+    },
+    "prose": {
+      "status": "passed",
+      "failures": [],
+      "vocabulary_source": "supplied prompt_checker.py",
+      "vocabulary_source_sha256": "de18417c7d2c39548b76ab0b3eb3d1e367e4b000af0aaf4dfd82713c89a61fb1",
+      "excluded_runtime_prompt_evidence": [
+        "agent/instructions.md",
+        "docs/sources/model-instructions-initial.md"
+      ]
+    },
+    "required_remote_checks": "reports/verification/delivery.json",
+    "actual_model_gate": "scripts/verify-report-evidence.mjs validates actual archives separately",
+    "local_checks_passed": true
+  },
+  "note": "Postgres cases are skipped in this uncredentialed CI job; independent configured Postgres verification is recorded separately."
+}

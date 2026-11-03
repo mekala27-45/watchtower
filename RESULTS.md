@@ -67,7 +67,7 @@ Actual inference attempted 24 sequences from the registered 24 sequences. Suppor
 
 ## Deployment and delivery
 
-Verified API: https://watchtower-mekala27-45s-projects.vercel.app. A public Pages site is not verified. Actual Actions dispatch is not verified. A public release is not verified.
+Verified API: https://watchtower-mekala27-45s-projects.vercel.app. Verified Pages site: https://mekala27-45.github.io/watchtower/. Actual collection dispatch evidence: https://github.com/mekala27-45/watchtower/actions/runs/41666485561. A public release is not verified.
 
 ## Recovery and provenance
 
@@ -75,7 +75,7 @@ See reports/faults for stored-state assertions and process-death evidence. See r
 
 ## Section 20 checklist
 
-1. **not done** Source, dependency and free-host probes are recorded and checked. reports/probes records verified source IDs, dependency integrity, CPU model, Neon Free direct TLS and a READY Vercel Hobby container. Public GitHub Pages host checks remain unexecuted.
+1. **done** Source, dependency and free-host probes are recorded and checked. reports/probes verifies source identities, pinned dependencies, Neon Free direct TLS, a READY Vercel Hobby API and the public GitHub Pages host. reports/verification/public-live.json passes all 4 hosted checks at 05ec1ac.
 
 2. **done** Claim renderer and every required gate pass their three cases. reports/verification/gate-three-cases.json maps 17 admission gates to clean, deliberate-violation and empty-input cases. The 45-test focused run passes without skips; actual model quality remains separately failed.
 
@@ -101,15 +101,15 @@ See reports/faults for stored-state assertions and process-death evidence. See r
 
 13. **done** Proof-sheet UI, both themes and accessibility checks are complete. reports/browser/postgres.json passes 14 checks and reports/browser/public-api.json passes 9 public checks across both themes, mobile, keyboard, labels and actual receipt recovery; palette verification has zero failures.
 
-14. **not done** Public Pages site completes the visible API review and receipt flow. The Vercel API-hosted review interface is verified, but the required GitHub Pages site does not exist. GitHub authentication and reliable access to the requested Chrome profile remain unavailable.
+14. **done** Public Pages site completes the visible API review and receipt flow. reports/browser/pages.json passes all 9 public Pages browser checks at 05ec1ac, including the visible compiled UI, digest-bound review, receipt recovery and a separate client verifying exactly one receipt.
 
 15. **done** Governance, notices, source policy, skills and retention checks are complete. Notices, source policy, operator helpers and repository skills are committed; actual Postgres retention tests pass 5/5 with no skipped cases.
 
-16. **not done** Actual dispatch succeeded and schedule configuration is reported honestly. The local operator collection succeeded with honest partial coverage; no Actions dispatch has run. The committed UTC schedule remains gated off.
+16. **done** Actual dispatch succeeded and schedule configuration is reported honestly. Actions run 41666485561 completed successfully. reports/verification/actions-storage.json independently verifies all 8 database assertions, 8 HTTP attempts and 4 partial captures. The six-hour UTC schedule is enabled; no scheduled run is claimed.
 
-17. **not done** Final reports, scans, live checks and clean worktree rederivation pass. Clean-checkout rederivation passes 156 tests and both fault matrices using a proven separate empty database. Public API checks now pass; required Pages and Actions live checks remain unexecuted.
+17. **done** Final reports, scans, live checks and clean worktree rederivation pass. A fresh checkout of 05ec1ac passed 160 tests without skips, both 541-case recovery matrices, typechecking, build and 14 browser checks on a proven separate empty database. Public Pages passes 9 checks and Actions storage passes 8 assertions. Revalidation preserved the actual model archive without inference.
 
-18. **not done** Release commits and tag are verified, with public release state explicit. The local day23-watchtower-gates-candidate tag is verified by packaged provenance/release-verification.json, with all earlier tags preserved. The required public repository, remote tag and release remain pending.
+18. **not done** Release commits and tag are verified, with public release state explicit. The public repository and all earlier annotated tags are verified. This checked source snapshot precedes final release publication; observed release and tag proof will be recorded after publication.
 
 
 Recorded failed case: [asset_metadata_edit-heldout-05](reports/model/runs/actual-2026-11-01T16-50-21-528Z/asset_metadata_edit-heldout-05.json). Its recorded failure code is model_turn_budget_exhausted. This case remains in the declared denominator.

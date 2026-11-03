@@ -1,8 +1,8 @@
 {
   "schema": "watchtower-browser-verification-v1",
   "label": "rederive",
-  "started_at": "2026-11-01T17:06:54.352Z",
-  "source_revision": "87dd52b866969cdc7be5734e4c9a4ba88ee4e0c8",
+  "started_at": "2026-11-03T15:59:45.532Z",
+  "source_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
   "backend": "sqlite_local_candidate",
   "tests": [
     {
@@ -41,10 +41,10 @@
       "name": "real HTTP prepare approve publish and identical receipt recovery",
       "status": "passed",
       "detail": {
-        "receipt_id": "74a1a966-8d5a-4163-99c5-bbd410ff37da",
-        "published_at": 1793552815271,
-        "briefing_digest": "163f5707f31898b2747fd7f31b45345de142f5949f31d2fcc86e5a6350a2dad1",
-        "namespace": "demo:28ff96d9-ff8c-4424-9244-0bd87ff4c1c8"
+        "receipt_id": "d118be0d-2808-4df8-9284-9c0d3f86c767",
+        "published_at": 1793721586377,
+        "briefing_digest": "3c34e266dc8d3fbe89a07157104cb8250c56404b2ba52e4ce6716969613af5d2",
+        "namespace": "demo:e3cf3ce4-ceed-48ee-ad26-9551dc558088"
       }
     },
     {
@@ -52,7 +52,7 @@
       "status": "passed",
       "detail": {
         "receipt_count": 1,
-        "receipt_id": "74a1a966-8d5a-4163-99c5-bbd410ff37da"
+        "receipt_id": "d118be0d-2808-4df8-9284-9c0d3f86c767"
       }
     },
     {
@@ -140,7 +140,7 @@
       "detail": {
         "kind": "actual_backend_head_change",
         "backend": "sqlite_local_candidate",
-        "namespace": "demo:3f80b069-e744-425a-aafd-1cdab6b3c122",
+        "namespace": "demo:5578063e-121f-4a02-b4cf-443f56562f2c",
         "publication_status": 409,
         "receipt_count": 0
       }
@@ -171,12 +171,12 @@
     "rederive-mobile-sources.png"
   ],
   "errors": [],
-  "site_url": "http://127.0.0.1:63443",
+  "site_url": "http://127.0.0.1:53683",
   "browser_version": "156.0.8078.74",
-  "api_revision": "87dd52b866969cdc7be5734e4c9a4ba88ee4e0c8",
-  "api_url": "http://127.0.0.1:63443",
+  "api_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+  "api_url": "http://127.0.0.1:53683",
   "status": "passed",
-  "finished_at": "2026-11-01T17:06:56.783Z",
+  "finished_at": "2026-11-03T15:59:47.829Z",
   "passed": 14,
   "failed": 0
 }

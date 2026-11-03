@@ -8,6 +8,12 @@ The suite tests prepare, explicit digest approval, publication, identical retry,
 
 For the public site, set `WATCHTOWER_BROWSER_URL` to the actual Pages URL and `WATCHTOWER_BROWSER_LABEL=public`. The build must already contain its approved public API origin. The public run exercises the real browser-to-API workflow and a separate client; local-only fault manipulations are omitted. A local browser result does not establish public Pages or hosted API success.
 
+The [Pages application](https://mekala27-45.github.io/watchtower/) was deployed by successful workflow dispatch `41666480544`. On November 3 `reports/verification/public-live.json` passed all four public GET checks and confirmed that Pages build metadata and API health both identify `05ec1ac5044a84e8f52796fad26275157a9fc01d`. It also checked the exact allowed Pages origin and rejection of an untrusted origin.
+
+The separate Pages browser run passed all nine checks in `reports/browser/pages.json` at the same source and API revision. Visible approval and publication produced receipt `357b208f-a5b2-47bd-a673-6e69eb485538`, identical retry recovered that receipt, and a separate HTTP client read exactly one receipt. The run also verified both themes, mobile layout, keyboard focus, reduced motion, screen reader labels and no uncaught browser errors. Local-only source mutation and session expiry tests remain in their separately labeled local runs.
+
+The earlier `reports/browser/public-api.json` contains nine passed browser checks against the API-hosted native modules at source revision `58a59b16f1a95021dbcbc19ed59b59292fa5ac24`. It includes publication, identical receipt recovery and a separate client observing one receipt. That evidence remains labeled with its original URL and revision. It is not a compiled Pages browser result.
+
 The report names its tested source revision, backend, browser version and timestamps. Reports generated while implementation changes are uncommitted are development evidence; release verification must rerun on the frozen candidate revision. Screenshots retain the UI state actually observed, including unavailable model results when inference has not run.
 
 `scripts/make-demo-gif.py LABEL` assembles the review, approval, publication and recovery screenshots from a passed browser run. Its companion JSON records input hashes and display durations. It is a presentation sequence of actual screenshots, not a continuous recording or a latency measurement. No interface text or result is invented by the assembly script.

@@ -1,13 +1,15 @@
 {
-  "code_revision": "0e13886d2f37e5726492a86707360d81fe616889",
-  "generated_at": "2026-11-01T16:59:07.399Z",
+  "code_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+  "generated_at": "2026-11-03T16:01:42.598Z",
+  "tested_implementation_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+  "implementation_unchanged_since_configured_full_suite": true,
   "tests": {
-    "total": 156,
-    "passed": 156,
+    "total": 160,
+    "passed": 160,
     "failed": 0,
     "skipped": 0,
     "exit_code": 0,
-    "evidence": "reports/verification/tests.tap"
+    "evidence": "reports/verification/rederived-artifacts/reports-verification-tests.tap"
   },
   "syntax": {
     "status": "passed",
@@ -15,8 +17,8 @@
   },
   "scan": {
     "status": "passed",
-    "files": 408,
-    "commits": 47,
+    "files": 482,
+    "commits": 51,
     "failures": [],
     "scope": "pattern-based secret and release-body scan; not a complete security audit"
   },
@@ -24,13 +26,8 @@
     "status": "passed",
     "failures": [],
     "vocabulary_source": "supplied prompt_checker.py",
-    "vocabulary_source_sha256": "de18417c7d2c39548b76ab0b3eb3d1e367e4b000af0aaf4dfd82713c89a61fb1",
-    "excluded_runtime_prompt_evidence": [
-      "agent/instructions.md",
-      "docs/sources/model-instructions-initial.md"
-    ]
+    "vocabulary_source_sha256": "de18417c7d2c39548b76ab0b3eb3d1e367e4b000af0aaf4dfd82713c89a61fb1"
   },
-  "required_remote_checks": "reports/verification/delivery.json",
-  "actual_model_gate": "scripts/verify-report-evidence.mjs validates actual archives separately",
+  "inference_executed": false,
   "local_checks_passed": true
 }

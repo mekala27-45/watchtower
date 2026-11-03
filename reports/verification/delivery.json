@@ -1,46 +1,64 @@
 {
   "backend": "postgres",
   "fonts": "installed",
-  "browser": "passed_local_postgres_and_public_api",
+  "browser": "passed_local_postgres_and_public_pages",
   "api": {
     "url": "https://watchtower-mekala27-45s-projects.vercel.app",
     "verified": true,
     "browser_verified": true,
     "separate_client_verified": true,
-    "source_revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24",
-    "deployment_id": "dpl_4q5w3qndov9DbwxBeriS5JZz4q42",
+    "source_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+    "deployment_id": "dpl_29b1o5vraJhvMjN3ALZJ5hUDug1h",
     "health_evidence": "reports/verification/public-live.json",
-    "browser_evidence": "reports/browser/public-api.json",
+    "browser_evidence": "reports/browser/pages.json",
     "ui_serving": "native_modules_from_apps_site",
     "blocker": null
   },
   "site": {
-    "url": null,
-    "verified": false,
-    "blocker": "GitHub CLI device sign-in awaits completion in the requested Chrome profile. The GitHub connector is signed in as mekala27-45, but the intended repository returns 404 and the native Chrome window is minimized."
+    "url": "https://mekala27-45.github.io/watchtower/",
+    "verified": true,
+    "browser_verified": true,
+    "source_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+    "ui_serving": "compiled_application_on_github_pages",
+    "workflow_run_url": "https://github.com/mekala27-45/watchtower/actions/runs/41666480544",
+    "build_evidence": "reports/verification/public-live.json",
+    "browser_evidence": "reports/browser/pages.json",
+    "blocker": null
   },
   "dispatch": {
-    "verified": false,
-    "run_url": null,
+    "verified": true,
+    "run_url": "https://github.com/mekala27-45/watchtower/actions/runs/41666485561",
     "operator_collection": "reports/collection/operator-20261101T1645.json",
     "schedule_configured": true,
-    "schedule_enabled": false,
-    "scheduled_run_observed": false
+    "schedule_enabled": true,
+    "scheduled_run_observed": false,
+    "provider_evidence": "reports/verification/actions-dispatch.json",
+    "database_evidence": "reports/verification/actions-storage.json",
+    "schedule": "17 */6 * * *",
+    "schedule_timezone": "UTC",
+    "coverage": "four_partial_captures"
   },
   "release": {
     "verified": false,
     "url": null,
     "public": false,
     "local_tag": "day23-watchtower-gates-candidate",
-    "verification": "packaged provenance/release-verification.json"
+    "remote_tag_verified": true,
+    "verification": "reports/verification/remote-tags.json",
+    "state": "final_release_preparation"
   },
   "browser_evidence": "reports/browser/postgres.json",
-  "demo_gif": "reports/browser/public-api-demo.gif",
+  "demo_gif": "reports/browser/pages-demo.gif",
   "rederivation": {
     "passed": true,
+    "source_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
     "evidence": "reports/verification/rederive.json",
-    "separate_empty_database_evidence": "reports/verification/rederive-database-isolation.json"
+    "separate_empty_database_evidence": "reports/verification/rederive-database-isolation.json",
+    "schema_preparation_evidence": "reports/verification/rederive-schema-preparation.json",
+    "tests_passed": 160,
+    "tests_skipped": 0
   },
-  "public_browser_evidence": "reports/browser/public-api.json",
-  "gate_contract_evidence": "reports/verification/gate-three-cases.json"
+  "public_browser_evidence": "reports/browser/pages.json",
+  "gate_contract_evidence": "reports/verification/gate-three-cases.json",
+  "repository": "https://github.com/mekala27-45/watchtower"
 }

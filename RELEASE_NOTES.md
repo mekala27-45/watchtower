@@ -1,13 +1,15 @@
-# Watchtower verified candidate with public API
+# Watchtower Day 23 release
 
-Failed collection remains visibly unknown. The application now uses direct TLS Postgres for durable source state, digest-bound review and atomic internal receipt recovery, with an isolated synthetic browser demo.
+Watchtower captures bounded release metadata, checks typed differences, freezes evidence for review and recovers an internal publication receipt after a lost response.
 
-The deterministic baseline matched 42 of 42 expected findings across 72 held-out sequences. The separate actual local model attempted 24 sequences, completed 20 and retained 4 failures. It produced zero supported proposals. The useful-model criterion did not pass.
+The public application is https://mekala27-45.github.io/watchtower/. Its API uses direct TLS Postgres at https://watchtower-mekala27-45s-projects.vercel.app. The Pages browser passed all 9 checks, including digest-bound review, identical receipt recovery and a separate client seeing exactly one receipt.
 
-The clean checkout passed 156 tests with no skipped cases. Both database fault matrices recovered all 541 applicable cases; the Postgres matrix includes 109 real process terminations. The clean rederivation used a separate database that had no Watchtower tables before migration. The actual model archive was independently regraded, without running inference again.
+The deterministic baseline matched 42 of 42 expected findings across 72 held-out sequences. The separate actual local model attempted 24 sequences, completed 20 and retained 4 failures. It produced zero supported proposals and missed all 13 expected findings. The useful-model criterion did not pass. Original inference evidence remains unchanged.
 
-The original verified source tag is day23-watchtower-verified-candidate. The previous public API evidence package uses local annotated tag day23-watchtower-public-api-candidate. The corrected gate evidence package uses day23-watchtower-gates-candidate. Its commit and full history are recorded in packaged provenance. The archive includes the complete Git bundle and final tag, scan and file-integrity evidence under provenance. The public Vercel PostgreSQL API and its review interface are verified at https://watchtower-mekala27-45s-projects.vercel.app. Nine public browser checks pass, including the same receipt recovered and verified by a separate client. Required GitHub Pages, Actions dispatch, remote tag and public release remain unverified because GitHub authentication and reliable browser targeting are unavailable. Database-secret destination approval is resolved.
+A fresh checkout of implementation revision 05ec1ac5044a84e8f52796fad26275157a9fc01d passed 160 tests without failures or skips. Both recovery matrices passed all 541 applicable cases, with 35 cases not applicable. The Postgres matrix includes 109 real process terminations. Fourteen local compiled browser checks also passed. The database was proved empty before the checked-in migrations were applied. An initial unmigrated setup failure is retained separately.
 
-Read RESULTS.md for all eighteen completion decisions. Open reports/browser/public-api-demo.gif for the actual screenshot sequence and its adjacent JSON provenance. Exact model and dependency identities remain in the frozen source and run manifests.
+Manual Actions collection run 41666485561 succeeded. Eight independent database assertions verified 8 HTTP attempts and 4 partial captures, with no false usable comparison head. Recurring collection is enabled at minute 17 every six hours UTC. No scheduled run is claimed.
 
-The gate contract audit maps 17 admission gates to clean, deliberate violation and empty-input cases. The focused check passed 45 tests with no failures or skips. This corrects section 20 line 2 without changing the failed actual model quality result. The original brief requires preserving that result; a second model comparison is optional stretch work.
+This source snapshot is prepared before final publication. The final annotated release tag, source archive digest and observed public release are recorded in post-publication verification. Later evidence-only documentation does not amend the released tag or imply another model run.
+
+Read RESULTS.md for separate baseline and actual-model tables. Open reports/browser/pages-demo.gif for the actual screenshot sequence and pages-demo.json for frame provenance.

@@ -1,8 +1,11 @@
 {
-  "state": "public_api_and_gate_contracts_verified_github_pending",
-  "candidate_tag": "day23-watchtower-gates-candidate",
-  "validated_revision": "744e9c86cfcc008526af22282019bfcf5d41fb57",
+  "state": "verified_delivery_release_preparation",
+  "verified_implementation_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+  "intended_release_tag": "day23-watchtower-v0.1.0",
   "public_release": false,
+  "public_repository": "https://github.com/mekala27-45/watchtower",
+  "public_site": "https://mekala27-45.github.io/watchtower/",
+  "actual_model_source_revision": "0e13886d2f37e5726492a86707360d81fe616889",
   "artifacts": [
     {
       "path": "reports/baseline/full.json",
@@ -17,50 +20,70 @@
       "sha256": "56b10174ad8b9c443efe57edfa45a0a17c0c5a588e9de330976bf665f3117a89"
     },
     {
-      "path": "reports/faults/matrix.json",
-      "sha256": "823dcbc1403c80ec8e4798f9f30e4c4a611d00c03e058baaa3a8e2412d16b2dc"
-    },
-    {
-      "path": "reports/verification/rederive.json",
-      "sha256": "102b4b1441b47728302f56a6b5b7b3ab404c64cddbb6660cdf2c1bdbfd319b95"
-    },
-    {
       "path": "docs/evaluation-plan.json",
       "sha256": "2ac30e960db3c20053d1a0ab9d01e85886402397326dcb7de389a2fee459b38e"
     },
     {
+      "path": "reports/current.json",
+      "sha256": "e1e8d65f3e3bacf0f72fb2f75966d86fa63cbae2b57b84ac423af8b3335b0acc"
+    },
+    {
+      "path": "reports/checklist.json",
+      "sha256": "6db63d3c8fdaf6a4be647e27c3a86ee367f4723a297a645cfce7455d7b680113"
+    },
+    {
+      "path": "reports/verification/checks.json",
+      "sha256": "1264fdfc18c80767de10a17b5c648e75591424beb5accd810c50deecb3a6e1f7"
+    },
+    {
+      "path": "reports/verification/rederive.json",
+      "sha256": "d75e2c8ecf5b8079ca354e830b3771e442e73f84b440c17e45151039ced1e600"
+    },
+    {
+      "path": "reports/verification/rederive-database-isolation.json",
+      "sha256": "0273406c5ae78ebc85a568845085b156cc61526fcd7bc4fdb1c5ccfb55ccd115"
+    },
+    {
+      "path": "reports/verification/rederive-schema-preparation.json",
+      "sha256": "1e8a634d793425ff91a71f5c0851676007506d890fe7712fdb7cc8ae581e7717"
+    },
+    {
       "path": "reports/verification/public-live.json",
-      "sha256": "e2b5fa91b79325a67a233f8b27cb10abfd8d9dbdc345afd90472094d4f8c36a1"
+      "sha256": "cbc88921e7c026d001caf9da50122f966913a10c22aa83dee0e0fb082f9ed455"
     },
     {
-      "path": "reports/verification/public-deployment.json",
-      "sha256": "e80fdce59a275199cf8f5dcad36a041f2ee1dea1b92c838bb04994b1a6e035de"
+      "path": "reports/verification/actions-dispatch.json",
+      "sha256": "07541a81283078aaf8466aa00f6364d31726704d32aaf8a1077eb99b46c5fc09"
     },
     {
-      "path": "reports/browser/public-api.json",
-      "sha256": "d2d5ed3e4f2ee2373be396497c259ad5108546efad07a1f2cbddeb4ec7dabbcf"
+      "path": "reports/verification/actions-storage.json",
+      "sha256": "3bcbefae0c7b35a98dc097ad490de24764d6098d838af29549840cf435df8e64"
     },
     {
-      "path": "reports/verification/gate-three-cases.json",
-      "sha256": "9d731f026e195956681136027c98b1554a3e8b5182b484aabce9f2310c8b5fe8"
+      "path": "reports/verification/github-hosts.json",
+      "sha256": "d29bb700ae4554d1e5ac8cbe11ae3c3f672d3f0948e422461b17686b07994003"
     },
     {
-      "path": "reports/verification/access-status-20261103.json",
-      "sha256": "8741a405cfd868ac89206822130c35cbe0b0c8fc4a28e0ccb29bbca0ced711b7"
+      "path": "reports/verification/github-variables.json",
+      "sha256": "27e2a1afe8fd494da2eaf796bda0a6a6b91c8ee0c2c22764400f1a22917810ee"
+    },
+    {
+      "path": "reports/verification/remote-tags.json",
+      "sha256": "165ed33a5426db912136d406075863331d0a82477e06f678410c34a97bd0a9d8"
+    },
+    {
+      "path": "reports/browser/pages.json",
+      "sha256": "92662d1c7592647383fca872136853ef986b097d3180019b90587973049a6907"
+    },
+    {
+      "path": "reports/browser/pages-demo.gif",
+      "sha256": "af570892f9cd2a659a52b628dc4e552e8815a66c9368267c9488e48e3e85604e"
+    },
+    {
+      "path": "reports/browser/pages-demo.json",
+      "sha256": "94c2df1db66c9f3cd1ec39ab9bc4b064bee1c77d0a5cf80bff9c83cdafaf5c4c"
     }
   ],
-  "historical_candidate": {
-    "tag": "day23-watchtower-local-candidate",
-    "revision": "88c830b8ae5db2f369aa073fa55d059fedea1de1"
-  },
-  "public_api": "https://watchtower-mekala27-45s-projects.vercel.app",
-  "previous_verified_candidate": {
-    "tag": "day23-watchtower-verified-candidate",
-    "revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24"
-  },
-  "evidence_package_revision": "See packaged provenance/release-verification.json",
-  "previous_public_api_candidate": {
-    "tag": "day23-watchtower-public-api-candidate",
-    "revision": "744e9c86cfcc008526af22282019bfcf5d41fb57"
-  }
+  "prior_tags_evidence": "reports/verification/remote-tags.json",
+  "post_publication_proof": "Public release assets will record the observed release, final tag and immutable source archive."
 }

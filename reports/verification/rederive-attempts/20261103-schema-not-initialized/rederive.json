@@ -1,0 +1,134 @@
+{
+  "revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+  "worktree": "C:\\Users\\mekal\\Documents\\Codex\\2026-11-01\\new-chat\\work\\watchtower-rederive-05ec1ac504-20261103155047320",
+  "started_clean": true,
+  "commands": [
+    {
+      "script": "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js",
+      "args": [
+        "ci",
+        "--ignore-scripts",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ],
+      "log": "reports/verification/rederive-npm-ci.log"
+    },
+    {
+      "script": "scripts/verify-report-evidence.mjs",
+      "args": [
+        "--archived"
+      ],
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ],
+      "log": "reports/verification/rederive-verify-report-evidence.mjs.log"
+    },
+    {
+      "script": "scripts/generate-fixtures.mjs",
+      "args": [],
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ],
+      "log": "reports/verification/rederive-generate-fixtures.mjs.log"
+    },
+    {
+      "script": "scripts/evaluate.mjs",
+      "args": [],
+      "exit_code": 0,
+      "allowed_exit_codes": [
+        0
+      ],
+      "log": "reports/verification/rederive-evaluate.mjs.log"
+    },
+    {
+      "script": "scripts/check.mjs",
+      "args": [],
+      "exit_code": 1,
+      "allowed_exit_codes": [
+        0
+      ],
+      "log": "reports/verification/rederive-check.mjs.log"
+    }
+  ],
+  "comparisons": [
+    {
+      "path": "reports/baseline/full.json",
+      "expected": "488fed426fd36e35c88a1595eaad0d60f153f52da7b8372082aaebbd83c76552",
+      "actual": "488fed426fd36e35c88a1595eaad0d60f153f52da7b8372082aaebbd83c76552",
+      "match": true
+    },
+    {
+      "path": "reports/baseline/model-subset.json",
+      "expected": "a4bc36d5ab9519449de03d42b5f2badd804a424ade49b556e7a3e8331269af78",
+      "actual": "a4bc36d5ab9519449de03d42b5f2badd804a424ade49b556e7a3e8331269af78",
+      "match": true
+    },
+    {
+      "path": "fixtures/manifest.json",
+      "expected": "9fb4e3a8443a245469e954085b2a0dc5adcdb4b6fb614bc248283dd5496e271b",
+      "actual": "9fb4e3a8443a245469e954085b2a0dc5adcdb4b6fb614bc248283dd5496e271b",
+      "match": true
+    }
+  ],
+  "preserved_artifacts": [
+    {
+      "source": "reports/verification/rederive-npm-ci.log",
+      "path": "reports/verification/rederived-artifacts/rederive-npm-ci.log"
+    },
+    {
+      "source": "reports/verification/rederive-verify-report-evidence.mjs.log",
+      "path": "reports/verification/rederived-artifacts/rederive-verify-report-evidence.mjs.log"
+    },
+    {
+      "source": "reports/verification/rederive-generate-fixtures.mjs.log",
+      "path": "reports/verification/rederived-artifacts/rederive-generate-fixtures.mjs.log"
+    },
+    {
+      "source": "reports/verification/rederive-evaluate.mjs.log",
+      "path": "reports/verification/rederived-artifacts/rederive-evaluate.mjs.log"
+    },
+    {
+      "source": "reports/verification/rederive-check.mjs.log",
+      "path": "reports/verification/rederived-artifacts/rederive-check.mjs.log"
+    },
+    {
+      "source": "reports/verification/checks.json",
+      "path": "reports/verification/rederived-artifacts/reports-verification-checks.json"
+    },
+    {
+      "source": "reports/verification/tests.tap",
+      "path": "reports/verification/rederived-artifacts/reports-verification-tests.tap"
+    },
+    {
+      "source": "reports/verification/rederived-full.json",
+      "path": "reports/verification/rederived-artifacts/reports-verification-rederived-full.json"
+    },
+    {
+      "source": "reports/verification/rederived-model-subset.json",
+      "path": "reports/verification/rederived-artifacts/reports-verification-rederived-model-subset.json"
+    },
+    {
+      "source": "reports/faults/matrix.json",
+      "path": "reports/verification/rederived-artifacts/reports-faults-matrix.json"
+    },
+    {
+      "source": "reports/faults/postgres-matrix.json",
+      "path": "reports/verification/rederived-artifacts/reports-faults-postgres-matrix.json"
+    }
+  ],
+  "fresh_database_state": "SQLite tests use fresh temporary or in-memory stores. PostgreSQL tests, when configured, use fresh random test namespaces and independent connections. No original application database or model session state is copied.",
+  "actual_model_executed": false,
+  "actual_model_evidence_regraded": true,
+  "public_checks_executed": false,
+  "postgres_tests_configured": true,
+  "started_at": "2026-11-03T15:50:47.741Z",
+  "local_rederivation_passed": false,
+  "error": "rederive_failed:check.mjs",
+  "finished_at": "2026-11-03T15:51:06.970Z"
+}

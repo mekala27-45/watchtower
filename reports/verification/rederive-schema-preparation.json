@@ -1,0 +1,15 @@
+{
+  "prepared_at": "2026-11-03T15:52:35.404Z",
+  "database": "watchtower_rederive_20261103",
+  "migrations": [
+    {
+      "name": "001_watchtower.sql"
+    },
+    {
+      "name": "002_runtime_adapter.sql"
+    }
+  ],
+  "namespace_count_before_tests": 0,
+  "empty_database_evidence": "reports/verification/rederive-database-isolation.json",
+  "method": "checked_in_migrations_before_test_initialization"
+}

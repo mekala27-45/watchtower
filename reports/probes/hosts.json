@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-02T15:49:50.796Z",
+  "checked_at": "2026-11-03T15:48:18.969Z",
   "neon": {
     "project_id": "sparkling-mode-99569565",
     "branch_id": "br-gentle-feather-b5gitp6s",
@@ -23,22 +23,32 @@
     "plan": "hobby",
     "framework": "container",
     "production_deployment": {
-      "id": "dpl_4q5w3qndov9DbwxBeriS5JZz4q42",
+      "id": "dpl_29b1o5vraJhvMjN3ALZJ5hUDug1h",
       "url": "https://watchtower-mekala27-45s-projects.vercel.app",
       "state": "READY",
-      "source_revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24"
+      "source_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d"
     },
     "database_secret": "stored_in_approved_production_destination",
     "public_verification": "reports/verification/public-live.json",
     "browser_verification": "reports/browser/public-api.json"
   },
   "github": {
-    "repository": null,
-    "pages": null,
-    "dispatch": null,
-    "reason": "GitHub CLI device sign-in awaits completion in the requested Chrome profile. The GitHub connector is signed in as mekala27-45, but the intended repository returns 404 and the native Chrome window is minimized.",
-    "prior_browser_blocker": "No repository create connector; native Chrome windows minimized and unavailable to browser controls.",
-    "followup_date": "2026-11-03",
-    "access_evidence": "reports/verification/access-status-20261103.json"
+    "repository": "https://github.com/mekala27-45/watchtower",
+    "pages": "https://mekala27-45.github.io/watchtower/",
+    "dispatch": "https://github.com/mekala27-45/watchtower/actions/runs/41666485561",
+    "repository_public": true,
+    "pages_https_enforced": true,
+    "pages_build_verified": true,
+    "source_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+    "manual_dispatch_verified": true,
+    "independent_database_assertions_passed": true,
+    "schedule_enabled": true,
+    "scheduled_run_observed": false,
+    "evidence": [
+      "reports/verification/github-hosts.json",
+      "reports/verification/public-live.json",
+      "reports/verification/actions-dispatch.json",
+      "reports/verification/actions-storage.json"
+    ]
   }
 }

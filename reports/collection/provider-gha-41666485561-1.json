@@ -1,0 +1,17 @@
+{
+  "schema": "watchtower-actions-provenance-v1",
+  "namespace": "live",
+  "mode": "provider_job_record",
+  "provider": "github_actions",
+  "run_key": "gha-41666485561-1",
+  "run_id": "41666485561",
+  "run_attempt": "1",
+  "event_name": "workflow_dispatch",
+  "source_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+  "run_url": "https://github.com/mekala27-45/watchtower/actions/runs/41666485561",
+  "collection_step_outcome": "success",
+  "workflow_success_verified": false,
+  "scheduled_success_verified": false,
+  "note": "Confirm the completed provider run and persisted collection rows independently. This file does not prove final workflow success.",
+  "recorded_at": "2026-11-03T15:42:16.194Z"
+}

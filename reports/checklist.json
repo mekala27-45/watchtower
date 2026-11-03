@@ -1,8 +1,8 @@
 [
   {
     "item": "Source, dependency and free-host probes are recorded and checked.",
-    "status": "not done",
-    "evidence": "reports/probes records verified source IDs, dependency integrity, CPU model, Neon Free direct TLS and a READY Vercel Hobby container. Public GitHub Pages host checks remain unexecuted."
+    "status": "done",
+    "evidence": "reports/probes verifies source identities, pinned dependencies, Neon Free direct TLS, a READY Vercel Hobby API and the public GitHub Pages host. reports/verification/public-live.json passes all 4 hosted checks at 05ec1ac."
   },
   {
     "item": "Claim renderer and every required gate pass their three cases.",
@@ -66,8 +66,8 @@
   },
   {
     "item": "Public Pages site completes the visible API review and receipt flow.",
-    "status": "not done",
-    "evidence": "The Vercel API-hosted review interface is verified, but the required GitHub Pages site does not exist. GitHub authentication and reliable access to the requested Chrome profile remain unavailable."
+    "status": "done",
+    "evidence": "reports/browser/pages.json passes all 9 public Pages browser checks at 05ec1ac, including the visible compiled UI, digest-bound review, receipt recovery and a separate client verifying exactly one receipt."
   },
   {
     "item": "Governance, notices, source policy, skills and retention checks are complete.",
@@ -76,17 +76,17 @@
   },
   {
     "item": "Actual dispatch succeeded and schedule configuration is reported honestly.",
-    "status": "not done",
-    "evidence": "The local operator collection succeeded with honest partial coverage; no Actions dispatch has run. The committed UTC schedule remains gated off."
+    "status": "done",
+    "evidence": "Actions run 41666485561 completed successfully. reports/verification/actions-storage.json independently verifies all 8 database assertions, 8 HTTP attempts and 4 partial captures. The six-hour UTC schedule is enabled; no scheduled run is claimed."
   },
   {
     "item": "Final reports, scans, live checks and clean worktree rederivation pass.",
-    "status": "not done",
-    "evidence": "Clean-checkout rederivation passes 156 tests and both fault matrices using a proven separate empty database. Public API checks now pass; required Pages and Actions live checks remain unexecuted."
+    "status": "done",
+    "evidence": "A fresh checkout of 05ec1ac passed 160 tests without skips, both 541-case recovery matrices, typechecking, build and 14 browser checks on a proven separate empty database. Public Pages passes 9 checks and Actions storage passes 8 assertions. Revalidation preserved the actual model archive without inference."
   },
   {
     "item": "Release commits and tag are verified, with public release state explicit.",
     "status": "not done",
-    "evidence": "The local day23-watchtower-gates-candidate tag is verified by packaged provenance/release-verification.json, with all earlier tags preserved. The required public repository, remote tag and release remain pending."
+    "evidence": "The public repository and all earlier annotated tags are verified. This checked source snapshot precedes final release publication; observed release and tag proof will be recorded after publication."
   }
 ]

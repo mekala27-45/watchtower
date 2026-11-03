@@ -1,0 +1,105 @@
+{
+  "attempt": 1,
+  "conclusion": "success",
+  "createdAt": "2026-11-03T15:41:26Z",
+  "databaseId": 41666485561,
+  "event": "workflow_dispatch",
+  "headSha": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+  "jobs": [
+    {
+      "completedAt": "2026-11-03T15:42:20Z",
+      "conclusion": "success",
+      "databaseId": 126023073983,
+      "name": "collect",
+      "startedAt": "2026-11-03T15:41:30Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-11-03T15:41:32Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-11-03T15:41:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-03T15:41:34Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-11-03T15:41:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-03T15:41:40Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+          "number": 3,
+          "startedAt": "2026-11-03T15:41:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-03T15:41:45Z",
+          "conclusion": "success",
+          "name": "Run npm ci --ignore-scripts --no-audit --no-fund",
+          "number": 4,
+          "startedAt": "2026-11-03T15:41:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-03T15:42:16Z",
+          "conclusion": "success",
+          "name": "Collect the fixed watchlist into direct Postgres",
+          "number": 5,
+          "startedAt": "2026-11-03T15:41:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-03T15:42:16Z",
+          "conclusion": "success",
+          "name": "Record runner provenance separately from collection coverage",
+          "number": 6,
+          "startedAt": "2026-11-03T15:42:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-03T15:42:17Z",
+          "conclusion": "success",
+          "name": "Preserve bounded collection and provider evidence",
+          "number": 7,
+          "startedAt": "2026-11-03T15:42:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-03T15:42:17Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+          "number": 13,
+          "startedAt": "2026-11-03T15:42:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-03T15:42:18Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 14,
+          "startedAt": "2026-11-03T15:42:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-11-03T15:42:18Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-11-03T15:42:18Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/mekala27-45/watchtower/actions/runs/41666485561/job/126023073983"
+    }
+  ],
+  "startedAt": "2026-11-03T15:41:26Z",
+  "status": "completed",
+  "updatedAt": "2026-11-03T15:42:21Z",
+  "url": "https://github.com/mekala27-45/watchtower/actions/runs/41666485561"
+}

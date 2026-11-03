@@ -1,11 +1,11 @@
 {
   "schema": "watchtower-public-live-verification-v1",
-  "started_at": "2026-11-02T15:46:21.466Z",
+  "started_at": "2026-11-03T15:42:39.687Z",
   "api_origin": "https://watchtower-mekala27-45s-projects.vercel.app",
-  "expected_revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24",
-  "site_url": null,
+  "expected_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+  "site_url": "https://mekala27-45.github.io/watchtower/",
   "allowed_origin": "https://mekala27-45.github.io",
-  "allowed_origin_source": "intended_watchtower_pages_origin",
+  "allowed_origin_source": "provided_site",
   "method": "uncredentialed_http_get",
   "mutation_endpoints_called": false,
   "checks": [
@@ -21,7 +21,7 @@
           "backend": "postgres",
           "state": "connected"
         },
-        "revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24",
+        "revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
         "contract": "watchtower-local-v1"
       }
     },
@@ -31,7 +31,7 @@
       "http_status": 200,
       "allow_origin_matches": true,
       "vary_includes_origin": true,
-      "revision": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24"
+      "revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d"
     },
     {
       "name": "untrusted_origin_rejected",
@@ -39,12 +39,21 @@
       "http_status": 403,
       "named_origin_rejection": true,
       "allow_origin_absent": true
+    },
+    {
+      "name": "pages_build_matches_api_and_source_revision",
+      "status": "passed",
+      "http_status": 200,
+      "build_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+      "revision_matches": true,
+      "api_origin_matches": true,
+      "schema_matches": true
     }
   ],
-  "finished_at": "2026-11-02T15:46:22.834Z",
-  "passed": 3,
+  "finished_at": "2026-11-03T15:42:42.224Z",
+  "passed": 4,
   "failed": 0,
   "status": "passed",
-  "pages_build_checked": false,
+  "pages_build_checked": true,
   "browser_flow_checked": false
 }

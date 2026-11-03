@@ -1,0 +1,148 @@
+{
+  "schema": "watchtower-browser-verification-v1",
+  "label": "pages",
+  "started_at": "2026-11-03T15:50:47.004Z",
+  "source_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+  "backend": "postgres",
+  "tests": [
+    {
+      "name": "compiled site loads local fonts and four labeled views",
+      "status": "passed",
+      "detail": {
+        "fontFaces": [
+          {
+            "family": "Bodoni Moda",
+            "status": "loaded"
+          },
+          {
+            "family": "Noto Sans",
+            "status": "loaded"
+          },
+          {
+            "family": "Noto Sans",
+            "status": "loaded"
+          },
+          {
+            "family": "Noto Sans",
+            "status": "loaded"
+          },
+          {
+            "family": "Fira Mono",
+            "status": "loaded"
+          }
+        ]
+      }
+    },
+    {
+      "name": "keyboard skip link and section focus are visible",
+      "status": "passed"
+    },
+    {
+      "name": "real HTTP prepare approve publish and identical receipt recovery",
+      "status": "passed",
+      "detail": {
+        "receipt_id": "357b208f-a5b2-47bd-a673-6e69eb485538",
+        "published_at": 1793721053262,
+        "briefing_digest": "36bb109fb4b69af4abeca1b85546864320c2c5fcfa827f16d04a7dc27c33b624",
+        "namespace": "demo:3aa92f90-b9b4-4a80-945a-ca261a676327"
+      }
+    },
+    {
+      "name": "separate HTTP client sees exactly one committed receipt",
+      "status": "passed",
+      "detail": {
+        "receipt_count": 1,
+        "receipt_id": "357b208f-a5b2-47bd-a673-6e69eb485538"
+      }
+    },
+    {
+      "name": "light theme real rendered text contrast and four views",
+      "status": "passed",
+      "detail": [
+        {
+          "view": "sources",
+          "checked": 61,
+          "worst": 5.798269134032843
+        },
+        {
+          "view": "briefings",
+          "checked": 66,
+          "worst": 6.073828333888035
+        },
+        {
+          "view": "trace",
+          "checked": 136,
+          "worst": 5.798269134032843
+        },
+        {
+          "view": "evidence",
+          "checked": 99,
+          "worst": 6.073828333888035
+        }
+      ]
+    },
+    {
+      "name": "dark theme real rendered text contrast and four views",
+      "status": "passed",
+      "detail": [
+        {
+          "view": "sources",
+          "checked": 61,
+          "worst": 8.769416394215044
+        },
+        {
+          "view": "briefings",
+          "checked": 66,
+          "worst": 6.937896300492237
+        },
+        {
+          "view": "trace",
+          "checked": 136,
+          "worst": 8.769416394215044
+        },
+        {
+          "view": "evidence",
+          "checked": 99,
+          "worst": 8.910879174833159
+        }
+      ]
+    },
+    {
+      "name": "narrow mobile layout keeps controls and aligned evidence readable",
+      "status": "passed"
+    },
+    {
+      "name": "reduced motion and screen reader labels",
+      "status": "passed"
+    },
+    {
+      "name": "no uncaught browser errors",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    "pages-briefing-review.png",
+    "pages-briefing-approved.png",
+    "pages-briefing-published.png",
+    "pages-briefing-recovered.png",
+    "pages-light-sources.png",
+    "pages-light-briefings.png",
+    "pages-light-trace.png",
+    "pages-light-evidence.png",
+    "pages-dark-sources.png",
+    "pages-dark-briefings.png",
+    "pages-dark-trace.png",
+    "pages-dark-evidence.png",
+    "pages-mobile-briefing.png",
+    "pages-mobile-sources.png"
+  ],
+  "errors": [],
+  "site_url": "https://mekala27-45.github.io/watchtower/",
+  "browser_version": "156.0.8078.74",
+  "api_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+  "api_url": "https://watchtower-mekala27-45s-projects.vercel.app",
+  "status": "passed",
+  "finished_at": "2026-11-03T15:50:55.903Z",
+  "passed": 9,
+  "failed": 0
+}

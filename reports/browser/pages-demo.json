@@ -1,0 +1,55 @@
+{
+  "schema": "watchtower-screenshot-sequence-v1",
+  "artifact": "pages-demo.gif",
+  "kind": "presentation_sequence_from_actual_browser_screenshots",
+  "not_elapsed_time_video": true,
+  "backend": "postgres",
+  "source_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+  "api_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+  "site_url": "https://mekala27-45.github.io/watchtower/",
+  "browser_report": "reports/browser/pages.json",
+  "browser_report_sha256": "92662d1c7592647383fca872136853ef986b097d3180019b90587973049a6907",
+  "capture_started_at": "2026-11-03T15:50:47.004Z",
+  "capture_finished_at": "2026-11-03T15:50:55.903Z",
+  "processing": "First four actual screenshot frames retained in report order; complete screenshots padded to one canvas and uniformly resized to 1000 pixels wide; no generated interface content.",
+  "duration_ms": [
+    2600,
+    1800,
+    2400,
+    3000
+  ],
+  "source_screenshot_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "sources": [
+    {
+      "file": "pages-briefing-review.png",
+      "sha256": "61be1c5c839d0966aaf2501d497e135b099bc81c0b168eaafcfe7fc50cd7f1ce",
+      "width": 1440,
+      "height": 1920
+    },
+    {
+      "file": "pages-briefing-approved.png",
+      "sha256": "96e00de4aa2d1a4da159d41830cb49a8aa1c90c5eb5d1295a2956228f5e47a95",
+      "width": 1440,
+      "height": 1920
+    },
+    {
+      "file": "pages-briefing-published.png",
+      "sha256": "861fff9abff10875a9213de35add372cc8c1e30f2af3b6de20af426b38b1165d",
+      "width": 1440,
+      "height": 2141
+    },
+    {
+      "file": "pages-briefing-recovered.png",
+      "sha256": "d4df256d374a5ab0f31124a1c9ab81820d3fb94e0eb4b85d930343588ef7f857",
+      "width": 1440,
+      "height": 2141
+    }
+  ],
+  "bytes": 577357,
+  "sha256": "af570892f9cd2a659a52b628dc4e552e8815a66c9368267c9488e48e3e85604e"
+}

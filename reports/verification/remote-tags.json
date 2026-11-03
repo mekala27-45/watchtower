@@ -1,0 +1,39 @@
+{
+  "observed_at": "2026-11-03T15:46:05.919Z",
+  "repository": "https://github.com/mekala27-45/watchtower",
+  "verified_source_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+  "remote_refs": [
+    {
+      "sha": "5f4e77471227e1dc7f04f2f6dabd7cb61f6da747",
+      "ref": "refs/tags/day23-watchtower-gates-candidate"
+    },
+    {
+      "sha": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+      "ref": "refs/tags/day23-watchtower-gates-candidate^{}"
+    },
+    {
+      "sha": "dda5655af5eecda4b54ab6bd6d9e04738d897eda",
+      "ref": "refs/tags/day23-watchtower-local-candidate"
+    },
+    {
+      "sha": "3de3342a04ba4527984890df743a4c208ba1d01f",
+      "ref": "refs/tags/day23-watchtower-local-candidate^{}"
+    },
+    {
+      "sha": "b803e516292f6923ed362ae0b0c08305f7422e88",
+      "ref": "refs/tags/day23-watchtower-public-api-candidate"
+    },
+    {
+      "sha": "744e9c86cfcc008526af22282019bfcf5d41fb57",
+      "ref": "refs/tags/day23-watchtower-public-api-candidate^{}"
+    },
+    {
+      "sha": "d697a7191816fa02a858a09c2bbc7c21b23589f6",
+      "ref": "refs/tags/day23-watchtower-verified-candidate"
+    },
+    {
+      "sha": "58a59b16f1a95021dbcbc19ed59b59292fa5ac24",
+      "ref": "refs/tags/day23-watchtower-verified-candidate^{}"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "schema": "fault-matrix-v1",
   "planDigest": "ea4227a86544b4c62b0b62d940cc79332121c8506966c71bc4a597c76807e350",
   "planCommit": "e8909303299c8febb7a450514920c373551217bc",
-  "sourceRevision": "87dd52b866969cdc7be5734e4c9a4ba88ee4e0c8",
+  "sourceRevision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
   "implementationDigests": {
     "scripts/fault-matrix.mjs": "44a11f4e47b05340f54593d8c7969c4e6fc99bc392517fc329d067a0076b10b7",
     "scripts/fault-worker.mjs": "d20e2a8359d2067b55c4678b8a11e4ff65d8aa74c61d79863a41dd8272adb76f",
@@ -11,8 +11,8 @@
     "packages/domain/fixture-loader.mjs": "e8874507ecffc355d5086e74e667a761bcc00fa2fe22c9aa8a2a385267958d88",
     "packages/collector/index.mjs": "c6e69ea0b0b6e0e1ecca5643854cf6a4e43e06ce461d78396174cda503e66b0e"
   },
-  "startedAt": "2026-11-01T17:01:43.955Z",
-  "finishedAt": "2026-11-01T17:02:39.505Z",
+  "startedAt": "2026-11-03T15:53:57.334Z",
+  "finishedAt": "2026-11-03T15:54:56.059Z",
   "backend": "sqlite_local_candidate",
   "transport": "injected_no_socket",
   "planned": 576,
@@ -128,7 +128,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "6589abfd8e847ccb9593a8a4065abe5f83f3fa4881b47d933848eba212ccf615",
+      "receiptDigest": "3e6980aeda08589d1c247d9709bbeaefe3cc1afe0177f063671b882ce1e23c25",
       "usingCanary": false
     },
     {
@@ -237,7 +237,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "8260cf96dbc6fbe98ac7f297a9bc8f4d66c5cd96d5c8cd0145ebb1f26bf1074d",
+      "receiptDigest": "8044c0a19e7240f9571cbdcd59b208e58d15780641872025db1dd1c5fc738160",
       "usingCanary": false
     },
     {
@@ -346,7 +346,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "e2c4e6f4d0c713ffdc58b303579ea5fe65af5ea2aaa963b51030c72a7efaa930",
+      "receiptDigest": "086ba7a52a797b7903e62b3a59ca36493bd5b18259a14b66b8be2d2e7533cfcc",
       "usingCanary": false
     },
     {
@@ -455,7 +455,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "c748193db53edfb72bf62da607ecd0ecd952b040af85f8e134b9183159c100bf",
+      "receiptDigest": "1f5d1ff4874a7e724d16f287764493eab94ce5c0a568c08afa182c841fb08680",
       "usingCanary": false
     },
     {
@@ -564,7 +564,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "7a2ed6a0bd540d9d29ff2e3a83f8af9cace7651bd5a9b7e4c4402031978aad98",
+      "receiptDigest": "69b363ee5bfeec68968dfffad4b1cc07b6bdee056b92a0bf9c36bf36f01aeb00",
       "usingCanary": false
     },
     {
@@ -673,7 +673,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "8d9badaef1758dd54f1e8a16c80ca1b3257a528ae902c3fab21a4a7b35b79fa3",
+      "receiptDigest": "ccd756e03440c266fbf52138efb3e7f0b5e330bbee0fba3b0317cc310eed16c5",
       "usingCanary": false
     },
     {
@@ -886,7 +886,7 @@
       "postDigest": "376334cdec5127bda046371b0ed8e97674d696dd816e1725be791cd51364356b",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "389f44fe22ca85c0b7d7668bea5a629eef44408876cd58090aae303d137f4ff1",
+      "receiptDigest": "467b8a828c8305ec943d3b4e016a4b5ccb5c9aab21803ca5d513fbdf3b280207",
       "usingCanary": false
     },
     {
@@ -995,7 +995,7 @@
       "postDigest": "376334cdec5127bda046371b0ed8e97674d696dd816e1725be791cd51364356b",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "13b6dc3c38e64def696c9706f5c6cc7775f91f0ef4e4704bea6b5e0b72596bd3",
+      "receiptDigest": "2a544bc51e9cd12914aeddadea3ed36cd32d9e6c16988377172b3580efacac3a",
       "usingCanary": false
     },
     {
@@ -1104,7 +1104,7 @@
       "postDigest": "376334cdec5127bda046371b0ed8e97674d696dd816e1725be791cd51364356b",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "e6cf3cf6a8c8187241e674a51a467bb66e6300e8384d6b5adb09a0e292a951ce",
+      "receiptDigest": "d6ef45c794439bdb6531c150b1468edf7cff777928233f55e5ea68cb1b49de72",
       "usingCanary": false
     },
     {
@@ -1213,7 +1213,7 @@
       "postDigest": "376334cdec5127bda046371b0ed8e97674d696dd816e1725be791cd51364356b",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "8d0288d885195d31340ba6fa858a49d56b1f74bb6a052700db432a16168d56cd",
+      "receiptDigest": "23d7e05964d9c158241f0ef74b1c57e85418721d053ee118b38626823b76ae78",
       "usingCanary": false
     },
     {
@@ -1322,7 +1322,7 @@
       "postDigest": "376334cdec5127bda046371b0ed8e97674d696dd816e1725be791cd51364356b",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "550c7f27a982441b24f21386dd23545ee75f8a1bbff18e014c2a11b7ba650f6a",
+      "receiptDigest": "dd6e4caec02d3df1e01bc77f9f7240386f25c1106362cdbc341567e5c486ec91",
       "usingCanary": false
     },
     {
@@ -2679,7 +2679,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "0f27b8dadeb17f68b3ca20f7171cc540a5184cb5063d95a3408487768c0c1cf3",
+      "receiptDigest": "5fbc97aac5cb8e2dee5dd48fdd545ffc31d6070c30d6651ccdf4fec0d7c91d4b",
       "usingCanary": false
     },
     {
@@ -2788,7 +2788,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "e0545b8136757c4fb806f956695668af0ac3d154657f56739387516d0e48d1fa",
+      "receiptDigest": "5ba88b5e2762293042de6e8b7c348a66c4d3ce149bab8c65d23615ee051f4379",
       "usingCanary": false
     },
     {
@@ -2897,7 +2897,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "fc0d6465e1078b237d67c94dd9db9a35a87ae6e415b9d9e96d3ce7c0eb665c2a",
+      "receiptDigest": "c0bd2835c5b75f6e91b79667b08768772480723a5696a066d4c26bf2c039ebfa",
       "usingCanary": false
     },
     {
@@ -3006,7 +3006,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "bc3440b2c9222c6dafa2d55942077dd31e15a2450dd22d129dcf4d3d57b55d7c",
+      "receiptDigest": "7ad933f168061ccd6c0143a5229ed671c8aad45c538c3a3dc7d2feb8f3238a2d",
       "usingCanary": false
     },
     {
@@ -3115,7 +3115,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "766efd714da5e230a7a87e4775019bf6f90a527f69f1baac9104671afbd90f9e",
+      "receiptDigest": "404275ab172bc2ba4bef88dc5028b01a016317247a4aa33ef7a63d955a02a747",
       "usingCanary": false
     },
     {
@@ -3224,7 +3224,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "ab035c39c3c2afb7a5f4fea2998fe80fb33eba93980ada38a1e35f3f872c6466",
+      "receiptDigest": "aa242dd36e403782ea1a2a2e26adac66aae4da333b1645e89448d1258b0b4d46",
       "usingCanary": false
     },
     {
@@ -3333,7 +3333,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "75340129244b5c193b05fadd4f057775c9e92a07a0eae1a493705bbb9a6107d5",
+      "receiptDigest": "64322ac86a709569a3805622dcccda41f0982a5197c2653eb66ea9edd13891db",
       "usingCanary": false
     },
     {
@@ -3442,7 +3442,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "60c78bbc49e89ad09a6a7acf05672ab5b77791d7abf46b27a6b02ba10a14132e",
+      "receiptDigest": "d0ad6ec298cc04f45d654dd2f4914996e0add50190f0dae99a468a3be419d7fc",
       "usingCanary": false
     },
     {
@@ -3551,7 +3551,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "ad1316835c809eef5ff0ea2624d48e449805f237bc3b36d0128602603c4934ef",
+      "receiptDigest": "63494c8ba49cdc17c81442dc36969650c9b188eb1919a7568788478c243cb450",
       "usingCanary": false
     },
     {
@@ -3660,7 +3660,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "7bbc5bae3a28a1bbeb833a1b16f6079f6de3eab21f8bd27f27ff1089a95d7a34",
+      "receiptDigest": "e3d0ee1d925dc4f0a8dd1c90340e74b4e79b0413dea74ccb7219d4ed6effc435",
       "usingCanary": false
     },
     {
@@ -3873,7 +3873,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "926e85d696ab2a904b5f903b11579d588a335d9276c3be4b0a56129fa162ec27",
+      "receiptDigest": "7ac7f175b24fea05d7b0269d39c9129d775c35ed39c07aa9c9288ab580d7a1fe",
       "usingCanary": false
     },
     {
@@ -3982,7 +3982,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "ceb8e482a8a44ea94eb2ef8eeababebbf11e10d37770598ab80334f1fabd3322",
+      "receiptDigest": "ebcf9bee5ef96319763b2a88a580a39d5071e28ec6998a95774d8603eaa4708d",
       "usingCanary": false
     },
     {
@@ -4091,7 +4091,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "dda9a71839cbe25fff77f4280a4edf24996551fdbb8de9d5a7b7779d948121c0",
+      "receiptDigest": "82aafffce52617f08a758f216470ae839d1e754109eeba8b95db59bef55e1f5f",
       "usingCanary": false
     },
     {
@@ -4200,7 +4200,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "e0c14ab51e3a714ae25e0a906e8ff18f2bdf7a4064c88f2c2ce410d67dd3bc1c",
+      "receiptDigest": "0ee3ad3fadd32c540e28a7e4d2487a42ab823eba72badfab6ef9cbe389dfbdf6",
       "usingCanary": false
     },
     {
@@ -4309,7 +4309,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "f3372ae24389d0d00662e0a8f643990a649026210ee6f37ff802974543b94862",
+      "receiptDigest": "19c5572debb637f9e6a57604f245cc1f9e71dad2c14829f4b76af30631b384c6",
       "usingCanary": false
     },
     {
@@ -4418,7 +4418,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "e09a931bb74c5f94308362bbee82dc937e3b8198d41555a6bd27a51b1ffd6544",
+      "receiptDigest": "b0b0225145fd4eb4bf336c1f5dfa72f6d92e78e6627e8cf4c3573eaa14d04dad",
       "usingCanary": false
     },
     {
@@ -4527,7 +4527,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "788bc2e7c69f7e9b7e93a454c4b851b99ff4eab0a68cdfe80f8c1cb23c3182bb",
+      "receiptDigest": "b87bc7c7ea57643d1fc3cee654b2fd5cbcea087eafe4e0c7097f778a9b901c25",
       "usingCanary": false
     },
     {
@@ -4636,7 +4636,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "cf2c0a421663b0565eff8226a45997ae2809b4503bd839c8355128e98668ee3a",
+      "receiptDigest": "e0b3106bcba984b764dd70dfc6be7ad53d397dfd0f257f77d7097f17fcd38b49",
       "usingCanary": false
     },
     {
@@ -4745,7 +4745,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "ad9ead8c2480f2e5fdc5987dd1749438abc00af568c272699e51952f79ce6d5d",
+      "receiptDigest": "9d295feff3646744f0735e865944fd692bac15cc87b9c01a7bc74cdd27562d74",
       "usingCanary": false
     },
     {
@@ -4854,7 +4854,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "a3e87a71d4e884633473bfe673e80c8c4176ff25d998183bae3bdbae24b56f74",
+      "receiptDigest": "ab5b9859bab62c070a2b04cd740bed0f89f46b53d97fc8a1a6c9fefffff4c8b2",
       "usingCanary": false
     },
     {
@@ -4963,7 +4963,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "beaf9a798aede72613e9689f701959bde17f4b57587541ce0943bf83c49568ac",
+      "receiptDigest": "f856341a59fb0cd4ef95da23cf586fcf0f5391e385882fb65ac3c3ff4299ef3a",
       "usingCanary": false
     },
     {
@@ -5072,7 +5072,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "ed505618113f6e32555109dc49baea8d1fccc0a95b39a5c8b28f4d9b3068885f",
+      "receiptDigest": "251754f79a4f718a667f74e4458b06b2db0ecea5c6c5668c64f8fe6163390077",
       "usingCanary": false
     },
     {
@@ -5181,7 +5181,7 @@
       "postDigest": "cc2db855ce4214a367dcd83bb65a12c850beb78131ab9001198c9554d8e32aa7",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "8de23a72613f0dddae4abf819ee1c4a0a017cd4fbbe05f459aa1732886ebc74c",
+      "receiptDigest": "30e8b0fed6b8184499e58498e7ba320857903ecd3dd0a6ce92d9559d25e1a7f6",
       "usingCanary": false
     },
     {
@@ -5914,7 +5914,7 @@
       "postDigest": "7d4bb38c73b24a089e0562101c299b97241a725cc86058cf62b5c01352b8281b",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "7f49b98128742db89f24bc11b871cf41d282fab6e459dc2d84421a4b5898464d",
+      "receiptDigest": "e591ed15c6d0e900fd2664085c37f882671193ad257074af8e1feaeeceffd79c",
       "usingCanary": false
     },
     {
@@ -6231,7 +6231,7 @@
       "postDigest": "7d4bb38c73b24a089e0562101c299b97241a725cc86058cf62b5c01352b8281b",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "b3c1556bd4b53c99373863a2c15ef0db8dba1f98528a8031184a8ad014a442c3",
+      "receiptDigest": "99fcf89cce5f94974c365c0f42ea655a050e2b79839fd8fb987ef790bb4a8cae",
       "usingCanary": false
     },
     {
@@ -6444,7 +6444,7 @@
       "postDigest": "7d4bb38c73b24a089e0562101c299b97241a725cc86058cf62b5c01352b8281b",
       "assertion": "process_kill_committed_receipt_recovered_without_duplicate",
       "processBoundary": true,
-      "receiptDigest": "c9921930507c6b1773240ebfe393ae5cfbde70ca655f76c6692714bd57a39bef",
+      "receiptDigest": "2ad022d66f96129a89615b6f5dbfc386b7a504c6f0166052f02a571f0a2fe955",
       "usingCanary": false
     },
     {

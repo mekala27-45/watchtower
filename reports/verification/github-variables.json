@@ -1,0 +1,25 @@
+{
+  "observed_at": "2026-11-03T15:51:10.205Z",
+  "variables": [
+    {
+      "name": "WATCHTOWER_COLLECTION_ENABLED",
+      "updatedAt": "2026-11-03T15:43:53Z",
+      "value": "true"
+    },
+    {
+      "name": "WATCHTOWER_PAGES_ENABLED",
+      "updatedAt": "2026-11-03T15:51:10Z",
+      "value": "true"
+    },
+    {
+      "name": "WATCHTOWER_PUBLIC_API_ORIGIN",
+      "updatedAt": "2026-11-03T15:41:23Z",
+      "value": "https://watchtower-mekala27-45s-projects.vercel.app"
+    }
+  ],
+  "schedule": "17 */6 * * *",
+  "timezone": "UTC",
+  "scheduled_run_observed": false,
+  "manual_dispatch_verified": true,
+  "pages_browser_verified": true
+}

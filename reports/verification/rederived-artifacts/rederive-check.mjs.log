@@ -1,9 +1,9 @@
 {
-  "code_revision": "87dd52b866969cdc7be5734e4c9a4ba88ee4e0c8",
-  "generated_at": "2026-11-01T17:01:43.815Z",
+  "code_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
+  "generated_at": "2026-11-03T15:53:57.196Z",
   "tests": {
-    "total": 156,
-    "passed": 156,
+    "total": 160,
+    "passed": 160,
     "failed": 0,
     "skipped": 0,
     "exit_code": 0,
@@ -15,8 +15,8 @@
   },
   "scan": {
     "status": "passed",
-    "files": 410,
-    "commits": 48,
+    "files": 455,
+    "commits": 51,
     "failures": [],
     "scope": "pattern-based secret and release-body scan; not a complete security audit"
   },

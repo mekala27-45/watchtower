@@ -4,7 +4,7 @@
   "mode": "separate_methods",
   "code_revision": "0e13886d2f37e5726492a86707360d81fe616889",
   "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
-  "generated_at": "2026-11-03T15:24:05.004Z",
+  "generated_at": "2026-11-03T16:01:37.982Z",
   "metrics": [
     {
       "id": "baseline.full.sequences",
@@ -38783,8 +38783,8 @@
   "checklist": [
     {
       "item": "Source, dependency and free-host probes are recorded and checked.",
-      "status": "not done",
-      "evidence": "reports/probes records verified source IDs, dependency integrity, CPU model, Neon Free direct TLS and a READY Vercel Hobby container. Public GitHub Pages host checks remain unexecuted."
+      "status": "done",
+      "evidence": "reports/probes verifies source identities, pinned dependencies, Neon Free direct TLS, a READY Vercel Hobby API and the public GitHub Pages host. reports/verification/public-live.json passes all 4 hosted checks at 05ec1ac."
     },
     {
       "item": "Claim renderer and every required gate pass their three cases.",
@@ -38848,8 +38848,8 @@
     },
     {
       "item": "Public Pages site completes the visible API review and receipt flow.",
-      "status": "not done",
-      "evidence": "The Vercel API-hosted review interface is verified, but the required GitHub Pages site does not exist. GitHub authentication and reliable access to the requested Chrome profile remain unavailable."
+      "status": "done",
+      "evidence": "reports/browser/pages.json passes all 9 public Pages browser checks at 05ec1ac, including the visible compiled UI, digest-bound review, receipt recovery and a separate client verifying exactly one receipt."
     },
     {
       "item": "Governance, notices, source policy, skills and retention checks are complete.",
@@ -38858,25 +38858,25 @@
     },
     {
       "item": "Actual dispatch succeeded and schedule configuration is reported honestly.",
-      "status": "not done",
-      "evidence": "The local operator collection succeeded with honest partial coverage; no Actions dispatch has run. The committed UTC schedule remains gated off."
+      "status": "done",
+      "evidence": "Actions run 41666485561 completed successfully. reports/verification/actions-storage.json independently verifies all 8 database assertions, 8 HTTP attempts and 4 partial captures. The six-hour UTC schedule is enabled; no scheduled run is claimed."
     },
     {
       "item": "Final reports, scans, live checks and clean worktree rederivation pass.",
-      "status": "not done",
-      "evidence": "Clean-checkout rederivation passes 156 tests and both fault matrices using a proven separate empty database. Public API checks now pass; required Pages and Actions live checks remain unexecuted."
+      "status": "done",
+      "evidence": "A fresh checkout of 05ec1ac passed 160 tests without skips, both 541-case recovery matrices, typechecking, build and 14 browser checks on a proven separate empty database. Public Pages passes 9 checks and Actions storage passes 8 assertions. Revalidation preserved the actual model archive without inference."
     },
     {
       "item": "Release commits and tag are verified, with public release state explicit.",
       "status": "not done",
-      "evidence": "The local day23-watchtower-gates-candidate tag is verified by packaged provenance/release-verification.json, with all earlier tags preserved. The required public repository, remote tag and release remain pending."
+      "evidence": "The public repository and all earlier annotated tags are verified. This checked source snapshot precedes final release publication; observed release and tag proof will be recorded after publication."
     }
   ],
   "completion": [
     {
       "item": "Source, dependency and free-host probes are recorded and checked.",
-      "status": "not done",
-      "evidence": "reports/probes records verified source IDs, dependency integrity, CPU model, Neon Free direct TLS and a READY Vercel Hobby container. Public GitHub Pages host checks remain unexecuted."
+      "status": "done",
+      "evidence": "reports/probes verifies source identities, pinned dependencies, Neon Free direct TLS, a READY Vercel Hobby API and the public GitHub Pages host. reports/verification/public-live.json passes all 4 hosted checks at 05ec1ac."
     },
     {
       "item": "Claim renderer and every required gate pass their three cases.",
@@ -38940,8 +38940,8 @@
     },
     {
       "item": "Public Pages site completes the visible API review and receipt flow.",
-      "status": "not done",
-      "evidence": "The Vercel API-hosted review interface is verified, but the required GitHub Pages site does not exist. GitHub authentication and reliable access to the requested Chrome profile remain unavailable."
+      "status": "done",
+      "evidence": "reports/browser/pages.json passes all 9 public Pages browser checks at 05ec1ac, including the visible compiled UI, digest-bound review, receipt recovery and a separate client verifying exactly one receipt."
     },
     {
       "item": "Governance, notices, source policy, skills and retention checks are complete.",
@@ -38950,18 +38950,18 @@
     },
     {
       "item": "Actual dispatch succeeded and schedule configuration is reported honestly.",
-      "status": "not done",
-      "evidence": "The local operator collection succeeded with honest partial coverage; no Actions dispatch has run. The committed UTC schedule remains gated off."
+      "status": "done",
+      "evidence": "Actions run 41666485561 completed successfully. reports/verification/actions-storage.json independently verifies all 8 database assertions, 8 HTTP attempts and 4 partial captures. The six-hour UTC schedule is enabled; no scheduled run is claimed."
     },
     {
       "item": "Final reports, scans, live checks and clean worktree rederivation pass.",
-      "status": "not done",
-      "evidence": "Clean-checkout rederivation passes 156 tests and both fault matrices using a proven separate empty database. Public API checks now pass; required Pages and Actions live checks remain unexecuted."
+      "status": "done",
+      "evidence": "A fresh checkout of 05ec1ac passed 160 tests without skips, both 541-case recovery matrices, typechecking, build and 14 browser checks on a proven separate empty database. Public Pages passes 9 checks and Actions storage passes 8 assertions. Revalidation preserved the actual model archive without inference."
     },
     {
       "item": "Release commits and tag are verified, with public release state explicit.",
       "status": "not done",
-      "evidence": "The local day23-watchtower-gates-candidate tag is verified by packaged provenance/release-verification.json, with all earlier tags preserved. The required public repository, remote tag and release remain pending."
+      "evidence": "The public repository and all earlier annotated tags are verified. This checked source snapshot precedes final release publication; observed release and tag proof will be recorded after publication."
     }
   ],
   "runs": {
@@ -39010,13 +39010,25 @@
   "limits": {
     "backend": "postgres",
     "public_api": "https://watchtower-mekala27-45s-projects.vercel.app",
-    "public_site": null,
-    "dispatch": null,
+    "public_site": "https://mekala27-45.github.io/watchtower/",
+    "dispatch": {
+      "verified": true,
+      "run_url": "https://github.com/mekala27-45/watchtower/actions/runs/41666485561",
+      "operator_collection": "reports/collection/operator-20261101T1645.json",
+      "schedule_configured": true,
+      "schedule_enabled": true,
+      "scheduled_run_observed": false,
+      "provider_evidence": "reports/verification/actions-dispatch.json",
+      "database_evidence": "reports/verification/actions-storage.json",
+      "schedule": "17 */6 * * *",
+      "schedule_timezone": "UTC",
+      "coverage": "four_partial_captures"
+    },
     "fonts": "installed",
-    "browser": "passed_local_postgres_and_public_api",
+    "browser": "passed_local_postgres_and_public_pages",
     "delivery_evidence": "reports/verification/delivery.json"
   },
   "disclaimer": "Portfolio demonstration using public release metadata and authored synthetic evaluation cases. Findings describe captured observations within a declared window. They are not security assessments or upgrade recommendations. Agent proposals, deterministic results, recordings and live observations are labeled separately. Incomplete coverage remains unknown.",
   "disclaimer_digest": "d09b14e10ff9d4a2f57228087a40f7577bc618daa2cf1ecaecfa6648c44c52b5",
-  "digest": "3eeb51d8fd489fcdf689d0c3dec87361b104736f9f49a0b2f6a56fb10d6e7f88"
+  "digest": "7ae1d76bcf6b4cd617171bab3628b3ae08e3754c5c85c2143d9d193588b7bf13"
 }
