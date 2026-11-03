@@ -86,7 +86,7 @@
   },
   {
     "item": "Release commits and tag are verified, with public release state explicit.",
-    "status": "not done",
-    "evidence": "The public repository and all earlier annotated tags are verified. This checked source snapshot precedes final release publication; observed release and tag proof will be recorded after publication."
+    "status": "done",
+    "evidence": "reports/verification/public-release.json records public release 432917389, annotated tag day23-watchtower-v0.1.0, matching remote target 34a6db638a8e1c57ca763ee3026a895483052897 and the uploaded source archive SHA-256. Later publication evidence does not amend the released tag."
   }
 ]

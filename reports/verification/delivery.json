@@ -39,13 +39,16 @@
     "coverage": "four_partial_captures"
   },
   "release": {
-    "verified": false,
-    "url": null,
-    "public": false,
-    "local_tag": "day23-watchtower-gates-candidate",
+    "verified": true,
+    "url": "https://github.com/mekala27-45/watchtower/releases/tag/day23-watchtower-v0.1.0",
+    "public": true,
+    "id": 432917389,
+    "tag": "day23-watchtower-v0.1.0",
+    "source_revision": "34a6db638a8e1c57ca763ee3026a895483052897",
+    "tag_object": "2f2cadb84cdd4921f1311f5cab0c2a0e996f2162",
     "remote_tag_verified": true,
-    "verification": "reports/verification/remote-tags.json",
-    "state": "final_release_preparation"
+    "verification": "reports/verification/public-release.json",
+    "documentation_phase": "post_publication_evidence_only"
   },
   "browser_evidence": "reports/browser/postgres.json",
   "demo_gif": "reports/browser/pages-demo.gif",

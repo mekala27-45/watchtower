@@ -1,8 +1,7 @@
 {
-  "state": "verified_delivery_release_preparation",
+  "state": "public_release_verified",
   "verified_implementation_revision": "05ec1ac5044a84e8f52796fad26275157a9fc01d",
-  "intended_release_tag": "day23-watchtower-v0.1.0",
-  "public_release": false,
+  "public_release": true,
   "public_repository": "https://github.com/mekala27-45/watchtower",
   "public_site": "https://mekala27-45.github.io/watchtower/",
   "actual_model_source_revision": "0e13886d2f37e5726492a86707360d81fe616889",
@@ -25,15 +24,15 @@
     },
     {
       "path": "reports/current.json",
-      "sha256": "e1e8d65f3e3bacf0f72fb2f75966d86fa63cbae2b57b84ac423af8b3335b0acc"
+      "sha256": "25a223462508bd54188a81df10d5fc6079b30bd593e3f559c18b21ca3f416f7c"
     },
     {
       "path": "reports/checklist.json",
-      "sha256": "6db63d3c8fdaf6a4be647e27c3a86ee367f4723a297a645cfce7455d7b680113"
+      "sha256": "693c10142108ab191f77b202e0b4db741d87f3d69b342eb582143e17aed7354f"
     },
     {
       "path": "reports/verification/checks.json",
-      "sha256": "1264fdfc18c80767de10a17b5c648e75591424beb5accd810c50deecb3a6e1f7"
+      "sha256": "8bf8b346b2a9f0275cbd5ef54e280bfd742a6e21d0ee2d71c2e1842d116fdace"
     },
     {
       "path": "reports/verification/rederive.json",
@@ -82,8 +81,16 @@
     {
       "path": "reports/browser/pages-demo.json",
       "sha256": "94c2df1db66c9f3cd1ec39ab9bc4b064bee1c77d0a5cf80bff9c83cdafaf5c4c"
+    },
+    {
+      "path": "reports/verification/public-release.json",
+      "sha256": "590fcae8a26ae4a3f72991d506939ead45f2df8c1fceea61629c7978c5cc537d"
     }
   ],
   "prior_tags_evidence": "reports/verification/remote-tags.json",
-  "post_publication_proof": "Public release assets will record the observed release, final tag and immutable source archive."
+  "post_publication_proof": "reports/verification/public-release.json",
+  "release_url": "https://github.com/mekala27-45/watchtower/releases/tag/day23-watchtower-v0.1.0",
+  "release_id": 432917389,
+  "release_tag": "day23-watchtower-v0.1.0",
+  "released_source_revision": "34a6db638a8e1c57ca763ee3026a895483052897"
 }

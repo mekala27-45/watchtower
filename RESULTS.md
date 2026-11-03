@@ -1,6 +1,6 @@
 # Watchtower results
 
-Implementation and verification results are recorded below. Any unfinished requirement remains marked not done in the completion checklist.
+The required implementation and release checks are complete.
 
 Portfolio demonstration using public release metadata and authored synthetic evaluation cases. Findings describe captured observations within a declared window. They are not security assessments or upgrade recommendations. Agent proposals, deterministic results, recordings and live observations are labeled separately. Incomplete coverage remains unknown.
 
@@ -67,7 +67,7 @@ Actual inference attempted 24 sequences from the registered 24 sequences. Suppor
 
 ## Deployment and delivery
 
-Verified API: https://watchtower-mekala27-45s-projects.vercel.app. Verified Pages site: https://mekala27-45.github.io/watchtower/. Actual collection dispatch evidence: https://github.com/mekala27-45/watchtower/actions/runs/41666485561. A public release is not verified.
+Verified API: https://watchtower-mekala27-45s-projects.vercel.app. Verified Pages site: https://mekala27-45.github.io/watchtower/. Actual collection dispatch evidence: https://github.com/mekala27-45/watchtower/actions/runs/41666485561. Public release evidence: https://github.com/mekala27-45/watchtower/releases/tag/day23-watchtower-v0.1.0.
 
 ## Recovery and provenance
 
@@ -109,7 +109,7 @@ See reports/faults for stored-state assertions and process-death evidence. See r
 
 17. **done** Final reports, scans, live checks and clean worktree rederivation pass. A fresh checkout of 05ec1ac passed 160 tests without skips, both 541-case recovery matrices, typechecking, build and 14 browser checks on a proven separate empty database. Public Pages passes 9 checks and Actions storage passes 8 assertions. Revalidation preserved the actual model archive without inference.
 
-18. **not done** Release commits and tag are verified, with public release state explicit. The public repository and all earlier annotated tags are verified. This checked source snapshot precedes final release publication; observed release and tag proof will be recorded after publication.
+18. **done** Release commits and tag are verified, with public release state explicit. reports/verification/public-release.json records public release 432917389, annotated tag day23-watchtower-v0.1.0, matching remote target 34a6db638a8e1c57ca763ee3026a895483052897 and the uploaded source archive SHA-256. Later publication evidence does not amend the released tag.
 
 
 Recorded failed case: [asset_metadata_edit-heldout-05](reports/model/runs/actual-2026-11-01T16-50-21-528Z/asset_metadata_edit-heldout-05.json). Its recorded failure code is model_turn_budget_exhausted. This case remains in the declared denominator.

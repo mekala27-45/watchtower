@@ -4,7 +4,7 @@
   "mode": "separate_methods",
   "code_revision": "0e13886d2f37e5726492a86707360d81fe616889",
   "plan_digest": "dbb3af1ad58fa87c26cda74600848f99d8bd2d8335e6508464e25ae97688e558",
-  "generated_at": "2026-11-03T16:01:37.982Z",
+  "generated_at": "2026-11-03T16:03:21.885Z",
   "metrics": [
     {
       "id": "baseline.full.sequences",
@@ -38868,8 +38868,8 @@
     },
     {
       "item": "Release commits and tag are verified, with public release state explicit.",
-      "status": "not done",
-      "evidence": "The public repository and all earlier annotated tags are verified. This checked source snapshot precedes final release publication; observed release and tag proof will be recorded after publication."
+      "status": "done",
+      "evidence": "reports/verification/public-release.json records public release 432917389, annotated tag day23-watchtower-v0.1.0, matching remote target 34a6db638a8e1c57ca763ee3026a895483052897 and the uploaded source archive SHA-256. Later publication evidence does not amend the released tag."
     }
   ],
   "completion": [
@@ -38960,8 +38960,8 @@
     },
     {
       "item": "Release commits and tag are verified, with public release state explicit.",
-      "status": "not done",
-      "evidence": "The public repository and all earlier annotated tags are verified. This checked source snapshot precedes final release publication; observed release and tag proof will be recorded after publication."
+      "status": "done",
+      "evidence": "reports/verification/public-release.json records public release 432917389, annotated tag day23-watchtower-v0.1.0, matching remote target 34a6db638a8e1c57ca763ee3026a895483052897 and the uploaded source archive SHA-256. Later publication evidence does not amend the released tag."
     }
   ],
   "runs": {
@@ -39030,5 +39030,5 @@
   },
   "disclaimer": "Portfolio demonstration using public release metadata and authored synthetic evaluation cases. Findings describe captured observations within a declared window. They are not security assessments or upgrade recommendations. Agent proposals, deterministic results, recordings and live observations are labeled separately. Incomplete coverage remains unknown.",
   "disclaimer_digest": "d09b14e10ff9d4a2f57228087a40f7577bc618daa2cf1ecaecfa6648c44c52b5",
-  "digest": "7ae1d76bcf6b4cd617171bab3628b3ae08e3754c5c85c2143d9d193588b7bf13"
+  "digest": "8475d043cbef792e635fa4a56ebb70d0c852a88847b6ada508c1a32cc8c22fc9"
 }

@@ -10,6 +10,6 @@ A fresh checkout of implementation revision 05ec1ac5044a84e8f52796fad26275157a9f
 
 Manual Actions collection run 41666485561 succeeded. Eight independent database assertions verified 8 HTTP attempts and 4 partial captures, with no false usable comparison head. Recurring collection is enabled at minute 17 every six hours UTC. No scheduled run is claimed.
 
-This source snapshot is prepared before final publication. The final annotated release tag, source archive digest and observed public release are recorded in post-publication verification. Later evidence-only documentation does not amend the released tag or imply another model run.
+The public release is https://github.com/mekala27-45/watchtower/releases/tag/day23-watchtower-v0.1.0. Its annotated tag points to 34a6db638a8e1c57ca763ee3026a895483052897. The uploaded source archive digest and observed release are recorded in reports/verification/public-release.json. This later documentation records publication evidence; it does not amend the released tag or imply another model run.
 
 Read RESULTS.md for separate baseline and actual-model tables. Open reports/browser/pages-demo.gif for the actual screenshot sequence and pages-demo.json for frame provenance.
